@@ -8,6 +8,11 @@
   "production_code": "8F20",
   "original_air_date": "1992-04-09",
   "overall_number": 56,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "747dc728-8210-41c9-834c-e5d2b64aab6a"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 56,

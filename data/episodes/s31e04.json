@@ -1,0 +1,14 @@
+{
+  "id": "s31e04",
+  "titles": {
+    "en": "Treehouse of Horror XXX",
+    "fr-FR": "Simpson Horror Show XXX",
+    "fr-CA": "Spécial d'Halloween XXX"
+  },
+  "overall_number": 666,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "9a4ed8fe-cefc-486b-9d12-9c08281584b5"
+    }
+  }
+}

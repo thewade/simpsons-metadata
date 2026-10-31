@@ -1,0 +1,14 @@
+{
+  "id": "s32e06",
+  "titles": {
+    "en": "Podcast News",
+    "fr-FR": "Podcast News",
+    "fr-CA": "Dans mon balado"
+  },
+  "overall_number": 690,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "9666221a-68b7-4511-9794-d53bdaebdf4b"
+    }
+  }
+}

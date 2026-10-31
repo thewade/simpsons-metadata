@@ -8,6 +8,11 @@
   "production_code": "7F08",
   "original_air_date": "1990-11-15",
   "overall_number": 19,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "553dee8f-bae7-4853-97b3-ec29759c451d"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 19,

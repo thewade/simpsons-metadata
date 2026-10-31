@@ -8,6 +8,11 @@
   "production_code": "1F09",
   "original_air_date": "1994-01-06",
   "overall_number": 92,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "25318604-f3ec-4560-806e-d68836bdf3bc"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 92,

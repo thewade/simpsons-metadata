@@ -8,6 +8,11 @@
   "production_code": "7G10",
   "original_air_date": "1990-03-25",
   "overall_number": 10,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "be633e7d-70a6-49ff-8f92-7be7ea234917"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 10,

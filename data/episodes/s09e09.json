@@ -8,6 +8,11 @@
   "production_code": "5F06",
   "original_air_date": "1997-12-07",
   "overall_number": 187,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "262165cb-0cd1-409f-810b-4c64d04ce13c"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 187,

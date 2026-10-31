@@ -8,6 +8,11 @@
   "production_code": "9F18",
   "original_air_date": "1993-04-29",
   "overall_number": 79,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "5f2bbb35-63c0-469c-87c5-58c1c4c41bf8"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 79,

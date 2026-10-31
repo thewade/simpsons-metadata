@@ -8,6 +8,11 @@
   "production_code": "2F15",
   "original_air_date": "1995-03-19",
   "overall_number": 122,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "06297b89-6b18-46b0-b0f6-64be0fddba8d"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 122,

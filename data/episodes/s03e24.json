@@ -8,6 +8,11 @@
   "production_code": "8F23",
   "original_air_date": "1992-08-27",
   "overall_number": 59,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "7ed9627b-d873-405e-9993-ea4dd6eda4ed"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 59,

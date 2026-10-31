@@ -8,6 +8,11 @@
   "production_code": "7F06",
   "original_air_date": "1990-12-06",
   "overall_number": 21,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "02bc9dd4-b8a1-4b84-ab15-6d3009a82a15"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 21,

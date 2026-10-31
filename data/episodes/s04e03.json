@@ -8,6 +8,11 @@
   "production_code": "9F01",
   "original_air_date": "1992-10-08",
   "overall_number": 62,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "2302e73c-b1bf-4157-9e1b-2613252d6c7a"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 62,

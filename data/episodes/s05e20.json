@@ -8,6 +8,11 @@
   "production_code": "1F19",
   "original_air_date": "1994-05-05",
   "overall_number": 101,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "a5165211-2353-4c85-a322-2acf8da14b61"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 101,

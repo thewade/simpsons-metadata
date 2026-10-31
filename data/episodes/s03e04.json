@@ -8,6 +8,11 @@
   "production_code": "8F03",
   "original_air_date": "1991-10-10",
   "overall_number": 39,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "fe2f004f-55bd-4355-a6f8-9dfc19b00e31"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 39,

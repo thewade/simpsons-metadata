@@ -8,6 +8,11 @@
   "production_code": "9F22",
   "original_air_date": "1993-10-07",
   "overall_number": 83,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "1198c86c-019d-4a4c-b111-f7fa32aca469"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 83,

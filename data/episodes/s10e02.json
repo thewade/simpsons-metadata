@@ -8,6 +8,11 @@
   "production_code": "5F21",
   "original_air_date": "1998-09-20",
   "overall_number": 205,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "3cb531c9-3660-4ae0-858a-53c6f3ab40eb"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 205,

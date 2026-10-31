@@ -8,6 +8,11 @@
   "production_code": "3G02",
   "original_air_date": "1997-10-19",
   "overall_number": 181,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "384b528d-a034-4f52-b02f-1afdc37f2b85"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 181,

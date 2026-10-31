@@ -8,6 +8,11 @@
   "production_code": "3F31",
   "original_air_date": "1995-12-03",
   "overall_number": 138,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "96cb6ab3-0123-4701-8839-60873e860d78"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 138,

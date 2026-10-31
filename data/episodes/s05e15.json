@@ -8,6 +8,11 @@
   "production_code": "1F13",
   "original_air_date": "1994-02-24",
   "overall_number": 96,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "fe31de9a-3bfd-4a39-90ab-71bcf4e26907"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 96,

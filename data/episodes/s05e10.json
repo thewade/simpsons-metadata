@@ -8,6 +8,11 @@
   "production_code": "1F08",
   "original_air_date": "1993-12-16",
   "overall_number": 91,
+  "streaming": {
+    "disney_plus": {
+      "content_id": "643aa3ba-6a8a-412d-abfb-2f3b25d84cb1"
+    }
+  },
   "legacy": {
     "type": "episode",
     "epnum": 91,

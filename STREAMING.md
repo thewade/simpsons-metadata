@@ -22,4 +22,4 @@ Either `url` or `content_id` may be provided; both must agree if supplied. Value
 - Affiliate signup tracking is **not** assumed compatible with episode deep links. Keep any approved affiliate signup links distinct from playback URLs and label them appropriately.
 - Do not upload video clips or copyrighted subtitles as part of this metadata project without permission.
 
-No Disney+ links were invented or imported for the legacy records. Consumers can add verified links individually through pull requests.
+Disney+ content IDs have been imported for many records; see [DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md) for their source, matching decisions, and limitations. Consumers can add verified direct links individually through pull requests.

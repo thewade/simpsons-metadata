@@ -28,7 +28,7 @@ Generated files live in `dist/v1/`. Preview locally with `python3 -m http.server
 
 No runtime queries or per-episode HTTP endpoints. Download a dataset and (optionally) an identifier map, then query locally. The individual record JSON is source material, **not** a public endpoint.
 
-The source currently contains 548 legacy episodes, one movie, 23 season/catalogue records (with Amazon listings), and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+The source currently contains 801 regular episodes (548 legacy imports and 253 later additions), one movie, 23 season/catalogue records (with Amazon listings), and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licensing
 
@@ -42,7 +42,7 @@ The GitHub Actions workflow runs tests and validation only. The generated `dist/
 
 ## Optional Disney+ episode links
 
-Verified direct `/play/<content-id>` links can be added as `streaming.disney_plus` metadata. No links are invented for existing data. URL parameters to force 4:3, audio/subtitles or seeking are not part of the public contract. See [STREAMING.md](STREAMING.md).
+Episode and movie records can include a `streaming.disney_plus.content_id`. The current IDs were imported from an external dataset and have not been checked against current playback. No direct `/play/` URLs were generated. URL parameters to force 4:3, audio/subtitles or seeking are not part of the public contract. See [DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md) for source and matching details and [STREAMING.md](STREAMING.md) for the field format.
 
 ## Legacy website database import
 
