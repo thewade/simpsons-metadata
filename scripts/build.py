@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""Validate record JSON and compile consolidated, static API datasets."""
+
+import argparse
+from datetime import date
+from hashlib import sha256
+import json
+from pathlib import Path
+import re
+import shutil
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+DATASETS = {
+    "episodes": "episodes.json",
+    "shorts/tracey-ullman": "shorts/tracey-ullman.json",
+    "shorts/disney-plus": "shorts/disney-plus.json",
+    "commercials": "commercials.json",
+    "specials": "specials.json",
+}
+SCHEMES = ("production", "tvdb", "tmdb", "imdb")
+# Pragmatic subset of BCP 47: common language, script, region and variant tags.
+LANG_TAG = re.compile(r"^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?(?:-[a-zA-Z0-9]{4,8})*$")
+EPISODE_ID = re.compile(r"^s[0-9]{2,}e[0-9]{2,}$")
+OTHER_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+
+
+class ValidationError(Exception):
+    pass
+
+
+def reject_duplicate_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValidationError(f"Duplicate JSON key: {key!r}")
+        result[key] = value
+    return result
+
+
+def parse_record(path, dataset):
+    try:
+        record = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=reject_duplicate_keys)
+    except (ValueError, UnicodeError) as exc:
+        raise ValidationError(f"{path}: invalid JSON: {exc}") from exc
+    if not isinstance(record, dict):
+        raise ValidationError(f"{path}: record must be a JSON object")
+    ident = record.get("id")
+    if not isinstance(ident, str) or ident != path.stem:
+        raise ValidationError(f"{path}: id must be a string equal to filename stem")
+    if dataset == "episodes":
+        if not EPISODE_ID.fullmatch(ident) or ident.startswith("s00") or re.search(r"e0+$", ident):
+            raise ValidationError(f"{path}: expected aired ID such as s01e01")
+    elif not OTHER_ID.fullmatch(ident):
+        raise ValidationError(f"{path}: invalid production-code ID")
+    if dataset != "episodes" and record.get("production_code") != ident:
+        raise ValidationError(f"{path}: non-episode id must equal production_code")
+    titles = record.get("titles")
+    if not isinstance(titles, dict) or not titles:
+        raise ValidationError(f"{path}: titles must be a nonempty object")
+    for lang, title in titles.items():
+        if not LANG_TAG.fullmatch(lang) or not isinstance(title, str) or not title.strip():
+            raise ValidationError(f"{path}: invalid language tag/title {lang!r}")
+    for field in ("production_code", "tvdb", "tmdb", "imdb"):
+        if field in record and (not isinstance(record[field], str) or not record[field].strip()):
+            raise ValidationError(f"{path}: {field} must be a nonempty string when present")
+    if "original_air_date" in record:
+        value = record["original_air_date"]
+        try:
+            if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+                raise ValueError("format")
+            date.fromisoformat(value)
+        except ValueError as exc:
+            raise ValidationError(f"{path}: original_air_date must be YYYY-MM-DD") from exc
+    return record
+
+
+def collect(source):
+    catalog = {dataset: {} for dataset in DATASETS}
+    index = {scheme: {} for scheme in SCHEMES}
+    for dataset in DATASETS:
+        folder = source / dataset
+        if not folder.is_dir():
+            raise ValidationError(f"Missing dataset directory: {folder}")
+        for path in sorted(folder.iterdir()):
+            if path.name == ".gitkeep":
+                continue
+            if path.suffix != ".json" or not path.is_file():
+                raise ValidationError(f"Unexpected file in {folder}: {path.name}")
+            record = parse_record(path, dataset)
+            ident = record["id"]
+            if ident in catalog[dataset]:
+                raise ValidationError(f"Duplicate internal ID in {dataset}: {ident}")
+            catalog[dataset][ident] = record
+            target = {"dataset": dataset, "id": ident}
+            for scheme in SCHEMES:
+                field = "production_code" if scheme == "production" else scheme
+                if field not in record:
+                    continue
+                value = record[field]
+                if value in index[scheme] and index[scheme][value] != target:
+                    raise ValidationError(f"Duplicate {field} {value!r}: {index[scheme][value]} and {target}")
+                index[scheme][value] = target
+    return catalog, index
+
+
+def json_bytes(obj):
+    return (json.dumps(obj, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
+
+
+def build(source, destination):
+    catalog, index = collect(source)  # validate everything before touching output
+    files = {DATASETS[d]: records for d, records in catalog.items()}
+    files.update({f"{scheme}.json": records for scheme, records in index.items()})
+    # A version root is rewritten only after successful validation.
+    if destination.exists():
+        shutil.rmtree(destination)
+    destination.mkdir(parents=True)
+    checksums = {}
+    for relative, content in sorted(files.items()):
+        path = destination / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        payload = json_bytes(content)
+        path.write_bytes(payload)
+        checksums[relative] = sha256(payload).hexdigest()
+    (destination / "manifest.json").write_bytes(json_bytes({"api_version": 1, "files": checksums}))
+    # GitHub Pages should not run Jekyll on the published tree.
+    (destination.parent / ".nojekyll").touch()
+    return sum(map(len, catalog.values()))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", type=Path, default=ROOT / "data")
+    parser.add_argument("--out", type=Path, default=ROOT / "dist" / "v1")
+    args = parser.parse_args()
+    try:
+        count = build(args.source, args.out)
+    except ValidationError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 1
+    print(f"Validated {count} records; generated API in {args.out}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
