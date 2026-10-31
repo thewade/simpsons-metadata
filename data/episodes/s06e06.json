@@ -1,7 +1,9 @@
 {
   "id": "s06e06",
   "titles": {
-    "en": "Treehouse of Horror V"
+    "en": "Treehouse of Horror V",
+    "fr-FR": "Simpson Horror Show V",
+    "fr-CA": "Spécial d'Halloween V"
   },
   "production_code": "2F03",
   "original_air_date": "1994-10-30",

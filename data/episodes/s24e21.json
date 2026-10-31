@@ -1,7 +1,9 @@
 {
   "id": "s24e21",
   "titles": {
-    "en": "The Saga of Carl"
+    "en": "The Saga of Carl",
+    "fr-FR": "La Saga de Carl",
+    "fr-CA": "La saga de Carl"
   },
   "production_code": "RABF14",
   "original_air_date": "2013-05-19",

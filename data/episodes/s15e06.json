@@ -1,7 +1,9 @@
 {
   "id": "s15e06",
   "titles": {
-    "en": "Today I Am a Clown"
+    "en": "Today I Am a Clown",
+    "fr-FR": "Enfin clown",
+    "fr-CA": "Un Krusty sur le toit"
   },
   "production_code": "FABF01",
   "original_air_date": "2003-12-07",

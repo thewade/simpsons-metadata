@@ -1,7 +1,9 @@
 {
   "id": "s18e04",
   "titles": {
-    "en": "Treehouse of Horror XVII"
+    "en": "Treehouse of Horror XVII",
+    "fr-FR": "Simpson Horror Show XVII",
+    "fr-CA": "Spécial d’Halloween XVII"
   },
   "production_code": "HABF17",
   "original_air_date": "2006-11-05",

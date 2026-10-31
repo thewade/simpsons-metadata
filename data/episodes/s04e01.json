@@ -1,7 +1,9 @@
 {
   "id": "s04e01",
   "titles": {
-    "en": "Kamp Krusty"
+    "en": "Kamp Krusty",
+    "fr-FR": "Les Jolies Colonies de vacances",
+    "fr-CA": "Le Camp de Krusty"
   },
   "production_code": "8F24",
   "original_air_date": "1992-09-24",

@@ -1,7 +1,9 @@
 {
   "id": "s21e10",
   "titles": {
-    "en": "Once Upon a Time in Springfield"
+    "en": "Once Upon a Time in Springfield",
+    "fr-FR": "Il était une fois à Springfield",
+    "fr-CA": "Il était une fois, à Springfield"
   },
   "production_code": "LABF20",
   "original_air_date": "2010-01-10",

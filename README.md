@@ -47,3 +47,7 @@ Verified direct `/play/<content-id>` links can be added as `streaming.disney_plu
 ## Legacy website database import
 
 This starter has been populated from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The new `v1/seasons.json` preserves Amazon listing URLs and ASINs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for limitations and missing database tables. The included `scripts/import_legacy.py` can reproduce the import from the original dump.
+
+## French episode titles
+
+The 548 existing regular episode records include `titles.fr-FR` and `titles.fr-CA` from the workspace's `data/titles/simpsons_quebec_titles.json` (also available as CSV). Its [source note](../../data/titles/notes.txt) points to the [French Wikipedia episode list](https://fr.wikipedia.org/wiki/Liste_des_%C3%A9pisodes_des_Simpson). Rows were matched by aired overall number and season episode number, with production codes checked as a second identity signal. Nonbreaking spaces in the working list are represented as regular spaces in API titles. English title differences were mostly punctuation and capitalization. The title list reverses the API's production codes for `s24e19` and `s24e20`; their aired numbers and English titles agree, so only the French titles were added. These are sourced regional title listings, not independently verified dub transcripts.

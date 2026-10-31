@@ -1,7 +1,9 @@
 {
   "id": "s12e15",
   "titles": {
-    "en": "Hungry, Hungry Homer"
+    "en": "Hungry, Hungry Homer",
+    "fr-FR": "Homer fait la grève de la faim",
+    "fr-CA": "Ventre plein n'a pas d'Homer"
   },
   "production_code": "CABF09",
   "original_air_date": "2001-03-04",

@@ -1,7 +1,9 @@
 {
   "id": "s11e20",
   "titles": {
-    "en": "Last Tap Dance in Springfield"
+    "en": "Last Tap Dance in Springfield",
+    "fr-FR": "Tais-toi et danse !",
+    "fr-CA": "Le Dernier Continental à Springfield"
   },
   "production_code": "BABF15",
   "original_air_date": "2000-05-07",

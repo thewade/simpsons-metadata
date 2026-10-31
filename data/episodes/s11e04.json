@@ -1,7 +1,9 @@
 {
   "id": "s11e04",
   "titles": {
-    "en": "Treehouse of Horror X"
+    "en": "Treehouse of Horror X",
+    "fr-FR": "Simpson Horror Show X",
+    "fr-CA": "Spécial d’Halloween X"
   },
   "production_code": "BABF01",
   "original_air_date": "1999-10-31",

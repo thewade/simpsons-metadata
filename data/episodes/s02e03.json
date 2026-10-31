@@ -1,7 +1,9 @@
 {
   "id": "s02e03",
   "titles": {
-    "en": "Treehouse of Horror"
+    "en": "Treehouse of Horror",
+    "fr-FR": "Simpson Horror Show",
+    "fr-CA": "Spécial d'Halloween I"
   },
   "production_code": "7F04",
   "original_air_date": "1990-10-25",

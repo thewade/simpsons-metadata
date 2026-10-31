@@ -1,7 +1,9 @@
 {
   "id": "s15e09",
   "titles": {
-    "en": "I, (Annoyed Grunt)-Bot"
+    "en": "I, (Annoyed Grunt)-Bot",
+    "fr-FR": "Robotflop",
+    "fr-CA": "Monsieur le robot"
   },
   "production_code": "FABF04",
   "original_air_date": "2004-01-11",

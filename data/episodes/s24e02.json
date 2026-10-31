@@ -1,7 +1,9 @@
 {
   "id": "s24e02",
   "titles": {
-    "en": "Treehouse of Horror XXIII"
+    "en": "Treehouse of Horror XXIII",
+    "fr-FR": "Simpson Horror Show XXIII",
+    "fr-CA": "Spécial d'Halloween XXIII"
   },
   "production_code": "PABF17",
   "original_air_date": "2012-10-07",

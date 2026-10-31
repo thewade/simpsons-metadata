@@ -1,7 +1,9 @@
 {
   "id": "s01e13",
   "titles": {
-    "en": "Some Enchanted Evening"
+    "en": "Some Enchanted Evening",
+    "fr-FR": "Une soirée d'enfer",
+    "fr-CA": "Une soirée romantique"
   },
   "production_code": "7G01",
   "original_air_date": "1990-05-13",

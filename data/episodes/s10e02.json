@@ -1,7 +1,9 @@
 {
   "id": "s10e02",
   "titles": {
-    "en": "The Wizard of Evergreen Terrace"
+    "en": "The Wizard of Evergreen Terrace",
+    "fr-FR": "La Dernière Invention d'Homer",
+    "fr-CA": "Le génie de la terrasse Evergreen"
   },
   "production_code": "5F21",
   "original_air_date": "1998-09-20",

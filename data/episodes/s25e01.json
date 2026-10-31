@@ -1,7 +1,9 @@
 {
   "id": "s25e01",
   "titles": {
-    "en": "Homerland"
+    "en": "Homerland",
+    "fr-FR": "Homerland",
+    "fr-CA": "Homerland"
   },
   "production_code": "RABF20",
   "original_air_date": "2013-09-29",

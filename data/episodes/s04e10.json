@@ -1,7 +1,9 @@
 {
   "id": "s04e10",
   "titles": {
-    "en": "Lisa's First Word"
+    "en": "Lisa's First Word",
+    "fr-FR": "Le Premier Mot de Lisa",
+    "fr-CA": "Le premier mot de Lisa"
   },
   "production_code": "9F08",
   "original_air_date": "1992-12-03",

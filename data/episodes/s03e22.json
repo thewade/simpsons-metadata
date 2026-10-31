@@ -1,7 +1,9 @@
 {
   "id": "s03e22",
   "titles": {
-    "en": "The Otto Show"
+    "en": "The Otto Show",
+    "fr-FR": "Le Permis d'Otto Bus",
+    "fr-CA": "Le show d'Otto"
   },
   "production_code": "8F21",
   "original_air_date": "1992-04-23",

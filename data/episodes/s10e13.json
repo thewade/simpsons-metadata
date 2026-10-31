@@ -1,7 +1,9 @@
 {
   "id": "s10e13",
   "titles": {
-    "en": "Homer to the Max"
+    "en": "Homer to the Max",
+    "fr-FR": "Max Simpson",
+    "fr-CA": "Homer au Max"
   },
   "production_code": "AABF09",
   "original_air_date": "1999-02-07",

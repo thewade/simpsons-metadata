@@ -1,7 +1,9 @@
 {
   "id": "s12e02",
   "titles": {
-    "en": "A Tale of Two Springfields"
+    "en": "A Tale of Two Springfields",
+    "fr-FR": "La Bataille des deux Springfield",
+    "fr-CA": "Un code, une ville"
   },
   "production_code": "BABF20",
   "original_air_date": "2000-11-05",

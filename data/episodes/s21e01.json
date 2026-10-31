@@ -1,7 +1,9 @@
 {
   "id": "s21e01",
   "titles": {
-    "en": "Homer the Whopper"
+    "en": "Homer the Whopper",
+    "fr-FR": "Super Homer",
+    "fr-CA": "Gros jambon"
   },
   "production_code": "LABF13",
   "original_air_date": "2009-09-27",

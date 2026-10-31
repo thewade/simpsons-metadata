@@ -1,7 +1,9 @@
 {
   "id": "s15e21",
   "titles": {
-    "en": "Bart-Mangled Banner"
+    "en": "Bart-Mangled Banner",
+    "fr-FR": "Le Drapeau... potin de Bart",
+    "fr-CA": "L'amer drapeau"
   },
   "production_code": "FABF17",
   "original_air_date": "2004-05-16",

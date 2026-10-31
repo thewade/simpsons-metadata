@@ -1,7 +1,9 @@
 {
   "id": "s22e01",
   "titles": {
-    "en": "Elementary School Musical"
+    "en": "Elementary School Musical",
+    "fr-FR": "Cours élémentaire musical",
+    "fr-CA": "Les jaunesses musicales"
   },
   "production_code": "MABF21",
   "original_air_date": "2010-09-26",

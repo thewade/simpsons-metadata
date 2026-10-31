@@ -1,7 +1,9 @@
 {
   "id": "s07e19",
   "titles": {
-    "en": "A Fish Called Selma"
+    "en": "A Fish Called Selma",
+    "fr-FR": "Un poisson nommé Selma",
+    "fr-CA": "Un poisson appelé Selma"
   },
   "production_code": "3F15",
   "original_air_date": "1996-03-24",

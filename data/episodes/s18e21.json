@@ -1,7 +1,9 @@
 {
   "id": "s18e21",
   "titles": {
-    "en": "24 Minutes"
+    "en": "24 Minutes",
+    "fr-FR": "24 Minutes",
+    "fr-CA": "24 minutes chrono"
   },
   "production_code": "JABF14",
   "original_air_date": "2007-05-20",

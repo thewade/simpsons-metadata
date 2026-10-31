@@ -1,7 +1,9 @@
 {
   "id": "s11e17",
   "titles": {
-    "en": "Bart to the Future"
+    "en": "Bart to the Future",
+    "fr-FR": "Les Simpson dans 30 ans",
+    "fr-CA": "Les Enfants de l'avenir"
   },
   "production_code": "BABF13",
   "original_air_date": "2000-03-19",

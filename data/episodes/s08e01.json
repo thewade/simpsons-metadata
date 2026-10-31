@@ -1,7 +1,9 @@
 {
   "id": "s08e01",
   "titles": {
-    "en": "Treehouse of Horror VII"
+    "en": "Treehouse of Horror VII",
+    "fr-FR": "Simpson Horror Show VII",
+    "fr-CA": "Spécial d'Halloween VII"
   },
   "production_code": "4F02",
   "original_air_date": "1996-10-27",

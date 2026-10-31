@@ -1,7 +1,9 @@
 {
   "id": "s25e12",
   "titles": {
-    "en": "Diggs"
+    "en": "Diggs",
+    "fr-FR": "Diggs",
+    "fr-CA": "Mon ami Diggs"
   },
   "production_code": "SABF08",
   "original_air_date": "2014-03-09",

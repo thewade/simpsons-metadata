@@ -1,7 +1,9 @@
 {
   "id": "s21e04",
   "titles": {
-    "en": "Treehouse of Horror XX"
+    "en": "Treehouse of Horror XX",
+    "fr-FR": "Simpson Horror Show XX",
+    "fr-CA": "Spécial d’Halloween XX"
   },
   "production_code": "LABF14",
   "original_air_date": "2009-10-18",

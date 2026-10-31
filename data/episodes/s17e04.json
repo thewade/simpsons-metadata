@@ -1,7 +1,9 @@
 {
   "id": "s17e04",
   "titles": {
-    "en": "Treehouse of Horror XVI"
+    "en": "Treehouse of Horror XVI",
+    "fr-FR": "Simpson Horror Show XVI",
+    "fr-CA": "Spécial d’Halloween XVI"
   },
   "production_code": "GABF17",
   "original_air_date": "2005-11-06",

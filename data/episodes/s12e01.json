@@ -1,7 +1,9 @@
 {
   "id": "s12e01",
   "titles": {
-    "en": "Treehouse of Horror XI"
+    "en": "Treehouse of Horror XI",
+    "fr-FR": "Simpson Horror Show XI",
+    "fr-CA": "Spécial d’Halloween XI"
   },
   "production_code": "BABF21",
   "original_air_date": "2000-11-01",

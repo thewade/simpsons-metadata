@@ -1,7 +1,9 @@
 {
   "id": "s04e02",
   "titles": {
-    "en": "A Streetcar Named Marge"
+    "en": "A Streetcar Named Marge",
+    "fr-FR": "Un tramway nommé Marge",
+    "fr-CA": "Un Tramway nommé Marge"
   },
   "production_code": "8F18",
   "original_air_date": "1992-10-01",

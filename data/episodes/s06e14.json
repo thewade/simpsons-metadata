@@ -1,7 +1,9 @@
 {
   "id": "s06e14",
   "titles": {
-    "en": "Bart's Comet"
+    "en": "Bart's Comet",
+    "fr-FR": "La Comète de Bart",
+    "fr-CA": "La Comète de Bart"
   },
   "production_code": "2F11",
   "original_air_date": "1995-02-05",

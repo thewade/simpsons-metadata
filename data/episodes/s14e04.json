@@ -1,7 +1,9 @@
 {
   "id": "s14e04",
   "titles": {
-    "en": "Large Marge"
+    "en": "Large Marge",
+    "fr-FR": "La Nouvelle Marge",
+    "fr-CA": "Y'a de la Marge au balcon"
   },
   "production_code": "DABF18",
   "original_air_date": "2002-11-24",

@@ -1,7 +1,9 @@
 {
   "id": "s13e01",
   "titles": {
-    "en": "Treehouse of Horror XII"
+    "en": "Treehouse of Horror XII",
+    "fr-FR": "Simpson Horror Show XII",
+    "fr-CA": "Spécial d’Halloween XII"
   },
   "production_code": "CABF19",
   "original_air_date": "2001-11-06",

@@ -1,7 +1,9 @@
 {
   "id": "s21e22",
   "titles": {
-    "en": "The Bob Next Door"
+    "en": "The Bob Next Door",
+    "fr-FR": "Mon voisin le Bob",
+    "fr-CA": "Visage à deux Bob"
   },
   "production_code": "MABF11",
   "original_air_date": "2010-05-16",

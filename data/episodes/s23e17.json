@@ -1,7 +1,9 @@
 {
   "id": "s23e17",
   "titles": {
-    "en": "Them, Robot"
+    "en": "Them, Robot",
+    "fr-FR": "Aïe, robot !",
+    "fr-CA": "Messieurs les robots"
   },
   "production_code": "PABF10",
   "original_air_date": "2012-03-18",

@@ -1,7 +1,9 @@
 {
   "id": "s05e05",
   "titles": {
-    "en": "Treehouse of Horror IV"
+    "en": "Treehouse of Horror IV",
+    "fr-FR": "Simpson Horror Show IV",
+    "fr-CA": "Spécial d'Halloween IV"
   },
   "production_code": "1F04",
   "original_air_date": "1993-10-28",

@@ -1,7 +1,9 @@
 {
   "id": "s16e01",
   "titles": {
-    "en": "Treehouse of Horror XV"
+    "en": "Treehouse of Horror XV",
+    "fr-FR": "Simpson Horror Show XV",
+    "fr-CA": "Spécial d’Halloween XV"
   },
   "production_code": "FABF23",
   "original_air_date": "2004-11-07",

@@ -1,7 +1,9 @@
 {
   "id": "s20e11",
   "titles": {
-    "en": "How the Test Was Won"
+    "en": "How the Test Was Won",
+    "fr-FR": "La Conquête du test",
+    "fr-CA": "La conquête du test"
   },
   "production_code": "LABF02",
   "original_air_date": "2009-03-01",

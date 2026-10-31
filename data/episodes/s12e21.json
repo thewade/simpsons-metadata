@@ -1,7 +1,9 @@
 {
   "id": "s12e21",
   "titles": {
-    "en": "Simpsons Tall Tales"
+    "en": "Simpsons Tall Tales",
+    "fr-FR": "Histoires de clochard",
+    "fr-CA": "La Légende du géant Homer"
   },
   "production_code": "CABF17",
   "original_air_date": "2001-05-20",

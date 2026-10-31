@@ -1,7 +1,9 @@
 {
   "id": "s10e04",
   "titles": {
-    "en": "Treehouse of Horror IX"
+    "en": "Treehouse of Horror IX",
+    "fr-FR": "Simpson Horror Show IX",
+    "fr-CA": "Spécial d'Halloween IX"
   },
   "production_code": "AABF01",
   "original_air_date": "1998-10-25",

@@ -1,7 +1,9 @@
 {
   "id": "s02e20",
   "titles": {
-    "en": "The War of the Simpsons"
+    "en": "The War of the Simpsons",
+    "fr-FR": "La Guerre des Simpson",
+    "fr-CA": "La guerre des Simpson"
   },
   "production_code": "7F20",
   "original_air_date": "1991-05-02",

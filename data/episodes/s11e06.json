@@ -1,7 +1,9 @@
 {
   "id": "s11e06",
   "titles": {
-    "en": "Hello Gutter, Hello Fadder"
+    "en": "Hello Gutter, Hello Fadder",
+    "fr-FR": "Homer perd la boule",
+    "fr-CA": "En roulant ma boule"
   },
   "production_code": "BABF02",
   "original_air_date": "1999-11-14",

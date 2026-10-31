@@ -1,7 +1,9 @@
 {
   "id": "s22e06",
   "titles": {
-    "en": "The Fool Monty"
+    "en": "The Fool Monty",
+    "fr-FR": "Ce fou d'Monty",
+    "fr-CA": "Le Monty coune"
   },
   "production_code": "NABF01",
   "original_air_date": "2010-11-21",

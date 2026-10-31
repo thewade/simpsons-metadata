@@ -1,7 +1,9 @@
 {
   "id": "s03e07",
   "titles": {
-    "en": "Treehouse of Horror II"
+    "en": "Treehouse of Horror II",
+    "fr-FR": "Simpson Horror Show II",
+    "fr-CA": "Spécial d'Halloween II"
   },
   "production_code": "8F02",
   "original_air_date": "1991-10-31",

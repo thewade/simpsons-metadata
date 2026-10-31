@@ -1,7 +1,9 @@
 {
   "id": "s15e01",
   "titles": {
-    "en": "Treehouse of Horror XIV"
+    "en": "Treehouse of Horror XIV",
+    "fr-FR": "Simpson Horror Show XIV",
+    "fr-CA": "Spécial d’Halloween XIV"
   },
   "production_code": "EABF21",
   "original_air_date": "2003-11-02",

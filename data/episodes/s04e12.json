@@ -1,7 +1,9 @@
 {
   "id": "s04e12",
   "titles": {
-    "en": "Marge vs. the Monorail"
+    "en": "Marge vs. the Monorail",
+    "fr-FR": "Le Monorail",
+    "fr-CA": "Marge contre le monorail"
   },
   "production_code": "9F10",
   "original_air_date": "1993-01-14",

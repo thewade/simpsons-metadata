@@ -1,7 +1,9 @@
 {
   "id": "s22e03",
   "titles": {
-    "en": "MoneyBART"
+    "en": "MoneyBART",
+    "fr-FR": "Bart-ball",
+    "fr-CA": "Parties honteuses"
   },
   "production_code": "MABF18",
   "original_air_date": "2010-10-10",

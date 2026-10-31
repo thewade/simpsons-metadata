@@ -1,7 +1,9 @@
 {
   "id": "s23e03",
   "titles": {
-    "en": "Treehouse of Horror XXII"
+    "en": "Treehouse of Horror XXII",
+    "fr-FR": "Simpson Horror Show XXII",
+    "fr-CA": "Spécial d'Halloween XXII"
   },
   "production_code": "NABF19",
   "original_air_date": "2011-10-30",

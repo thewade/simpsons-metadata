@@ -1,7 +1,9 @@
 {
   "id": "s22e18",
   "titles": {
-    "en": "The Great Simpsina"
+    "en": "The Great Simpsina",
+    "fr-FR": "La Grande Simpsina",
+    "fr-CA": "La grande Simpsina"
   },
   "production_code": "NABF11",
   "original_air_date": "2011-04-10",

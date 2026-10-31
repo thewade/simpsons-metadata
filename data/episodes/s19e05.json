@@ -1,7 +1,9 @@
 {
   "id": "s19e05",
   "titles": {
-    "en": "Treehouse of Horror XVIII"
+    "en": "Treehouse of Horror XVIII",
+    "fr-FR": "Simpson Horror Show XVIII",
+    "fr-CA": "Spécial d’Halloween XVIII"
   },
   "production_code": "JABF16",
   "original_air_date": "2007-11-04",

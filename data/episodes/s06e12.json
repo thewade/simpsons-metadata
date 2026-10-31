@@ -1,7 +1,9 @@
 {
   "id": "s06e12",
   "titles": {
-    "en": "Homer the Great"
+    "en": "Homer the Great",
+    "fr-FR": "Homer le grand",
+    "fr-CA": "Homer le grand"
   },
   "production_code": "2F09",
   "original_air_date": "1995-01-08",

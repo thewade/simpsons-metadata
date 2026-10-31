@@ -1,7 +1,9 @@
 {
   "id": "s14e01",
   "titles": {
-    "en": "Treehouse of Horror XIII"
+    "en": "Treehouse of Horror XIII",
+    "fr-FR": "Simpson Horror Show XIII",
+    "fr-CA": "Spécial d’Halloween XIII"
   },
   "production_code": "DABF19",
   "original_air_date": "2002-11-03",

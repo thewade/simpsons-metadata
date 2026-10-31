@@ -1,7 +1,9 @@
 {
   "id": "s25e18",
   "titles": {
-    "en": "Days of Future Future"
+    "en": "Days of Future Future",
+    "fr-FR": "Le Futur Avenir",
+    "fr-CA": "Les lendemains de l'avenir"
   },
   "production_code": "SABF13",
   "original_air_date": "2014-04-13",

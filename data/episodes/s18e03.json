@@ -1,7 +1,9 @@
 {
   "id": "s18e03",
   "titles": {
-    "en": "Please Homer, Don't Hammer 'Em"
+    "en": "Please Homer, Don't Hammer 'Em",
+    "fr-FR": "C'est moi qui l'ai fait !",
+    "fr-CA": "Swing la Marge dans l'fond d'la boîte à outils"
   },
   "production_code": "HABF20",
   "original_air_date": "2006-09-24",

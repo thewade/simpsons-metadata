@@ -1,7 +1,9 @@
 {
   "id": "s13e03",
   "titles": {
-    "en": "Homer the Moe"
+    "en": "Homer the Moe",
+    "fr-FR": "Les Maux de Moe",
+    "fr-CA": "Homer à boire"
   },
   "production_code": "CABF20",
   "original_air_date": "2001-11-18",

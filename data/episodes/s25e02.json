@@ -1,7 +1,9 @@
 {
   "id": "s25e02",
   "titles": {
-    "en": "Treehouse of Horror XXIV"
+    "en": "Treehouse of Horror XXIV",
+    "fr-FR": "Simpson Horror Show XXIV",
+    "fr-CA": "Spécial d'Halloween XXIV"
   },
   "production_code": "RABF16",
   "original_air_date": "2013-10-06",

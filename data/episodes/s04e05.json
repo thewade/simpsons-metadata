@@ -1,7 +1,9 @@
 {
   "id": "s04e05",
   "titles": {
-    "en": "Treehouse of Horror III"
+    "en": "Treehouse of Horror III",
+    "fr-FR": "Simpson Horror Show III",
+    "fr-CA": "Spécial d'Halloween III"
   },
   "production_code": "9F04",
   "original_air_date": "1992-10-29",

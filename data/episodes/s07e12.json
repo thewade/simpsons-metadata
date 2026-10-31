@@ -1,7 +1,9 @@
 {
   "id": "s07e12",
   "titles": {
-    "en": "Team Homer"
+    "en": "Team Homer",
+    "fr-FR": "Une partie Homérique",
+    "fr-CA": "Homer et son équipe"
   },
   "production_code": "3F10",
   "original_air_date": "1996-01-07",

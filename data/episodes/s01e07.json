@@ -1,7 +1,9 @@
 {
   "id": "s01e07",
   "titles": {
-    "en": "The Call of the Simpsons"
+    "en": "The Call of the Simpsons",
+    "fr-FR": "L'Abominable Homme des bois",
+    "fr-CA": "Les Simpson, coureurs de bois"
   },
   "production_code": "7G09",
   "original_air_date": "1990-02-18",

@@ -1,7 +1,9 @@
 {
   "id": "s22e13",
   "titles": {
-    "en": "The Blue and the Gray"
+    "en": "The Blue and the Gray",
+    "fr-FR": "Le Bleu et le Gris",
+    "fr-CA": "Le gris m'donne les bleus"
   },
   "production_code": "NABF06",
   "original_air_date": "2011-02-13",

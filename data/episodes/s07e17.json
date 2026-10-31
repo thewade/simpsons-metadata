@@ -1,7 +1,9 @@
 {
   "id": "s07e17",
   "titles": {
-    "en": "Homer the Smithers"
+    "en": "Homer the Smithers",
+    "fr-FR": "Homer fait son Smithers",
+    "fr-CA": "Homer le substitut"
   },
   "production_code": "3F14",
   "original_air_date": "1996-02-25",
