@@ -16,6 +16,11 @@ class BuildTests(unittest.TestCase):
             out = Path(temp) / "dist" / "v1"
             count = module.build(ROOT / "data", out)
             self.assertGreaterEqual(count, 2)
+            self.assertTrue((out.parent / "index.html").is_file())
+            api_spec = json.loads((out.parent / "openapi.json").read_text())
+            self.assertEqual(api_spec["openapi"], "3.0.3")
+            self.assertIn("/v1/episodes.json", api_spec["paths"])
+            self.assertIn("/v1/shorts/disney-plus.json", api_spec["paths"])
             production = json.loads((out / "production.json").read_text())
             self.assertEqual(production["7G08"], {"dataset": "episodes", "id": "s01e01"})
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})

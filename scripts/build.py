@@ -133,6 +133,43 @@ def json_bytes(obj):
     return (json.dumps(obj, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
 
 
+def openapi_document():
+    """Minimal OpenAPI contract for the published, read-only static JSON datasets."""
+    descriptions = {
+        "episodes": "Regular television episodes, keyed by sXXeYY.",
+        "seasons": "Season catalogue entries, including legacy Amazon listings.",
+        "shorts/tracey-ullman": "Tracey Ullman shorts, keyed by production code.",
+        "shorts/disney-plus": "Disney+ shorts, keyed by production code.",
+        "commercials": "Commercials, keyed by production code.",
+        "specials": "Specials and other non-regular items.",
+        "production": "Production code to dataset and internal ID.",
+        "tvdb": "TVDB identifier to dataset and internal ID.",
+        "tmdb": "TMDB identifier to dataset and internal ID.",
+        "imdb": "IMDb identifier to dataset and internal ID.",
+        "manifest": "Published filenames and their SHA-256 hashes.",
+    }
+    paths = {}
+    for name, description in descriptions.items():
+        path = f"/v1/{DATASETS[name]}" if name in DATASETS else f"/v1/{name}.json"
+        paths[path] = {"get": {
+            "tags": ["Datasets" if name in DATASETS else "Lookups" if name != "manifest" else "Metadata"],
+            "summary": description,
+            "operationId": "get_" + name.replace("/", "_").replace("-", "_"),
+            "responses": {"200": {
+                "description": "JSON object (static, no server-side filtering).",
+                "content": {"application/json": {"schema": {"type": "object", "additionalProperties": True}}}
+            }}
+        }}
+    return {
+        "openapi": "3.0.3",
+        "info": {"title": "Simpsons Metadata API", "version": "1.0.0",
+                 "description": "Free, static, read-only JSON datasets. Each endpoint returns a complete dataset or mapping. No authentication, pagination or server-side queries. Metadata is licensed CC BY 4.0."},
+        "servers": [{"url": "https://api.simpsonseh.com", "description": "Production"}],
+        "tags": [{"name": "Datasets"}, {"name": "Lookups"}, {"name": "Metadata"}],
+        "paths": paths,
+    }
+
+
 def build(source, destination):
     catalog, index = collect(source)  # validate everything before touching output
     files = {DATASETS[d]: records for d, records in catalog.items()}
@@ -154,6 +191,12 @@ def build(source, destination):
     headers_source = ROOT / "deployment" / "_headers"
     if headers_source.exists():
         shutil.copyfile(headers_source, destination.parent / "_headers")
+    # Publish a static Swagger UI landing page and an OpenAPI description.
+    swagger_page = ROOT / "deployment" / "index.html"
+    if swagger_page.exists():
+        shutil.copyfile(swagger_page, destination.parent / "index.html")
+    spec = openapi_document()
+    (destination.parent / "openapi.json").write_bytes(json_bytes(spec))
     (destination.parent / ".nojekyll").touch()
     return sum(map(len, catalog.values()))
 
