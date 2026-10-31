@@ -1,0 +1,31 @@
+{
+  "id": "s17",
+  "titles": {
+    "en": "Season Seventeen"
+  },
+  "legacy": {
+    "row_id": 17,
+    "season_code": "17",
+    "years": "(2005-2006)",
+    "original_columns": [
+      17,
+      "17",
+      "Season Seventeen",
+      "(2005-2006)",
+      "http://www.amazon.ca/dp/B00MC4AJEY?tag=simpeh-20",
+      "B00MC4AJEY",
+      "http://www.amazon.ca/dp/B00MC4AIIG?tag=simpeh-20",
+      "B00MC4AIIG"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B00MC4AJEY?tag=simpeh-20",
+      "asin": "B00MC4AJEY"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B00MC4AIIG?tag=simpeh-20",
+      "asin": "B00MC4AIIG"
+    }
+  ]
+}

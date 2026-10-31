@@ -1,0 +1,19 @@
+{
+  "id": "s10e18",
+  "titles": {
+    "en": "Simpsons Bible Stories"
+  },
+  "production_code": "AABF14",
+  "original_air_date": "1999-04-04",
+  "overall_number": 221,
+  "legacy": {
+    "type": "episode",
+    "epnum": 221,
+    "tcode": "S10E18",
+    "season": 10,
+    "sepisode": 18,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/AABF14.html",
+    "Wikipedia": "Simpsons Bible Stories"
+  }
+}

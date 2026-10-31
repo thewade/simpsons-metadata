@@ -1,0 +1,19 @@
+{
+  "id": "s05e01",
+  "titles": {
+    "en": "Homer's Barbershop Quartet"
+  },
+  "production_code": "9F21",
+  "original_air_date": "1993-09-30",
+  "overall_number": 82,
+  "legacy": {
+    "type": "episode",
+    "epnum": 82,
+    "tcode": "S05E01",
+    "season": 5,
+    "sepisode": 1,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/9F21.html",
+    "Wikipedia": "Homer's Barbershop Quartet"
+  }
+}

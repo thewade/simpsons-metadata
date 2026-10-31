@@ -1,0 +1,27 @@
+{
+  "id": "s04",
+  "titles": {
+    "en": "Season Four"
+  },
+  "legacy": {
+    "row_id": 4,
+    "season_code": "4",
+    "years": "(1992-1993)",
+    "original_columns": [
+      4,
+      "4",
+      "Season Four",
+      "(1992-1993)",
+      "http://www.amazon.ca/dp/B007H9COFQ?tag=simpeh-20",
+      "B007H9COFQ",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COFQ?tag=simpeh-20",
+      "asin": "B007H9COFQ"
+    }
+  ]
+}

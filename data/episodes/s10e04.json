@@ -1,0 +1,19 @@
+{
+  "id": "s10e04",
+  "titles": {
+    "en": "Treehouse of Horror IX"
+  },
+  "production_code": "AABF01",
+  "original_air_date": "1998-10-25",
+  "overall_number": 207,
+  "legacy": {
+    "type": "episode",
+    "epnum": 207,
+    "tcode": "S10E04",
+    "season": 10,
+    "sepisode": 4,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/AABF01.html",
+    "Wikipedia": "Treehouse of Horror IX"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "s01e13",
+  "titles": {
+    "en": "Some Enchanted Evening"
+  },
+  "production_code": "7G01",
+  "original_air_date": "1990-05-13",
+  "overall_number": 13,
+  "legacy": {
+    "type": "episode",
+    "epnum": 13,
+    "tcode": "S01E13",
+    "season": 1,
+    "sepisode": 13,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G01.html",
+    "Wikipedia": "Some Enchanted Evening (The Simpsons)"
+  }
+}

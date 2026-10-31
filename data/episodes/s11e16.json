@@ -1,0 +1,19 @@
+{
+  "id": "s11e16",
+  "titles": {
+    "en": "Pygmoelian"
+  },
+  "production_code": "BABF12",
+  "original_air_date": "2000-02-27",
+  "overall_number": 242,
+  "legacy": {
+    "type": "episode",
+    "epnum": 242,
+    "tcode": "S11E16",
+    "season": 11,
+    "sepisode": 16,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF12.html",
+    "Wikipedia": "Pygmoelian"
+  }
+}

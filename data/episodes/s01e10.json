@@ -1,0 +1,19 @@
+{
+  "id": "s01e10",
+  "titles": {
+    "en": "Homer's Night Out"
+  },
+  "production_code": "7G10",
+  "original_air_date": "1990-03-25",
+  "overall_number": 10,
+  "legacy": {
+    "type": "episode",
+    "epnum": 10,
+    "tcode": "S01E10",
+    "season": 1,
+    "sepisode": 10,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G10.html",
+    "Wikipedia": "Homer's Night Out"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "s13",
+  "titles": {
+    "en": "Season Thirteen"
+  },
+  "legacy": {
+    "row_id": 13,
+    "season_code": "13",
+    "years": "(2001-2002)",
+    "original_columns": [
+      13,
+      "13",
+      "Season Thirteen",
+      "(2001-2002)",
+      "http://www.amazon.ca/dp/B003LXBTC6?tag=simpeh-20",
+      "B003LXBTC6",
+      "http://www.amazon.ca/dp/B003LXBTBW?tag=simpeh-20",
+      "B003LXBTBW"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B003LXBTC6?tag=simpeh-20",
+      "asin": "B003LXBTC6"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B003LXBTBW?tag=simpeh-20",
+      "asin": "B003LXBTBW"
+    }
+  ]
+}

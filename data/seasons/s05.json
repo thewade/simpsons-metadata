@@ -1,0 +1,27 @@
+{
+  "id": "s05",
+  "titles": {
+    "en": "Season Five"
+  },
+  "legacy": {
+    "row_id": 5,
+    "season_code": "5",
+    "years": "(1993-1994)",
+    "original_columns": [
+      5,
+      "5",
+      "Season Five",
+      "(1993-1994)",
+      "http://www.amazon.ca/dp/B007H9COII?tag=simpeh-20",
+      "B007H9COII",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COII?tag=simpeh-20",
+      "asin": "B007H9COII"
+    }
+  ]
+}

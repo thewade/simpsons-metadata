@@ -1,0 +1,27 @@
+{
+  "id": "s08",
+  "titles": {
+    "en": "Season Eight"
+  },
+  "legacy": {
+    "row_id": 8,
+    "season_code": "8",
+    "years": "(1996-1997)",
+    "original_columns": [
+      8,
+      "8",
+      "Season Eight",
+      "(1996-1997)",
+      "http://www.amazon.ca/dp/B007H9COR4?tag=simpeh-20",
+      "B007H9COR4",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COR4?tag=simpeh-20",
+      "asin": "B007H9COR4"
+    }
+  ]
+}

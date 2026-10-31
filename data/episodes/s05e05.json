@@ -1,0 +1,19 @@
+{
+  "id": "s05e05",
+  "titles": {
+    "en": "Treehouse of Horror IV"
+  },
+  "production_code": "1F04",
+  "original_air_date": "1993-10-28",
+  "overall_number": 86,
+  "legacy": {
+    "type": "episode",
+    "epnum": 86,
+    "tcode": "S05E05",
+    "season": 5,
+    "sepisode": 5,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/1F04.html",
+    "Wikipedia": "Treehouse of Horror IV"
+  }
+}

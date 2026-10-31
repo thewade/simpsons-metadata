@@ -1,0 +1,19 @@
+{
+  "id": "s07e17",
+  "titles": {
+    "en": "Homer the Smithers"
+  },
+  "production_code": "3F14",
+  "original_air_date": "1996-02-25",
+  "overall_number": 145,
+  "legacy": {
+    "type": "episode",
+    "epnum": 145,
+    "tcode": "S07E17",
+    "season": 7,
+    "sepisode": 17,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/3F14.html",
+    "Wikipedia": "Homer the Smithers"
+  }
+}

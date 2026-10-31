@@ -57,3 +57,26 @@ class BuildTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class StreamingTests(unittest.TestCase):
+    def _parse(self, disney):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 's01e01.json'
+            path.write_text(json.dumps({'id':'s01e01', 'titles':{'en':'Example'},'streaming':{'disney_plus': disney}}))
+            return module.parse_record(path,'episodes')
+
+    def test_accepts_verified_shape(self):
+        record = self._parse({'content_id':'abc-123','url':'https://www.disneyplus.com/play/abc-123'})
+        self.assertEqual(record['streaming']['disney_plus']['content_id'], 'abc-123')
+
+    def test_rejects_mismatched_content_id(self):
+        with self.assertRaisesRegex(module.ValidationError, 'disagree'):
+            self._parse({'content_id':'abc','url':'https://www.disneyplus.com/play/xyz'})
+
+    def test_rejects_unsupported_playback_parameters(self):
+        with self.assertRaisesRegex(module.ValidationError, 'no query/fragment'):
+            self._parse({'url':'https://www.disneyplus.com/play/abc?t=30'})
+
+    def test_rejects_unsupported_language_overrides(self):
+        with self.assertRaisesRegex(module.ValidationError, 'unsupported Disney'):
+            self._parse({'content_id':'abc','audio_language':'fr-CA'})

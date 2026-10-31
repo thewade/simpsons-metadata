@@ -1,0 +1,19 @@
+{
+  "id": "s07e06",
+  "titles": {
+    "en": "Treehouse of Horror VI"
+  },
+  "production_code": "3F04",
+  "original_air_date": "1995-10-29",
+  "overall_number": 134,
+  "legacy": {
+    "type": "episode",
+    "epnum": 134,
+    "tcode": "S07E06",
+    "season": 7,
+    "sepisode": 6,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/3F04.html",
+    "Wikipedia": "Treehouse of Horror VI"
+  }
+}

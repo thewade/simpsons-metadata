@@ -1,0 +1,19 @@
+{
+  "id": "s12e21",
+  "titles": {
+    "en": "Simpsons Tall Tales"
+  },
+  "production_code": "CABF17",
+  "original_air_date": "2001-05-20",
+  "overall_number": 269,
+  "legacy": {
+    "type": "episode",
+    "epnum": 269,
+    "tcode": "S12E21",
+    "season": 12,
+    "sepisode": 21,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/CABF17.html",
+    "Wikipedia": "Simpsons Tall Tales"
+  }
+}

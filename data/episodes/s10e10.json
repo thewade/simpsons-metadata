@@ -1,0 +1,19 @@
+{
+  "id": "s10e10",
+  "titles": {
+    "en": "Viva Ned Flanders"
+  },
+  "production_code": "AABF06",
+  "original_air_date": "1999-01-10",
+  "overall_number": 213,
+  "legacy": {
+    "type": "episode",
+    "epnum": 213,
+    "tcode": "S10E10",
+    "season": 10,
+    "sepisode": 10,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/AABF06.html",
+    "Wikipedia": "Viva Ned Flanders"
+  }
+}

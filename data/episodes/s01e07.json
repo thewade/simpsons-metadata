@@ -1,0 +1,19 @@
+{
+  "id": "s01e07",
+  "titles": {
+    "en": "The Call of the Simpsons"
+  },
+  "production_code": "7G09",
+  "original_air_date": "1990-02-18",
+  "overall_number": 7,
+  "legacy": {
+    "type": "episode",
+    "epnum": 7,
+    "tcode": "S01E07",
+    "season": 1,
+    "sepisode": 7,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G09.html",
+    "Wikipedia": "The Call of the Simpsons"
+  }
+}

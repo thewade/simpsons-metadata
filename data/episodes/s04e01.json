@@ -1,0 +1,19 @@
+{
+  "id": "s04e01",
+  "titles": {
+    "en": "Kamp Krusty"
+  },
+  "production_code": "8F24",
+  "original_air_date": "1992-09-24",
+  "overall_number": 60,
+  "legacy": {
+    "type": "episode",
+    "epnum": 60,
+    "tcode": "S04E01",
+    "season": 4,
+    "sepisode": 1,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/8F24.html",
+    "Wikipedia": "Kamp Krusty"
+  }
+}

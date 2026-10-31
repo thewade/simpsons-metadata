@@ -1,0 +1,19 @@
+{
+  "id": "s12e02",
+  "titles": {
+    "en": "A Tale of Two Springfields"
+  },
+  "production_code": "BABF20",
+  "original_air_date": "2000-11-05",
+  "overall_number": 250,
+  "legacy": {
+    "type": "episode",
+    "epnum": 250,
+    "tcode": "S12E02",
+    "season": 12,
+    "sepisode": 2,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF20.html",
+    "Wikipedia": "A Tale of Two Springfields"
+  }
+}

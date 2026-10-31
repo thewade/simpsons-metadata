@@ -1,0 +1,27 @@
+{
+  "id": "s10",
+  "titles": {
+    "en": "Season Ten"
+  },
+  "legacy": {
+    "row_id": 10,
+    "season_code": "10",
+    "years": "(1998-1999)",
+    "original_columns": [
+      10,
+      "10",
+      "Season Ten",
+      "(1998-1999)",
+      "http://www.amazon.ca/dp/B007H9CO7Y?tag=simpeh-20",
+      "B007H9CO7Y",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9CO7Y?tag=simpeh-20",
+      "asin": "B007H9CO7Y"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "s12",
+  "titles": {
+    "en": "Season Twelve"
+  },
+  "legacy": {
+    "row_id": 12,
+    "season_code": "12",
+    "years": "(2000-2001)",
+    "original_columns": [
+      12,
+      "12",
+      "Season Twelve",
+      "(2000-2001)",
+      "http://www.amazon.ca/dp/B002BWIRVY?tag=simpeh-20",
+      "B002BWIRVY",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B002BWIRVY?tag=simpeh-20",
+      "asin": "B002BWIRVY"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "s12e12",
+  "titles": {
+    "en": "Tennis the Menace"
+  },
+  "production_code": "CABF07",
+  "original_air_date": "2001-02-11",
+  "overall_number": 260,
+  "legacy": {
+    "type": "episode",
+    "epnum": 260,
+    "tcode": "S12E12",
+    "season": 12,
+    "sepisode": 12,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/CABF07.html",
+    "Wikipedia": "Tennis the Menace"
+  }
+}

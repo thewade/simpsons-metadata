@@ -1,0 +1,19 @@
+{
+  "id": "Movie1",
+  "titles": {
+    "en": "The Simpsons Movie"
+  },
+  "production_code": "Movie1",
+  "original_air_date": "2007-07-26",
+  "type": "movie",
+  "legacy": {
+    "type": "movie",
+    "epnum": 0,
+    "tcode": "Movie",
+    "season": 0,
+    "sepisode": 0,
+    "SHOWCODE": 1,
+    "SNPP": "",
+    "Wikipedia": "The Simpsons Movie"
+  }
+}

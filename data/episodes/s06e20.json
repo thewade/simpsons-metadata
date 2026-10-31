@@ -1,0 +1,19 @@
+{
+  "id": "s06e20",
+  "titles": {
+    "en": "Two Dozen and One Greyhounds"
+  },
+  "production_code": "2F18",
+  "original_air_date": "1995-04-09",
+  "overall_number": 123,
+  "legacy": {
+    "type": "episode",
+    "epnum": 123,
+    "tcode": "S06E20",
+    "season": 6,
+    "sepisode": 20,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/2F18.html",
+    "Wikipedia": "Two Dozen and One Greyhounds"
+  }
+}

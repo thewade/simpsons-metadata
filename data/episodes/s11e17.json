@@ -1,0 +1,19 @@
+{
+  "id": "s11e17",
+  "titles": {
+    "en": "Bart to the Future"
+  },
+  "production_code": "BABF13",
+  "original_air_date": "2000-03-19",
+  "overall_number": 243,
+  "legacy": {
+    "type": "episode",
+    "epnum": 243,
+    "tcode": "S11E17",
+    "season": 11,
+    "sepisode": 17,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF13.html",
+    "Wikipedia": "Bart to the Future"
+  }
+}

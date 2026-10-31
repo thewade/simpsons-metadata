@@ -1,0 +1,19 @@
+{
+  "id": "s05e16",
+  "titles": {
+    "en": "Homer Loves Flanders"
+  },
+  "production_code": "1F14",
+  "original_air_date": "1994-03-17",
+  "overall_number": 97,
+  "legacy": {
+    "type": "episode",
+    "epnum": 97,
+    "tcode": "S05E16",
+    "season": 5,
+    "sepisode": 16,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/1F14.html",
+    "Wikipedia": "Homer Loves Flanders"
+  }
+}

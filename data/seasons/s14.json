@@ -1,0 +1,31 @@
+{
+  "id": "s14",
+  "titles": {
+    "en": "Season Fourteen"
+  },
+  "legacy": {
+    "row_id": 14,
+    "season_code": "14",
+    "years": "(2002-2003)",
+    "original_columns": [
+      14,
+      "14",
+      "Season Fourteen",
+      "(2002-2003)",
+      "http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20",
+      "B005SOH7QS",
+      "http://www.amazon.ca/dp/B005SOH7MW?tag=simpeh-20",
+      "B005SOH7MW"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20",
+      "asin": "B005SOH7QS"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B005SOH7MW?tag=simpeh-20",
+      "asin": "B005SOH7MW"
+    }
+  ]
+}

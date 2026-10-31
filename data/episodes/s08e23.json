@@ -1,0 +1,19 @@
+{
+  "id": "s08e23",
+  "titles": {
+    "en": "Homer's Enemy"
+  },
+  "production_code": "4F19",
+  "original_air_date": "1997-05-04",
+  "overall_number": 176,
+  "legacy": {
+    "type": "episode",
+    "epnum": 176,
+    "tcode": "S08E23",
+    "season": 8,
+    "sepisode": 23,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/4F19.html",
+    "Wikipedia": "Homer's Enemy"
+  }
+}

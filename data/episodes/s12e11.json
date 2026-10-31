@@ -1,0 +1,19 @@
+{
+  "id": "s12e11",
+  "titles": {
+    "en": "Worst Episode Ever"
+  },
+  "production_code": "CABF08",
+  "original_air_date": "2001-02-04",
+  "overall_number": 259,
+  "legacy": {
+    "type": "episode",
+    "epnum": 259,
+    "tcode": "S12E11",
+    "season": 12,
+    "sepisode": 11,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/CABF08.html",
+    "Wikipedia": "Worst Episode Ever"
+  }
+}

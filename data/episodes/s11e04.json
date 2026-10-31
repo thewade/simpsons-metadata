@@ -1,0 +1,19 @@
+{
+  "id": "s11e04",
+  "titles": {
+    "en": "Treehouse of Horror X"
+  },
+  "production_code": "BABF01",
+  "original_air_date": "1999-10-31",
+  "overall_number": 230,
+  "legacy": {
+    "type": "episode",
+    "epnum": 230,
+    "tcode": "S11E04",
+    "season": 11,
+    "sepisode": 4,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF01.html",
+    "Wikipedia": "Treehouse of Horror X"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "s02e03",
+  "titles": {
+    "en": "Treehouse of Horror"
+  },
+  "production_code": "7F04",
+  "original_air_date": "1990-10-25",
+  "overall_number": 16,
+  "legacy": {
+    "type": "episode",
+    "epnum": 16,
+    "tcode": "S02E03",
+    "season": 2,
+    "sepisode": 3,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7F04.html",
+    "Wikipedia": "Treehouse of Horror"
+  }
+}

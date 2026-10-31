@@ -1,0 +1,31 @@
+{
+  "id": "s15",
+  "titles": {
+    "en": "Season Fifteen"
+  },
+  "legacy": {
+    "row_id": 15,
+    "season_code": "15",
+    "years": "(2003-2004)",
+    "original_columns": [
+      15,
+      "15",
+      "Season Fifteen",
+      "(2003-2004)",
+      "http://www.amazon.ca/dp/B008AITJ2Y?tag=simpeh-20",
+      "B008AITJ2Y",
+      "http://www.amazon.ca/dp/B008AITJ2O?tag=simpeh-20",
+      "B008AITJ2O"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B008AITJ2Y?tag=simpeh-20",
+      "asin": "B008AITJ2Y"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B008AITJ2O?tag=simpeh-20",
+      "asin": "B008AITJ2O"
+    }
+  ]
+}

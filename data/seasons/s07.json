@@ -1,0 +1,27 @@
+{
+  "id": "s07",
+  "titles": {
+    "en": "Season Seven"
+  },
+  "legacy": {
+    "row_id": 7,
+    "season_code": "7",
+    "years": "(1995-1996)",
+    "original_columns": [
+      7,
+      "7",
+      "Season Seven",
+      "(1995-1996)",
+      "http://www.amazon.ca/dp/B007H9CORO?tag=simpeh-20",
+      "B007H9CORO",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9CORO?tag=simpeh-20",
+      "asin": "B007H9CORO"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "s11e06",
+  "titles": {
+    "en": "Hello Gutter, Hello Fadder"
+  },
+  "production_code": "BABF02",
+  "original_air_date": "1999-11-14",
+  "overall_number": 232,
+  "legacy": {
+    "type": "episode",
+    "epnum": 232,
+    "tcode": "S11E06",
+    "season": 11,
+    "sepisode": 6,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF02.html",
+    "Wikipedia": "Hello Gutter, Hello Fadder"
+  }
+}

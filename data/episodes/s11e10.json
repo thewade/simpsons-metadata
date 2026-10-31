@@ -1,0 +1,19 @@
+{
+  "id": "s11e10",
+  "titles": {
+    "en": "Little Big Mom"
+  },
+  "production_code": "BABF04",
+  "original_air_date": "2000-01-09",
+  "overall_number": 236,
+  "legacy": {
+    "type": "episode",
+    "epnum": 236,
+    "tcode": "S11E10",
+    "season": 11,
+    "sepisode": 10,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF04.html",
+    "Wikipedia": "Little Big Mom"
+  }
+}

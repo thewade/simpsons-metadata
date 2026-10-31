@@ -1,0 +1,19 @@
+{
+  "id": "s09e19",
+  "titles": {
+    "en": "Simpson Tide"
+  },
+  "production_code": "3G04",
+  "original_air_date": "1998-03-29",
+  "overall_number": 197,
+  "legacy": {
+    "type": "episode",
+    "epnum": 197,
+    "tcode": "S09E19",
+    "season": 9,
+    "sepisode": 19,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/3G04.html",
+    "Wikipedia": "Simpson Tide"
+  }
+}

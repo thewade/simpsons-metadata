@@ -1,0 +1,19 @@
+{
+  "id": "s01e02",
+  "titles": {
+    "en": "Bart the Genius"
+  },
+  "production_code": "7G02",
+  "original_air_date": "1990-01-14",
+  "overall_number": 2,
+  "legacy": {
+    "type": "episode",
+    "epnum": 2,
+    "tcode": "S01E02",
+    "season": 1,
+    "sepisode": 2,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G02.html",
+    "Wikipedia": "Bart the Genius"
+  }
+}

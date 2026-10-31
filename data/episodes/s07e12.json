@@ -1,0 +1,19 @@
+{
+  "id": "s07e12",
+  "titles": {
+    "en": "Team Homer"
+  },
+  "production_code": "3F10",
+  "original_air_date": "1996-01-07",
+  "overall_number": 140,
+  "legacy": {
+    "type": "episode",
+    "epnum": 140,
+    "tcode": "S07E12",
+    "season": 7,
+    "sepisode": 12,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/3F10.html",
+    "Wikipedia": "Team Homer"
+  }
+}

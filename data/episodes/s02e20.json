@@ -1,0 +1,19 @@
+{
+  "id": "s02e20",
+  "titles": {
+    "en": "The War of the Simpsons"
+  },
+  "production_code": "7F20",
+  "original_air_date": "1991-05-02",
+  "overall_number": 33,
+  "legacy": {
+    "type": "episode",
+    "epnum": 33,
+    "tcode": "S02E20",
+    "season": 2,
+    "sepisode": 20,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7F20.html",
+    "Wikipedia": "The War of the Simpsons"
+  }
+}

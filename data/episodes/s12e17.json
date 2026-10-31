@@ -1,0 +1,19 @@
+{
+  "id": "s12e17",
+  "titles": {
+    "en": "Simpson Safari"
+  },
+  "production_code": "CABF13",
+  "original_air_date": "2001-04-01",
+  "overall_number": 265,
+  "legacy": {
+    "type": "episode",
+    "epnum": 265,
+    "tcode": "S12E17",
+    "season": 12,
+    "sepisode": 17,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/CABF13.html",
+    "Wikipedia": "Simpson Safari"
+  }
+}

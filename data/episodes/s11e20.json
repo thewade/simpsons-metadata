@@ -1,0 +1,19 @@
+{
+  "id": "s11e20",
+  "titles": {
+    "en": "Last Tap Dance in Springfield"
+  },
+  "production_code": "BABF15",
+  "original_air_date": "2000-05-07",
+  "overall_number": 246,
+  "legacy": {
+    "type": "episode",
+    "epnum": 246,
+    "tcode": "S11E20",
+    "season": 11,
+    "sepisode": 20,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF15.html",
+    "Wikipedia": "Last Tap Dance in Springfield"
+  }
+}

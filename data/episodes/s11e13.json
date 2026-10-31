@@ -1,0 +1,19 @@
+{
+  "id": "s11e13",
+  "titles": {
+    "en": "Saddlesore Galactica"
+  },
+  "production_code": "BABF09",
+  "original_air_date": "2000-02-06",
+  "overall_number": 239,
+  "legacy": {
+    "type": "episode",
+    "epnum": 239,
+    "tcode": "S11E13",
+    "season": 11,
+    "sepisode": 13,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/BABF09.html",
+    "Wikipedia": "Saddlesore Galactica"
+  }
+}

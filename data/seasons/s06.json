@@ -1,0 +1,27 @@
+{
+  "id": "s06",
+  "titles": {
+    "en": "Season Six"
+  },
+  "legacy": {
+    "row_id": 6,
+    "season_code": "6",
+    "years": "(1994-1995)",
+    "original_columns": [
+      6,
+      "6",
+      "Season Six",
+      "(1994-1995)",
+      "http://www.amazon.ca/dp/B007H9COGK?tag=simpeh-20",
+      "B007H9COGK",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COGK?tag=simpeh-20",
+      "asin": "B007H9COGK"
+    }
+  ]
+}

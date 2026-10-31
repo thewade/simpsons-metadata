@@ -1,0 +1,19 @@
+{
+  "id": "s03e07",
+  "titles": {
+    "en": "Treehouse of Horror II"
+  },
+  "production_code": "8F02",
+  "original_air_date": "1991-10-31",
+  "overall_number": 42,
+  "legacy": {
+    "type": "episode",
+    "epnum": 42,
+    "tcode": "S03E07",
+    "season": 3,
+    "sepisode": 7,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/8F02.html",
+    "Wikipedia": "Treehouse of Horror II"
+  }
+}

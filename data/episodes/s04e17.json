@@ -1,0 +1,19 @@
+{
+  "id": "s04e17",
+  "titles": {
+    "en": "Last Exit to Springfield"
+  },
+  "production_code": "9F15",
+  "original_air_date": "1993-03-11",
+  "overall_number": 76,
+  "legacy": {
+    "type": "episode",
+    "epnum": 76,
+    "tcode": "S04E17",
+    "season": 4,
+    "sepisode": 17,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/9F15.html",
+    "Wikipedia": "Last Exit to Springfield"
+  }
+}

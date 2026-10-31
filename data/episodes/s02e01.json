@@ -1,0 +1,19 @@
+{
+  "id": "s02e01",
+  "titles": {
+    "en": "Bart Gets an F"
+  },
+  "production_code": "7F03",
+  "original_air_date": "1990-10-11",
+  "overall_number": 14,
+  "legacy": {
+    "type": "episode",
+    "epnum": 14,
+    "tcode": "S02E01",
+    "season": 2,
+    "sepisode": 1,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7F03.html",
+    "Wikipedia": "Bart Gets an F"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "s01e12",
+  "titles": {
+    "en": "Krusty Gets Busted"
+  },
+  "production_code": "7G12",
+  "original_air_date": "1990-04-29",
+  "overall_number": 12,
+  "legacy": {
+    "type": "episode",
+    "epnum": 12,
+    "tcode": "S01E12",
+    "season": 1,
+    "sepisode": 12,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G12.html",
+    "Wikipedia": "Krusty Gets Busted"
+  }
+}

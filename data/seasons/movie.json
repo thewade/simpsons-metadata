@@ -1,0 +1,31 @@
+{
+  "id": "movie",
+  "titles": {
+    "en": "The Simpsons Movie"
+  },
+  "legacy": {
+    "row_id": 19,
+    "season_code": "Movie",
+    "years": "(2007)",
+    "original_columns": [
+      19,
+      "Movie",
+      "The Simpsons Movie",
+      "(2007)",
+      "http://www.amazon.ca/dp/B000WOQKAS?&tag=simpeh-20",
+      "B000WOQKAS",
+      "http://www.amazon.ca/dp/B000WOQKCG?&tag=simpeh-20",
+      "B000WOQKCG"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B000WOQKAS?&tag=simpeh-20",
+      "asin": "B000WOQKAS"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B000WOQKCG?&tag=simpeh-20",
+      "asin": "B000WOQKCG"
+    }
+  ]
+}

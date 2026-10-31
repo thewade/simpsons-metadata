@@ -1,0 +1,19 @@
+{
+  "id": "s02e10",
+  "titles": {
+    "en": "Bart Gets Hit by a Car"
+  },
+  "production_code": "7F10",
+  "original_air_date": "1991-01-10",
+  "overall_number": 23,
+  "legacy": {
+    "type": "episode",
+    "epnum": 23,
+    "tcode": "S02E10",
+    "season": 2,
+    "sepisode": 10,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7F10.html",
+    "Wikipedia": "Bart Gets Hit by a Car"
+  }
+}

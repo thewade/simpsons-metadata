@@ -1,0 +1,31 @@
+{
+  "id": "s16",
+  "titles": {
+    "en": "Season Sixteen"
+  },
+  "legacy": {
+    "row_id": 16,
+    "season_code": "16",
+    "years": "(2004-2005)",
+    "original_columns": [
+      16,
+      "16",
+      "Season Sixteen",
+      "(2004-2005)",
+      "http://www.amazon.ca/dp/B00F9VOAKQ?tag=simpeh-20",
+      "B00F9VOAKQ",
+      "http://www.amazon.ca/dp/B00F9VO9UW?tag=simpeh-20",
+      "B00F9VO9UW"
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B00F9VOAKQ?tag=simpeh-20",
+      "asin": "B00F9VOAKQ"
+    },
+    {
+      "url": "http://www.amazon.ca/dp/B00F9VO9UW?tag=simpeh-20",
+      "asin": "B00F9VO9UW"
+    }
+  ]
+}

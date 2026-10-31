@@ -1,0 +1,19 @@
+{
+  "id": "s06e12",
+  "titles": {
+    "en": "Homer the Great"
+  },
+  "production_code": "2F09",
+  "original_air_date": "1995-01-08",
+  "overall_number": 115,
+  "legacy": {
+    "type": "episode",
+    "epnum": 115,
+    "tcode": "S06E12",
+    "season": 6,
+    "sepisode": 12,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/2F09.html",
+    "Wikipedia": "Homer the Great"
+  }
+}

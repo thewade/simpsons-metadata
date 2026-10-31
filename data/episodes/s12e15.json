@@ -1,0 +1,19 @@
+{
+  "id": "s12e15",
+  "titles": {
+    "en": "Hungry, Hungry Homer"
+  },
+  "production_code": "CABF09",
+  "original_air_date": "2001-03-04",
+  "overall_number": 263,
+  "legacy": {
+    "type": "episode",
+    "epnum": 263,
+    "tcode": "S12E15",
+    "season": 12,
+    "sepisode": 15,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/CABF09.html",
+    "Wikipedia": "Hungry, Hungry Homer"
+  }
+}

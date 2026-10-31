@@ -1,0 +1,27 @@
+{
+  "id": "s01",
+  "titles": {
+    "en": "Season One"
+  },
+  "legacy": {
+    "row_id": 1,
+    "season_code": "1",
+    "years": "(1989-1990)",
+    "original_columns": [
+      1,
+      "1",
+      "Season One",
+      "(1989-1990)",
+      "http://www.amazon.ca/dp/B007H9CO7O?tag=simpeh-20",
+      "B007H9CO7O",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9CO7O?tag=simpeh-20",
+      "asin": "B007H9CO7O"
+    }
+  ]
+}

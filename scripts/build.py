@@ -6,6 +6,7 @@ from datetime import date
 from hashlib import sha256
 import json
 from pathlib import Path
+from urllib.parse import urlparse
 import re
 import shutil
 import sys
@@ -13,6 +14,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DATASETS = {
     "episodes": "episodes.json",
+    "seasons": "seasons.json",
     "shorts/tracey-ullman": "shorts/tracey-ullman.json",
     "shorts/disney-plus": "shorts/disney-plus.json",
     "commercials": "commercials.json",
@@ -53,7 +55,7 @@ def parse_record(path, dataset):
             raise ValidationError(f"{path}: expected aired ID such as s01e01")
     elif not OTHER_ID.fullmatch(ident):
         raise ValidationError(f"{path}: invalid production-code ID")
-    if dataset != "episodes" and record.get("production_code") != ident:
+    if dataset not in ("episodes", "seasons") and record.get("production_code") != ident:
         raise ValidationError(f"{path}: non-episode id must equal production_code")
     titles = record.get("titles")
     if not isinstance(titles, dict) or not titles:
@@ -72,6 +74,29 @@ def parse_record(path, dataset):
             date.fromisoformat(value)
         except ValueError as exc:
             raise ValidationError(f"{path}: original_air_date must be YYYY-MM-DD") from exc
+    streaming = record.get("streaming", {})
+    if not isinstance(streaming, dict):
+        raise ValidationError(f"{path}: streaming must be an object")
+    disney = streaming.get("disney_plus")
+    if disney is not None:
+        if not isinstance(disney, dict) or not disney:
+            raise ValidationError(f"{path}: streaming.disney_plus must be a nonempty object")
+        allowed = {"content_id", "url"}
+        if set(disney) - allowed:
+            raise ValidationError(f"{path}: unsupported Disney+ playback field(s): {sorted(set(disney) - allowed)}")
+        content_id = disney.get("content_id")
+        url = disney.get("url")
+        if content_id is not None and (not isinstance(content_id, str) or not re.fullmatch(r"[A-Za-z0-9-]+", content_id)):
+            raise ValidationError(f"{path}: invalid Disney+ content_id")
+        if url is not None:
+            if not isinstance(url, str):
+                raise ValidationError(f"{path}: Disney+ url must be a string")
+            parsed = urlparse(url)
+            if parsed.scheme != "https" or parsed.hostname not in {"disneyplus.com", "www.disneyplus.com"} or not re.fullmatch(r"/play/[A-Za-z0-9-]+/?", parsed.path) or parsed.query or parsed.fragment:
+                raise ValidationError(f"{path}: Disney+ url must be a direct https://www.disneyplus.com/play/<id> link (no query/fragment)")
+            url_id = parsed.path.strip("/").split("/")[-1]
+            if content_id is not None and content_id != url_id:
+                raise ValidationError(f"{path}: Disney+ URL and content_id disagree")
     return record
 
 
@@ -125,6 +150,10 @@ def build(source, destination):
         checksums[relative] = sha256(payload).hexdigest()
     (destination / "manifest.json").write_bytes(json_bytes({"api_version": 1, "files": checksums}))
     # GitHub Pages should not run Jekyll on the published tree.
+    # Cloudflare Pages custom headers; GitHub Pages ignores _headers safely.
+    headers_source = ROOT / "deployment" / "_headers"
+    if headers_source.exists():
+        shutil.copyfile(headers_source, destination.parent / "_headers")
     (destination.parent / ".nojekyll").touch()
     return sum(map(len, catalog.values()))
 

@@ -1,0 +1,19 @@
+{
+  "id": "s04e05",
+  "titles": {
+    "en": "Treehouse of Horror III"
+  },
+  "production_code": "9F04",
+  "original_air_date": "1992-10-29",
+  "overall_number": 64,
+  "legacy": {
+    "type": "episode",
+    "epnum": 64,
+    "tcode": "S04E05",
+    "season": 4,
+    "sepisode": 5,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/9F04.html",
+    "Wikipedia": "Treehouse of Horror III"
+  }
+}

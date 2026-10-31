@@ -1,0 +1,27 @@
+{
+  "id": "s02",
+  "titles": {
+    "en": "Season Two"
+  },
+  "legacy": {
+    "row_id": 2,
+    "season_code": "2",
+    "years": "(1990-1991)",
+    "original_columns": [
+      2,
+      "2",
+      "Season Two",
+      "(1990-1991)",
+      "http://www.amazon.ca/dp/B007H9COGA?tag=simpeh-20",
+      "B007H9COGA",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COGA?tag=simpeh-20",
+      "asin": "B007H9COGA"
+    }
+  ]
+}

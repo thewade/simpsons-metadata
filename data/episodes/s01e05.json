@@ -1,0 +1,19 @@
+{
+  "id": "s01e05",
+  "titles": {
+    "en": "Bart the General"
+  },
+  "production_code": "7G05",
+  "original_air_date": "1990-02-04",
+  "overall_number": 5,
+  "legacy": {
+    "type": "episode",
+    "epnum": 5,
+    "tcode": "S01E05",
+    "season": 1,
+    "sepisode": 5,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/7G05.html",
+    "Wikipedia": "Bart the General"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "s03",
+  "titles": {
+    "en": "Season Three"
+  },
+  "legacy": {
+    "row_id": 3,
+    "season_code": "3",
+    "years": "(1991-1992)",
+    "original_columns": [
+      3,
+      "3",
+      "Season Three",
+      "(1991-1992)",
+      "http://www.amazon.ca/dp/B007H9COG0?tag=simpeh-20",
+      "B007H9COG0",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COG0?tag=simpeh-20",
+      "asin": "B007H9COG0"
+    }
+  ]
+}

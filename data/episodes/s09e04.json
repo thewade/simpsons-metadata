@@ -1,0 +1,19 @@
+{
+  "id": "s09e04",
+  "titles": {
+    "en": "Treehouse of Horror VIII"
+  },
+  "production_code": "5F02",
+  "original_air_date": "1997-10-26",
+  "overall_number": 182,
+  "legacy": {
+    "type": "episode",
+    "epnum": 182,
+    "tcode": "S09E04",
+    "season": 9,
+    "sepisode": 4,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/5F02.html",
+    "Wikipedia": "Treehouse of Horror VIII"
+  }
+}

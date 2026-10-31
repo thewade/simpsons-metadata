@@ -1,0 +1,19 @@
+{
+  "id": "s03e13",
+  "titles": {
+    "en": "Radio Bart"
+  },
+  "production_code": "8F11",
+  "original_air_date": "1992-01-09",
+  "overall_number": 48,
+  "legacy": {
+    "type": "episode",
+    "epnum": 48,
+    "tcode": "S03E13",
+    "season": 3,
+    "sepisode": 13,
+    "SHOWCODE": 0,
+    "SNPP": "episodes/8F11.html",
+    "Wikipedia": "Radio Bart"
+  }
+}

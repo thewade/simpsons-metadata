@@ -46,7 +46,7 @@ Build output is generated; **never edit it manually**. It is not committed to Gi
 - A data set can be empty; it still produces `{}`.
 - JSON formatting is pretty-printed, sorted and UTF-8 to make diffs and local use easy. Clients can HTTP-cache or pin a downloaded copy.
 - `/v1/` means consumer-facing data contract version 1. Incompatible changes require a new path. No version bump needed for ordinary additions or corrections.
-- GitHub Pages is the MVP host. A separate CDN can be added later without changing the data format. Public Pages sites should not be treated as a guaranteed unlimited-bandwidth hosting service.
+- Cloudflare Pages is the deployment target for `api.simpsonseh.com`, using GitHub integration. DreamHost remains the existing website/database host and can retain authoritative DNS. GitHub Actions validates the data; the Cloudflare build serves static files.
 - If project needs grow: consider immutable release snapshots, variants for differing regional/platform titles, a full BCP 47 validator, or search tooling **when actually needed**.
 
 ## Trade-off: all non-episode items need production codes
@@ -56,3 +56,12 @@ This policy intentionally cannot represent an item with no known production code
 ## Rights
 
 The MIT license covers code, not metadata. CC BY 4.0 applies to contributors' original metadata and permits commercial reuse with attribution; it does **not** authorize copying protected third-party databases, episode descriptions or artwork. Contributors are responsible for sharing only material licensed appropriately or independently compiled facts.
+
+
+## Legacy season/catalogue records
+
+A `seasons` dataset (`data/seasons/*.json` → `dist/v1/seasons.json`) supports historical website season entries and associated Amazon listings. Values of uncertain meaning remain in `legacy.original_columns`, pending a full database schema.
+
+## Optional provider URLs and website integration
+
+Verified Disney+ episode URLs may be stored under `streaming.disney_plus` (see `STREAMING.md`). There is no assumption that URL arguments can force 4:3/16:9, captions, audio, timestamp seeks, or clipping. This is optional per record; unknown values are omitted. The old PHP/MySQL site may periodically synchronize `episodes.json` and `seasons.json` using a separate importer, but the Git-hosted JSON is canonical. That sync should use a privileged *separate* DB account and keep the site's runtime account read-only. The legacy SQL table uses MyISAM and production codes as its primary key; perform an explicit mapping and staging/transaction strategy before implementing destructive synchronization.

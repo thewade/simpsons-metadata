@@ -1,0 +1,27 @@
+{
+  "id": "s09",
+  "titles": {
+    "en": "Season Nine"
+  },
+  "legacy": {
+    "row_id": 9,
+    "season_code": "9",
+    "years": "(1997-1998)",
+    "original_columns": [
+      9,
+      "9",
+      "Season Nine",
+      "(1997-1998)",
+      "http://www.amazon.ca/dp/B007H9COS8?tag=simpeh-20",
+      "B007H9COS8",
+      "",
+      ""
+    ]
+  },
+  "amazon_listings": [
+    {
+      "url": "http://www.amazon.ca/dp/B007H9COS8?tag=simpeh-20",
+      "asin": "B007H9COS8"
+    }
+  ]
+}
