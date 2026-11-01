@@ -8,6 +8,9 @@
   "production_code": "AABF06",
   "original_air_date": "1999-01-10",
   "overall_number": 213,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Viva_Ned_Flanders"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "b18b44be-0296-4d1a-a79b-6ebc38195ac2"

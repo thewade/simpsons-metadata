@@ -8,6 +8,9 @@
   "production_code": "LABF13",
   "original_air_date": "2009-09-27",
   "overall_number": 442,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer_the_Whopper"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "0433d074-edec-4b66-9fb1-6e2905da3ce6"

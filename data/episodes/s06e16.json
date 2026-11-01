@@ -8,6 +8,9 @@
   "production_code": "2F13",
   "original_air_date": "1995-02-19",
   "overall_number": 119,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bart_vs._Australia"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "3e779896-f515-4909-ad3e-08b6b75d5cac"

@@ -8,6 +8,9 @@
   "production_code": "2F05",
   "original_air_date": "1994-11-13",
   "overall_number": 111,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lisa_on_Ice"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "eec508d9-beaa-4ee1-a21c-8013ea6a25cb"

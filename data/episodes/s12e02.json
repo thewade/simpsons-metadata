@@ -8,6 +8,9 @@
   "production_code": "BABF20",
   "original_air_date": "2000-11-05",
   "overall_number": 250,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Springfields"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "927e2db3-96ce-4175-af6c-49a562ae6190"

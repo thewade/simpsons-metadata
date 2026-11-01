@@ -59,6 +59,22 @@ class BuildTests(unittest.TestCase):
             with self.assertRaisesRegex(module.ValidationError, "language tag"):
                 module.parse_record(path, "episodes")
 
+    def test_validates_reference_links(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "s01e01.json"
+            record = {"id": "s01e01", "titles": {"en": "Example"},
+                      "links": {"wikipedia": "https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes#ep1"}}
+            path.write_text(json.dumps(record))
+            self.assertEqual(module.parse_record(path, "episodes")["links"], record["links"])
+            for invalid in (None, {}, {"wikipedia": "http://en.wikipedia.org/wiki/Example"},
+                            {"bad name": "https://example.org"},
+                            {"wikipedia": "https://user@example.org/page"}):
+                with self.subTest(links=invalid):
+                    record["links"] = invalid
+                    path.write_text(json.dumps(record))
+                    with self.assertRaisesRegex(module.ValidationError, "links|link name"):
+                        module.parse_record(path, "episodes")
+
 
 if __name__ == "__main__":
     unittest.main()

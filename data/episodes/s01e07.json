@@ -8,6 +8,9 @@
   "production_code": "7G09",
   "original_air_date": "1990-02-18",
   "overall_number": 7,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Call_of_the_Simpsons"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "b299a1fa-4cb5-4490-a981-b8e866373b0e"

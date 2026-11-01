@@ -8,6 +8,9 @@
   "production_code": "BABF01",
   "original_air_date": "1999-10-31",
   "overall_number": 230,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_X"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "2d2168ba-d77e-47cd-b2e2-d28267850689"

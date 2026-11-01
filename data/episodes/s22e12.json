@@ -8,6 +8,9 @@
   "production_code": "NABF05",
   "original_air_date": "2011-01-23",
   "overall_number": 476,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer_the_Father"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "d55ae112-96ec-49cd-947e-0c971dcbb5e2"

@@ -8,6 +8,9 @@
   "production_code": "3F14",
   "original_air_date": "1996-02-25",
   "overall_number": 145,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer_the_Smithers"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "f8f7fad6-97f9-43d9-9141-19085e4f4bea"

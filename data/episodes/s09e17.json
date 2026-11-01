@@ -8,6 +8,9 @@
   "production_code": "4F24",
   "original_air_date": "1998-03-08",
   "overall_number": 195,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lisa_the_Simpson"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "172517fb-b029-4548-a28d-fc417f78f26e"

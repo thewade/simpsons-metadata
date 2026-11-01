@@ -8,6 +8,9 @@
   "production_code": "8F24",
   "original_air_date": "1992-09-24",
   "overall_number": 60,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kamp_Krusty"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "ccad196d-c2fc-4238-bbbc-ff5bd29524c5"

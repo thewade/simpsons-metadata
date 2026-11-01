@@ -8,6 +8,9 @@
   "production_code": "9F10",
   "original_air_date": "1993-01-14",
   "overall_number": 71,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Marge_vs._the_Monorail"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "2361cbc4-30c9-4167-9fb8-e645126c0aee"

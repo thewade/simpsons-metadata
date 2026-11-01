@@ -8,6 +8,9 @@
   "production_code": "AABF15",
   "original_air_date": "1999-04-11",
   "overall_number": 222,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mom_and_Pop_Art"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "427928c5-20d0-4685-bfce-2e4cc10ac4ec"

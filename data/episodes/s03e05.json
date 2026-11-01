@@ -8,6 +8,9 @@
   "production_code": "8F04",
   "original_air_date": "1991-10-17",
   "overall_number": 40,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer_Defined"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "7a1389f2-c391-4b2c-aa3c-2e862cc79c68"

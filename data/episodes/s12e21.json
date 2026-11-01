@@ -8,6 +8,9 @@
   "production_code": "CABF17",
   "original_air_date": "2001-05-20",
   "overall_number": 269,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Simpsons_Tall_Tales"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "a65827d4-e377-4781-bb88-8e376a2d010d"

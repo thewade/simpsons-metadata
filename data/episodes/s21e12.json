@@ -8,6 +8,9 @@
   "production_code": "MABF05",
   "original_air_date": "2010-02-14",
   "overall_number": 453,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Boy_Meets_Curl"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "93cba602-d4f9-4fcb-b094-2f0ff6134d0b"

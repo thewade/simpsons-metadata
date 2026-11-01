@@ -8,6 +8,9 @@
   "production_code": "HABF01",
   "original_air_date": "2005-12-18",
   "overall_number": 365,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Simpsons_Christmas_Stories"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "812e4524-0235-4195-aae1-d4261142a30a"

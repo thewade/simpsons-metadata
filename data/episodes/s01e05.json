@@ -8,6 +8,9 @@
   "production_code": "7G05",
   "original_air_date": "1990-02-04",
   "overall_number": 5,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bart_the_General"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "84a26dec-4825-4a8d-aa15-715f033b6afc"

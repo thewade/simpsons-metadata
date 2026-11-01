@@ -8,6 +8,9 @@
   "production_code": "5F11",
   "original_air_date": "1998-02-15",
   "overall_number": 192,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Das_Bus"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "9727b41b-333f-43fd-a42f-582f80d3465d"

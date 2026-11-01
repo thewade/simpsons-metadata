@@ -8,6 +8,9 @@
   "production_code": "CABF11",
   "original_air_date": "2001-03-11",
   "overall_number": 264,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bye_Bye_Nerdie"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "13a045c8-254b-4ef8-99df-2eddbb0fa183"

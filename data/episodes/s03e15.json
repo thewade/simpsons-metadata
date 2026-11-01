@@ -8,6 +8,9 @@
   "production_code": "8F14",
   "original_air_date": "1992-02-06",
   "overall_number": 50,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer_Alone"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "d04a3f53-6737-4b4d-9767-9a52e4797571"

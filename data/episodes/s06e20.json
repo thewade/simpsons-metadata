@@ -8,6 +8,9 @@
   "production_code": "2F18",
   "original_air_date": "1995-04-09",
   "overall_number": 123,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Two_Dozen_and_One_Greyhounds"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "cf87a2a7-1a2b-484c-8e37-00c2a8e59a2a"

@@ -8,6 +8,9 @@
   "production_code": "7G02",
   "original_air_date": "1990-01-14",
   "overall_number": 2,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bart_the_Genius"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "425579ff-353b-4de6-969c-b942402a4496"

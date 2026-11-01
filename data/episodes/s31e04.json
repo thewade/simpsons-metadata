@@ -8,6 +8,9 @@
   "production_code": "YABF18",
   "original_air_date": "2019-10-20",
   "overall_number": 666,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXX"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "9a4ed8fe-cefc-486b-9d12-9c08281584b5"

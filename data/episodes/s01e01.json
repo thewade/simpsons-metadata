@@ -8,6 +8,9 @@
   "production_code": "7G08",
   "original_air_date": "1989-12-17",
   "overall_number": 1,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Simpsons_Roasting_on_an_Open_Fire"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "ffb14e5a-38db-4522-a559-3cfa52bcf4df"

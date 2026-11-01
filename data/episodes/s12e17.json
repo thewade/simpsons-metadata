@@ -8,6 +8,9 @@
   "production_code": "CABF13",
   "original_air_date": "2001-04-01",
   "overall_number": 265,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Simpson_Safari"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "5e0845ce-5089-45f7-8c77-8c5f2563a462"

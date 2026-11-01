@@ -8,6 +8,9 @@
   "production_code": "3G01",
   "original_air_date": "1997-01-12",
   "overall_number": 163,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Springfield_Files"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "ec08080c-ea45-4f8b-8a04-3c0e3fc5c29a"

@@ -8,6 +8,9 @@
   "production_code": "WABF22",
   "original_air_date": "2017-10-08",
   "overall_number": 620,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Springfield_Splendor"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "deb0534a-f902-4d07-adaa-a684909ab9fa"

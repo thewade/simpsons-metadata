@@ -66,6 +66,22 @@ def parse_record(path, dataset):
     for field in ("production_code", "tvdb", "tmdb", "imdb"):
         if field in record and (not isinstance(record[field], str) or not record[field].strip()):
             raise ValidationError(f"{path}: {field} must be a nonempty string when present")
+    if "links" in record:
+        links = record["links"]
+        if not isinstance(links, dict) or not links:
+            raise ValidationError(f"{path}: links must be a nonempty object")
+        for site, url in links.items():
+            if not isinstance(site, str) or not re.fullmatch(r"[a-z][a-z0-9_]*", site):
+                raise ValidationError(f"{path}: invalid link name {site!r}")
+            if not isinstance(url, str) or not url or url != url.strip() or re.search(r"\s", url):
+                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL")
+            try:
+                parsed = urlparse(url)
+                valid = parsed.scheme == "https" and parsed.hostname and parsed.username is None and parsed.password is None
+            except ValueError:
+                valid = False
+            if not valid:
+                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL")
     if "original_air_date" in record:
         value = record["original_air_date"]
         try:

@@ -8,6 +8,9 @@
   "production_code": "1F01",
   "original_air_date": "1993-10-21",
   "overall_number": 85,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Rosebud_(The_Simpsons)"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "9d7f9bc8-5d00-442f-a3b8-34f54be24386"

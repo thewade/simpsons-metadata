@@ -8,6 +8,9 @@
   "production_code": "GABF15",
   "original_air_date": "2005-05-15",
   "overall_number": 355,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Home_Away_from_Homer"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "7babab57-edff-4cb9-a428-b292eb5a8dd6"

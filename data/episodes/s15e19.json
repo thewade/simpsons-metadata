@@ -8,6 +8,9 @@
   "production_code": "FABF15",
   "original_air_date": "2004-05-02",
   "overall_number": 332,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Simple_Simpson"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "ed2d530b-4a19-4179-b421-822bc9ce9e32"

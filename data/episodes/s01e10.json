@@ -8,6 +8,9 @@
   "production_code": "7G10",
   "original_air_date": "1990-03-25",
   "overall_number": 10,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Homer's_Night_Out"
+  },
   "streaming": {
     "disney_plus": {
       "content_id": "be633e7d-70a6-49ff-8f92-7be7ea234917"

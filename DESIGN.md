@@ -24,6 +24,7 @@
 - A non-episode record requires `production_code`, equal to `id`.
 - An episode may include `production_code` if known.
 - `tvdb`, `tmdb`, `imdb` are optional external identifier strings. They are **not** used as internal IDs.
+- `links` is an optional, nonempty object of named HTTPS URLs, such as `"links": {"wikipedia": "https://en.wikipedia.org/wiki/..."}`. Link names use lowercase letters, digits and underscores. Verify the target against the record's identity; do not construct URLs from titles. A Wikipedia list row anchor is suitable when an episode has no standalone article.
 - Other fields such as `original_air_date` may be added as needed; YYYY-MM-DD date values are checked when that field is present.
 - Missing information is **omitted**, not filled with `null` or guessed values.
 - If multiple identifiers genuinely refer to the same item, put them in that item's record. If an identifier appears on two different records, publishing fails rather than silently choosing one.
