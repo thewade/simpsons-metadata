@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Seventeen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_17"
+  },
   "legacy": {
     "row_id": 17,
     "season_code": "17",
@@ -12,20 +15,22 @@
       "17",
       "Season Seventeen",
       "(2005-2006)",
-      "http://www.amazon.ca/dp/B00MC4AJEY?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B00MC4AJEY",
       "B00MC4AJEY",
-      "http://www.amazon.ca/dp/B00MC4AIIG?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B00MC4AIIG",
       "B00MC4AIIG"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B00MC4AJEY?tag=simpeh-20",
-      "asin": "B00MC4AJEY"
+      "url": "https://www.amazon.ca/dp/B00MC4AJEY",
+      "asin": "B00MC4AJEY",
+      "format": "dvd"
     },
     {
-      "url": "http://www.amazon.ca/dp/B00MC4AIIG?tag=simpeh-20",
-      "asin": "B00MC4AIIG"
+      "url": "https://www.amazon.ca/dp/B00MC4AIIG",
+      "asin": "B00MC4AIIG",
+      "format": "blu_ray"
     }
   ]
 }

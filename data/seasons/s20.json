@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Twenty"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_20"
+  },
   "legacy": {
     "row_id": 21,
     "season_code": "20",
@@ -14,14 +17,15 @@
       "(2008-2009)",
       "",
       "",
-      "http://www.amazon.ca/dp/B002V0B0O2?&tag=simpeh-20",
+      "https://www.amazon.ca/dp/B002V0B0O2",
       "B002V0B0O2"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B002V0B0O2?&tag=simpeh-20",
-      "asin": "B002V0B0O2"
+      "url": "https://www.amazon.ca/dp/B002V0B0O2",
+      "asin": "B002V0B0O2",
+      "format": "blu_ray"
     }
   ]
 }

@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season One"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_1"
+  },
   "legacy": {
     "row_id": 1,
     "season_code": "1",
@@ -12,7 +15,7 @@
       "1",
       "Season One",
       "(1989-1990)",
-      "http://www.amazon.ca/dp/B007H9CO7O?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9CO7O",
       "B007H9CO7O",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9CO7O?tag=simpeh-20",
-      "asin": "B007H9CO7O"
+      "url": "https://www.amazon.ca/dp/B007H9CO7O",
+      "asin": "B007H9CO7O",
+      "format": "dvd"
     }
   ]
 }

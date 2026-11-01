@@ -3,6 +3,9 @@
   "titles": {
     "en": "The Simpsons Movie"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Movie"
+  },
   "legacy": {
     "row_id": 19,
     "season_code": "Movie",
@@ -12,20 +15,22 @@
       "Movie",
       "The Simpsons Movie",
       "(2007)",
-      "http://www.amazon.ca/dp/B000WOQKAS?&tag=simpeh-20",
+      "https://www.amazon.ca/dp/B000WOQKAS",
       "B000WOQKAS",
-      "http://www.amazon.ca/dp/B000WOQKCG?&tag=simpeh-20",
+      "https://www.amazon.ca/dp/B000WOQKCG",
       "B000WOQKCG"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B000WOQKAS?&tag=simpeh-20",
-      "asin": "B000WOQKAS"
+      "url": "https://www.amazon.ca/dp/B000WOQKAS",
+      "asin": "B000WOQKAS",
+      "format": "dvd"
     },
     {
-      "url": "http://www.amazon.ca/dp/B000WOQKCG?&tag=simpeh-20",
-      "asin": "B000WOQKCG"
+      "url": "https://www.amazon.ca/dp/B000WOQKCG",
+      "asin": "B000WOQKCG",
+      "format": "blu_ray"
     }
   ]
 }

@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Four"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_4"
+  },
   "legacy": {
     "row_id": 4,
     "season_code": "4",
@@ -12,7 +15,7 @@
       "4",
       "Season Four",
       "(1992-1993)",
-      "http://www.amazon.ca/dp/B007H9COFQ?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COFQ",
       "B007H9COFQ",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COFQ?tag=simpeh-20",
-      "asin": "B007H9COFQ"
+      "url": "https://www.amazon.ca/dp/B007H9COFQ",
+      "asin": "B007H9COFQ",
+      "format": "dvd"
     }
   ]
 }

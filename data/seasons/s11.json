@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Eleven"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_11"
+  },
   "legacy": {
     "row_id": 11,
     "season_code": "11",
@@ -12,7 +15,7 @@
       "11",
       "Season Eleven",
       "(1999-2000)",
-      "http://www.amazon.ca/dp/B001DHE9EC?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B001DHE9EC",
       "B001DHE9EC",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B001DHE9EC?tag=simpeh-20",
-      "asin": "B001DHE9EC"
+      "url": "https://www.amazon.ca/dp/B001DHE9EC",
+      "asin": "B001DHE9EC",
+      "format": "dvd"
     }
   ]
 }

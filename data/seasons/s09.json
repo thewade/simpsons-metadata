@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Nine"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_9"
+  },
   "legacy": {
     "row_id": 9,
     "season_code": "9",
@@ -12,7 +15,7 @@
       "9",
       "Season Nine",
       "(1997-1998)",
-      "http://www.amazon.ca/dp/B007H9COS8?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COS8",
       "B007H9COS8",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COS8?tag=simpeh-20",
-      "asin": "B007H9COS8"
+      "url": "https://www.amazon.ca/dp/B007H9COS8",
+      "asin": "B007H9COS8",
+      "format": "dvd"
     }
   ]
 }

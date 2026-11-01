@@ -22,6 +22,7 @@ Generated files live in `dist/v1/`. Preview locally with `python3 -m http.server
 | `v1/shorts/disney-plus.json` | Disney+ shorts |
 | `v1/commercials.json` | Commercials |
 | `v1/specials.json` | Specials |
+| `v1/seasons.json` | Season catalogue and historical movie row |
 | `v1/production.json` | Production codes to `{dataset,id}` |
 | `v1/tvdb.json`, `v1/tmdb.json`, `v1/imdb.json` | External identifiers to `{dataset,id}` |
 | `v1/manifest.json` | File paths and SHA-256 checksums |
@@ -30,7 +31,7 @@ No runtime queries or per-episode HTTP endpoints. Download a dataset and (option
 
 Episode records use `links.wikipedia` for an individual English Wikipedia article. A `null` value means the absence of such an article was checked; an unknown link is omitted. The `links` object can hold other verified external URLs as they are added.
 
-The source currently contains 801 regular episodes (548 legacy imports and 253 later additions), one movie, 23 season/catalogue records (with Amazon listings), and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+The source currently contains 801 regular episodes (548 legacy imports and 253 later additions), one movie, 39 season/catalogue records (38 seasons and a historical movie row), and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licensing
 
@@ -48,7 +49,7 @@ Episode and movie records can include a `streaming.disney_plus.content_id`. The 
 
 ## Legacy website database import
 
-This starter has been populated from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The new `v1/seasons.json` preserves Amazon listing URLs and ASINs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for limitations and missing database tables. The included `scripts/import_legacy.py` can reproduce the import from the original dump.
+This starter has been populated from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The `v1/seasons.json` data now includes seasons 1–38 and Wikipedia links. Historical Amazon listings retain their ASINs and DVD/Blu-ray formats with affiliate-free HTTPS URLs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for limitations and missing database tables. The included `scripts/import_legacy.py` can reproduce the base import from the original dump.
 
 ## French episode titles
 

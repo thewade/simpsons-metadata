@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Fifteen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_15"
+  },
   "legacy": {
     "row_id": 15,
     "season_code": "15",
@@ -12,20 +15,22 @@
       "15",
       "Season Fifteen",
       "(2003-2004)",
-      "http://www.amazon.ca/dp/B008AITJ2Y?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B008AITJ2Y",
       "B008AITJ2Y",
-      "http://www.amazon.ca/dp/B008AITJ2O?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B008AITJ2O",
       "B008AITJ2O"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B008AITJ2Y?tag=simpeh-20",
-      "asin": "B008AITJ2Y"
+      "url": "https://www.amazon.ca/dp/B008AITJ2Y",
+      "asin": "B008AITJ2Y",
+      "format": "dvd"
     },
     {
-      "url": "http://www.amazon.ca/dp/B008AITJ2O?tag=simpeh-20",
-      "asin": "B008AITJ2O"
+      "url": "https://www.amazon.ca/dp/B008AITJ2O",
+      "asin": "B008AITJ2O",
+      "format": "blu_ray"
     }
   ]
 }

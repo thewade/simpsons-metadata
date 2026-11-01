@@ -8,6 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("simpsons_build", ROOT / "scripts" / "build.py")
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
+import_spec = importlib.util.spec_from_file_location("simpsons_import", ROOT / "scripts" / "import_legacy.py")
+import_module = importlib.util.module_from_spec(import_spec)
+import_spec.loader.exec_module(import_module)
 
 
 class BuildTests(unittest.TestCase):
@@ -25,6 +28,16 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(production["7G08"], {"dataset": "episodes", "id": "s01e01"})
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})
             self.assertEqual(json.loads((out / "commercials.json").read_text()), {})
+            seasons = json.loads((out / "seasons.json").read_text())
+            self.assertEqual(len(seasons), 39)
+            self.assertEqual(seasons["s38"]["links"]["wikipedia"],
+                             "https://en.wikipedia.org/wiki/The_Simpsons_season_38")
+            self.assertEqual([item["format"] for item in seasons["s14"]["amazon_listings"]],
+                             ["dvd", "blu_ray"])
+            self.assertEqual(seasons["s01"]["amazon_listings"][0]["format"], "dvd")
+            self.assertEqual(seasons["s20"]["amazon_listings"][0]["format"], "blu_ray")
+            self.assertEqual(seasons["s14"]["amazon_listings"][0]["url"],
+                             "https://www.amazon.ca/dp/B005SOH7QS")
 
     def test_rejects_duplicate_external_ids(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -78,6 +91,25 @@ class BuildTests(unittest.TestCase):
                     path.write_text(json.dumps(record))
                     with self.assertRaisesRegex(module.ValidationError, "links|link name"):
                         module.parse_record(path, "episodes")
+
+    def test_rejects_affiliate_amazon_listing(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "s14.json"
+            path.write_text(json.dumps({
+                "id": "s14", "titles": {"en": "Season Fourteen"},
+                "amazon_listings": [{"url": "https://www.amazon.ca/dp/B005SOH7QS?tag=affiliate",
+                                     "asin": "B005SOH7QS", "format": "dvd"}]
+            }))
+            with self.assertRaisesRegex(module.ValidationError, "clean HTTPS ASIN link"):
+                module.parse_record(path, "seasons")
+
+    def test_legacy_amazon_url_normalization(self):
+        self.assertEqual(
+            import_module.clean_amazon_url("http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20", "B005SOH7QS"),
+            "https://www.amazon.ca/dp/B005SOH7QS",
+        )
+        with self.assertRaisesRegex(ValueError, "disagree"):
+            import_module.clean_amazon_url("http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20", "B005SOH7MW")
 
 
 if __name__ == "__main__":

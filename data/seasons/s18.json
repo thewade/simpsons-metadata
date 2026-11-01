@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Eighteen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_18"
+  },
   "legacy": {
     "row_id": 18,
     "season_code": "18",

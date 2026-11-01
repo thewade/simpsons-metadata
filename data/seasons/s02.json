@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Two"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_2"
+  },
   "legacy": {
     "row_id": 2,
     "season_code": "2",
@@ -12,7 +15,7 @@
       "2",
       "Season Two",
       "(1990-1991)",
-      "http://www.amazon.ca/dp/B007H9COGA?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COGA",
       "B007H9COGA",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COGA?tag=simpeh-20",
-      "asin": "B007H9COGA"
+      "url": "https://www.amazon.ca/dp/B007H9COGA",
+      "asin": "B007H9COGA",
+      "format": "dvd"
     }
   ]
 }

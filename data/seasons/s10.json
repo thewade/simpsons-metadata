@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Ten"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_10"
+  },
   "legacy": {
     "row_id": 10,
     "season_code": "10",
@@ -12,7 +15,7 @@
       "10",
       "Season Ten",
       "(1998-1999)",
-      "http://www.amazon.ca/dp/B007H9CO7Y?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9CO7Y",
       "B007H9CO7Y",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9CO7Y?tag=simpeh-20",
-      "asin": "B007H9CO7Y"
+      "url": "https://www.amazon.ca/dp/B007H9CO7Y",
+      "asin": "B007H9CO7Y",
+      "format": "dvd"
     }
   ]
 }

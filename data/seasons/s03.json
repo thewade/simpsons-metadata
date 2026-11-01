@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Three"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_3"
+  },
   "legacy": {
     "row_id": 3,
     "season_code": "3",
@@ -12,7 +15,7 @@
       "3",
       "Season Three",
       "(1991-1992)",
-      "http://www.amazon.ca/dp/B007H9COG0?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COG0",
       "B007H9COG0",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COG0?tag=simpeh-20",
-      "asin": "B007H9COG0"
+      "url": "https://www.amazon.ca/dp/B007H9COG0",
+      "asin": "B007H9COG0",
+      "format": "dvd"
     }
   ]
 }

@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Twenty-One"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_21"
+  },
   "legacy": {
     "row_id": 22,
     "season_code": "21",

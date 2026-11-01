@@ -61,7 +61,9 @@ The MIT license covers code, not metadata. CC BY 4.0 applies to contributors' or
 
 ## Legacy season/catalogue records
 
-A `seasons` dataset (`data/seasons/*.json` → `dist/v1/seasons.json`) supports historical website season entries and associated Amazon listings. Values of uncertain meaning remain in `legacy.original_columns`, pending a full database schema.
+A `seasons` dataset (`data/seasons/*.json` → `dist/v1/seasons.json`) contains seasons 1–38 plus the historical movie catalogue row. Each record has `links.wikipedia` for its season or movie article. The 23 imported catalogue rows retain their legacy values; Amazon URLs in `legacy.original_columns` have affiliate parameters removed. The first Amazon slot is treated as DVD and the second as Blu-ray, consistent with the historical release pattern; individual product pages have not been reverified.
+
+When present, `amazon_listings` contains one entry per known format: `asin`, `format` (`dvd` or `blu_ray`), and a clean `https://www.amazon.ca/dp/<ASIN>` URL. A missing listing means no product URL was imported; it does not assert that no release exists.
 
 ## Optional provider URLs and website integration
 

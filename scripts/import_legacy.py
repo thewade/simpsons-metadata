@@ -3,6 +3,7 @@
 
 The SQL export is intentionally treated as an input snapshot, not executed.
 Unidentified season columns are retained in positional form.
+Season Amazon URLs are normalized without affiliate parameters.
 """
 import argparse
 import json
@@ -12,6 +13,17 @@ import sys
 
 FIELDS = ['prodcode','type','title','epnum','tcode','airdate','season','sepisode','SHOWCODE','SNPP','Wikipedia']
 LINE = re.compile(r'^INSERT INTO `([^`]+)` VALUES \((.*)\);$')
+
+
+def clean_amazon_url(url, asin):
+    if not url and not asin:
+        return ''
+    if not isinstance(asin, str) or not re.fullmatch(r'[A-Z0-9]{10}', asin):
+        raise ValueError(f'invalid Amazon ASIN: {asin!r}')
+    match = re.fullmatch(r'https?://www\.amazon\.ca/dp/([A-Z0-9]{10})(?:\?[^#]*)?', url or '')
+    if not match or match.group(1) != asin:
+        raise ValueError(f'Amazon URL and ASIN disagree: {url!r}, {asin!r}')
+    return f'https://www.amazon.ca/dp/{asin}'
 
 def parse_values(text):
     values=[]; i=0
@@ -95,8 +107,11 @@ def main():
             if ('seasons',ident) in seen:raise ValueError('duplicate season '+ident)
             seen.add(('seasons',ident))
             items=[]
-            for url,asin in ((url1,asin1),(url2,asin2)):
-                if url or asin:items.append({'url':url,'asin':asin})
+            for slot,(url,asin) in enumerate(((url1,asin1),(url2,asin2))):
+                if url or asin:
+                    clean_url=clean_amazon_url(url,asin)
+                    vals[4+slot*2]=clean_url
+                    items.append({'url':clean_url,'asin':asin,'format':'dvd' if slot==0 else 'blu_ray'})
             rec={'id':ident,'titles':{'en':label},'legacy':{'row_id':row_id,'season_code':code,'years':years,'original_columns':vals}}
             if items:rec['amazon_listings']=items
             write(args.data/'seasons'/(ident+'.json'),rec)

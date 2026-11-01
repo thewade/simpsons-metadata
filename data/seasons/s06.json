@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Six"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_6"
+  },
   "legacy": {
     "row_id": 6,
     "season_code": "6",
@@ -12,7 +15,7 @@
       "6",
       "Season Six",
       "(1994-1995)",
-      "http://www.amazon.ca/dp/B007H9COGK?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COGK",
       "B007H9COGK",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COGK?tag=simpeh-20",
-      "asin": "B007H9COGK"
+      "url": "https://www.amazon.ca/dp/B007H9COGK",
+      "asin": "B007H9COGK",
+      "format": "dvd"
     }
   ]
 }

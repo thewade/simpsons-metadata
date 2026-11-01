@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Seven"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_7"
+  },
   "legacy": {
     "row_id": 7,
     "season_code": "7",
@@ -12,7 +15,7 @@
       "7",
       "Season Seven",
       "(1995-1996)",
-      "http://www.amazon.ca/dp/B007H9CORO?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9CORO",
       "B007H9CORO",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9CORO?tag=simpeh-20",
-      "asin": "B007H9CORO"
+      "url": "https://www.amazon.ca/dp/B007H9CORO",
+      "asin": "B007H9CORO",
+      "format": "dvd"
     }
   ]
 }

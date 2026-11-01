@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Eight"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_8"
+  },
   "legacy": {
     "row_id": 8,
     "season_code": "8",
@@ -12,7 +15,7 @@
       "8",
       "Season Eight",
       "(1996-1997)",
-      "http://www.amazon.ca/dp/B007H9COR4?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B007H9COR4",
       "B007H9COR4",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B007H9COR4?tag=simpeh-20",
-      "asin": "B007H9COR4"
+      "url": "https://www.amazon.ca/dp/B007H9COR4",
+      "asin": "B007H9COR4",
+      "format": "dvd"
     }
   ]
 }

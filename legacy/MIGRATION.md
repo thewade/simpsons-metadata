@@ -7,15 +7,15 @@ This migration used the user-supplied SQL excerpt from the website database. Thi
 - 548 `episodes` rows → `data/episodes/sXXeYY.json`, aired-order ID from source `season` + `sepisode`.
 - 1 `episodes` row with type `movie` → `data/specials/Movie1.json` (kept original production-code ID).
 - 23 `seasons` insert rows → `data/seasons/sXX.json` and `data/seasons/movie.json`.
-- Two Amazon listing slots per source season row, retaining ASINs and complete URLs (including affiliate tag parameters).
-- Original `seasons` row values stored as the eight-element `legacy.original_columns` array because the supplied excerpt has **no CREATE TABLE for seasons** and field names other than the obvious labels are unverified.
+- Two Amazon listing slots per source season row, treated as DVD first and Blu-ray second based on the historical release pattern. ASINs are retained and URLs are normalized to clean HTTPS product links without affiliate parameters. Individual product pages have not been reverified.
+- Source `seasons` row values are stored as the eight-element `legacy.original_columns` array, except Amazon URLs are sanitized as above. The supplied excerpt has **no CREATE TABLE for seasons**.
 - Original `episodes` columns `type`, `epnum`, `tcode`, `season`, `sepisode`, `SHOWCODE`, `SNPP`, and `Wikipedia` are retained verbatim under `legacy`; `prodcode`, `title`, and `airdate` are represented by normalized fields.
 
 ## Preserved, but not published as content data
 
 - The `jokes` table definition and three legacy views are preserved in `legacy/database-structures.sql` for reference.
 - The excerpt contains no `INSERT INTO jokes` entries and no table definitions or rows for `actors` and `artwork`. No actual joke, actor, or artwork records can be recovered from this file.
-- `seasons` has 23 insert rows but lacks its table definition. Do not guess what the first and second Amazon product positions represent.
+- `seasons` has 23 insert rows but lacks its table definition. The dataset owner clarified that the product slots represent DVD and Blu-ray; their ordering is inferred from the historical release pattern.
 - The views `actorsjoin`, `artworkjoin`, `jokesjoin` are not published in the static API and are **not** run during conversion.
 
 ## Intentional handling

@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Nineteen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_19"
+  },
   "legacy": {
     "row_id": 20,
     "season_code": "19",

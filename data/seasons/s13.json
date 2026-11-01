@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Thirteen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_13"
+  },
   "legacy": {
     "row_id": 13,
     "season_code": "13",
@@ -12,20 +15,22 @@
       "13",
       "Season Thirteen",
       "(2001-2002)",
-      "http://www.amazon.ca/dp/B003LXBTC6?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B003LXBTC6",
       "B003LXBTC6",
-      "http://www.amazon.ca/dp/B003LXBTBW?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B003LXBTBW",
       "B003LXBTBW"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B003LXBTC6?tag=simpeh-20",
-      "asin": "B003LXBTC6"
+      "url": "https://www.amazon.ca/dp/B003LXBTC6",
+      "asin": "B003LXBTC6",
+      "format": "dvd"
     },
     {
-      "url": "http://www.amazon.ca/dp/B003LXBTBW?tag=simpeh-20",
-      "asin": "B003LXBTBW"
+      "url": "https://www.amazon.ca/dp/B003LXBTBW",
+      "asin": "B003LXBTBW",
+      "format": "blu_ray"
     }
   ]
 }

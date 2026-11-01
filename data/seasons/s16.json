@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Sixteen"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_16"
+  },
   "legacy": {
     "row_id": 16,
     "season_code": "16",
@@ -12,20 +15,22 @@
       "16",
       "Season Sixteen",
       "(2004-2005)",
-      "http://www.amazon.ca/dp/B00F9VOAKQ?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B00F9VOAKQ",
       "B00F9VOAKQ",
-      "http://www.amazon.ca/dp/B00F9VO9UW?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B00F9VO9UW",
       "B00F9VO9UW"
     ]
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B00F9VOAKQ?tag=simpeh-20",
-      "asin": "B00F9VOAKQ"
+      "url": "https://www.amazon.ca/dp/B00F9VOAKQ",
+      "asin": "B00F9VOAKQ",
+      "format": "dvd"
     },
     {
-      "url": "http://www.amazon.ca/dp/B00F9VO9UW?tag=simpeh-20",
-      "asin": "B00F9VO9UW"
+      "url": "https://www.amazon.ca/dp/B00F9VO9UW",
+      "asin": "B00F9VO9UW",
+      "format": "blu_ray"
     }
   ]
 }

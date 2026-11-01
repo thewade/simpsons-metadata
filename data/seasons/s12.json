@@ -3,6 +3,9 @@
   "titles": {
     "en": "Season Twelve"
   },
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_season_12"
+  },
   "legacy": {
     "row_id": 12,
     "season_code": "12",
@@ -12,7 +15,7 @@
       "12",
       "Season Twelve",
       "(2000-2001)",
-      "http://www.amazon.ca/dp/B002BWIRVY?tag=simpeh-20",
+      "https://www.amazon.ca/dp/B002BWIRVY",
       "B002BWIRVY",
       "",
       ""
@@ -20,8 +23,9 @@
   },
   "amazon_listings": [
     {
-      "url": "http://www.amazon.ca/dp/B002BWIRVY?tag=simpeh-20",
-      "asin": "B002BWIRVY"
+      "url": "https://www.amazon.ca/dp/B002BWIRVY",
+      "asin": "B002BWIRVY",
+      "format": "dvd"
     }
   ]
 }

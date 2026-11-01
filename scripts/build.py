@@ -84,6 +84,22 @@ def parse_record(path, dataset):
                 valid = False
             if not valid:
                 raise ValidationError(f"{path}: links.{site} must be an HTTPS URL or null")
+    if "amazon_listings" in record:
+        listings = record["amazon_listings"]
+        if dataset != "seasons" or not isinstance(listings, list) or not listings:
+            raise ValidationError(f"{path}: amazon_listings must be a nonempty season listing array")
+        formats = set()
+        for listing in listings:
+            if not isinstance(listing, dict) or set(listing) != {"url", "asin", "format"}:
+                raise ValidationError(f"{path}: each Amazon listing needs url, asin and format")
+            asin, media_format = listing["asin"], listing["format"]
+            if not isinstance(asin, str) or not re.fullmatch(r"[A-Z0-9]{10}", asin):
+                raise ValidationError(f"{path}: invalid Amazon ASIN")
+            if media_format not in ("dvd", "blu_ray") or media_format in formats:
+                raise ValidationError(f"{path}: invalid or duplicate Amazon format")
+            formats.add(media_format)
+            if listing["url"] != f"https://www.amazon.ca/dp/{asin}":
+                raise ValidationError(f"{path}: Amazon URL must be the clean HTTPS ASIN link")
     if "original_air_date" in record:
         value = record["original_air_date"]
         try:
