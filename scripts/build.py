@@ -230,15 +230,15 @@ def build(source, destination):
         path.write_bytes(payload)
         checksums[relative] = sha256(payload).hexdigest()
     (destination / "manifest.json").write_bytes(json_bytes({"api_version": 1, "files": checksums}))
-    # GitHub Pages should not run Jekyll on the published tree.
-    # Cloudflare Pages custom headers; GitHub Pages ignores _headers safely.
+    # Cloudflare Pages custom headers.
     headers_source = ROOT / "deployment" / "_headers"
     if headers_source.exists():
         shutil.copyfile(headers_source, destination.parent / "_headers")
-    # Publish a static Swagger UI landing page and an OpenAPI description.
-    swagger_page = ROOT / "deployment" / "index.html"
-    if swagger_page.exists():
-        shutil.copyfile(swagger_page, destination.parent / "index.html")
+    # Publish the consumer landing page, API explorer, and OpenAPI description.
+    for name in ("index.html", "docs.html"):
+        page = ROOT / "deployment" / name
+        if page.exists():
+            shutil.copyfile(page, destination.parent / name)
     spec = openapi_document()
     (destination.parent / "openapi.json").write_bytes(json_bytes(spec))
     (destination.parent / ".nojekyll").touch()

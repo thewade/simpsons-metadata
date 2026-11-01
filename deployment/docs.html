@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API reference · Simpsons Metadata</title>
+  <meta name="description" content="Explore the open Simpsons Metadata JSON API.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css">
+  <style>body { margin: 0; background: #fafafa; } .topbar { display: none; }
+  .intro { padding: 16px 24px; font-family: system-ui, sans-serif; background: #fff; border-bottom: 1px solid #ddd; }
+  .intro h1 { margin: 0 0 6px; font-size: 22px; } .intro p { margin: 0; line-height: 1.6; }
+  .intro a { color: #1767a5; }</style>
+</head>
+<body>
+  <header class="intro">
+    <h1>Simpsons Metadata API reference</h1>
+    <p><a href="/">← Back to API home</a> · Free public JSON datasets. No API key or server-side queries. <a href="/openapi.json">OpenAPI definition</a> · <a href="https://github.com/thewade/simpsons-metadata">GitHub / contribute</a></p>
+  </header>
+  <div id="swagger-ui"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      window.ui = SwaggerUIBundle({
+        url: '/openapi.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        displayRequestDuration: true,
+        presets: [SwaggerUIBundle.presets.apis],
+        layout: 'BaseLayout'
+      });
+    });
+  </script>
+</body>
+</html>

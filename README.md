@@ -1,66 +1,41 @@
-# Simpsons Metadata
+# Simpsons Metadata API
 
-A community-editable, static JSON metadata API for *The Simpsons*. Each source record is a single JSON file. A Python build validates the complete source tree and emits a handful of consolidated JSON datasets and lookup indexes suitable for Cloudflare Pages or GitHub Pages.
+Free, read-only JSON metadata for *The Simpsons*. Browse the API at **[api.simpsonseh.com](https://api.simpsonseh.com/)**, or use the [interactive reference](https://api.simpsonseh.com/docs.html). No account or API key is required.
 
-## Quick start
+## Get started
 
-Requires Python 3.10+; **no external packages**.
+Each dataset endpoint returns one JSON object keyed by record ID. Download a dataset, then look up the record you need:
 
-```sh
-python3 scripts/build.py
-python3 -m unittest discover -s tests -v
+```js
+const episodes = await fetch('https://api.simpsonseh.com/v1/episodes.json')
+  .then(response => response.json());
+
+console.log(episodes['s01e01'].titles.en);
+// Simpsons Roasting on an Open Fire
 ```
 
-Generated files live in `dist/v1/`. Preview locally with `python3 -m http.server 8000 --directory dist` and visit `http://localhost:8000/v1/movies.json`.
+The API is static and read-only. It does not offer server-side search, filtering, pagination, or individual record URLs. Browser requests are allowed by CORS. Unknown fields are omitted; a `null` link means its absence was checked.
 
-## Public endpoints
+## Datasets
 
-| File | Purpose |
+| Endpoint | Contents |
 | --- | --- |
-| `v1/episodes.json` | Regular episodes keyed by `sxxeyy` |
-| `v1/shorts/tracey-ullman.json` | Original Tracey Ullman shorts |
-| `v1/shorts/disney-plus.json` | Disney+ shorts |
-| `v1/commercials.json` | Commercials |
-| `v1/specials.json` | Specials other than feature films |
-| `v1/seasons.json` | Season catalogue, seasons 1–38 |
-| `v1/movies.json` | Released and announced feature films |
-| `v1/production.json` | Production codes to `{dataset,id}` |
-| `v1/tvdb.json`, `v1/tmdb.json`, `v1/imdb.json` | External identifiers to `{dataset,id}` |
-| `v1/manifest.json` | File paths and SHA-256 checksums |
+| [`/v1/episodes.json`](https://api.simpsonseh.com/v1/episodes.json) | Regular episodes, keyed by aired-order IDs such as `s01e01` |
+| [`/v1/seasons.json`](https://api.simpsonseh.com/v1/seasons.json) | Television seasons, keyed by IDs such as `s01` |
+| [`/v1/movies.json`](https://api.simpsonseh.com/v1/movies.json) | Released and announced films, keyed by IDs such as `movie-2007` |
+| [`/v1/shorts/tracey-ullman.json`](https://api.simpsonseh.com/v1/shorts/tracey-ullman.json) | Tracey Ullman shorts |
+| [`/v1/shorts/disney-plus.json`](https://api.simpsonseh.com/v1/shorts/disney-plus.json) | Disney+ shorts |
+| [`/v1/commercials.json`](https://api.simpsonseh.com/v1/commercials.json) | Commercials |
+| [`/v1/specials.json`](https://api.simpsonseh.com/v1/specials.json) | Specials other than feature films |
 
-The movie records appear only in `movies.json`. The production-code lookup points the first film's legacy code `Movie1` to its movie record.
+Some categories are currently empty and return `{}`. A record may have a `links` object for verified external pages and a `streaming` object for known provider identifiers. Omitted data is unknown, not an assertion that it does not exist.
 
-No runtime queries or per-episode HTTP endpoints. Download a dataset and (optionally) an identifier map, then query locally. The individual record JSON is source material, **not** a public endpoint.
+## Lookups and API description
 
-Episode records use `links.wikipedia` for an individual English Wikipedia article. A `null` value means the absence of such an article was checked; an unknown link is omitted. The `links` object can hold other verified external URLs as they are added.
+[`production.json`](https://api.simpsonseh.com/v1/production.json), [`tvdb.json`](https://api.simpsonseh.com/v1/tvdb.json), [`tmdb.json`](https://api.simpsonseh.com/v1/tmdb.json), and [`imdb.json`](https://api.simpsonseh.com/v1/imdb.json) map external identifiers to `{ "dataset": "...", "id": "..." }`. [`manifest.json`](https://api.simpsonseh.com/v1/manifest.json) lists the published files and their SHA-256 hashes. The machine-readable API description is [`openapi.json`](https://api.simpsonseh.com/openapi.json).
 
-The source currently contains 801 regular episodes (548 legacy imports and 253 later additions), one released movie, one announced movie, 38 season records, and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+## License and contributions
 
-## Licensing
+Original metadata contributions are licensed [CC BY 4.0](LICENSE-DATA.md); code is [MIT licensed](LICENSE). Credit **Simpsons Metadata contributors** and link to [this repository](https://github.com/thewade/simpsons-metadata) when using the metadata. This project is unaffiliated with the rights holders of *The Simpsons*.
 
-Source code: MIT ([LICENSE](LICENSE)). Original metadata contributions: Creative Commons Attribution 4.0 International ([LICENSE-DATA.md](LICENSE-DATA.md)). Contribute only data you can legally share under those terms. *The Simpsons* and related marks belong to their respective owners; this project is unaffiliated.
-
-## Deploy to Cloudflare Pages
-
-Use the Cloudflare Pages GitHub integration: build command `python3 scripts/build.py`, build output `dist`, production branch `main`. Connect `api.simpsonseh.com` as a custom domain in Pages and create the requested `api` CNAME at the authoritative DNS provider (DreamHost if unchanged). **Do not deploy GitHub Pages and Cloudflare Pages independently.** Detailed instructions: [DEPLOYMENT.md](DEPLOYMENT.md).
-
-The GitHub Actions workflow runs tests and validation only. The generated `dist/_headers` allows browser CORS requests and a five-minute cache on `/v1/*`.
-
-## Optional Disney+ episode links
-
-Episode and movie records can include a `streaming.disney_plus.content_id`. The current IDs were imported from an external dataset and have not been checked against current playback. No direct `/play/` URLs were generated. URL parameters to force 4:3, audio/subtitles or seeking are not part of the public contract. See [DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md) for source and matching details and [STREAMING.md](STREAMING.md) for the field format.
-
-## Historical SQL migration
-
-The initial records came from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The source data now includes seasons 1–38, and the historical film row is merged into its movie record. Historical Amazon listings retain their ASINs and DVD/Blu-ray formats with affiliate-free HTTPS URLs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. These JSON records in Git are now the source of truth. Edit them directly; do not re-import the old SQL. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for provenance and limitations.
-
-## French episode titles
-
-The 548 existing regular episode records include `titles.fr-FR` and `titles.fr-CA` from the workspace's `data/titles/simpsons_quebec_titles.json` (also available as CSV). Its [source note](../../data/titles/notes.txt) points to the [French Wikipedia episode list](https://fr.wikipedia.org/wiki/Liste_des_%C3%A9pisodes_des_Simpson). Rows were matched by aired overall number and season episode number, with production codes checked as a second identity signal. Nonbreaking spaces in the working list are represented as regular spaces in API titles. English title differences were mostly punctuation and capitalization. The title list reverses the API's production codes for `s24e19` and `s24e20`; their aired numbers and English titles agree, so only the French titles were added. These are sourced regional title listings, not independently verified dub transcripts.
-
-## Interactive API documentation
-
-Cloudflare Pages serves Swagger UI at the domain root (`https://api.simpsonseh.com/`).
-The OpenAPI 3.0 definition is generated at `/openapi.json`; it documents all static dataset/index endpoints.
-Both files are generated by `python3 scripts/build.py` into `dist/`, so no changes to the Cloudflare build command are needed.
-Swagger UI's pinned CSS/JavaScript files are loaded from jsDelivr CDN; the API itself remains self-hosted on Cloudflare Pages.
+The JSON records in [`data/`](data/) are the source of truth. Corrections and additions are welcome through pull requests; see [CONTRIBUTING.md](CONTRIBUTING.md). Maintainer details are in [DESIGN.md](DESIGN.md) and [DEPLOYMENT.md](DEPLOYMENT.md).
