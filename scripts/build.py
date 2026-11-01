@@ -73,15 +73,17 @@ def parse_record(path, dataset):
         for site, url in links.items():
             if not isinstance(site, str) or not re.fullmatch(r"[a-z][a-z0-9_]*", site):
                 raise ValidationError(f"{path}: invalid link name {site!r}")
+            if url is None:
+                continue
             if not isinstance(url, str) or not url or url != url.strip() or re.search(r"\s", url):
-                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL")
+                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL or null")
             try:
                 parsed = urlparse(url)
                 valid = parsed.scheme == "https" and parsed.hostname and parsed.username is None and parsed.password is None
             except ValueError:
                 valid = False
             if not valid:
-                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL")
+                raise ValidationError(f"{path}: links.{site} must be an HTTPS URL or null")
     if "original_air_date" in record:
         value = record["original_air_date"]
         try:

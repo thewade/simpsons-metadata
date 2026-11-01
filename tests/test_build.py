@@ -66,9 +66,13 @@ class BuildTests(unittest.TestCase):
                       "links": {"wikipedia": "https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes#ep1"}}
             path.write_text(json.dumps(record))
             self.assertEqual(module.parse_record(path, "episodes")["links"], record["links"])
+            record["links"] = {"wikipedia": None}
+            path.write_text(json.dumps(record))
+            self.assertIsNone(module.parse_record(path, "episodes")["links"]["wikipedia"])
             for invalid in (None, {}, {"wikipedia": "http://en.wikipedia.org/wiki/Example"},
                             {"bad name": "https://example.org"},
-                            {"wikipedia": "https://user@example.org/page"}):
+                            {"wikipedia": "https://user@example.org/page"},
+                            {"wikipedia": False}):
                 with self.subTest(links=invalid):
                     record["links"] = invalid
                     path.write_text(json.dumps(record))

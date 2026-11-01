@@ -28,7 +28,7 @@ Generated files live in `dist/v1/`. Preview locally with `python3 -m http.server
 
 No runtime queries or per-episode HTTP endpoints. Download a dataset and (optionally) an identifier map, then query locally. The individual record JSON is source material, **not** a public endpoint.
 
-Episode records include a `links.wikipedia` URL to an individual article or the episode's row in a Wikipedia list. The `links` object can hold other verified external URLs as they are added.
+Episode records use `links.wikipedia` for an individual English Wikipedia article. A `null` value means the absence of such an article was checked; an unknown link is omitted. The `links` object can hold other verified external URLs as they are added.
 
 The source currently contains 801 regular episodes (548 legacy imports and 253 later additions), one movie, 23 season/catalogue records (with Amazon listings), and one sample Tracey Ullman short. Several categories are empty. The legacy data has not been independently fact-checked. See [DESIGN.md](DESIGN.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
