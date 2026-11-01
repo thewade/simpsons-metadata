@@ -8,9 +8,6 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("simpsons_build", ROOT / "scripts" / "build.py")
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
-import_spec = importlib.util.spec_from_file_location("simpsons_import", ROOT / "scripts" / "import_legacy.py")
-import_module = importlib.util.module_from_spec(import_spec)
-import_spec.loader.exec_module(import_module)
 
 
 class BuildTests(unittest.TestCase):
@@ -131,15 +128,6 @@ class BuildTests(unittest.TestCase):
             path.write_text(json.dumps(record))
             with self.assertRaisesRegex(module.ValidationError, "movie-YYYY"):
                 module.parse_record(path, "movies")
-
-    def test_legacy_amazon_url_normalization(self):
-        self.assertEqual(
-            import_module.clean_amazon_url("http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20", "B005SOH7QS"),
-            "https://www.amazon.ca/dp/B005SOH7QS",
-        )
-        with self.assertRaisesRegex(ValueError, "disagree"):
-            import_module.clean_amazon_url("http://www.amazon.ca/dp/B005SOH7QS?tag=simpeh-20", "B005SOH7MW")
-
 
 if __name__ == "__main__":
     unittest.main()

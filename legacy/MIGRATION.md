@@ -1,6 +1,6 @@
-# Legacy MySQL import — October 31, 2026
+# Historical MySQL migration — October 31, 2026
 
-This migration used the user-supplied SQL excerpt from the website database. This is **not** a complete database backup.
+This completed migration used the user-supplied SQL excerpt from the website database. This is **not** a complete database backup. The JSON records under `data/` are now authoritative; do not use the old SQL to update them.
 
 ## Imported
 
@@ -25,12 +25,6 @@ This migration used the user-supplied SQL excerpt from the website database. Thi
 - Listings are **historical source data**, not a statement of current Amazon availability or accuracy.
 - The original starter `s01e01.json` was replaced by the imported source record; the starter `MG01` short is retained separately.
 
-## Repeat the conversion
+## Archived converter
 
-```bash
-python3 scripts/import_legacy.py /path/to/source-dump.sql
-python3 scripts/build.py
-python3 -m unittest discover -s tests -v
-```
-
-The importer refuses to overwrite records with different values. For a fresh conversion, run it against a new checkout or an empty data directory. Review imported changes before committing them to a public repo.
+`legacy/import_legacy.py` is retained only to document how the initial SQL excerpt was converted. It is deprecated, is not part of the API build or tests, and requires an explicit empty scratch output directory if run for historical inspection. New records and corrections belong directly in `data/`.

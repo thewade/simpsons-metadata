@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Import the supplied legacy SQL excerpt without requiring a MySQL server.
+"""Deprecated one-time SQL migration tool; archived for provenance only.
 
-The SQL export is intentionally treated as an input snapshot, not executed.
+The repository's JSON records are now authoritative. Run only against a
+separate, empty scratch directory to inspect the historical conversion.
+The SQL export is treated as an input snapshot, not executed.
 Unidentified season columns are retained in positional form.
 Season and movie Amazon URLs are normalized without affiliate parameters.
 """
@@ -67,8 +69,15 @@ def write(path,record):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('dump',type=Path)
-    parser.add_argument('--data',type=Path,default=Path(__file__).resolve().parents[1]/'data')
+    parser.add_argument('--data',type=Path,required=True,
+                        help='empty scratch output directory; never the canonical data/ tree')
     args=parser.parse_args()
+    args.data=args.data.resolve()
+    canonical=(Path(__file__).resolve().parents[1]/'data').resolve()
+    if args.data == canonical or args.data.is_relative_to(canonical):
+        parser.error('the canonical data/ tree is the source of truth; use a scratch directory')
+    if args.data.exists() and any(args.data.iterdir()):
+        parser.error('scratch output directory must be empty')
     counts={'episodes':0,'specials':0,'seasons':0,'movies':0}
     movie=None
     seen=set()

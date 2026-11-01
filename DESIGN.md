@@ -2,7 +2,7 @@
 
 ## Goals and non-goals
 
-- Single source of truth in Git for multiple projects; public, read-only JSON output.
+- The `data/` JSON records in Git are the single source of truth for multiple projects; public, read-only JSON output.
 - Free hosting; no database, functions, authentication, API keys or server-side query language.
 - Contributions via pull request; Git commits are the provenance trail. No separate source-tracking database.
 - The build publishes a minimal OpenAPI document for the static endpoints.
@@ -67,4 +67,4 @@ When present on a season or movie, `amazon_listings` contains one entry per know
 
 ## Optional provider URLs and website integration
 
-Verified Disney+ episode URLs may be stored under `streaming.disney_plus` (see `STREAMING.md`). There is no assumption that URL arguments can force 4:3/16:9, captions, audio, timestamp seeks, or clipping. This is optional per record; unknown values are omitted. The old PHP/MySQL site may periodically synchronize `episodes.json` and `seasons.json` using a separate importer, but the Git-hosted JSON is canonical. That sync should use a privileged *separate* DB account and keep the site's runtime account read-only. The legacy SQL table uses MyISAM and production codes as its primary key; perform an explicit mapping and staging/transaction strategy before implementing destructive synchronization.
+Verified Disney+ episode URLs may be stored under `streaming.disney_plus` (see `STREAMING.md`). There is no assumption that URL arguments can force 4:3/16:9, captions, audio, timestamp seeks, or clipping. This is optional per record; unknown values are omitted. If the old PHP/MySQL site needs metadata, it should consume the published API as a downstream copy. That integration must never write changes back into the canonical JSON from the old SQL data. The historical SQL migration tool is archived under `legacy/` and is outside the build and validation workflow.

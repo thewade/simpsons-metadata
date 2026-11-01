@@ -50,9 +50,9 @@ The GitHub Actions workflow runs tests and validation only. The generated `dist/
 
 Episode and movie records can include a `streaming.disney_plus.content_id`. The current IDs were imported from an external dataset and have not been checked against current playback. No direct `/play/` URLs were generated. URL parameters to force 4:3, audio/subtitles or seeking are not part of the public contract. See [DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md) for source and matching details and [STREAMING.md](STREAMING.md) for the field format.
 
-## Legacy website database import
+## Historical SQL migration
 
-This starter has been populated from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The source data now includes seasons 1–38, and the historical film row is merged into its movie record. Historical Amazon listings retain their ASINs and DVD/Blu-ray formats with affiliate-free HTTPS URLs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for limitations and missing database tables. The included `scripts/import_legacy.py` can reproduce the base import from the original dump.
+The initial records came from a historical SQL excerpt: 548 regular episodes, one film and 23 season/catalogue rows. The source data now includes seasons 1–38, and the historical film row is merged into its movie record. Historical Amazon listings retain their ASINs and DVD/Blu-ray formats with affiliate-free HTTPS URLs; `v1/episodes.json` preserves the old website-specific fields under `legacy`. These JSON records in Git are now the source of truth. Edit them directly; do not re-import the old SQL. See [legacy/MIGRATION.md](legacy/MIGRATION.md) for provenance and limitations.
 
 ## French episode titles
 
