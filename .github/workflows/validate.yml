@@ -26,3 +26,4 @@ jobs:
           test -s dist/openapi.json
           test -s dist/index.html
           test -s dist/docs/index.html
+          test -s dist/episodes/index.html

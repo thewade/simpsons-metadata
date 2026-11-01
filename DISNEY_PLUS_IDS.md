@@ -4,8 +4,9 @@ The `streaming.disney_plus.content_id` values came from the workspace copy of
 [`simpsons_data.json`](../../external/simpsons_data/simpsons_data.json) at
 [`colinxfleming/simpsons_data` commit `721276cad20dcafebd54d4a246187b5ee8d583aa`](https://github.com/colinxfleming/simpsons_data/tree/721276cad20dcafebd54d4a246187b5ee8d583aa).
 That repository describes its dataset as scraped from SimpsonsWorld. These IDs
-have not been checked against current Disney+ playback; the API stores IDs only,
-without constructing `/play/` URLs or asserting regional availability.
+have not been checked against current Disney+ playback. The API stores IDs only;
+the episode guide constructs `/play/` links from them as a convenience, without
+asserting current or regional availability.
 
 The import added IDs to 547 existing regular episodes and the existing movie,
 then created 253 regular episode records. Existing titles, dates, production

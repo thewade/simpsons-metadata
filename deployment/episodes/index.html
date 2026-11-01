@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17223b">
+  <meta name="description" content="Browse Simpsons episode metadata by season, with expandable details, references, and Disney+ links.">
+  <title>Episode guide · Simpsons Metadata</title>
+  <style>
+    :root { color-scheme: light; --ink:#17223b; --blue:#155b91; --muted:#526078; --paper:#f8f7f1; --line:#d8dde5; --yellow:#ffdc56; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--blue); }
+    a:focus-visible, button:focus-visible { outline:3px solid #df7331; outline-offset:3px; }
+    .skip { position:absolute; left:1rem; top:-5rem; z-index:20; padding:.5rem .8rem; background:var(--yellow); }
+    .skip:focus { top:1rem; }
+    .wrap { width:min(1180px,calc(100% - 3rem)); margin-inline:auto; }
+    .topbar { background:var(--ink); color:#fff; }
+    .topbar .wrap { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; min-height:76px; }
+    .brand { color:#fff; text-decoration:none; font-weight:800; letter-spacing:-.025em; }
+    .brand span { display:inline-grid; place-items:center; width:34px; height:34px; margin-right:.55rem; border-radius:50%; background:var(--yellow); color:var(--ink); font:800 1.25rem Georgia,serif; transform:rotate(-9deg); }
+    .topbar nav { display:flex; flex-wrap:wrap; gap:1rem 1.5rem; font-size:.9rem; font-weight:700; }
+    .topbar nav a { color:#e4eaf4; text-decoration:none; }
+    .topbar nav a:hover { color:var(--yellow); }
+    .hero { padding:4.5rem 0 4rem; background:var(--ink); color:#fff; border-top:1px solid #37445e; }
+    .eyebrow { margin:0 0 .6rem; color:#a87b00; text-transform:uppercase; letter-spacing:.17em; font-size:.71rem; font-weight:850; }
+    .hero .eyebrow { color:var(--yellow); }
+    h1,h2,h3,h4 { margin:0; line-height:1.1; letter-spacing:-.04em; }
+    h1 { font-size:clamp(2.8rem,6vw,5rem); }
+    .hero p:last-child { max-width:68ch; margin:1rem 0 0; color:#d0d9e8; font-size:1.1rem; }
+    .guide-nav { padding:1.7rem 0 2rem; border-bottom:1px solid var(--line); background:#fff; }
+    .guide-nav .lead { display:flex; align-items:center; flex-wrap:wrap; gap:.75rem 1.6rem; margin-bottom:1.2rem; font-size:.92rem; font-weight:700; }
+    .guide-nav .lead a { text-underline-offset:.22em; }
+    .season-jumps { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .season-jumps a { display:grid; place-items:center; min-width:2.45rem; min-height:2.45rem; padding:.2rem .4rem; border:1px solid #c9d0db; border-radius:5px; background:#fff; color:var(--ink); font-size:.82rem; font-weight:800; text-decoration:none; }
+    .season-jumps a:hover { border-color:var(--blue); background:#e9f2f9; }
+    .catalogue { padding:1.4rem 0 5rem; }
+    .group { padding-top:3rem; }
+    .group-heading { margin-bottom:2rem; }
+    .group-heading h2 { font-size:clamp(2.3rem,4vw,3.4rem); }
+    .season { margin:0 0 3.3rem; scroll-margin-top:1.5rem; }
+    .season-heading { display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:.7rem 1rem; padding:0 0 1rem; border-bottom:3px solid var(--ink); }
+    .season-kicker { min-height:1.1em; margin:0 0 .2rem; color:var(--muted); font-size:.8rem; font-weight:700; }
+    .season-heading h3 { font-size:clamp(1.65rem,3vw,2.2rem); scroll-margin-top:1rem; }
+    .season-meta { display:flex; align-items:center; flex-wrap:wrap; gap:.5rem 1.2rem; color:var(--muted); font-size:.84rem; }
+    .season-meta a { font-weight:750; text-underline-offset:.2em; }
+    .table-scroll { overflow-x:auto; background:#fff; border:1px solid var(--line); border-top:0; }
+    table { width:100%; min-width:760px; border-collapse:collapse; font-size:.9rem; }
+    thead { background:#edf1f5; color:#45546b; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; }
+    th,td { padding:.78rem .85rem; border-bottom:1px solid #e4e8ee; vertical-align:top; }
+    thead th { text-align:left; white-space:nowrap; }
+    th:nth-child(1),td:nth-child(1) { width:78px; }
+    th:nth-child(2),td:nth-child(2) { width:62px; }
+    th:nth-child(4),td:nth-child(4) { width:190px; }
+    th:nth-child(5),td:nth-child(5) { width:160px; }
+    th:nth-child(6),td:nth-child(6) { width:42px; }
+    tbody tr.episode-row:nth-of-type(4n+3) { background:#fafbfd; }
+    .episode-row { cursor:pointer; }
+    .episode-row:hover, .episode-row.is-open { background:#fff8d9 !important; }
+    .episode-row th { text-align:left; font-weight:700; }
+    .episode-toggle { display:block; width:100%; margin:0; padding:0; border:0; background:none; color:var(--blue); font:inherit; font-weight:800; text-align:left; cursor:pointer; }
+    .episode-toggle:hover { text-decoration:underline; text-underline-offset:.18em; }
+    td code,dd code { font:.88em ui-monospace,SFMono-Regular,Consolas,monospace; }
+    .row-arrow { color:var(--blue); font-size:1.3rem; line-height:1; text-align:center; transition:transform .15s ease; }
+    .episode-row.is-open .row-arrow { transform:rotate(180deg); }
+    [hidden] { display:none !important; }
+    .detail-row td { padding:0; background:#fffdf4; }
+    .detail-panel { padding:1.4rem clamp(1rem,3vw,2rem) 1.7rem; border-left:5px solid var(--yellow); }
+    .detail-top { display:flex; justify-content:space-between; align-items:start; gap:1rem; }
+    .detail-label { margin:0 0 .25rem; color:var(--muted); font:700 .75rem ui-monospace,SFMono-Regular,Consolas,monospace; }
+    .detail-top h4 { font-size:1.3rem; }
+    .permalink { white-space:nowrap; font-size:.82rem; font-weight:750; }
+    .detail-facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:.8rem 1.5rem; margin:1.4rem 0 0; }
+    .detail-facts div { min-width:0; }
+    .detail-facts dt { color:var(--muted); font-size:.73rem; font-weight:750; text-transform:uppercase; letter-spacing:.06em; }
+    .detail-facts dd { margin:.18rem 0 0; overflow-wrap:anywhere; }
+    .detail-links { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.25rem; }
+    .detail-links a { display:inline-flex; align-items:center; min-height:2.4rem; padding:.4rem .8rem; border:1px solid #bdd4e6; border-radius:5px; background:#f0f7fc; font-size:.85rem; font-weight:800; text-decoration:none; }
+    .detail-links a:hover { background:#e2f0fa; }
+    .no-link { color:var(--muted); font-size:.84rem; align-self:center; }
+    .legacy { max-width:720px; margin-top:1.3rem; color:var(--muted); font-size:.82rem; }
+    .legacy summary { width:max-content; cursor:pointer; color:var(--blue); font-weight:700; }
+    .legacy pre { max-height:300px; overflow:auto; margin:.6rem 0 0; padding:1rem; border:1px solid var(--line); background:#f7f9fb; color:var(--ink); font: .77rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    .empty { margin:0; padding:1.5rem; border:1px solid var(--line); background:#fff; color:var(--muted); }
+    .guide-note { max-width:85ch; margin:0 0 2rem; padding:1rem 1.2rem; border-left:4px solid var(--yellow); background:#fff; color:var(--muted); font-size:.9rem; }
+    .guide-note strong { color:var(--ink); }
+    .footer { padding:2rem 0; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    .footer .wrap { display:flex; justify-content:space-between; gap:1rem; }
+    .footer p { margin:0; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:650px) { .wrap { width:min(100% - 2rem,1180px); } .topbar .wrap { align-items:start; flex-direction:column; padding:1rem 0; gap:.6rem; } .hero { padding:3rem 0; } .detail-top { display:block; } .permalink { display:inline-block; margin-top:.8rem; } .footer .wrap { display:block; } .footer p + p { margin-top:.5rem; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .row-arrow { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#catalogue">Skip to episode tables</a>
+  <header class="topbar"><div class="wrap"><a class="brand" href="/"><span aria-hidden="true">S</span> Simpsons Metadata</a><nav aria-label="Site navigation"><a href="/">Home</a><a href="/v1/episodes.json">Raw JSON</a><a href="/docs/">API reference</a></nav></div></header>
+  <section class="hero" aria-labelledby="guide-title"><div class="wrap"><p class="eyebrow">Browse the catalogue</p><h1 id="guide-title">Episode guide</h1><p>{{EPISODE_COUNT}} numbered episode records across {{SEASON_COUNT}} season entries. Select an episode to reveal its extra metadata, references, and Disney+ link when a content ID is available.</p></div></section>
+  <aside class="guide-nav"><div class="wrap"><div class="lead"><a href="#classic">Seasons 1–20</a><a href="#modern">Season 21 onward</a><a href="/v1/episodes.json">Download episodes.json ↗</a></div><nav class="season-jumps" aria-label="Jump to a season"><!-- SEASON_JUMPS --></nav></div></aside>
+  <main id="catalogue" class="wrap catalogue">
+    <p class="guide-note"><strong>About these links:</strong> Disney+ links are formed from stored content IDs. The IDs have not been rechecked against current playback, and availability can vary by region or subscription. This guide shows numbered regular episodes in this API; some Disney+ exclusive episodes are not yet represented.</p>
+    <noscript><p class="guide-note">Enable JavaScript to expand episode rows. The <a href="/v1/episodes.json">complete JSON dataset</a> remains available without it.</p></noscript>
+    <!-- EPISODE_TABLES -->
+  </main>
+  <footer class="footer"><div class="wrap"><p>Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>.</p><p><a href="/">API home</a> · <a href="https://github.com/thewade/simpsons-metadata">Source &amp; contributions</a></p></div></footer>
+  <script>
+    function setOpen(row, open) {
+      const button = row.querySelector('.episode-toggle');
+      const details = document.getElementById(button.getAttribute('aria-controls'));
+      button.setAttribute('aria-expanded', String(open));
+      details.hidden = !open;
+      row.classList.toggle('is-open', open);
+    }
+    document.addEventListener('click', event => {
+      const row = event.target.closest('.episode-row');
+      if (!row) return;
+      const button = row.querySelector('.episode-toggle');
+      setOpen(row, button.getAttribute('aria-expanded') !== 'true');
+    });
+    function openEpisodeFromHash() {
+      let id;
+      try { id = decodeURIComponent(location.hash.slice(1)); }
+      catch { return; }
+      const row = document.getElementById(id);
+      if (row && row.classList.contains('episode-row')) setOpen(row, true);
+    }
+    window.addEventListener('hashchange', openEpisodeFromHash);
+    openEpisodeFromHash();
+  </script>
+</body>
+</html>

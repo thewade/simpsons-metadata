@@ -11,6 +11,20 @@ spec.loader.exec_module(module)
 
 
 class BuildTests(unittest.TestCase):
+    def test_episode_guide_escapes_metadata_and_links_only_known_ids(self):
+        guide = module.render_episode_guide({
+            "seasons": {"s01": {"id": "s01"}},
+            "episodes": {"s01e01": {
+                "id": "s01e01", "titles": {"en": "<script>alert(1)</script>"},
+                "links": {"wikipedia": None},
+                "streaming": {"disney_plus": {"content_id": "id?part"}},
+            }},
+        })
+        self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", guide)
+        self.assertNotIn("<script>alert(1)</script>", guide)
+        self.assertIn("No standalone English Wikipedia article", guide)
+        self.assertIn("https://www.disneyplus.com/play/id%3Fpart", guide)
+
     def test_build_outputs_expected_maps(self):
         with tempfile.TemporaryDirectory() as temp:
             out = Path(temp) / "dist" / "v1"
@@ -19,6 +33,16 @@ class BuildTests(unittest.TestCase):
             self.assertTrue((out.parent / "index.html").is_file())
             self.assertTrue((out.parent / "docs" / "index.html").is_file())
             self.assertIn('href="/docs/"', (out.parent / "index.html").read_text())
+            guide = (out.parent / "episodes" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('href="/episodes/"', (out.parent / "index.html").read_text())
+            self.assertEqual(guide.count('<tr class="episode-row"'),
+                             len(json.loads((out / "episodes.json").read_text())))
+            self.assertIn('id="classic"', guide)
+            self.assertIn('id="modern"', guide)
+            self.assertIn('id="season-38"', guide)
+            self.assertIn('id="s01e01-details" hidden', guide)
+            self.assertIn('https://www.disneyplus.com/play/ffb14e5a-38db-4522-a559-3cfa52bcf4df', guide)
+            self.assertNotIn('href="https://www.disneyplus.com/play/not-ported-over"', guide)
             api_spec = json.loads((out.parent / "openapi.json").read_text())
             self.assertEqual(api_spec["openapi"], "3.0.3")
             self.assertIn("/v1/episodes.json", api_spec["paths"])

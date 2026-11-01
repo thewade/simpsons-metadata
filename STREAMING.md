@@ -23,3 +23,5 @@ Either `url` or `content_id` may be provided; both must agree if supplied. Value
 - Do not upload video clips or copyrighted subtitles as part of this metadata project without permission.
 
 Disney+ content IDs have been imported for many records; see [DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md) for their source, matching decisions, and limitations. Consumers can add verified direct links individually through pull requests.
+
+The public episode guide at `/episodes/` constructs `https://www.disneyplus.com/play/<content_id>` links when an ID is present. These convenience links are generated for the website only; the API still publishes the ID without asserting that the target currently plays or is available in a given region. A separately verified `streaming.disney_plus.url` may still be added to a record.

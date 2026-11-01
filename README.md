@@ -1,6 +1,6 @@
 # Simpsons Metadata API
 
-Free, read-only JSON metadata for *The Simpsons*. Browse the API at **[api.simpsonseh.com](https://api.simpsonseh.com/)**, or use the [interactive reference](https://api.simpsonseh.com/docs/). No account or API key is required.
+Free, read-only JSON metadata for *The Simpsons*. Start at **[api.simpsonseh.com](https://api.simpsonseh.com/)**, browse the [episode guide](https://api.simpsonseh.com/episodes/), or use the [interactive API reference](https://api.simpsonseh.com/docs/). No account or API key is required.
 
 ## Get started
 
@@ -29,6 +29,8 @@ The API is static and read-only. It does not offer server-side search, filtering
 | [`/v1/specials.json`](https://api.simpsonseh.com/v1/specials.json) | Specials other than feature films |
 
 Some categories are currently empty and return `{}`. A record may have a `links` object for verified external pages and a `streaming` object for known provider identifiers. Omitted data is unknown, not an assertion that it does not exist.
+
+The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episodes into season tables. Select a row for regional titles, references, archived source fields, and a Disney+ link when a content ID is stored. Those playback links are built from imported IDs and are not a guarantee of current or regional availability.
 
 ## Lookups and API description
 

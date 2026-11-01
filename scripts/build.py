@@ -2,11 +2,13 @@
 """Validate record JSON and compile consolidated, static API datasets."""
 
 import argparse
+from collections import defaultdict
 from datetime import date
 from hashlib import sha256
+from html import escape
 import json
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 import re
 import shutil
 import sys
@@ -215,8 +217,111 @@ def openapi_document():
     }
 
 
+def render_episode_guide(catalog):
+    """Render the numbered episodes as accessible, expandable season tables."""
+    template = (ROOT / "deployment" / "episodes" / "index.html").read_text(encoding="utf-8")
+    by_season = defaultdict(list)
+    for record in catalog["episodes"].values():
+        season_number = int(record["id"].split("e", 1)[0][1:])
+        by_season[season_number].append(record)
+    numbers = sorted({int(key[1:]) for key in catalog["seasons"]} | set(by_season))
+    h = lambda value: escape(str(value), quote=True)
+    jumps = "".join(f'<a href="#season-{number:02}">{number}</a>' for number in numbers)
+    groups = []
+    for first, last, label, anchor in ((1, 20, "Seasons 1–20", "classic"),
+                                        (21, float("inf"), "Season 21 onward", "modern")):
+        members = [number for number in numbers if first <= number <= last]
+        if not members:
+            continue
+        sections = []
+        for number in members:
+            records = sorted(by_season[number], key=lambda record: int(record["id"].split("e", 1)[1]))
+            season = catalog["seasons"].get(f"s{number:02}", {})
+            dates = [record["original_air_date"] for record in records if "original_air_date" in record]
+            years = sorted({value[:4] for value in dates})
+            year_label = years[0] if len(years) == 1 else f"{years[0]}–{years[-1]}" if years else ""
+            season_link = season.get("links", {}).get("wikipedia")
+            season_link_html = (f'<a href="{h(season_link)}" target="_blank" rel="noopener noreferrer">Season article ↗</a>'
+                                if season_link else "")
+            heading = (f'<header class="season-heading"><div><p class="season-kicker">{h(year_label)}</p>'
+                       f'<h3 id="season-{number:02}">Season {number}</h3></div>'
+                       f'<div class="season-meta"><span>{len(records)} numbered episodes</span>{season_link_html}</div></header>')
+            if not records:
+                sections.append(f'<section class="season">{heading}<p class="empty">No numbered episode records in this season yet.</p></section>')
+                continue
+            rows = []
+            for record in records:
+                ident = record["id"]
+                episode_number = int(ident.split("e", 1)[1])
+                title = record["titles"].get("en", next(iter(record["titles"].values())))
+                aired = record.get("original_air_date")
+                displayed_date = (f'{date.fromisoformat(aired).strftime("%B")} {date.fromisoformat(aired).day}, '
+                                  f'{date.fromisoformat(aired).year}') if aired else "—"
+                date_html = f'<time datetime="{h(aired)}">{h(displayed_date)}</time>' if aired else "—"
+                production = record.get("production_code", "—")
+                overall = record.get("overall_number", "—")
+                details_id = f"{ident}-details"
+                rows.append(
+                    f'<tr class="episode-row" id="{h(ident)}"><td>{h(overall)}</td><td>{episode_number}</td>'
+                    f'<th scope="row"><button type="button" class="episode-toggle" aria-expanded="false" '
+                    f'aria-controls="{h(details_id)}">{h(title)}</button></th><td>{date_html}</td>'
+                    f'<td><code>{h(production)}</code></td><td class="row-arrow" aria-hidden="true">⌄</td></tr>'
+                )
+                facts = []
+                for language, translated in record["titles"].items():
+                    if language != "en":
+                        facts.append(f'<div><dt>Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
+                for key, field_label in (("tvdb", "TVDB"), ("tmdb", "TMDB"), ("imdb", "IMDb")):
+                    if key in record:
+                        facts.append(f'<div><dt>{field_label}</dt><dd><code>{h(record[key])}</code></dd></div>')
+                fact_html = f'<dl class="detail-facts">{"".join(facts)}</dl>' if facts else ""
+                links = []
+                for site, url in record.get("links", {}).items():
+                    if url is None:
+                        if site == "wikipedia":
+                            links.append('<span class="no-link">No standalone English Wikipedia article</span>')
+                    else:
+                        name = "Wikipedia" if site == "wikipedia" else site.replace("_", " ").title()
+                        links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{h(name)} ↗</a>')
+                disney = record.get("streaming", {}).get("disney_plus", {})
+                content_id = disney.get("content_id")
+                disney_url = (f'https://www.disneyplus.com/play/{quote(content_id, safe="")}'
+                              if content_id else disney.get("url"))
+                if disney_url:
+                    links.append(f'<a href="{h(disney_url)}" target="_blank" rel="noopener noreferrer">Open on Disney+ ↗</a>')
+                links_html = f'<div class="detail-links">{"".join(links)}</div>' if links else '<p class="no-link">No external links recorded.</p>'
+                legacy = record.get("legacy")
+                legacy_html = (f'<details class="legacy"><summary>Archived source fields</summary>'
+                               f'<pre>{h(json.dumps(legacy, ensure_ascii=False, indent=2))}</pre></details>') if legacy else ""
+                rows.append(
+                    f'<tr class="detail-row" id="{h(details_id)}" hidden><td colspan="6"><div class="detail-panel">'
+                    f'<div class="detail-top"><div><p class="detail-label">{h(ident)} · Episode details</p>'
+                    f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}">Link to episode</a></div>'
+                    f'{fact_html}{links_html}{legacy_html}</div></td></tr>'
+                )
+            table = ('<div class="table-scroll"><table><thead><tr><th scope="col">Overall</th><th scope="col">No.</th>'
+                     '<th scope="col">Episode</th><th scope="col">Original air date</th>'
+                     '<th scope="col">Production code</th><th scope="col"><span class="sr-only">Details</span></th>'
+                     f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
+            sections.append(f'<section class="season">{heading}{table}</section>')
+        groups.append(f'<section class="group" id="{anchor}"><div class="group-heading"><p class="eyebrow">Episode catalogue</p>'
+                      f'<h2>{label}</h2></div>{"".join(sections)}</section>')
+    replacements = {
+        "{{EPISODE_COUNT}}": str(len(catalog["episodes"])),
+        "{{SEASON_COUNT}}": str(len(numbers)),
+        "<!-- SEASON_JUMPS -->": jumps,
+        "<!-- EPISODE_TABLES -->": "".join(groups),
+    }
+    for marker, content in replacements.items():
+        if template.count(marker) != 1:
+            raise ValidationError(f"Episode guide template must contain exactly one {marker}")
+        template = template.replace(marker, content)
+    return template
+
+
 def build(source, destination):
     catalog, index = collect(source)  # validate everything before touching output
+    episode_html = render_episode_guide(catalog)
     files = {DATASETS[d]: records for d, records in catalog.items()}
     files.update({f"{scheme}.json": records for scheme, records in index.items()})
     if destination.exists():
@@ -234,13 +339,16 @@ def build(source, destination):
     headers_source = ROOT / "deployment" / "_headers"
     if headers_source.exists():
         shutil.copyfile(headers_source, destination.parent / "_headers")
-    # Publish the consumer landing page, API explorer, and OpenAPI description.
+    # Publish the consumer pages, API explorer, and OpenAPI description.
     for name in ("index.html", "docs/index.html"):
         page = ROOT / "deployment" / name
         if page.exists():
             target = destination.parent / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(page, target)
+    episode_page = destination.parent / "episodes" / "index.html"
+    episode_page.parent.mkdir(parents=True, exist_ok=True)
+    episode_page.write_text(episode_html, encoding="utf-8")
     spec = openapi_document()
     (destination.parent / "openapi.json").write_bytes(json_bytes(spec))
     (destination.parent / ".nojekyll").touch()
