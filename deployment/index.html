@@ -115,7 +115,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/" aria-label="Simpsons Metadata API home"><span class="brand-mark" aria-hidden="true">S</span><span>Simpsons Metadata<small>Public JSON API</small></span></a>
-      <nav aria-label="Primary navigation"><a href="#datasets">Datasets</a><a href="#getting-started">Get started</a><a href="https://github.com/thewade/simpsons-metadata">GitHub</a><a class="nav-docs" href="/docs.html">API reference ↗</a></nav>
+      <nav aria-label="Primary navigation"><a href="#datasets">Datasets</a><a href="#getting-started">Get started</a><a href="https://github.com/thewade/simpsons-metadata">GitHub</a><a class="nav-docs" href="/docs/">API reference ↗</a></nav>
     </div>
   </header>
   <main id="main">
@@ -125,7 +125,7 @@
           <span class="eyebrow">Open data · version 1</span>
           <h1 id="hero-title">Springfield, <em>in structured data.</em></h1>
           <p class="hero-lede">Explore <em>The Simpsons</em> episodes, seasons, films, and more through simple, public JSON files. Ready for your project, with no account or API key.</p>
-          <div class="actions"><a class="button button-primary" href="#datasets">Explore datasets <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/docs.html">Open API reference</a></div>
+          <div class="actions"><a class="button button-primary" href="#datasets">Explore datasets <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/docs/">Open API reference</a></div>
           <ul class="hero-facts"><li>Read-only JSON</li><li>HTTPS + CORS</li><li>No API key</li></ul>
         </div>
         <div class="sample" aria-label="Example JSON response excerpt">
@@ -159,14 +159,14 @@
       </div>
     </section>
     <section class="section how" id="getting-started" aria-labelledby="start-title">
-      <div class="wrap how-grid"><div><p class="kicker">Make a request</p><h2 id="start-title">Start with one fetch.</h2><p>Responses are keyed by IDs such as <code>s01e01</code>. There are no per-record URLs or server-side filters: fetch a dataset and query it locally.</p><a href="/docs.html">Explore every endpoint in the API reference →</a></div><div class="how-code"><div class="label">JavaScript example</div><pre><code>const episodes = await fetch(
+      <div class="wrap how-grid"><div><p class="kicker">Make a request</p><h2 id="start-title">Start with one fetch.</h2><p>Responses are keyed by IDs such as <code>s01e01</code>. There are no per-record URLs or server-side filters: fetch a dataset and query it locally.</p><a href="/docs/">Explore every endpoint in the API reference →</a></div><div class="how-code"><div class="label">JavaScript example</div><pre><code>const episodes = await fetch(
   'https://api.simpsonseh.com/v1/episodes.json'
 ).then(response => response.json());
 
 console.log(episodes['s01e01'].titles.en);
 <span class="comment">// Simpsons Roasting on an Open Fire</span></code></pre></div></div>
     </section>
-    <section class="section" aria-labelledby="more-title"><div class="wrap"><div class="section-head"><div><p class="kicker">More ways in</p><h2 id="more-title">Explore and integrate.</h2></div></div><div class="resources"><div class="resource"><h3>Find a record</h3><p>Production, TVDB, TMDB, and IMDb lookup maps point an external ID to its dataset and record ID.</p><a href="/v1/production.json">Open production lookup →</a></div><div class="resource"><h3>Inspect the contract</h3><p>Browse the interactive reference or read the machine-readable OpenAPI description.</p><a href="/docs.html">Open API reference →</a></div><div class="resource"><h3>Track changes</h3><p>The manifest lists published files and SHA-256 hashes for clients that cache datasets.</p><a href="/v1/manifest.json">View manifest →</a></div></div></div></section>
+    <section class="section" aria-labelledby="more-title"><div class="wrap"><div class="section-head"><div><p class="kicker">More ways in</p><h2 id="more-title">Explore and integrate.</h2></div></div><div class="resources"><div class="resource"><h3>Find a record</h3><p>Production, TVDB, TMDB, and IMDb lookup maps point an external ID to its dataset and record ID.</p><a href="/v1/production.json">Open production lookup →</a></div><div class="resource"><h3>Inspect the contract</h3><p>Browse the interactive reference or read the machine-readable OpenAPI description.</p><a href="/docs/">Open API reference →</a></div><div class="resource"><h3>Track changes</h3><p>The manifest lists published files and SHA-256 hashes for clients that cache datasets.</p><a href="/v1/manifest.json">View manifest →</a></div></div></div></section>
   </main>
   <footer><div class="wrap"><p>Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>. Unaffiliated with the rights holders of <em>The Simpsons</em>.</p><p><a href="https://github.com/thewade/simpsons-metadata">Source &amp; contributions</a> · <a href="/openapi.json">OpenAPI JSON</a></p></div></footer>
 </body>

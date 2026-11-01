@@ -235,10 +235,12 @@ def build(source, destination):
     if headers_source.exists():
         shutil.copyfile(headers_source, destination.parent / "_headers")
     # Publish the consumer landing page, API explorer, and OpenAPI description.
-    for name in ("index.html", "docs.html"):
+    for name in ("index.html", "docs/index.html"):
         page = ROOT / "deployment" / name
         if page.exists():
-            shutil.copyfile(page, destination.parent / name)
+            target = destination.parent / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(page, target)
     spec = openapi_document()
     (destination.parent / "openapi.json").write_bytes(json_bytes(spec))
     (destination.parent / ".nojekyll").touch()

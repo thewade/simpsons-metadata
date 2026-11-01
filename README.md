@@ -1,6 +1,6 @@
 # Simpsons Metadata API
 
-Free, read-only JSON metadata for *The Simpsons*. Browse the API at **[api.simpsonseh.com](https://api.simpsonseh.com/)**, or use the [interactive reference](https://api.simpsonseh.com/docs.html). No account or API key is required.
+Free, read-only JSON metadata for *The Simpsons*. Browse the API at **[api.simpsonseh.com](https://api.simpsonseh.com/)**, or use the [interactive reference](https://api.simpsonseh.com/docs/). No account or API key is required.
 
 ## Get started
 

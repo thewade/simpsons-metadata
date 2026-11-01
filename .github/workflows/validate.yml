@@ -25,4 +25,4 @@ jobs:
           test -s dist/v1/movies.json
           test -s dist/openapi.json
           test -s dist/index.html
-          test -s dist/docs.html
+          test -s dist/docs/index.html
