@@ -22,5 +22,6 @@ jobs:
         run: |
           test -s dist/v1/episodes.json
           test -s dist/v1/manifest.json
+          test -s dist/v1/movies.json
           test -s dist/openapi.json
           test -s dist/index.html

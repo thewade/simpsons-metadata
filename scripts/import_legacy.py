@@ -3,7 +3,7 @@
 
 The SQL export is intentionally treated as an input snapshot, not executed.
 Unidentified season columns are retained in positional form.
-Season Amazon URLs are normalized without affiliate parameters.
+Season and movie Amazon URLs are normalized without affiliate parameters.
 """
 import argparse
 import json
@@ -69,7 +69,8 @@ def main():
     parser.add_argument('dump',type=Path)
     parser.add_argument('--data',type=Path,default=Path(__file__).resolve().parents[1]/'data')
     args=parser.parse_args()
-    counts={'episodes':0,'specials':0,'seasons':0}
+    counts={'episodes':0,'specials':0,'seasons':0,'movies':0}
+    movie=None
     seen=set()
     for line_no,line in enumerate(args.dump.read_text(encoding='utf-8').splitlines(),1):
         m=LINE.match(line)
@@ -86,24 +87,34 @@ def main():
                 if season<=0 or episode<=0:raise ValueError(f'bad season episode: {line_no}')
                 ident=f's{season:02}e{episode:02}'; folder='episodes'
             elif kind=='movie':
-                ident=str(raw['prodcode']);folder='specials'
+                if not re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', str(raw['airdate'])):
+                    raise ValueError(f'legacy movie needs a release year: {line_no}')
+                ident=f"movie-{raw['airdate'][:4]}";folder='movies'
             else:
                 ident=str(raw['prodcode']);folder={'short':'shorts/tracey-ullman','commercial':'commercials','webisode':'specials'}.get(kind)
                 if not folder:raise ValueError(f'unknown kind {kind} line {line_no}')
             if (folder,ident) in seen:raise ValueError('duplicate '+ident)
             seen.add((folder,ident))
             record={'id':ident,'titles':{'en':raw['title']},'production_code':raw['prodcode']}
-            if raw['airdate'] not in ('','0000-00-00'):record['original_air_date']=raw['airdate']
+            if raw['airdate'] not in ('','0000-00-00'):
+                record['release_date' if kind=='movie' else 'original_air_date']=raw['airdate']
             if raw['epnum']:record['overall_number']=raw['epnum']
-            if kind!='episode':record['type']=kind
+            if kind not in ('episode','movie'):record['type']=kind
             # Preserve site-specific and historical columns exactly, including zero/blank values.
-            record['legacy']={k:raw[k] for k in ('type','epnum','tcode','season','sepisode','SHOWCODE','SNPP','Wikipedia')}
-            write(args.data/folder/(ident+'.json'),record)
+            episode_legacy={k:raw[k] for k in ('type','epnum','tcode','season','sepisode','SHOWCODE','SNPP','Wikipedia')}
+            if kind=='movie':
+                if movie is not None:raise ValueError('multiple legacy movie rows')
+                record['legacy']={'episode_row':episode_legacy}
+                movie=record
+            else:
+                record['legacy']=episode_legacy
+                write(args.data/folder/(ident+'.json'),record)
             counts[folder if folder in counts else 'specials']+=1
         elif table=='seasons':
             if len(vals)!=8:raise ValueError(f'line {line_no}: expected 8 season values, got {len(vals)}')
             row_id,code,label,years,url1,asin1,url2,asin2=vals
-            ident='movie' if str(code).lower()=='movie' else f's{int(code):02}'
+            is_movie=str(code).lower()=='movie'
+            ident='movie' if is_movie else f's{int(code):02}'
             if ('seasons',ident) in seen:raise ValueError('duplicate season '+ident)
             seen.add(('seasons',ident))
             items=[]
@@ -114,10 +125,19 @@ def main():
                     items.append({'url':clean_url,'asin':asin,'format':'dvd' if slot==0 else 'blu_ray'})
             rec={'id':ident,'titles':{'en':label},'legacy':{'row_id':row_id,'season_code':code,'years':years,'original_columns':vals}}
             if items:rec['amazon_listings']=items
-            write(args.data/'seasons'/(ident+'.json'),rec)
-            counts['seasons']+=1
+            if is_movie:
+                if movie is None or 'catalogue_row' in movie['legacy']:
+                    raise ValueError('unexpected legacy movie catalogue row')
+                movie['legacy']['catalogue_row']=rec['legacy']
+                if items:movie['amazon_listings']=items
+            else:
+                write(args.data/'seasons'/(ident+'.json'),rec)
+                counts['seasons']+=1
+    if movie is None or 'catalogue_row' not in movie['legacy']:
+        raise ValueError('incomplete legacy movie data')
+    write(args.data/'movies'/(movie['id']+'.json'),movie)
     print('Imported:', counts)
-    if counts['episodes']+counts['specials']!=549 or counts['seasons']!=23:
+    if counts['episodes']+counts['specials']+counts['movies']!=549 or counts['seasons']!=22 or counts['movies']!=1:
         raise ValueError('unexpected row counts: '+str(counts))
 
 if __name__=='__main__':main()

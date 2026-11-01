@@ -5,27 +5,27 @@
 - Single source of truth in Git for multiple projects; public, read-only JSON output.
 - Free hosting; no database, functions, authentication, API keys or server-side query language.
 - Contributions via pull request; Git commits are the provenance trail. No separate source-tracking database.
-- No JSON Schema or formal OpenAPI document until there is a concrete need.
+- The build publishes a minimal OpenAPI document for the static endpoints.
 - No aliases or numeric surrogate IDs.
 
 ## Record identity and datasets
 
 - Regular TV episodes use the established common **aired** order: `s01e01`, `s07e23` (lowercase and two or more digits for each component). The numbering is treated as stable and never automatically reordered to match an external service.
-- All other records are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Where no verified production code exists, **do not invent one**. Leave the record unadded until the code is established or the policy is deliberately revised. This is particularly relevant to newer shorts and commercials. The repository includes empty datasets for those categories.
+- Shorts, commercials and specials are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Where no verified production code exists, **do not invent one** for those datasets. Films use `movie-YYYY`, based on the release year or announced release year when the record is created, as their ID. Keep that ID stable if a planned release moves; store a verified production code separately when known.
 - Record identity is the pair (`dataset`, `id`), e.g. (`episodes`, `s01e01`) or (`shorts/tracey-ullman`, `MG01`). This avoids cross-dataset collisions.
 - Source files are `data/<dataset>/<id>.json` (non-episode directories mirror published datasets). Git filenames must be portable and are validated against the record ID.
-- Supported datasets: `episodes`, `shorts/tracey-ullman`, `shorts/disney-plus`, `commercials`, `specials`. No combined `shorts.json`.
+- Supported datasets: `episodes`, `seasons`, `movies`, `shorts/tracey-ullman`, `shorts/disney-plus`, `commercials`, `specials`. No combined `shorts.json`.
 - The public JSON has object keys equal to internal IDs; each value contains the record's own fields, including `id` for convenient use.
 
 ## Record fields (informal, extensible)
 
 - `id` is required and matches the filename.
 - `titles` is required, nonempty, and keyed by BCP 47 tags (`en`, `fr-CA`, `fr-FR`, etc.). The build checks a pragmatic syntax subset, not the complete IANA language registry.
-- A non-episode record requires `production_code`, equal to `id`.
+- A short, commercial or special requires `production_code`, equal to `id`. A movie may omit it until verified; when present it need not equal the movie ID.
 - An episode may include `production_code` if known.
 - `tvdb`, `tmdb`, `imdb` are optional external identifier strings. They are **not** used as internal IDs.
 - `links` is an optional, nonempty object of named HTTPS URLs or `null`, such as `"links": {"wikipedia": "https://en.wikipedia.org/wiki/..."}`. Link names use lowercase letters, digits and underscores. Verify the target against the record's identity; do not construct URLs from titles. Omit a link key when its status is unknown; use `null` only after confirming that the named destination does not exist.
-- Other fields such as `original_air_date` may be added as needed; YYYY-MM-DD date values are checked when that field is present.
+- `original_air_date` is for television records. Movies use `release_date` for an actual theatrical date or `planned_release_date` for an announced date. These dates use YYYY-MM-DD and are validated.
 - Missing information is **omitted**, not guessed. The explicit `null` value for a link means its absence was checked and confirmed.
 - If multiple identifiers genuinely refer to the same item, put them in that item's record. If an identifier appears on two different records, publishing fails rather than silently choosing one.
 
@@ -35,35 +35,35 @@ Example: `data/episodes/s01e01.json`.
 
 `python3 scripts/build.py` reads every record, validates **the entire source tree**, and publishes consolidated, sorted JSON under `dist/v1/`.
 
-- `episodes.json`, `shorts/tracey-ullman.json`, `shorts/disney-plus.json`, `commercials.json`, `specials.json`: full metadata by internal ID.
+- `episodes.json`, `seasons.json`, `movies.json`, `shorts/tracey-ullman.json`, `shorts/disney-plus.json`, `commercials.json`, `specials.json`: full metadata by internal ID.
 - `production.json`, `tvdb.json`, `tmdb.json`, `imdb.json`: identifier -> `{ "dataset": "...", "id": "..." }`.
 - `manifest.json`: checksums and paths for the files in the same build, allowing client-side cache invalidation.
 
-Build output is generated; **never edit it manually**. It is not committed to Git. GitHub Actions validates pull requests and publishes only pushes to `main`. Publishing uploads one complete build as a GitHub Pages artifact.
+Build output is generated; **never edit it manually**. It is not committed to Git. GitHub Actions validates pull requests; Cloudflare Pages publishes pushes to `main`.
 
 ## Constraints and decisions
 
 - The indexes enforce **global uniqueness** of each identifier within its scheme, even across datasets. Duplicate `production_code`, `tvdb`, etc. fail the build. Existing repeated data is allowed if consistent within *one* record (e.g. `MG01` as both `id` and `production_code`).
 - A data set can be empty; it still produces `{}`.
 - JSON formatting is pretty-printed, sorted and UTF-8 to make diffs and local use easy. Clients can HTTP-cache or pin a downloaded copy.
-- `/v1/` means consumer-facing data contract version 1. Incompatible changes require a new path. No version bump needed for ordinary additions or corrections.
+- `/v1/` is the consumer-facing data contract. Films live in `movies.json`; `seasons.json` and `specials.json` contain only their respective record types. Future incompatible changes require a new path.
 - Cloudflare Pages is the deployment target for `api.simpsonseh.com`, using GitHub integration. DreamHost remains the existing website/database host and can retain authoritative DNS. GitHub Actions validates the data; the Cloudflare build serves static files.
 - If project needs grow: consider immutable release snapshots, variants for differing regional/platform titles, a full BCP 47 validator, or search tooling **when actually needed**.
 
 ## Trade-off: all non-episode items need production codes
 
-This policy intentionally cannot represent an item with no known production code. It is strict, not an accidental validator limitation. To support commercial assets or Disney+ shorts without one, you would need to relax the ID rule to allow curated slugs. Make that a conscious policy change rather than putting fabricated codes into the database.
+The production-code rule for shorts, commercials and specials intentionally cannot represent an item with no known production code. Movies use year-based IDs because announced films may not yet have production codes. If two films share a release year, the movie ID policy will need an extension. To support other categories without a production code, revise their ID policy deliberately rather than putting fabricated codes into the database.
 
 ## Rights
 
 The MIT license covers code, not metadata. CC BY 4.0 applies to contributors' original metadata and permits commercial reuse with attribution; it does **not** authorize copying protected third-party databases, episode descriptions or artwork. Contributors are responsible for sharing only material licensed appropriately or independently compiled facts.
 
 
-## Legacy season/catalogue records
+## Seasons and movies
 
-A `seasons` dataset (`data/seasons/*.json` → `dist/v1/seasons.json`) contains seasons 1–38 plus the historical movie catalogue row. Each record has `links.wikipedia` for its season or movie article. The 23 imported catalogue rows retain their legacy values; Amazon URLs in `legacy.original_columns` have affiliate parameters removed. The first Amazon slot is treated as DVD and the second as Blu-ray, consistent with the historical release pattern; individual product pages have not been reverified.
+A `seasons` dataset contains seasons 1–38. The old movie catalogue row and film record are merged into `data/movies/movie-2007.json`; the announced sequel is `data/movies/movie-2027.json`. Both are published in `v1/movies.json`. The 23 imported catalogue rows retain their legacy values, with the film row under `legacy.catalogue_row` and its episode-table row under `legacy.episode_row`. Amazon URLs in `legacy.original_columns` have affiliate parameters removed. The first Amazon slot is treated as DVD and the second as Blu-ray, consistent with the historical release pattern; individual product pages have not been reverified. The 2007 release date is inherited from the legacy film air-date field, whose region was not recorded.
 
-When present, `amazon_listings` contains one entry per known format: `asin`, `format` (`dvd` or `blu_ray`), and a clean `https://www.amazon.ca/dp/<ASIN>` URL. A missing listing means no product URL was imported; it does not assert that no release exists.
+When present on a season or movie, `amazon_listings` contains one entry per known format: `asin`, `format` (`dvd` or `blu_ray`), and a clean `https://www.amazon.ca/dp/<ASIN>` URL. A missing listing means no product URL was imported; it does not assert that no release exists. The sequel's September 3, 2027 date is a plan, not an actual release date.
 
 ## Optional provider URLs and website integration
 

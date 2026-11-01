@@ -5,11 +5,11 @@ This migration used the user-supplied SQL excerpt from the website database. Thi
 ## Imported
 
 - 548 `episodes` rows → `data/episodes/sXXeYY.json`, aired-order ID from source `season` + `sepisode`.
-- 1 `episodes` row with type `movie` → `data/specials/Movie1.json` (kept original production-code ID).
-- 23 `seasons` insert rows → `data/seasons/sXX.json` and `data/seasons/movie.json`.
+- 1 `episodes` row with type `movie`, merged with its catalogue row → `data/movies/movie-2007.json` (production code `Movie1` retained separately).
+- 23 `seasons` insert rows → 22 `data/seasons/sXX.json` files and the `legacy.catalogue_row` on the movie record.
 - Two Amazon listing slots per source season row, treated as DVD first and Blu-ray second based on the historical release pattern. ASINs are retained and URLs are normalized to clean HTTPS product links without affiliate parameters. Individual product pages have not been reverified.
 - Source `seasons` row values are stored as the eight-element `legacy.original_columns` array, except Amazon URLs are sanitized as above. The supplied excerpt has **no CREATE TABLE for seasons**.
-- Original `episodes` columns `type`, `epnum`, `tcode`, `season`, `sepisode`, `SHOWCODE`, `SNPP`, and `Wikipedia` are retained verbatim under `legacy`; `prodcode`, `title`, and `airdate` are represented by normalized fields.
+- Original `episodes` columns `type`, `epnum`, `tcode`, `season`, `sepisode`, `SHOWCODE`, `SNPP`, and `Wikipedia` are retained verbatim under `legacy` (under `legacy.episode_row` for the film); `prodcode`, `title`, and `airdate` are represented by normalized fields.
 
 ## Preserved, but not published as content data
 

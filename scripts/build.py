@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATASETS = {
     "episodes": "episodes.json",
     "seasons": "seasons.json",
+    "movies": "movies.json",
     "shorts/tracey-ullman": "shorts/tracey-ullman.json",
     "shorts/disney-plus": "shorts/disney-plus.json",
     "commercials": "commercials.json",
@@ -54,8 +55,12 @@ def parse_record(path, dataset):
         if not EPISODE_ID.fullmatch(ident) or ident.startswith("s00") or re.search(r"e0+$", ident):
             raise ValidationError(f"{path}: expected aired ID such as s01e01")
     elif not OTHER_ID.fullmatch(ident):
-        raise ValidationError(f"{path}: invalid production-code ID")
-    if dataset not in ("episodes", "seasons") and record.get("production_code") != ident:
+        raise ValidationError(f"{path}: invalid ID")
+    if dataset == "seasons" and not re.fullmatch(r"s[0-9]{2,}", ident):
+        raise ValidationError(f"{path}: season id must be sXX")
+    if dataset == "movies" and not re.fullmatch(r"movie-[0-9]{4}", ident):
+        raise ValidationError(f"{path}: movie id must be movie-YYYY")
+    if dataset not in ("episodes", "seasons", "movies") and record.get("production_code") != ident:
         raise ValidationError(f"{path}: non-episode id must equal production_code")
     titles = record.get("titles")
     if not isinstance(titles, dict) or not titles:
@@ -86,8 +91,8 @@ def parse_record(path, dataset):
                 raise ValidationError(f"{path}: links.{site} must be an HTTPS URL or null")
     if "amazon_listings" in record:
         listings = record["amazon_listings"]
-        if dataset != "seasons" or not isinstance(listings, list) or not listings:
-            raise ValidationError(f"{path}: amazon_listings must be a nonempty season listing array")
+        if dataset not in ("seasons", "movies") or not isinstance(listings, list) or not listings:
+            raise ValidationError(f"{path}: amazon_listings must be a nonempty season or movie listing array")
         formats = set()
         for listing in listings:
             if not isinstance(listing, dict) or set(listing) != {"url", "asin", "format"}:
@@ -100,14 +105,19 @@ def parse_record(path, dataset):
             formats.add(media_format)
             if listing["url"] != f"https://www.amazon.ca/dp/{asin}":
                 raise ValidationError(f"{path}: Amazon URL must be the clean HTTPS ASIN link")
-    if "original_air_date" in record:
-        value = record["original_air_date"]
-        try:
-            if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
-                raise ValueError("format")
-            date.fromisoformat(value)
-        except ValueError as exc:
-            raise ValidationError(f"{path}: original_air_date must be YYYY-MM-DD") from exc
+    if dataset == "movies" and "original_air_date" in record:
+        raise ValidationError(f"{path}: movies use release_date or planned_release_date")
+    if dataset == "movies" and "release_date" in record and "planned_release_date" in record:
+        raise ValidationError(f"{path}: a movie cannot have both release dates")
+    for date_field in ("original_air_date", "release_date", "planned_release_date"):
+        if date_field in record:
+            value = record[date_field]
+            try:
+                if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+                    raise ValueError("format")
+                date.fromisoformat(value)
+            except ValueError as exc:
+                raise ValidationError(f"{path}: {date_field} must be YYYY-MM-DD") from exc
     streaming = record.get("streaming", {})
     if not isinstance(streaming, dict):
         raise ValidationError(f"{path}: streaming must be an object")
@@ -172,6 +182,7 @@ def openapi_document():
     descriptions = {
         "episodes": "Regular television episodes, keyed by sXXeYY.",
         "seasons": "Season catalogue entries, including legacy Amazon listings.",
+        "movies": "Feature films, including announced releases.",
         "shorts/tracey-ullman": "Tracey Ullman shorts, keyed by production code.",
         "shorts/disney-plus": "Disney+ shorts, keyed by production code.",
         "commercials": "Commercials, keyed by production code.",
@@ -208,7 +219,6 @@ def build(source, destination):
     catalog, index = collect(source)  # validate everything before touching output
     files = {DATASETS[d]: records for d, records in catalog.items()}
     files.update({f"{scheme}.json": records for scheme, records in index.items()})
-    # A version root is rewritten only after successful validation.
     if destination.exists():
         shutil.rmtree(destination)
     destination.mkdir(parents=True)

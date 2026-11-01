@@ -24,12 +24,15 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(api_spec["openapi"], "3.0.3")
             self.assertIn("/v1/episodes.json", api_spec["paths"])
             self.assertIn("/v1/shorts/disney-plus.json", api_spec["paths"])
+            self.assertIn("/v1/movies.json", api_spec["paths"])
             production = json.loads((out / "production.json").read_text())
             self.assertEqual(production["7G08"], {"dataset": "episodes", "id": "s01e01"})
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})
+            self.assertEqual(production["Movie1"], {"dataset": "movies", "id": "movie-2007"})
             self.assertEqual(json.loads((out / "commercials.json").read_text()), {})
             seasons = json.loads((out / "seasons.json").read_text())
-            self.assertEqual(len(seasons), 39)
+            self.assertEqual(len(seasons), 38)
+            self.assertNotIn("movie", seasons)
             self.assertEqual(seasons["s38"]["links"]["wikipedia"],
                              "https://en.wikipedia.org/wiki/The_Simpsons_season_38")
             self.assertEqual([item["format"] for item in seasons["s14"]["amazon_listings"]],
@@ -38,6 +41,14 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(seasons["s20"]["amazon_listings"][0]["format"], "blu_ray")
             self.assertEqual(seasons["s14"]["amazon_listings"][0]["url"],
                              "https://www.amazon.ca/dp/B005SOH7QS")
+            movies = json.loads((out / "movies.json").read_text())
+            self.assertEqual(set(movies), {"movie-2007", "movie-2027"})
+            self.assertEqual(movies["movie-2007"]["release_date"], "2007-07-26")
+            self.assertEqual(movies["movie-2007"]["production_code"], "Movie1")
+            self.assertEqual(movies["movie-2027"]["planned_release_date"], "2027-09-03")
+            self.assertNotIn("production_code", movies["movie-2027"])
+            self.assertEqual(json.loads((out / "specials.json").read_text()), {})
+            self.assertEqual(json.loads((out / "manifest.json").read_text())["api_version"], 1)
 
     def test_rejects_duplicate_external_ids(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -102,6 +113,24 @@ class BuildTests(unittest.TestCase):
             }))
             with self.assertRaisesRegex(module.ValidationError, "clean HTTPS ASIN link"):
                 module.parse_record(path, "seasons")
+
+    def test_movie_without_production_code_and_release_date_validation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "movie-2027.json"
+            record = {"id": "movie-2027", "titles": {"en": "New Movie"},
+                      "planned_release_date": "2027-09-03"}
+            path.write_text(json.dumps(record))
+            self.assertEqual(module.parse_record(path, "movies"), record)
+            record["planned_release_date"] = "2027-02-30"
+            path.write_text(json.dumps(record))
+            with self.assertRaisesRegex(module.ValidationError, "planned_release_date"):
+                module.parse_record(path, "movies")
+            path = Path(temp) / "new-movie.json"
+            record["id"] = "new-movie"
+            record["planned_release_date"] = "2027-09-03"
+            path.write_text(json.dumps(record))
+            with self.assertRaisesRegex(module.ValidationError, "movie-YYYY"):
+                module.parse_record(path, "movies")
 
     def test_legacy_amazon_url_normalization(self):
         self.assertEqual(

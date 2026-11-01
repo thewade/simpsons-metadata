@@ -1,0 +1,55 @@
+{
+  "id": "movie-2007",
+  "titles": {
+    "en": "The Simpsons Movie"
+  },
+  "production_code": "Movie1",
+  "release_date": "2007-07-26",
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Movie"
+  },
+  "amazon_listings": [
+    {
+      "url": "https://www.amazon.ca/dp/B000WOQKAS",
+      "asin": "B000WOQKAS",
+      "format": "dvd"
+    },
+    {
+      "url": "https://www.amazon.ca/dp/B000WOQKCG",
+      "asin": "B000WOQKCG",
+      "format": "blu_ray"
+    }
+  ],
+  "streaming": {
+    "disney_plus": {
+      "content_id": "21cdf36d-d3ba-49f6-9dc6-b9d4e2a8be85"
+    }
+  },
+  "legacy": {
+    "episode_row": {
+      "type": "movie",
+      "epnum": 0,
+      "tcode": "Movie",
+      "season": 0,
+      "sepisode": 0,
+      "SHOWCODE": 1,
+      "SNPP": "",
+      "Wikipedia": "The Simpsons Movie"
+    },
+    "catalogue_row": {
+      "row_id": 19,
+      "season_code": "Movie",
+      "years": "(2007)",
+      "original_columns": [
+        19,
+        "Movie",
+        "The Simpsons Movie",
+        "(2007)",
+        "https://www.amazon.ca/dp/B000WOQKAS",
+        "B000WOQKAS",
+        "https://www.amazon.ca/dp/B000WOQKCG",
+        "B000WOQKCG"
+      ]
+    }
+  }
+}
