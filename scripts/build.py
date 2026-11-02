@@ -264,6 +264,9 @@ def render_episode_guide(catalog):
         ident = record["id"]
         title = record["titles"].get("en", next(iter(record["titles"].values())))
         facts = []
+        if "en" in record["titles"]:
+            facts.append(f'<div data-english-title hidden><dt data-i18n="englishTitle">English title</dt>'
+                         f'<dd>{h(record["titles"]["en"])}</dd></div>')
         for language, translated in record["titles"].items():
             if language != "en":
                 facts.append(f'<div><dt data-i18n="titleLanguage" data-language="{h(language)}">'

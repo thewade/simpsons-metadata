@@ -40,6 +40,8 @@ class BuildTests(unittest.TestCase):
         self.assertIn("https://www.disneyplus.com/play/id%3Fpart", guide)
         self.assertIn("Film &amp; &lt;script&gt;", guide)
         self.assertNotIn("Film & <script>", guide)
+        self.assertIn('<div data-english-title hidden><dt data-i18n="englishTitle">English title</dt>'
+                      '<dd>&lt;script&gt;alert(1)&lt;/script&gt;</dd></div>', guide)
         self.assertIn('id="movie-2027-details" hidden', guide)
         self.assertIn('September 3, 2027</time> <span class="date-note" data-i18n="planned">(planned)</span>', guide)
 

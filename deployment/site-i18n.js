@@ -98,6 +98,7 @@
     releaseDate: "Date de sortie",
     firstRelease: "Première sortie",
     planned: "(prévue)",
+    englishTitle: "Titre anglais",
     titleLanguage: "Titre ({language})",
     aspectRatio: "Format d’image original",
     wikiEnglish: "Wikipédia (anglais) ↗",
@@ -193,6 +194,9 @@
       button.textContent = title;
       document.getElementById(button.getAttribute("aria-controls"))?.querySelector(".detail-top h4")
         ?.replaceChildren(document.createTextNode(title));
+    }
+    for (const field of document.querySelectorAll("[data-english-title]")) {
+      field.hidden = locale === "en";
     }
     const sampleTitle = document.getElementById("sample-title");
     if (sampleTitle) {
