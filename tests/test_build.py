@@ -53,6 +53,23 @@ class BuildTests(unittest.TestCase):
             self.assertTrue(all("\ufffd" not in title for record in episodes.values()
                                 for title in record["titles"].values()))
             self.assertEqual(episodes["s37e07"]["titles"]["fr-FR"], "L'Empire Quimby")
+            exclusive_ids = {
+                "s36e10": "ed114092-e308-46da-8a7c-04272cce1e45",
+                "s36e11": "ed114092-e308-46da-8a7c-04272cce1e45",
+                "s36e14": "c27f4ec6-3cf9-485c-9b40-9f0d0fba639d",
+                "s36e18": "7624fc2b-178e-460c-ab85-9af4ced2e510",
+                "s37e16": "1173a9d5-2521-4f37-b6a1-cddbd20fb393",
+                "s37e17": "1173a9d5-2521-4f37-b6a1-cddbd20fb393",
+                "s37e18": "bc7b17f1-bf0b-46f8-8654-d67354c6c268",
+                "s37e19": "5acb669f-c090-4b00-8dfd-36710909ee1d",
+            }
+            for episode_id, content_id in exclusive_ids.items():
+                self.assertEqual(episodes[episode_id]["streaming"]["disney_plus"]["content_id"], content_id)
+            self.assertEqual(episodes["s36e10"]["titles"]["fr-CA"], "Un Noël sous hypnose")
+            self.assertEqual(episodes["s37e16"]["titles"]["fr-CA"],
+                             "Les Simpson : Extreme Makeover : Homer Edition")
+            self.assertEqual(episodes["s37e19"]["overall_number"], 809)
+            self.assertIn("https://www.disneyplus.com/play/1173a9d5-2521-4f37-b6a1-cddbd20fb393", guide)
             self.assertEqual(episodes["s36e01"]["titles"]["fr-CA"], "La fête de Bart")
             api_spec = json.loads((out.parent / "openapi.json").read_text())
             self.assertEqual(api_spec["openapi"], "3.0.3")
@@ -63,6 +80,7 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(production["7G08"], {"dataset": "episodes", "id": "s01e01"})
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})
             self.assertEqual(production["MG48"], {"dataset": "shorts/tracey-ullman", "id": "MG48"})
+            self.assertEqual(production["36ABF21"], {"dataset": "episodes", "id": "s37e17"})
             self.assertEqual(production["Movie1"], {"dataset": "movies", "id": "movie-2007"})
             ullman = json.loads((out / "shorts" / "tracey-ullman.json").read_text(encoding="utf-8"))
             self.assertEqual(set(ullman), {f"MG{number:02}" for number in range(1, 49)})

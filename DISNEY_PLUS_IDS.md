@@ -1,4 +1,25 @@
-# Disney+ content ID import — October 31, 2026
+# Disney+ content ID sources
+
+## Exclusive episodes added November 1, 2026
+
+Six French Canadian Disney+ play links supplied by the repository owner were
+matched by title to eight full-length exclusive episode records. The display
+titles from those `/fr-ca/play/<content_id>` pages are stored as `fr-CA`;
+the misencoded Noël in the supplied table was corrected. The six content IDs
+are stored under `streaming.disney_plus.content_id`; the API's episode guide
+builds play links from that field. The provided locale-specific URLs are not
+stored separately.
+
+`O C'mon All Ye Faithful` and `Extreme Makeover: Homer Edition` each span two
+production-coded parts, and Disney+ supplied one play URL for each whole
+special. Both part records therefore share that special's content ID. The
+[English episode list](https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes_%28season_21%E2%80%93present%29)
+supplies the dates, production codes, and overall numbers; the
+[French episode list](https://fr.wikipedia.org/wiki/Liste_des_%C3%A9pisodes_des_Simpson)
+supplies the season positions and available France titles. These are episodes,
+not the separate Disney+ short films, so they live in `data/episodes/`.
+
+## Earlier content ID import
 
 The `streaming.disney_plus.content_id` values came from the workspace copy of
 [`simpsons_data.json`](../../external/simpsons_data/simpsons_data.json) at

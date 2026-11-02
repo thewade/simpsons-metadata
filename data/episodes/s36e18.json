@@ -1,0 +1,20 @@
+{
+  "id": "s36e18",
+  "titles": {
+    "en": "Yellow Planet",
+    "fr-FR": "Yellow Planet",
+    "fr-CA": "Yellow Planet"
+  },
+  "production_code": "35ABF20",
+  "original_air_date": "2025-04-22",
+  "overall_number": 786,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Yellow_Planet",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Yellow_Planet"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "7624fc2b-178e-460c-ab85-9af4ced2e510"
+    }
+  }
+}

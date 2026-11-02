@@ -1,0 +1,20 @@
+{
+  "id": "s36e14",
+  "titles": {
+    "en": "The Past and the Furious",
+    "fr-FR": "Past & Furious",
+    "fr-CA": "Past & Furious"
+  },
+  "production_code": "35ABF19",
+  "original_air_date": "2025-02-12",
+  "overall_number": 782,
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Past_and_the_Furious",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Past_%26_Furious"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "c27f4ec6-3cf9-485c-9b40-9f0d0fba639d"
+    }
+  }
+}
