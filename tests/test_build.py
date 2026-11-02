@@ -47,6 +47,7 @@ class BuildTests(unittest.TestCase):
             self.assertIn('https://www.disneyplus.com/play/ffb14e5a-38db-4522-a559-3cfa52bcf4df', guide)
             self.assertNotIn('href="https://www.disneyplus.com/play/not-ported-over"', guide)
             self.assertIn('Wikipedia (French)', guide)
+            self.assertIn('Simpsons Archive', guide)
             episodes = json.loads((out / "episodes.json").read_text(encoding="utf-8"))
             self.assertEqual(episodes["s20e09"]["original_aspect_ratio"], "4:3")
             self.assertEqual(episodes["s20e10"]["original_aspect_ratio"], "16:9")
@@ -61,6 +62,17 @@ class BuildTests(unittest.TestCase):
             self.assertTrue(all("\ufffd" not in title for record in episodes.values()
                                 for title in record["titles"].values()))
             self.assertEqual(episodes["s37e07"]["titles"]["fr-FR"], "L'Empire Quimby")
+            archive_links = {key: record["links"]["simpsons_archive"] for key, record in episodes.items()
+                             if "simpsons_archive" in record.get("links", {})}
+            self.assertEqual(len(archive_links), 280)
+            self.assertEqual(archive_links["s01e01"],
+                             "https://www.simpsonsarchive.com/episodes/7G08.html")
+            self.assertEqual(archive_links["s07e22"],
+                             "https://www.simpsonsarchive.com/episodes/3F19.html")
+            self.assertEqual(archive_links["s13e11"],
+                             "https://www.simpsonsarchive.com/episodes/DABF06.txt")
+            self.assertNotIn("s13e12", archive_links)
+            self.assertNotIn("s14e01", archive_links)
             exclusive_ids = {
                 "s36e10": "ed114092-e308-46da-8a7c-04272cce1e45",
                 "s36e11": "ed114092-e308-46da-8a7c-04272cce1e45",

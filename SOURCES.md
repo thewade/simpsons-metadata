@@ -18,6 +18,21 @@ or link means it was not established; a list placeholder such as “Titre
 québécois inconnu” is not an episode title. Do not infer a French article URL
 from a translated title. Check the link on the list or article page.
 
+## Simpsons Archive episode pages
+
+Checked on 2026-11-02. The [Simpsons Archive episode guides](https://www.simpsonsarchive.com/episodeguide/season1.html)
+provide direct episode links for seasons 1–12 and the first ten entries in
+[season 13](https://www.simpsonsarchive.com/episodeguide/season13.html). The
+guide links were matched to 279 existing episode records by production code and
+stored as `links.simpsons_archive`. Some guide `.html` links redirect to `.txt`
+capsules; the guide's URL is retained. The separately verified
+[`DABF06.txt` capsule](https://www.simpsonsarchive.com/episodes/DABF06.txt)
+adds `s13e11`, for 280 links total. The old `legacy.SNPP` values remain as
+historical source data, including the mistyped `episodea/3F19.html` path in
+`s07e22`; its new link follows the [season 7 guide](https://www.simpsonsarchive.com/episodeguide/season7.html).
+The later [season guides](https://www.simpsonsarchive.com/episodeguide/season14.html)
+list episodes without individual links, so those records have no archive link.
+
 ## Refresh the French titles and links
 
 The current French sync used [revision 240864494](https://fr.wikipedia.org/w/index.php?title=Liste_des_%C3%A9pisodes_des_Simpson&oldid=240864494),
