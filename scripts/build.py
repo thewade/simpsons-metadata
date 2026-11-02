@@ -227,6 +227,19 @@ def openapi_document():
     }
 
 
+def guide_title(titles, locale):
+    """Choose a display title without claiming a regional dub where none is recorded."""
+    preferences = {
+        "en": ("en",),
+        "fr-FR": ("fr-FR", "fr", "en"),
+        "fr-CA": ("fr-CA", "fr-FR", "fr", "en"),
+    }
+    for language in preferences[locale]:
+        if language in titles:
+            return titles[language]
+    return next(iter(titles.values()))
+
+
 def render_episode_guide(catalog):
     """Render episodes, movies, and shorts as accessible, expandable tables."""
     template = (ROOT / "deployment" / "episodes" / "index.html").read_text(encoding="utf-8")
@@ -236,6 +249,12 @@ def render_episode_guide(catalog):
         by_season[season_number].append(record)
     numbers = sorted({int(key[1:]) for key in catalog["seasons"]} | set(by_season))
     h = lambda value: escape(str(value), quote=True)
+
+    def title_attributes(record):
+        titles = record["titles"]
+        return (f'data-title-en="{h(guide_title(titles, "en"))}" '
+                f'data-title-fr-fr="{h(guide_title(titles, "fr-FR"))}" '
+                f'data-title-fr-ca="{h(guide_title(titles, "fr-CA"))}"')
 
     def display_date(value):
         parsed = date.fromisoformat(value)
@@ -247,9 +266,11 @@ def render_episode_guide(catalog):
         facts = []
         for language, translated in record["titles"].items():
             if language != "en":
-                facts.append(f'<div><dt>Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
+                facts.append(f'<div><dt data-i18n="titleLanguage" data-language="{h(language)}">'
+                             f'Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
         if "original_aspect_ratio" in record:
-            facts.append(f'<div><dt>Original aspect ratio</dt><dd>{h(record["original_aspect_ratio"])}</dd></div>')
+            facts.append(f'<div><dt data-i18n="aspectRatio">Original aspect ratio</dt>'
+                         f'<dd>{h(record["original_aspect_ratio"])}</dd></div>')
         for key, label in (("tvdb", "TVDB"), ("tmdb", "TMDB"), ("imdb", "IMDb")):
             if key in record:
                 facts.append(f'<div><dt>{label}</dt><dd><code>{h(record[key])}</code></dd></div>')
@@ -258,28 +279,39 @@ def render_episode_guide(catalog):
         for site, url in record.get("links", {}).items():
             if url is None:
                 if site == "wikipedia":
-                    links.append('<span class="no-link">No standalone English Wikipedia article</span>')
+                    links.append('<span class="no-link" data-i18n="noWikiEnglish">No standalone English Wikipedia article</span>')
             else:
                 name = {"wikipedia": "Wikipedia (English)",
                         "wikipedia_fr": "Wikipedia (French)"}.get(site, site.replace("_", " ").title())
-                links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{h(name)} ↗</a>')
+                i18n = {"wikipedia": "wikiEnglish", "wikipedia_fr": "wikiFrench"}.get(site)
+                marker = f' data-i18n="{i18n}"' if i18n else ""
+                links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer"{marker}>{h(name)} ↗</a>')
         disney = record.get("streaming", {}).get("disney_plus", {})
         content_id = disney.get("content_id")
         disney_url = (f'https://www.disneyplus.com/play/{quote(content_id, safe="")}'
                       if content_id else disney.get("url"))
         if disney_url:
-            links.append(f'<a href="{h(disney_url)}" target="_blank" rel="noopener noreferrer">Open on Disney+ ↗</a>')
+            links.append(f'<a href="{h(disney_url)}" target="_blank" rel="noopener noreferrer" '
+                         f'data-i18n="openDisney">Open on Disney+ ↗</a>')
         for listing in record.get("amazon_listings", []):
             label = {"dvd": "DVD", "blu_ray": "Blu-ray"}.get(listing.get("format"), "Amazon")
-            links.append(f'<a href="{h(listing["url"])}" target="_blank" rel="noopener noreferrer">{label} on Amazon ↗</a>')
-        links_html = f'<div class="detail-links">{"".join(links)}</div>' if links else '<p class="no-link">No external links recorded.</p>'
+            i18n = {"dvd": "amazonDvd", "blu_ray": "amazonBluray"}.get(listing.get("format"))
+            marker = f' data-i18n="{i18n}"' if i18n else ""
+            links.append(f'<a href="{h(listing["url"])}" target="_blank" rel="noopener noreferrer"{marker}>'
+                         f'{label} on Amazon ↗</a>')
+        links_html = (f'<div class="detail-links">{"".join(links)}</div>' if links else
+                      '<p class="no-link" data-i18n="noExternalLinks">No external links recorded.</p>')
         legacy = record.get("legacy")
-        legacy_html = (f'<details class="legacy"><summary>Archived source fields</summary>'
+        legacy_html = (f'<details class="legacy"><summary data-i18n="archivedFields">Archived source fields</summary>'
                        f'<pre>{h(json.dumps(legacy, ensure_ascii=False, indent=2))}</pre></details>') if legacy else ""
         details_id = f"{ident}-details"
+        detail_key = {"Episode": "episodeDetails", "Film": "filmDetails", "Short": "shortDetails"}[kind]
+        link_key = {"Episode": "linkEpisode", "Film": "linkFilm", "Short": "linkShort"}[kind]
         return (f'<tr class="detail-row" id="{h(details_id)}" hidden><td colspan="{colspan}"><div class="detail-panel">'
-                f'<div class="detail-top"><div><p class="detail-label">{h(ident)} · {kind} details</p>'
-                f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}">Link to {kind.lower()}</a></div>'
+                f'<div class="detail-top"><div><p class="detail-label">{h(ident)} · '
+                f'<span data-i18n="{detail_key}">{kind} details</span></p>'
+                f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}" '
+                f'data-i18n="{link_key}">Link to {kind.lower()}</a></div>'
                 f'{fact_html}{links_html}{legacy_html}</div></td></tr>')
 
     jumps = "".join(f'<a href="#season-{number:02}">{number}</a>' for number in numbers)
@@ -297,16 +329,20 @@ def render_episode_guide(catalog):
             years = sorted({value[:4] for value in dates})
             year_label = years[0] if len(years) == 1 else f"{years[0]}–{years[-1]}" if years else ""
             season_links = []
-            for site, label in (("wikipedia", "English article"), ("wikipedia_fr", "French article")):
+            for site, label, key in (("wikipedia", "English article", "englishArticle"),
+                                     ("wikipedia_fr", "French article", "frenchArticle")):
                 url = season.get("links", {}).get(site)
                 if url:
-                    season_links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{label} ↗</a>')
+                    season_links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer" '
+                                        f'data-i18n="{key}">{label} ↗</a>')
             season_link_html = "".join(season_links)
             heading = (f'<header class="season-heading"><div><p class="season-kicker">{h(year_label)}</p>'
-                       f'<h3 id="season-{number:02}">Season {number}</h3></div>'
-                       f'<div class="season-meta"><span>{len(records)} numbered episodes</span>{season_link_html}</div></header>')
+                       f'<h3 id="season-{number:02}" data-i18n="seasonLabel" data-number="{number}">Season {number}</h3></div>'
+                       f'<div class="season-meta"><span data-i18n="numberedEpisodes" data-count="{len(records)}">'
+                       f'{len(records)} numbered episodes</span>{season_link_html}</div></header>')
             if not records:
-                sections.append(f'<section class="season">{heading}<p class="empty">No numbered episode records in this season yet.</p></section>')
+                sections.append(f'<section class="season">{heading}<p class="empty" data-i18n="noNumberedEpisodes">'
+                                'No numbered episode records in this season yet.</p></section>')
                 continue
             rows = []
             for record in records:
@@ -321,17 +357,22 @@ def render_episode_guide(catalog):
                 rows.append(
                     f'<tr class="episode-row" id="{h(ident)}"><td>{h(overall)}</td><td>{episode_number}</td>'
                     f'<th scope="row"><button type="button" class="episode-toggle" aria-expanded="false" '
-                    f'aria-controls="{h(details_id)}">{h(title)}</button></th><td>{date_html}</td>'
+                    f'aria-controls="{h(details_id)}" {title_attributes(record)}>{h(title)}</button></th><td>{date_html}</td>'
                     f'<td><code>{h(production)}</code></td><td class="row-arrow" aria-hidden="true">⌄</td></tr>'
                 )
                 rows.append(detail_row(record, "Episode", 6))
-            table = ('<div class="table-scroll"><table class="episode-table"><thead><tr><th scope="col">Overall</th><th scope="col">No.</th>'
-                     '<th scope="col">Episode</th><th scope="col">Original air date</th>'
-                     '<th scope="col">Production code</th><th scope="col"><span class="sr-only">Details</span></th>'
+            table = ('<div class="table-scroll"><table class="episode-table"><thead><tr>'
+                     '<th scope="col" data-i18n="overall">Overall</th><th scope="col" data-i18n="number">No.</th>'
+                     '<th scope="col" data-i18n="episode">Episode</th>'
+                     '<th scope="col" data-i18n="originalAirDate">Original air date</th>'
+                     '<th scope="col" data-i18n="productionCode">Production code</th>'
+                     '<th scope="col"><span class="sr-only" data-i18n="details">Details</span></th>'
                      f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
             sections.append(f'<section class="season">{heading}{table}</section>')
-        groups.append(f'<section class="group" id="{anchor}"><div class="group-heading"><p class="eyebrow">Episode catalogue</p>'
-                      f'<h2>{label}</h2></div>{"".join(sections)}</section>')
+        label_key = "classic" if anchor == "classic" else "modern"
+        groups.append(f'<section class="group" id="{anchor}"><div class="group-heading">'
+                      f'<p class="eyebrow" data-i18n="episodeCatalogue">Episode catalogue</p>'
+                      f'<h2 data-i18n="{label_key}">{label}</h2></div>{"".join(sections)}</section>')
 
     media_groups = (
         ("movies", "movies", "Movies", "Film", "Release date", True,
@@ -353,25 +394,34 @@ def render_episode_guide(catalog):
             planned = record.get("planned_release_date") if not released else None
             date_html = display_date(released or planned) if released or planned else "—"
             if planned:
-                date_html += ' <span class="date-note">(planned)</span>'
+                date_html += ' <span class="date-note" data-i18n="planned">(planned)</span>'
             code_html = (f'<td><code>{h(record["production_code"])}</code></td>'
                          if "production_code" in record else '<td>—</td>') if show_code else ""
             details_id = f"{ident}-details"
             rows.append(f'<tr class="episode-row media-row" id="{h(ident)}">'
                         f'<th scope="row"><button type="button" class="episode-toggle" aria-expanded="false" '
-                        f'aria-controls="{h(details_id)}">{h(title)}</button></th>'
+                        f'aria-controls="{h(details_id)}" {title_attributes(record)}>{h(title)}</button></th>'
                         f'<td>{date_html}</td>{code_html}<td class="row-arrow" aria-hidden="true">⌄</td></tr>')
             rows.append(detail_row(record, kind, 4 if show_code else 3))
-        code_heading = '<th scope="col">Production code</th>' if show_code else ""
-        table = (f'<div class="table-scroll"><table class="media-table"><thead><tr><th scope="col">{kind}</th>'
-                 f'<th scope="col">{date_heading}</th>{code_heading}'
-                 f'<th scope="col"><span class="sr-only">Details</span></th></tr></thead>'
-                 f'<tbody>{"".join(rows)}</tbody></table></div>') if rows else '<p class="empty">No records yet.</p>'
+        code_heading = '<th scope="col" data-i18n="productionCode">Production code</th>' if show_code else ""
+        date_key = {"Release date": "releaseDate", "Original air date": "originalAirDate",
+                    "First release": "firstRelease"}[date_heading]
+        kind_key = "film" if kind == "Film" else "short"
+        table = (f'<div class="table-scroll"><table class="media-table"><thead><tr>'
+                 f'<th scope="col" data-i18n="{kind_key}">{kind}</th>'
+                 f'<th scope="col" data-i18n="{date_key}">{date_heading}</th>{code_heading}'
+                 f'<th scope="col"><span class="sr-only" data-i18n="details">Details</span></th></tr></thead>'
+                 f'<tbody>{"".join(rows)}</tbody></table></div>') if rows else '<p class="empty" data-i18n="noRecords">No records yet.</p>'
         api_path = DATASETS[dataset]
+        heading_key, intro_key = {"movies": ("movies", "moviesIntro"),
+                                  "shorts/tracey-ullman": ("traceyShorts", "traceyIntro"),
+                                  "shorts/disney-plus": ("disneyShorts", "disneyIntro")}[dataset]
         groups.append(f'<section class="group media-group" id="{anchor}"><div class="group-heading">'
-                      f'<p class="eyebrow">Beyond numbered episodes</p><h2>{heading}</h2>'
-                      f'<p class="group-intro">{description} {len(records)} records. '
-                      f'<a href="/v1/{api_path}">Download JSON ↗</a></p></div>{table}</section>')
+                      f'<p class="eyebrow" data-i18n="beyondEpisodes">Beyond numbered episodes</p>'
+                      f'<h2 data-i18n="{heading_key}">{heading}</h2>'
+                      f'<p class="group-intro"><span data-i18n="{intro_key}">{description}</span> '
+                      f'<span data-i18n="recordsCount" data-count="{len(records)}">{len(records)} records.</span> '
+                      f'<a href="/v1/{api_path}" data-i18n="downloadJson">Download JSON ↗</a></p></div>{table}</section>')
     replacements = {
         "{{EPISODE_COUNT}}": str(len(catalog["episodes"])),
         "{{SEASON_COUNT}}": str(len(numbers)),
@@ -382,8 +432,9 @@ def render_episode_guide(catalog):
         "<!-- EPISODE_TABLES -->": "".join(groups),
     }
     for marker, content in replacements.items():
-        if template.count(marker) != 1:
-            raise ValidationError(f"Episode guide template must contain exactly one {marker}")
+        count = template.count(marker)
+        if count == 0 or (marker.startswith("<!--") and count != 1):
+            raise ValidationError(f"Episode guide template has invalid marker count for {marker}")
         template = template.replace(marker, content)
     return template
 
@@ -409,7 +460,7 @@ def build(source, destination):
     if headers_source.exists():
         shutil.copyfile(headers_source, destination.parent / "_headers")
     # Publish the consumer pages, API explorer, and OpenAPI description.
-    for name in ("index.html", "docs/index.html"):
+    for name in ("index.html", "docs/index.html", "site-i18n.js"):
         page = ROOT / "deployment" / name
         if page.exists():
             target = destination.parent / name

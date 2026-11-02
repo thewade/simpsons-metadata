@@ -12,6 +12,15 @@ spec.loader.exec_module(module)
 
 
 class BuildTests(unittest.TestCase):
+    def test_guide_title_fallbacks(self):
+        titles = {"en": "English", "fr": "French", "fr-FR": "France", "fr-CA": "Québec"}
+        self.assertEqual(module.guide_title(titles, "en"), "English")
+        self.assertEqual(module.guide_title(titles, "fr-FR"), "France")
+        self.assertEqual(module.guide_title(titles, "fr-CA"), "Québec")
+        self.assertEqual(module.guide_title({"en": "English", "fr-FR": "France"}, "fr-CA"), "France")
+        self.assertEqual(module.guide_title({"en": "English", "fr": "French"}, "fr-CA"), "French")
+        self.assertEqual(module.guide_title({"en": "English"}, "fr-CA"), "English")
+
     def test_episode_guide_escapes_metadata_and_links_only_known_ids(self):
         guide = module.render_episode_guide({
             "seasons": {"s01": {"id": "s01"}},
@@ -32,7 +41,7 @@ class BuildTests(unittest.TestCase):
         self.assertIn("Film &amp; &lt;script&gt;", guide)
         self.assertNotIn("Film & <script>", guide)
         self.assertIn('id="movie-2027-details" hidden', guide)
-        self.assertIn('September 3, 2027</time> <span class="date-note">(planned)</span>', guide)
+        self.assertIn('September 3, 2027</time> <span class="date-note" data-i18n="planned">(planned)</span>', guide)
 
     def test_build_outputs_expected_maps(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -41,8 +50,25 @@ class BuildTests(unittest.TestCase):
             self.assertGreaterEqual(count, 2)
             self.assertTrue((out.parent / "index.html").is_file())
             self.assertTrue((out.parent / "docs" / "index.html").is_file())
+            self.assertTrue((out.parent / "site-i18n.js").is_file())
             self.assertIn('href="/docs/"', (out.parent / "index.html").read_text())
+            landing = (out.parent / "index.html").read_text(encoding="utf-8")
+            self.assertIn('id="language-select"', landing)
+            self.assertIn('src="site-i18n.js"', landing)
+            self.assertIn('id="sample-title" data-title-en="Simpsons Roasting on an Open Fire" '
+                          'data-title-fr-fr="Noël mortel" data-title-fr-ca="Homer au nez rouge"', landing)
             guide = (out.parent / "episodes" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('id="language-select"', guide)
+            self.assertIn('src="../site-i18n.js"', guide)
+            self.assertIn('data-title-fr-fr="Noël mortel" data-title-fr-ca="Homer au nez rouge"', guide)
+            self.assertRegex(guide, r'id="s13e14"[^\n]*data-title-fr-fr="To Bart or not to Bart"'
+                                    r' data-title-fr-ca="Contes du domaine public"')
+            i18n = (out.parent / "site-i18n.js").read_text(encoding="utf-8")
+            french_keys = set(re.findall(r'^\s+([A-Za-z][A-Za-z0-9]*):',
+                                         i18n.split("const french = {", 1)[1].split("\n  };", 1)[0], re.M))
+            used_keys = set(re.findall(r'data-i18n(?:-html|-aria)?="([A-Za-z][A-Za-z0-9]*)"',
+                                       landing + guide))
+            self.assertFalse(used_keys - french_keys)
             self.assertIn('href="/episodes/"', (out.parent / "index.html").read_text())
             self.assertEqual(guide.count('<tr class="episode-row"'),
                              len(json.loads((out / "episodes.json").read_text())))
@@ -65,8 +91,8 @@ class BuildTests(unittest.TestCase):
             self.assertIn('id="season-38"', guide)
             self.assertIn('French article', guide)
             self.assertIn('id="s01e01-details" hidden', guide)
-            self.assertIn('<dt>Original aspect ratio</dt><dd>4:3</dd>', guide)
-            self.assertIn('<dt>Original aspect ratio</dt><dd>16:9</dd>', guide)
+            self.assertIn('<dt data-i18n="aspectRatio">Original aspect ratio</dt><dd>4:3</dd>', guide)
+            self.assertIn('<dt data-i18n="aspectRatio">Original aspect ratio</dt><dd>16:9</dd>', guide)
             self.assertIn('https://www.disneyplus.com/play/ffb14e5a-38db-4522-a559-3cfa52bcf4df', guide)
             self.assertNotIn('href="https://www.disneyplus.com/play/not-ported-over"', guide)
             self.assertIn('Wikipedia (French)', guide)

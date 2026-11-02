@@ -25,6 +25,9 @@
     nav a { color: #e3e9f2; text-decoration: none; }
     nav a:hover, nav a:focus-visible { color: var(--yellow); }
     .nav-docs { padding: .48rem .82rem; border: 1px solid #78849a; border-radius: 999px; }
+    .language-picker { display: flex; align-items: center; gap: .5rem; color: #e3e9f2; font-size: .78rem; font-weight: 700; }
+    .language-picker select { max-width: 170px; padding: .4rem .5rem; border: 1px solid #78849a; border-radius: 5px; background: #fff; color: var(--ink); font: inherit; }
+    .language-picker select:focus-visible { outline: 3px solid #e27b36; outline-offset: 3px; }
     .hero { position: relative; overflow: hidden; background: var(--ink); color: var(--white); }
     .hero::after { content: ""; position: absolute; width: 420px; height: 420px; right: -180px; bottom: -260px; border: 70px solid rgba(255, 220, 86, .11); border-radius: 50%; pointer-events: none; }
     .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); align-items: center; gap: clamp(2.5rem, 7vw, 6rem); padding-block: clamp(4.5rem, 8vw, 7rem); }
@@ -85,6 +88,7 @@
     footer p { margin: 0; }
     footer a { color: var(--blue); }
     @media (max-width: 860px) {
+      .site-header .wrap { flex-wrap: wrap; padding-block: 1rem; gap: .75rem 1.5rem; }
       .hero-grid, .how-grid { grid-template-columns: 1fr; }
       h1 { max-width: 14ch; }
       .sample { max-width: 680px; }
@@ -109,65 +113,67 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button, .endpoint { transition: none; } }
   </style>
+  <script defer src="site-i18n.js"></script>
 </head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+<body data-page="landing">
+  <a class="skip" href="#main" data-i18n="skipContent">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Simpsons Metadata API home"><span class="brand-mark" aria-hidden="true">S</span><span>Simpsons Metadata<small>Public JSON API</small></span></a>
-      <nav aria-label="Primary navigation"><a href="/episodes/">Episode guide</a><a href="#datasets">Datasets</a><a href="https://github.com/thewade/simpsons-metadata">GitHub</a><a class="nav-docs" href="/docs/">API reference ↗</a></nav>
+      <a class="brand" href="/" data-page-link="/" aria-label="Simpsons Metadata API home" data-i18n-aria="brandHome"><span class="brand-mark" aria-hidden="true">S</span><span>Simpsons Metadata<small data-i18n="brandSmall">Public JSON API</small></span></a>
+      <nav aria-label="Primary navigation" data-i18n-aria="primaryNav"><a href="/episodes/" data-page-link="/episodes/" data-i18n="navGuide">Episode guide</a><a href="#datasets" data-i18n="navDatasets">Datasets</a><a href="https://github.com/thewade/simpsons-metadata">GitHub</a><a class="nav-docs" href="/docs/" data-i18n="navApi">API reference ↗</a></nav>
+      <div class="language-picker"><label for="language-select">Language / Langue</label><select id="language-select"><option value="en">English</option><option value="fr-FR">Français (France)</option><option value="fr-CA">Français (Québec)</option></select></div>
     </div>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div>
-          <span class="eyebrow">Open data · version 1</span>
-          <h1 id="hero-title">Springfield, <em>in structured data.</em></h1>
-          <p class="hero-lede">Explore <em>The Simpsons</em> episodes, seasons, films, and more through simple, public JSON files. Ready for your project, with no account or API key.</p>
-          <div class="actions"><a class="button button-primary" href="/episodes/">Browse the guide <span aria-hidden="true">→</span></a><a class="button button-secondary" href="#datasets">Explore datasets</a></div>
-          <ul class="hero-facts"><li>Read-only JSON</li><li>HTTPS + CORS</li><li>No API key</li></ul>
+          <span class="eyebrow" data-i18n="heroEyebrow">Open data · version 1</span>
+          <h1 id="hero-title"><span data-i18n="heroLead">Springfield,</span> <em data-i18n="heroEm">in structured data.</em></h1>
+          <p class="hero-lede" data-i18n-html="heroLede">Explore <em>The Simpsons</em> episodes, seasons, films, and more through simple, public JSON files. Ready for your project, with no account or API key.</p>
+          <div class="actions"><a class="button button-primary" href="/episodes/" data-page-link="/episodes/" data-i18n="browseGuide">Browse the guide →</a><a class="button button-secondary" href="#datasets" data-i18n="exploreDatasets">Explore datasets</a></div>
+          <ul class="hero-facts"><li data-i18n="factReadOnly">Read-only JSON</li><li data-i18n="factHttpsCors">HTTPS + CORS</li><li data-i18n="factNoKey">No API key</li></ul>
         </div>
-        <div class="sample" aria-label="Example JSON response excerpt">
-          <div class="sample-top"><span>GET /v1/episodes.json</span><a href="/v1/episodes.json">Open JSON ↗</a></div>
+        <div class="sample" aria-label="Example JSON response excerpt" data-i18n-aria="sampleAria">
+          <div class="sample-top"><span>GET /v1/episodes.json</span><a href="/v1/episodes.json" data-i18n="openJson">Open JSON ↗</a></div>
           <pre><code><span class="punct">{</span>
   <span class="key">"s01e01"</span><span class="punct">: {</span>
     <span class="key">"titles"</span><span class="punct">: {</span>
-      <span class="key">"en"</span><span class="punct">: </span><span class="string">"Simpsons Roasting on an Open Fire"</span>
+      <span class="key" id="sample-title-language">"en"</span><span class="punct">: </span><span class="string" id="sample-title" data-title-en="Simpsons Roasting on an Open Fire" data-title-fr-fr="Noël mortel" data-title-fr-ca="Homer au nez rouge">"Simpsons Roasting on an Open Fire"</span>
     <span class="punct">},</span>
     <span class="key">"production_code"</span><span class="punct">: </span><span class="string">"7G08"</span><span class="punct">,</span>
     <span class="key">"original_air_date"</span><span class="punct">: </span><span class="string">"1989-12-17"</span>
   <span class="punct">}</span>
 <span class="punct">}</span></code></pre>
-          <p class="sample-note">Response excerpt · records are keyed by ID</p>
+          <p class="sample-note" data-i18n="sampleNote">Response excerpt · records are keyed by ID</p>
         </div>
       </div>
     </section>
     <section class="section" id="datasets" aria-labelledby="datasets-title">
       <div class="wrap">
-        <div class="section-head"><div><p class="kicker">Browse the catalogue</p><h2 id="datasets-title">Pick a dataset.</h2></div><p>Each link opens a complete JSON object. <a href="/episodes/">Browse the episode tables</a> or download a dataset and look up IDs in your own code.</p></div>
+        <div class="section-head"><div><p class="kicker" data-i18n="catalogueKicker">Browse the catalogue</p><h2 id="datasets-title" data-i18n="pickDataset">Pick a dataset.</h2></div><p data-i18n-html="datasetIntro">Each link opens a complete JSON object. <a href="/episodes/" data-page-link="/episodes/">Browse the episode tables</a> or download a dataset and look up IDs in your own code.</p></div>
         <div class="endpoint-list">
-          <a class="endpoint" href="/v1/episodes.json"><span class="num">01</span><span><strong>Episodes</strong><small>Regular television episodes</small></span><code>/v1/episodes.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/seasons.json"><span class="num">02</span><span><strong>Seasons</strong><small>Season catalogue</small></span><code>/v1/seasons.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/movies.json"><span class="num">03</span><span><strong>Movies</strong><small>Released and announced films</small></span><code>/v1/movies.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/shorts/tracey-ullman.json"><span class="num">04</span><span><strong>Tracey Ullman shorts</strong><small>Original animated shorts</small></span><code>/v1/shorts/tracey-ullman.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/shorts/disney-plus.json"><span class="num">05</span><span><strong>Disney+ shorts</strong><small>Short-form releases</small></span><code>/v1/shorts/disney-plus.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/commercials.json"><span class="num">06</span><span><strong>Commercials</strong><small>Commercial appearances</small></span><code>/v1/commercials.json</code><span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="endpoint" href="/v1/specials.json"><span class="num">07</span><span><strong>Specials</strong><small>Other non-regular releases</small></span><code>/v1/specials.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/episodes.json"><span class="num">01</span><span><strong data-i18n="datasetEpisodes">Episodes</strong><small data-i18n="descEpisodes">Regular television episodes</small></span><code>/v1/episodes.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/seasons.json"><span class="num">02</span><span><strong data-i18n="datasetSeasons">Seasons</strong><small data-i18n="descSeasons">Season catalogue</small></span><code>/v1/seasons.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/movies.json"><span class="num">03</span><span><strong data-i18n="datasetMovies">Movies</strong><small data-i18n="descMovies">Released and announced films</small></span><code>/v1/movies.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/shorts/tracey-ullman.json"><span class="num">04</span><span><strong data-i18n="datasetTracey">Tracey Ullman shorts</strong><small data-i18n="descTracey">Original animated shorts</small></span><code>/v1/shorts/tracey-ullman.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/shorts/disney-plus.json"><span class="num">05</span><span><strong data-i18n="datasetDisney">Disney+ shorts</strong><small data-i18n="descDisney">Short-form releases</small></span><code>/v1/shorts/disney-plus.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/commercials.json"><span class="num">06</span><span><strong data-i18n="datasetCommercials">Commercials</strong><small data-i18n="descCommercials">Commercial appearances</small></span><code>/v1/commercials.json</code><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="endpoint" href="/v1/specials.json"><span class="num">07</span><span><strong data-i18n="datasetSpecials">Specials</strong><small data-i18n="descSpecials">Other non-regular releases</small></span><code>/v1/specials.json</code><span class="arrow" aria-hidden="true">↗</span></a>
         </div>
-        <p class="note"><strong>A note on coverage:</strong> Some datasets are still empty and return <code>{}</code>. Missing fields are omitted; a <code>null</code> link means the absence of that destination was checked.</p>
+        <p class="note" data-i18n-html="coverageNote"><strong>A note on coverage:</strong> Some datasets are still empty and return <code>{}</code>. Missing fields are omitted; a <code>null</code> link means the absence of that destination was checked.</p>
       </div>
     </section>
     <section class="section how" id="getting-started" aria-labelledby="start-title">
-      <div class="wrap how-grid"><div><p class="kicker">Make a request</p><h2 id="start-title">Start with one fetch.</h2><p>Responses are keyed by IDs such as <code>s01e01</code>. There are no per-record URLs or server-side filters: fetch a dataset and query it locally.</p><a href="/docs/">Explore every endpoint in the API reference →</a></div><div class="how-code"><div class="label">JavaScript example</div><pre><code>const episodes = await fetch(
+      <div class="wrap how-grid"><div><p class="kicker" data-i18n="requestKicker">Make a request</p><h2 id="start-title" data-i18n="startFetch">Start with one fetch.</h2><p data-i18n-html="fetchIntro">Responses are keyed by IDs such as <code>s01e01</code>. There are no per-record URLs or server-side filters: fetch a dataset and query it locally.</p><a href="/docs/" data-i18n="exploreEndpoints">Explore every endpoint in the API reference →</a></div><div class="how-code"><div class="label" data-i18n="jsExample">JavaScript example</div><pre><code>const episodes = await fetch(
   'https://api.simpsonseh.com/v1/episodes.json'
 ).then(response => response.json());
 
-console.log(episodes['s01e01'].titles.en);
-<span class="comment">// Simpsons Roasting on an Open Fire</span></code></pre></div></div>
+console.log(episodes['s01e01'].titles['<span id="sample-js-language">en</span>']);
+<span class="comment" id="sample-js-title">// Simpsons Roasting on an Open Fire</span></code></pre></div></div>
     </section>
-    <section class="section" aria-labelledby="more-title"><div class="wrap"><div class="section-head"><div><p class="kicker">More ways in</p><h2 id="more-title">Explore and integrate.</h2></div></div><div class="resources"><div class="resource"><h3>Find a record</h3><p>Production, TVDB, TMDB, and IMDb lookup maps point an external ID to its dataset and record ID.</p><a href="/v1/production.json">Open production lookup →</a></div><div class="resource"><h3>Inspect the contract</h3><p>Browse the interactive reference or read the machine-readable OpenAPI description.</p><a href="/docs/">Open API reference →</a></div><div class="resource"><h3>Track changes</h3><p>The manifest lists published files and SHA-256 hashes for clients that cache datasets.</p><a href="/v1/manifest.json">View manifest →</a></div></div></div></section>
+    <section class="section" aria-labelledby="more-title"><div class="wrap"><div class="section-head"><div><p class="kicker" data-i18n="moreKicker">More ways in</p><h2 id="more-title" data-i18n="exploreIntegrate">Explore and integrate.</h2></div></div><div class="resources"><div class="resource"><h3 data-i18n="findRecord">Find a record</h3><p data-i18n="findIntro">Production, TVDB, TMDB, and IMDb lookup maps point an external ID to its dataset and record ID.</p><a href="/v1/production.json" data-i18n="openProduction">Open production lookup →</a></div><div class="resource"><h3 data-i18n="inspectContract">Inspect the contract</h3><p data-i18n="inspectIntro">Browse the interactive reference or read the machine-readable OpenAPI description.</p><a href="/docs/" data-i18n="openApi">Open API reference →</a></div><div class="resource"><h3 data-i18n="trackChanges">Track changes</h3><p data-i18n="trackIntro">The manifest lists published files and SHA-256 hashes for clients that cache datasets.</p><a href="/v1/manifest.json" data-i18n="viewManifest">View manifest →</a></div></div></div></section>
   </main>
-  <footer><div class="wrap"><p>Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>. Unaffiliated with the rights holders of <em>The Simpsons</em>.</p><p><a href="https://github.com/thewade/simpsons-metadata">Source &amp; contributions</a> · <a href="/openapi.json">OpenAPI JSON</a></p></div></footer>
+  <footer><div class="wrap"><p data-i18n-html="footerLanding">Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>. Unaffiliated with the rights holders of <em>The Simpsons</em>.</p><p><a href="https://github.com/thewade/simpsons-metadata" data-i18n="sourceContrib">Source &amp; contributions</a> · <a href="/openapi.json">OpenAPI JSON</a></p></div></footer>
 </body>
 </html>

@@ -32,6 +32,8 @@ Some categories are currently empty and return `{}`. A record may have a `links`
 
 The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episodes into season tables and also lists movies, Tracey Ullman shorts, and Disney+ shorts. Select a row for regional titles, references, archived source fields, and a Disney+ link when a content ID is stored. Those playback links are built from imported IDs and are not a guarantee of current or regional availability.
 
+The landing page and guide are available in English, French (France), and French (Québec). They start with your browser's preferred language; use the language menu to change it. The choice is saved in the browser and can be shared with `?lang=en`, `?lang=fr-FR`, or `?lang=fr-CA`. A Québec guide title falls back to the France title, then a generic French title, then English when needed. The JSON API retains its original language tags.
+
 ## Lookups and API description
 
 [`production.json`](https://api.simpsonseh.com/v1/production.json), [`tvdb.json`](https://api.simpsonseh.com/v1/tvdb.json), [`tmdb.json`](https://api.simpsonseh.com/v1/tmdb.json), and [`imdb.json`](https://api.simpsonseh.com/v1/imdb.json) map external identifiers to `{ "dataset": "...", "id": "..." }`. [`manifest.json`](https://api.simpsonseh.com/v1/manifest.json) lists the published files and their SHA-256 hashes. The machine-readable API description is [`openapi.json`](https://api.simpsonseh.com/openapi.json).

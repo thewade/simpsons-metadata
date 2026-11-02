@@ -23,6 +23,8 @@
     .topbar nav { display:flex; flex-wrap:wrap; gap:1rem 1.5rem; font-size:.9rem; font-weight:700; }
     .topbar nav a { color:#e4eaf4; text-decoration:none; }
     .topbar nav a:hover { color:var(--yellow); }
+    .language-picker { display:flex; align-items:center; gap:.5rem; color:#e4eaf4; font-size:.78rem; font-weight:700; }
+    .language-picker select { max-width:170px; padding:.4rem .5rem; border:1px solid #78849a; border-radius:5px; background:#fff; color:var(--ink); font:inherit; }
     .hero { padding:4.5rem 0 4rem; background:var(--ink); color:#fff; border-top:1px solid #37445e; }
     .eyebrow { margin:0 0 .6rem; color:#a87b00; text-transform:uppercase; letter-spacing:.17em; font-size:.71rem; font-weight:850; }
     .hero .eyebrow { color:var(--yellow); }
@@ -95,21 +97,23 @@
     .footer .wrap { display:flex; justify-content:space-between; gap:1rem; }
     .footer p { margin:0; }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:900px) { .topbar .wrap { flex-wrap:wrap; padding-block:1rem; gap:.75rem 1.5rem; } }
     @media(max-width:650px) { .wrap { width:min(100% - 2rem,1180px); } .topbar .wrap { align-items:start; flex-direction:column; padding:1rem 0; gap:.6rem; } .hero { padding:3rem 0; } .detail-top { display:block; } .permalink { display:inline-block; margin-top:.8rem; } .footer .wrap { display:block; } .footer p + p { margin-top:.5rem; } }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .row-arrow { transition:none; } }
   </style>
+  <script defer src="../site-i18n.js"></script>
 </head>
-<body>
-  <a class="skip" href="#catalogue">Skip to catalogue</a>
-  <header class="topbar"><div class="wrap"><a class="brand" href="/"><span aria-hidden="true">S</span> Simpsons Metadata</a><nav aria-label="Site navigation"><a href="/">Home</a><a href="/v1/episodes.json">Raw JSON</a><a href="/docs/">API reference</a></nav></div></header>
-  <section class="hero" aria-labelledby="guide-title"><div class="wrap"><p class="eyebrow">Browse the catalogue</p><h1 id="guide-title">Episode guide</h1><p>{{EPISODE_COUNT}} numbered episodes across {{SEASON_COUNT}} seasons, plus {{MOVIE_COUNT}} movies and {{SHORT_COUNT}} shorts. Select a row to reveal titles, references, and Disney+ links when available.</p></div></section>
-  <aside class="guide-nav"><div class="wrap"><div class="lead"><a href="#classic">Seasons 1–20</a><a href="#modern">Season 21 onward</a><a href="#movies">Movies</a><a href="#tracey-ullman-shorts">Tracey Ullman shorts</a><a href="#disney-plus-shorts">Disney+ shorts</a><a href="/v1/episodes.json">Download episodes.json ↗</a></div><nav class="season-jumps" aria-label="Jump to a season"><!-- SEASON_JUMPS --></nav></div></aside>
+<body data-page="guide">
+  <a class="skip" href="#catalogue" data-i18n="skipCatalogue">Skip to catalogue</a>
+  <header class="topbar"><div class="wrap"><a class="brand" href="/" data-page-link="/"><span aria-hidden="true">S</span> Simpsons Metadata</a><nav aria-label="Site navigation" data-i18n-aria="primaryNav"><a href="/" data-page-link="/" data-i18n="navHome">Home</a><a href="/v1/episodes.json" data-i18n="navJson">Raw JSON</a><a href="/docs/" data-i18n="navApi">API reference ↗</a></nav><div class="language-picker"><label for="language-select">Language / Langue</label><select id="language-select"><option value="en">English</option><option value="fr-FR">Français (France)</option><option value="fr-CA">Français (Québec)</option></select></div></div></header>
+  <section class="hero" aria-labelledby="guide-title"><div class="wrap"><p class="eyebrow" data-i18n="guideEyebrow">Browse the catalogue</p><h1 id="guide-title" data-i18n="guideHeading">Episode guide</h1><p data-i18n="guideIntro" data-episodes="{{EPISODE_COUNT}}" data-seasons="{{SEASON_COUNT}}" data-movies="{{MOVIE_COUNT}}" data-shorts="{{SHORT_COUNT}}">{{EPISODE_COUNT}} numbered episodes across {{SEASON_COUNT}} seasons, plus {{MOVIE_COUNT}} movies and {{SHORT_COUNT}} shorts. Select a row to reveal titles, references, and Disney+ links when available.</p></div></section>
+  <aside class="guide-nav"><div class="wrap"><div class="lead"><a href="#classic" data-i18n="classic">Seasons 1–20</a><a href="#modern" data-i18n="modern">Season 21 onward</a><a href="#movies" data-i18n="movies">Movies</a><a href="#tracey-ullman-shorts" data-i18n="traceyShorts">Tracey Ullman shorts</a><a href="#disney-plus-shorts" data-i18n="disneyShorts">Disney+ shorts</a><a href="/v1/episodes.json" data-i18n="downloadEpisodes">Download episodes.json ↗</a></div><nav class="season-jumps" aria-label="Jump to a season" data-i18n-aria="jumpSeason"><!-- SEASON_JUMPS --></nav></div></aside>
   <main id="catalogue" class="wrap catalogue">
-    <p class="guide-note"><strong>About these links:</strong> Disney+ links are formed from stored content IDs. The IDs have not been rechecked against current playback, and availability can vary by region or subscription. Planned movie dates are marked as such.</p>
-    <noscript><p class="guide-note">Enable JavaScript to expand rows. The <a href="/docs/">API reference</a> links to the complete JSON datasets.</p></noscript>
+    <p class="guide-note" data-i18n-html="guideNote"><strong>About these links:</strong> Disney+ links are formed from stored content IDs. The IDs have not been rechecked against current playback, and availability can vary by region or subscription. Planned movie dates are marked as such.</p>
+    <noscript><p class="guide-note" data-i18n-html="guideNoScript">Enable JavaScript to expand rows. The <a href="/docs/">API reference</a> links to the complete JSON datasets.</p></noscript>
     <!-- EPISODE_TABLES -->
   </main>
-  <footer class="footer"><div class="wrap"><p>Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>.</p><p><a href="/">API home</a> · <a href="https://github.com/thewade/simpsons-metadata">Source &amp; contributions</a></p></div></footer>
+  <footer class="footer"><div class="wrap"><p data-i18n-html="footerGuide">Metadata contributed under <a href="https://github.com/thewade/simpsons-metadata/blob/main/LICENSE-DATA.md">CC BY 4.0</a>.</p><p><a href="/" data-page-link="/" data-i18n="apiHome">API home</a> · <a href="https://github.com/thewade/simpsons-metadata" data-i18n="sourceContrib">Source &amp; contributions</a></p></div></footer>
   <script>
     function setOpen(row, open) {
       const button = row.querySelector('.episode-toggle');
