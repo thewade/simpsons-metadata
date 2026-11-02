@@ -7,7 +7,12 @@
     "fr-CA": "Genèse d'aujourd'hui"
   },
   "production_code": "HABF14",
-  "original_air_date": "2006-05-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-05-14"
+    }
+  ],
   "overall_number": 377,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Monkey_Suit",

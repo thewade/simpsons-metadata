@@ -7,7 +7,12 @@
     "fr-CA": "Pour quelques milliards de plus"
   },
   "production_code": "5F14",
-  "original_air_date": "1998-04-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-04-05"
+    }
+  ],
   "overall_number": 198,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F14.html",

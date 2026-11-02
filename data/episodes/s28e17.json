@@ -7,7 +7,12 @@
     "fr-CA": "Les Ti-counes du sport"
   },
   "production_code": "WABF10",
-  "original_air_date": "2017-03-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-03-12"
+    }
+  ],
   "overall_number": 613,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/22_for_30",

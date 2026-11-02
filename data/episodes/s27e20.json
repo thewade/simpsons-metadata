@@ -7,7 +7,12 @@
     "fr-CA": "L'Homme à la valise"
   },
   "production_code": "VABF14",
-  "original_air_date": "2016-05-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-05-08"
+    }
+  ],
   "overall_number": 594,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/To_Courier_with_Love",

@@ -7,7 +7,12 @@
     "fr-CA": "Le jour où la violence est morte"
   },
   "production_code": "3F16",
-  "original_air_date": "1996-03-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-03-17"
+    }
+  ],
   "overall_number": 146,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F16.html",

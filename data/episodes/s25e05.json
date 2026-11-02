@@ -7,7 +7,12 @@
     "fr-CA": "Poupons, Poupounes et pompons"
   },
   "production_code": "RABF19",
-  "original_air_date": "2013-11-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-11-17"
+    }
+  ],
   "overall_number": 535,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Labor_Pains_(The_Simpsons)",

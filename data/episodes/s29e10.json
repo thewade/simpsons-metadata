@@ -7,7 +7,12 @@
     "fr-CA": "Ha-Ha Land"
   },
   "production_code": "XABF03",
-  "original_air_date": "2018-01-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-01-07"
+    }
+  ],
   "overall_number": 628,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Haw-Haw_Land",

@@ -7,7 +7,12 @@
     "fr-CA": "Pigeon voyageur : Terminus"
   },
   "production_code": "NABF02",
-  "original_air_date": "2010-11-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-11-28"
+    }
+  ],
   "overall_number": 471,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/How_Munched_Is_That_Birdie_in_the_Window%3F",

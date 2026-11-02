@@ -7,7 +7,12 @@
     "fr-CA": "Les jaunesses musicales"
   },
   "production_code": "MABF21",
-  "original_air_date": "2010-09-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-09-26"
+    }
+  ],
   "overall_number": 465,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Elementary_School_Musical_(The_Simpsons)",

@@ -7,7 +7,12 @@
     "fr-CA": "Krusty complètement cirque"
   },
   "production_code": "XABF22",
-  "original_air_date": "2018-11-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-11-25"
+    }
+  ],
   "overall_number": 647,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Krusty_the_Clown_(The_Simpsons_episode)",

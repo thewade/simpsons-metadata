@@ -7,7 +7,12 @@
     "fr-CA": "La fin du monde devait être à sept heures"
   },
   "production_code": "GABF14",
-  "original_air_date": "2005-05-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-05-08"
+    }
+  ],
   "overall_number": 354,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Thank_God,_It's_Doomsday",

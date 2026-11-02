@@ -7,7 +7,12 @@
     "fr-CA": "Ent'deux joints"
   },
   "production_code": "ZABF10",
-  "original_air_date": "2020-03-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-03-22"
+    }
+  ],
   "overall_number": 679,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Highway_to_Well",

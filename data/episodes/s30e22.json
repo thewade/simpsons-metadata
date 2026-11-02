@@ -7,7 +7,12 @@
     "fr-CA": "Vol au-dessus d'un nid de wou-hou"
   },
   "production_code": "YABF15",
-  "original_air_date": "2019-05-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-05-05"
+    }
+  ],
   "overall_number": 661,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Woo-Hoo_Dunnit%3F",

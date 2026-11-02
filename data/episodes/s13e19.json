@@ -7,7 +7,12 @@
     "fr-CA": "Apu de souffle"
   },
   "production_code": "DABF14",
-  "original_air_date": "2002-05-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-05-05"
+    }
+  ],
   "overall_number": 288,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Sweetest_Apu",

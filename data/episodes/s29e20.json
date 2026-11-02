@@ -7,7 +7,12 @@
     "fr-CA": "Quelque chose de jauni au Royaume du Danemark"
   },
   "production_code": "XABF13",
-  "original_air_date": "2018-05-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-05-13"
+    }
+  ],
   "overall_number": 638,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Throw_Grampa_from_the_Dane",

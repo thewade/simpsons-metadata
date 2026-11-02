@@ -7,7 +7,12 @@
     "fr-CA": "Le Père qui en savait trop peu"
   },
   "production_code": "EABF03",
-  "original_air_date": "2003-01-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-01-12"
+    }
+  ],
   "overall_number": 299,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Dad_Who_Knew_Too_Little",

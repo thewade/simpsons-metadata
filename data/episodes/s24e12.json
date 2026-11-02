@@ -7,7 +7,12 @@
     "fr-CA": "L'amour est dans le champ"
   },
   "production_code": "RABF07",
-  "original_air_date": "2013-02-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-02-10"
+    }
+  ],
   "overall_number": 520,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Love_Is_a_Many-Splintered_Thing",

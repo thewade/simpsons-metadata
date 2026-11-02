@@ -7,7 +7,12 @@
     "fr-CA": "Milhouse se fait du cinéma"
   },
   "production_code": "GABF19",
-  "original_air_date": "2005-09-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-09-25"
+    }
+  ],
   "overall_number": 359,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Milhouse_of_Sand_and_Fog",

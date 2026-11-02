@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d’Halloween XVI"
   },
   "production_code": "GABF17",
-  "original_air_date": "2005-11-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-11-06"
+    }
+  ],
   "overall_number": 360,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XVI",

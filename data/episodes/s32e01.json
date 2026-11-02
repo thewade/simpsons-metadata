@@ -7,7 +7,12 @@
     "fr-CA": "Le milionnaire masqué"
   },
   "production_code": "ZABF19",
-  "original_air_date": "2020-09-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-09-27"
+    }
+  ],
   "overall_number": 685,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Undercover_Burns",

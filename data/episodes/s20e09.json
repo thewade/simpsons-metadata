@@ -7,7 +7,12 @@
     "fr-CA": "La seigneure des amis"
   },
   "production_code": "KABF22",
-  "original_air_date": "2009-01-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-01-25"
+    }
+  ],
   "overall_number": 429,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_the_Drama_Queen",

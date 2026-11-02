@@ -7,7 +7,12 @@
     "fr-CA": "Où sont les fans ?"
   },
   "production_code": "OABF11",
-  "original_air_date": "2023-04-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-04-23"
+    }
+  ],
   "overall_number": 746,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Fan-ily_Feud",

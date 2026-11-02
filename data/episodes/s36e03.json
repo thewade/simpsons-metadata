@@ -7,7 +7,12 @@
     "fr-CA": "Recherche Lisa désespérément"
   },
   "production_code": "35ABF18",
-  "original_air_date": "2024-10-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-10-20"
+    }
+  ],
   "overall_number": 771,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Desperately_Seeking_Lisa",

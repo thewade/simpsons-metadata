@@ -7,7 +7,12 @@
     "fr-CA": "Crédit d'impôt pour épisode"
   },
   "production_code": "OABF12",
-  "original_air_date": "2023-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-04-30"
+    }
+  ],
   "overall_number": 747,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Write_Off_This_Episode",

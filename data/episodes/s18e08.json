@@ -7,7 +7,12 @@
     "fr-CA": "Les Simpson et le prisonnier de la cabane"
   },
   "production_code": "JABF02",
-  "original_air_date": "2006-12-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-12-10"
+    }
+  ],
   "overall_number": 386,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Haw-Hawed_Couple",

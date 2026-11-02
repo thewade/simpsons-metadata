@@ -7,7 +7,12 @@
     "fr-CA": "Le Choix de Selma"
   },
   "production_code": "9F11",
-  "original_air_date": "1993-01-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-01-21"
+    }
+  ],
   "overall_number": 72,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F11.html",

@@ -6,7 +6,12 @@
     "fr-FR": "Les Rois du cracker"
   },
   "production_code": "37ABF05",
-  "original_air_date": "2026-02-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-02-15"
+    }
+  ],
   "overall_number": 805,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer%3F_A_Cracker_Bro%3F",

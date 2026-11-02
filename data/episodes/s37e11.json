@@ -6,7 +6,12 @@
     "fr-FR": "Activité parahormonale"
   },
   "production_code": "37ABF03",
-  "original_air_date": "2025-12-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-12-14"
+    }
+  ],
   "overall_number": 801,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Parahormonal_Activity",

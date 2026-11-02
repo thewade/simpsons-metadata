@@ -7,7 +7,12 @@
     "fr-CA": "Le vieil homme et la clé"
   },
   "production_code": "DABF09",
-  "original_air_date": "2002-03-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-03-10"
+    }
+  ],
   "overall_number": 282,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Key",

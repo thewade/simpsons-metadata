@@ -6,7 +6,12 @@
     "fr-FR": "Absolument crapuleux"
   },
   "production_code": "37ABF02",
-  "original_air_date": "2025-11-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-30"
+    }
+  ],
   "overall_number": 799,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Aunt_Misbehavin'",

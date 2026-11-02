@@ -7,7 +7,12 @@
     "fr-CA": "La filière Springfield"
   },
   "production_code": "2F21",
-  "original_air_date": "1995-05-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-05-07"
+    }
+  ],
   "overall_number": 126,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F21.html",

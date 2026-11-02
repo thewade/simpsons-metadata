@@ -7,7 +7,12 @@
     "fr-CA": "Ma nuit chez Clancy"
   },
   "production_code": "MABF09",
-  "original_air_date": "2010-04-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-04-18"
+    }
+  ],
   "overall_number": 459,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Chief_of_Hearts",

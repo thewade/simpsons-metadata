@@ -7,7 +7,12 @@
     "fr-CA": "Un Milhouse pour deux"
   },
   "production_code": "4F04",
-  "original_air_date": "1996-12-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-12-01"
+    }
+  ],
   "overall_number": 159,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/4F04.html",

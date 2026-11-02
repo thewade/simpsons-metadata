@@ -7,7 +7,12 @@
     "fr-CA": "Deux mauvais voisins"
   },
   "production_code": "3F09",
-  "original_air_date": "1996-01-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-01-14"
+    }
+  ],
   "overall_number": 141,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F09.html",

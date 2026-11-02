@@ -7,7 +7,12 @@
     "fr-CA": "Marge à planche"
   },
   "production_code": "YABF08",
-  "original_air_date": "2019-03-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-03-10"
+    }
+  ],
   "overall_number": 655,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I_Want_You_(She's_So_Heavy)_(The_Simpsons)",

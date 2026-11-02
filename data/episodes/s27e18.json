@@ -7,7 +7,12 @@
     "fr-CA": "Vivre dans la Marge"
   },
   "production_code": "VABF11",
-  "original_air_date": "2016-04-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-04-10"
+    }
+  ],
   "overall_number": 592,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/How_Lisa_Got_Her_Marge_Back",

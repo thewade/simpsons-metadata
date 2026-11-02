@@ -7,7 +7,12 @@
     "fr-CA": "Viva la pura vida"
   },
   "production_code": "ZABF03",
-  "original_air_date": "2019-11-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-11-17"
+    }
+  ],
   "overall_number": 669,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Livin_La_Pura_Vida",

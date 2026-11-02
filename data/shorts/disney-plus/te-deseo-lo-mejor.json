@@ -4,7 +4,12 @@
     "en": "Te Deseo Lo Mejor",
     "fr": "Te Deseo Lo Mejor"
   },
-  "original_air_date": "2021-12-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-12-24"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Te_Deseo_Lo_Mejor"
   },

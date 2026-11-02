@@ -7,7 +7,12 @@
     "fr-CA": "Prêtre, pas prête, j'y vas"
   },
   "production_code": "ZABF12",
-  "original_air_date": "2020-04-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-04-26"
+    }
+  ],
   "overall_number": 681,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Warrin'_Priests",

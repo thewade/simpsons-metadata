@@ -7,7 +7,12 @@
     "fr-CA": "Personne ne touche à la vie de Lisa"
   },
   "production_code": "MABF20",
-  "original_air_date": "2010-11-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-11-14"
+    }
+  ],
   "overall_number": 469,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_Simpson,_This_Isn't_Your_Life",

@@ -7,7 +7,12 @@
     "fr-CA": "Libérée et livrée"
   },
   "production_code": "35ABF07",
-  "original_air_date": "2024-04-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-04-07"
+    }
+  ],
   "overall_number": 764,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Night_of_the_Living_Wage",

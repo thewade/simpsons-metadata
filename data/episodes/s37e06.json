@@ -6,7 +6,12 @@
     "fr-FR": "Donjons et Dragon de Komodo"
   },
   "production_code": "36ABF16",
-  "original_air_date": "2025-11-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-09"
+    }
+  ],
   "overall_number": 796,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_'N'_Frink",

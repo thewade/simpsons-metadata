@@ -7,7 +7,12 @@
     "fr-CA": "Krustyssion scolaire"
   },
   "production_code": "OABF15",
-  "original_air_date": "2023-05-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-05-14"
+    }
+  ],
   "overall_number": 749,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Clown_V._Board_of_Education",

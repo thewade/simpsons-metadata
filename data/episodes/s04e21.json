@@ -7,7 +7,12 @@
     "fr-CA": "Marge en prison"
   },
   "production_code": "9F20",
-  "original_air_date": "1993-05-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-05-06"
+    }
+  ],
   "overall_number": 80,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F20.html",

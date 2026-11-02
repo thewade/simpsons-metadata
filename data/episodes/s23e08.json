@@ -7,7 +7,12 @@
     "fr-CA": "Son dix pour cent"
   },
   "production_code": "PABF02",
-  "original_air_date": "2011-12-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-12-04"
+    }
+  ],
   "overall_number": 494,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Ten-Per-Cent_Solution",

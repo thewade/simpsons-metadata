@@ -7,7 +7,12 @@
     "fr-CA": "Bart, chasseur de tête"
   },
   "production_code": "7G07",
-  "original_air_date": "1990-02-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-02-25"
+    }
+  ],
   "overall_number": 8,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G07.html",

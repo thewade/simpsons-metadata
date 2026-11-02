@@ -4,7 +4,12 @@
     "en": "Family Therapy"
   },
   "production_code": "MG47",
-  "original_air_date": "1989-04-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-04-23"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Family_Therapy"
   }

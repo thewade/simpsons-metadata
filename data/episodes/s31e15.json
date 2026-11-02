@@ -7,7 +7,12 @@
     "fr-CA": "Capture d'écrans"
   },
   "production_code": "ZABF09",
-  "original_air_date": "2020-03-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-03-08"
+    }
+  ],
   "overall_number": 677,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Screenless_(The_Simpsons)",

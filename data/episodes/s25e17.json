@@ -7,7 +7,12 @@
     "fr-CA": "Luca$"
   },
   "production_code": "SABF12",
-  "original_air_date": "2014-04-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-04-06"
+    }
+  ],
   "overall_number": 547,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Luca$",

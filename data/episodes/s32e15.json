@@ -7,7 +7,12 @@
     "fr-CA": "Quatre morceaux de robots"
   },
   "production_code": "QABF08",
-  "original_air_date": "2021-03-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-03-14"
+    }
+  ],
   "overall_number": 699,
   "links": {
     "wikipedia": null,

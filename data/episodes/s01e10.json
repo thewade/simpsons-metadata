@@ -7,7 +7,12 @@
     "fr-CA": "Homer fait une virée"
   },
   "production_code": "7G10",
-  "original_air_date": "1990-03-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-03-25"
+    }
+  ],
   "overall_number": 10,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G10.html",

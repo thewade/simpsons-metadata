@@ -7,7 +7,12 @@
     "fr-CA": "Père moron, Fils manqué"
   },
   "production_code": "FABF21",
-  "original_air_date": "2004-12-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-12-12"
+    }
+  ],
   "overall_number": 340,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Fat_Man_and_Little_Boy_(The_Simpsons)",

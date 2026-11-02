@@ -7,7 +7,12 @@
     "fr-CA": "Odieux guide"
   },
   "production_code": "ZABF11",
-  "original_air_date": "2020-03-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-03-15"
+    }
+  ],
   "overall_number": 678,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Better_Off_Ned",

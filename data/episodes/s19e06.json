@@ -7,7 +7,12 @@
     "fr-CA": "Milhouse l'enfant martyr"
   },
   "production_code": "JABF22",
-  "original_air_date": "2007-11-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-11-11"
+    }
+  ],
   "overall_number": 406,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Little_Orphan_Millie",

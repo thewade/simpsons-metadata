@@ -7,7 +7,12 @@
     "fr-CA": "Flanders fait faillite"
   },
   "production_code": "7F23",
-  "original_air_date": "1991-10-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-10-03"
+    }
+  ],
   "overall_number": 38,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F23.html",

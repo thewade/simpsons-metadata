@@ -7,7 +7,12 @@
     "fr-CA": "Jamais sans ma mère"
   },
   "production_code": "EABF18",
-  "original_air_date": "2003-11-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-11-09"
+    }
+  ],
   "overall_number": 315,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/My_Mother_the_Carjacker",

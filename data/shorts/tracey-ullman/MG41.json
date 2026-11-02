@@ -4,7 +4,12 @@
     "en": "Bart's Little Fantasy"
   },
   "production_code": "MG41",
-  "original_air_date": "1989-02-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-02-05"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bart%27s_Little_Fantasy"
   }

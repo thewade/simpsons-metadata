@@ -7,7 +7,12 @@
     "fr-CA": "Burns l'aime, elle non plus"
   },
   "production_code": "CABF18",
-  "original_air_date": "2001-12-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-12-02"
+    }
+  ],
   "overall_number": 273,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/CABF18.html",

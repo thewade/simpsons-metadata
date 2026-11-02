@@ -4,7 +4,12 @@
     "en": "The Good, the Bart, and the Loki",
     "fr": "Le bon, le Bart et le Loki"
   },
-  "original_air_date": "2021-07-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-07-07"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Good,_the_Bart,_and_the_Loki"
   },

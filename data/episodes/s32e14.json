@@ -7,7 +7,12 @@
     "fr-CA": "Mille après mille je suis riche"
   },
   "production_code": "QABF07",
-  "original_air_date": "2021-03-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-03-07"
+    }
+  ],
   "overall_number": 698,
   "links": {
     "wikipedia": null,

@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween IV"
   },
   "production_code": "1F04",
-  "original_air_date": "1993-10-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-10-28"
+    }
+  ],
   "overall_number": 86,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F04.html",

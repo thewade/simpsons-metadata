@@ -7,7 +7,12 @@
     "fr-CA": "Big Mother vous regarde"
   },
   "production_code": "TABF11",
-  "original_air_date": "2015-04-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-04-19"
+    }
+  ],
   "overall_number": 570,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Peeping_Mom",

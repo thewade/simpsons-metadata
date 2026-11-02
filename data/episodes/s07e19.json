@@ -7,7 +7,12 @@
     "fr-CA": "Un poisson appelé Selma"
   },
   "production_code": "3F15",
-  "original_air_date": "1996-03-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-03-24"
+    }
+  ],
   "overall_number": 147,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F15.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Ragots de vedettes"
   },
   "production_code": "5F19",
-  "original_air_date": "1998-11-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-11-08"
+    }
+  ],
   "overall_number": 208,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F19.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Caméra cachée café"
   },
   "production_code": "MABF12",
-  "original_air_date": "2010-05-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-05-02"
+    }
+  ],
   "overall_number": 461,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/To_Surveil_with_Love",

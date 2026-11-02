@@ -7,7 +7,12 @@
     "fr-CA": "Devoir de réserve"
   },
   "production_code": "OABF10",
-  "original_air_date": "2023-03-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-03-19"
+    }
+  ],
   "overall_number": 745,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pin_Gal",

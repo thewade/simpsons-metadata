@@ -4,7 +4,12 @@
     "en": "Scary Stories"
   },
   "production_code": "MG17",
-  "original_air_date": "1987-12-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-12-19"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Scary_Stories"
   }

@@ -7,7 +7,12 @@
     "fr-CA": "On n'enferme pas les Bart sauvages"
   },
   "production_code": "AABF07",
-  "original_air_date": "1999-01-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-01-17"
+    }
+  ],
   "overall_number": 214,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF07.html",

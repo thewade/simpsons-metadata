@@ -7,7 +7,12 @@
     "fr-CA": "Le(s) plus beau(x) voyage(s)"
   },
   "production_code": "KABF18",
-  "original_air_date": "2008-11-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-11-09"
+    }
+  ],
   "overall_number": 425,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Dangerous_Curves_(The_Simpsons)",

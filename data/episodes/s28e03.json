@@ -7,7 +7,12 @@
     "fr-CA": "Boston, Crime, Bye"
   },
   "production_code": "VABF17",
-  "original_air_date": "2016-10-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-10-09"
+    }
+  ],
   "overall_number": 599,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Town_(The_Simpsons)",

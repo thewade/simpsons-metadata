@@ -7,7 +7,12 @@
     "fr-CA": "22 courts métrages sur Springfield"
   },
   "production_code": "3F18",
-  "original_air_date": "1996-04-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-04-14"
+    }
+  ],
   "overall_number": 149,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F18.html",

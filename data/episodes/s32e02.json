@@ -7,7 +7,12 @@
     "fr-CA": "Aïe, Carambus"
   },
   "production_code": "ZABF18",
-  "original_air_date": "2020-10-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-10-04"
+    }
+  ],
   "overall_number": 686,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I,_Carumbus",

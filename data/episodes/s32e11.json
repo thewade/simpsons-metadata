@@ -7,7 +7,12 @@
     "fr-CA": "Cœur de père"
   },
   "production_code": "QABF04",
-  "original_air_date": "2021-01-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-01-03"
+    }
+  ],
   "overall_number": 695,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Dad-Feelings_Limited",

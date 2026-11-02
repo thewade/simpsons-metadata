@@ -7,7 +7,12 @@
     "fr-CA": "Gros jambon"
   },
   "production_code": "LABF13",
-  "original_air_date": "2009-09-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-09-27"
+    }
+  ],
   "overall_number": 442,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_the_Whopper",

@@ -4,7 +4,12 @@
     "en": "Space Patrol"
   },
   "production_code": "MG13",
-  "original_air_date": "1987-11-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-11-08"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Space_Patrol"
   }

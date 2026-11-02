@@ -7,7 +7,12 @@
     "fr-CA": "Vite sur la grassette"
   },
   "production_code": "QABF20",
-  "original_air_date": "2021-10-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-10-24"
+    }
+  ],
   "overall_number": 711,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa's_Belly",

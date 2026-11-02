@@ -7,7 +7,12 @@
     "fr-CA": "Messieurs les robots"
   },
   "production_code": "PABF10",
-  "original_air_date": "2012-03-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-03-18"
+    }
+  ],
   "overall_number": 503,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Them,_Robot",

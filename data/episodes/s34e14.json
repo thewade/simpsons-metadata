@@ -7,7 +7,12 @@
     "fr-CA": "La légende de Carl Carlson"
   },
   "production_code": "OABF07",
-  "original_air_date": "2023-02-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-02-26"
+    }
+  ],
   "overall_number": 742,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Carl_Carlson_Rides_Again",

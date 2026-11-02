@@ -7,7 +7,12 @@
     "fr-CA": "Je voudrais voir la mère"
   },
   "production_code": "UABF02",
-  "original_air_date": "2021-11-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-11-28"
+    }
+  ],
   "overall_number": 715,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mothers_and_Other_Strangers",

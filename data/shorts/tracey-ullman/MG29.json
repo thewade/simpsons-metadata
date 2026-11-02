@@ -4,7 +4,12 @@
     "en": "The Art Museum"
   },
   "production_code": "MG29",
-  "original_air_date": "1988-05-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-05-03"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Art_Museum"
   }

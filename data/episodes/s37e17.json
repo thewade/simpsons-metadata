@@ -6,7 +6,12 @@
     "fr-CA": "Les Simpson : Extreme Makeover : Homer Edition"
   },
   "production_code": "36ABF21",
-  "original_air_date": "2026-06-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-06-17"
+    }
+  ],
   "overall_number": 807,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Extreme_Makeover:_Homer_Edition",

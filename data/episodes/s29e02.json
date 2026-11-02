@@ -7,7 +7,12 @@
     "fr-CA": "Bonsoir tristesse"
   },
   "production_code": "WABF22",
-  "original_air_date": "2017-10-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-10-08"
+    }
+  ],
   "overall_number": 620,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Springfield_Splendor",

@@ -7,7 +7,12 @@
     "fr-CA": "J'épèle au loin"
   },
   "production_code": "EABF07",
-  "original_air_date": "2003-02-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-02-16"
+    }
+  ],
   "overall_number": 303,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I'm_Spelling_as_Fast_as_I_Can",

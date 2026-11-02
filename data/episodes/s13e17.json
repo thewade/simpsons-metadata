@@ -7,7 +7,12 @@
     "fr-CA": "Le déclin de l'empire Simpson"
   },
   "production_code": "DABF12",
-  "original_air_date": "2002-04-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-04-21"
+    }
+  ],
   "overall_number": 286,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Gump_Roast",

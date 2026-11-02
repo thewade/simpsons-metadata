@@ -7,7 +7,12 @@
     "fr-CA": "Maux croisés"
   },
   "production_code": "KABF19",
-  "original_air_date": "2008-11-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-11-16"
+    }
+  ],
   "overall_number": 426,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_and_Lisa_Exchange_Cross_Words",

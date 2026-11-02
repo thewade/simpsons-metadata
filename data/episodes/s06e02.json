@@ -7,7 +7,12 @@
     "fr-CA": "La Rivale de Lisa"
   },
   "production_code": "1F17",
-  "original_air_date": "1994-09-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-09-11"
+    }
+  ],
   "overall_number": 105,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F17.html",

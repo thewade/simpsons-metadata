@@ -7,7 +7,12 @@
     "fr-CA": "Pour le meilleur et pour la bière"
   },
   "production_code": "ZABF15",
-  "original_air_date": "2020-11-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-11-08"
+    }
+  ],
   "overall_number": 689,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_7_Beer_Itch",

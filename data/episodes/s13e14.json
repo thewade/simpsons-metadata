@@ -7,7 +7,12 @@
     "fr-CA": "Contes du domaine public"
   },
   "production_code": "DABF08",
-  "original_air_date": "2002-03-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-03-17"
+    }
+  ],
   "overall_number": 283,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Tales_from_the_Public_Domain",

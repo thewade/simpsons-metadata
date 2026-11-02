@@ -6,7 +6,12 @@
     "fr-FR": "Des choses étranges"
   },
   "production_code": "36ABF11",
-  "original_air_date": "2025-05-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-05-18"
+    }
+  ],
   "overall_number": 790,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Estranger_Things",

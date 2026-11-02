@@ -7,7 +7,12 @@
     "fr-CA": "La leçon de pia-d'oh"
   },
   "production_code": "RABF13",
-  "original_air_date": "2013-05-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-05-12"
+    }
+  ],
   "overall_number": 528,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Fabulous_Faker_Boy",

@@ -7,7 +7,12 @@
     "fr-CA": "Des roses blanches pour mon frère jaune"
   },
   "production_code": "MABF01",
-  "original_air_date": "2009-12-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-12-13"
+    }
+  ],
   "overall_number": 449,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/O_Brother,_Where_Bart_Thou%3F",

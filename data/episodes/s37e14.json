@@ -6,7 +6,12 @@
     "fr-FR": "Le Trésor de Pitit Papa Noël"
   },
   "production_code": "37ABF08",
-  "original_air_date": "2026-02-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-02-15"
+    }
+  ],
   "overall_number": 804,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Irrational_Treasure",

@@ -7,7 +7,12 @@
     "fr-CA": "La Classe de tous les dangers"
   },
   "production_code": "CABF11",
-  "original_air_date": "2001-03-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-03-11"
+    }
+  ],
   "overall_number": 264,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/CABF11.html",

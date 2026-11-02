@@ -7,7 +7,12 @@
     "fr-CA": "Le Kirk a ses raisons"
   },
   "production_code": "OABF09",
-  "original_air_date": "2023-03-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-03-12"
+    }
+  ],
   "overall_number": 744,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Hostile_Kirk_Place",

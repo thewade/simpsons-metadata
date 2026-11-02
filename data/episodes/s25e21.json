@@ -7,7 +7,12 @@
     "fr-CA": "Guerre et pais"
   },
   "production_code": "SABF15",
-  "original_air_date": "2014-05-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-05-11"
+    }
+  ],
   "overall_number": 551,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pay_Pal_(The_Simpsons)",

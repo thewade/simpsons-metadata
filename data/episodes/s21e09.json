@@ -7,7 +7,12 @@
     "fr-CA": "Une journée avec Abie, et une journée de folie"
   },
   "production_code": "MABF02",
-  "original_air_date": "2010-01-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-01-03"
+    }
+  ],
   "overall_number": 450,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Thursdays_with_Abie",

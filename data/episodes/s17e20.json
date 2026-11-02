@@ -7,7 +7,12 @@
     "fr-CA": "La mémoire dans la Marge"
   },
   "production_code": "HABF13",
-  "original_air_date": "2006-05-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-05-07"
+    }
+  ],
   "overall_number": 376,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Regarding_Margie",

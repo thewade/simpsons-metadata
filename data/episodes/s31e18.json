@@ -7,7 +7,12 @@
     "fr-CA": "L'Insoutenable Légèreté de la suce"
   },
   "production_code": "YABF13",
-  "original_air_date": "2020-04-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-04-19"
+    }
+  ],
   "overall_number": 680,
   "links": {
     "wikipedia": null,

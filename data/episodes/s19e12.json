@@ -7,7 +7,12 @@
     "fr-CA": "Un jaune, une fille"
   },
   "production_code": "KABF05",
-  "original_air_date": "2008-02-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-02-17"
+    }
+  ],
   "overall_number": 412,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Love,_Springfieldian_Style",

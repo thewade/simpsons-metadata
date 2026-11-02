@@ -7,7 +7,12 @@
     "fr-CA": "Échec et maths"
   },
   "production_code": "ZABF06",
-  "original_air_date": "2020-02-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-02-16"
+    }
+  ],
   "overall_number": 674,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Miseducation_of_Lisa_Simpson",

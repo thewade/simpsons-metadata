@@ -7,7 +7,12 @@
     "fr-CA": "Le Vieil Homme et l'amer"
   },
   "production_code": "WABF11",
-  "original_air_date": "2017-03-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-03-19"
+    }
+  ],
   "overall_number": 614,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Father's_Watch",

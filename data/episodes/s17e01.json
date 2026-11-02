@@ -7,7 +7,12 @@
     "fr-CA": "La complainte des lamantins"
   },
   "production_code": "GABF18",
-  "original_air_date": "2005-09-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-09-11"
+    }
+  ],
   "overall_number": 357,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Bonfire_of_the_Manatees",

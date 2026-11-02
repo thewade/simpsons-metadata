@@ -7,7 +7,12 @@
     "fr-CA": "Thérapie de coupe"
   },
   "production_code": "ZABF02",
-  "original_air_date": "2019-11-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-11-10"
+    }
+  ],
   "overall_number": 668,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Marge_the_Lumberjill",

@@ -7,7 +7,12 @@
     "fr-CA": "Simpson et Dalilah"
   },
   "production_code": "7F02",
-  "original_air_date": "1990-10-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-10-18"
+    }
+  ],
   "overall_number": 15,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F02.html",

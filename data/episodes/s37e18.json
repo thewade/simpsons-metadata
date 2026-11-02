@@ -6,7 +6,12 @@
     "fr-CA": "Simpsley"
   },
   "production_code": "36ABF19",
-  "original_air_date": "2026-07-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-07-03"
+    }
+  ],
   "overall_number": 808,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Simpsley",

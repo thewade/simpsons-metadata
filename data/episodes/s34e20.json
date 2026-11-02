@@ -7,7 +7,12 @@
     "fr-CA": "Ça va bien aller"
   },
   "production_code": "OABF14",
-  "original_air_date": "2023-05-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-05-07"
+    }
+  ],
   "overall_number": 748,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Very_Hungry_Caterpillars",

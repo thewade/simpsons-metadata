@@ -7,7 +7,12 @@
     "fr-CA": "L'enfer, c'est eux autres"
   },
   "production_code": "ZABF04",
-  "original_air_date": "2019-12-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-12-01"
+    }
+  ],
   "overall_number": 671,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Todd,_Todd,_Why_Hast_Thou_Forsaken_Me%3F",

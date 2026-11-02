@@ -7,7 +7,12 @@
     "fr-CA": "Le choix du président"
   },
   "production_code": "LABF01",
-  "original_air_date": "2009-02-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-02-15"
+    }
+  ],
   "overall_number": 430,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Take_My_Life,_Please",

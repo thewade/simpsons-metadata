@@ -7,7 +7,12 @@
     "fr-CA": "Burns vend la centrale"
   },
   "production_code": "8F09",
-  "original_air_date": "1991-12-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-12-05"
+    }
+  ],
   "overall_number": 46,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F09.html",

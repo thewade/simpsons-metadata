@@ -7,7 +7,12 @@
     "fr-CA": "Un gars, une fille"
   },
   "production_code": "JABF04",
-  "original_air_date": "2007-02-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-02-11"
+    }
+  ],
   "overall_number": 390,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Little_Big_Girl",

@@ -7,7 +7,12 @@
     "fr-CA": "Le génie de la terrasse Evergreen"
   },
   "production_code": "5F21",
-  "original_air_date": "1998-09-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-09-20"
+    }
+  ],
   "overall_number": 205,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F21.html",

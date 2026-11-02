@@ -7,7 +7,12 @@
     "fr-CA": "Bart contre Itchy et Scratchy"
   },
   "production_code": "YABF10",
-  "original_air_date": "2019-03-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-03-24"
+    }
+  ],
   "overall_number": 657,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_vs._Itchy_&_Scratchy",

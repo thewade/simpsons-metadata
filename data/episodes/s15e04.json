@@ -7,7 +7,12 @@
     "fr-CA": "Y'avait t'un prisonnier"
   },
   "production_code": "EABF22",
-  "original_air_date": "2003-11-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-11-23"
+    }
+  ],
   "overall_number": 317,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Regina_Monologues",

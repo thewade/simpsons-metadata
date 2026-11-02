@@ -4,7 +4,12 @@
     "en": "TV Simpsons"
   },
   "production_code": "MG48",
-  "original_air_date": "1989-05-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-05-14"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/TV_Simpsons"
   }

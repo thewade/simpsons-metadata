@@ -7,7 +7,12 @@
     "fr-CA": "Bart et son jeu vidéo"
   },
   "production_code": "3F07",
-  "original_air_date": "1995-12-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-12-17"
+    }
+  ],
   "overall_number": 139,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F07.html",

@@ -6,7 +6,12 @@
     "fr-FR": "Le Dernier à enfler"
   },
   "production_code": "36ABF06",
-  "original_air_date": "2025-04-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-04-06"
+    }
+  ],
   "overall_number": 784,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Last_Man_Expanding",

@@ -7,7 +7,12 @@
     "fr-CA": "Le poney de Lisa"
   },
   "production_code": "8F06",
-  "original_air_date": "1991-11-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-11-07"
+    }
+  ],
   "overall_number": 43,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F06.html",

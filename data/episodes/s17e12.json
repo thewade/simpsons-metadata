@@ -7,7 +7,12 @@
     "fr-CA": "La mélodie du concierge"
   },
   "production_code": "HABF05",
-  "original_air_date": "2006-02-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-02-26"
+    }
+  ],
   "overall_number": 368,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/My_Fair_Laddy",

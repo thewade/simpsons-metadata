@@ -7,7 +7,12 @@
     "fr-CA": "Vie-rtuelle de famille"
   },
   "production_code": "VABF18",
-  "original_air_date": "2016-10-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-10-02"
+    }
+  ],
   "overall_number": 598,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Friends_and_Family_(The_Simpsons)",

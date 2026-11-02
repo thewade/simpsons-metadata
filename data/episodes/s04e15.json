@@ -7,7 +7,12 @@
     "fr-CA": "J'aime Lisa"
   },
   "production_code": "9F13",
-  "original_air_date": "1993-02-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-02-11"
+    }
+  ],
   "overall_number": 74,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F13.html",

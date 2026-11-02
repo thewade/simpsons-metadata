@@ -7,7 +7,12 @@
     "fr-CA": "Mon céphalopode bien-aimé"
   },
   "production_code": "UABF11",
-  "original_air_date": "2022-04-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-04-24"
+    }
+  ],
   "overall_number": 724,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/My_Octopus_and_a_Teacher",

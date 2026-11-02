@@ -7,7 +7,12 @@
     "fr-CA": "Diviser pour mieux niaiser"
   },
   "production_code": "MABF04",
-  "original_air_date": "2010-03-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-03-14"
+    }
+  ],
   "overall_number": 455,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Postcards_from_the_Wedge",

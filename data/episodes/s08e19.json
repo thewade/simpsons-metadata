@@ -7,7 +7,12 @@
     "fr-CA": "L'amour pédagogique!"
   },
   "production_code": "4F09",
-  "original_air_date": "1997-04-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1997-04-06"
+    }
+  ],
   "overall_number": 172,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/4F09.html",

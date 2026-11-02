@@ -7,7 +7,12 @@
     "fr-CA": "Bonne mère malgré tout"
   },
   "production_code": "BABF04",
-  "original_air_date": "2000-01-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-01-09"
+    }
+  ],
   "overall_number": 236,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF04.html",

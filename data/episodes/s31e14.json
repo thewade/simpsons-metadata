@@ -7,7 +7,12 @@
     "fr-CA": "À Thor et à travers"
   },
   "production_code": "ZABF08",
-  "original_air_date": "2020-03-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-03-01"
+    }
+  ],
   "overall_number": 676,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_the_Bad_Guy",

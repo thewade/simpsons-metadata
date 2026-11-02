@@ -7,7 +7,12 @@
     "fr-CA": "Mad Démène"
   },
   "production_code": "PABF01",
-  "original_air_date": "2011-11-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-11-27"
+    }
+  ],
   "overall_number": 493,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Man_in_the_Blue_Flannel_Pants",

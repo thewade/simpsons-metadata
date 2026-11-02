@@ -7,7 +7,12 @@
     "fr-CA": "Apocalypse t'à l'heure"
   },
   "production_code": "RABF02",
-  "original_air_date": "2013-01-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-01-06"
+    }
+  ],
   "overall_number": 517,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_Goes_to_Prep_School",

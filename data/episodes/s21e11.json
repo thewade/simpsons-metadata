@@ -7,7 +7,12 @@
     "fr-CA": "Ça ne change pas le monde, sauf que..."
   },
   "production_code": "MABF03",
-  "original_air_date": "2010-01-31",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-01-31"
+    }
+  ],
   "overall_number": 452,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Million_Dollar_Maybe",

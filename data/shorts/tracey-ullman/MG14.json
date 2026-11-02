@@ -4,7 +4,12 @@
     "en": "The Funeral"
   },
   "production_code": "MG14",
-  "original_air_date": "1987-10-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-10-04"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Funeral"
   }

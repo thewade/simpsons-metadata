@@ -7,7 +7,12 @@
     "fr-CA": "Le moron de Noël"
   },
   "production_code": "QABF09",
-  "original_air_date": "2021-03-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-03-21"
+    }
+  ],
   "overall_number": 700,
   "links": {
     "wikipedia": null,

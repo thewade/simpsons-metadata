@@ -7,7 +7,12 @@
     "fr-CA": "On ne déménage que deux fois"
   },
   "production_code": "3F23",
-  "original_air_date": "1996-11-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-11-03"
+    }
+  ],
   "overall_number": 155,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F23.html",

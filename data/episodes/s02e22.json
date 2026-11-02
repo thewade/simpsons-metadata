@@ -7,7 +7,12 @@
     "fr-CA": "Transfusion sanguine"
   },
   "production_code": "7F22",
-  "original_air_date": "1991-07-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-07-11"
+    }
+  ],
   "overall_number": 35,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F22.html",

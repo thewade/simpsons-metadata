@@ -7,7 +7,12 @@
     "fr-CA": "Bar laitier"
   },
   "production_code": "HABF22",
-  "original_air_date": "2006-11-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-11-26"
+    }
+  ],
   "overall_number": 385,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Ice_Cream_of_Margie_(with_the_Light_Blue_Hair)",

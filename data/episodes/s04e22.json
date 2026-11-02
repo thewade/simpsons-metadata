@@ -7,7 +7,12 @@
     "fr-CA": "Krusty perd son émission"
   },
   "production_code": "9F19",
-  "original_air_date": "1993-05-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-05-13"
+    }
+  ],
   "overall_number": 81,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F19.html",

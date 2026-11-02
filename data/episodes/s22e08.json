@@ -7,7 +7,12 @@
     "fr-CA": "Lard de la guerre"
   },
   "production_code": "MABF22",
-  "original_air_date": "2010-12-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-12-05"
+    }
+  ],
   "overall_number": 472,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Fight_Before_Christmas_(The_Simpsons)",

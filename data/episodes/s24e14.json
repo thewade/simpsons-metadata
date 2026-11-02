@@ -7,7 +7,12 @@
     "fr-CA": "Grand-p'pa le magnifique"
   },
   "production_code": "RABF06",
-  "original_air_date": "2013-03-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-03-03"
+    }
+  ],
   "overall_number": 522,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Gorgeous_Grampa",

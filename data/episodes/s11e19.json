@@ -7,7 +7,12 @@
     "fr-CA": "Prends l'alligator et tire-toi"
   },
   "production_code": "BABF16",
-  "original_air_date": "2000-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-04-30"
+    }
+  ],
   "overall_number": 245,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF16.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Accident de parcours"
   },
   "production_code": "7F10",
-  "original_air_date": "1991-01-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-01-10"
+    }
+  ],
   "overall_number": 23,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F10.html",

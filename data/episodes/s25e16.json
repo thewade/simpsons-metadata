@@ -7,7 +7,12 @@
     "fr-CA": "Mon père, ce héros au sifflet si doux"
   },
   "production_code": "SABF11",
-  "original_air_date": "2014-03-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-03-30"
+    }
+  ],
   "overall_number": 546,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/You_Don't_Have_to_Live_Like_a_Referee",

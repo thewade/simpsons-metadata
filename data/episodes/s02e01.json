@@ -7,7 +7,12 @@
     "fr-CA": "Mauvais quart d'heure"
   },
   "production_code": "7F03",
-  "original_air_date": "1990-10-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-10-11"
+    }
+  ],
   "overall_number": 14,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F03.html",

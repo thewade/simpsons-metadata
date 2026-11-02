@@ -7,7 +7,12 @@
     "fr-CA": "Chanson des colons"
   },
   "production_code": "JABF09",
-  "original_air_date": "2007-03-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-03-04"
+    }
+  ],
   "overall_number": 392,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Yokel_Chords",

@@ -7,7 +7,12 @@
     "fr-CA": "Martin préfère la marche"
   },
   "production_code": "UABF06",
-  "original_air_date": "2022-03-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-03-06"
+    }
+  ],
   "overall_number": 719,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Boyz_N_the_Highlands",

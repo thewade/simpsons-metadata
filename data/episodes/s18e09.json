@@ -7,7 +7,12 @@
     "fr-CA": "Tuer Gil, parties 1 et 2"
   },
   "production_code": "JABF01",
-  "original_air_date": "2006-12-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-12-17"
+    }
+  ],
   "overall_number": 387,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Kill_Gil,_Volumes_I_&_II",

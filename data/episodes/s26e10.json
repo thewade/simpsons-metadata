@@ -7,7 +7,12 @@
     "fr-CA": "La trouille du cosmos"
   },
   "production_code": "RABF15",
-  "original_air_date": "2015-01-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-01-04"
+    }
+  ],
   "overall_number": 562,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Man_Who_Came_to_Be_Dinner",

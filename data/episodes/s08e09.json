@@ -7,7 +7,12 @@
     "fr-CA": "Le voyage mystérieux d'Homer"
   },
   "production_code": "3F24",
-  "original_air_date": "1997-01-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1997-01-05"
+    }
+  ],
   "overall_number": 162,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F24.html",

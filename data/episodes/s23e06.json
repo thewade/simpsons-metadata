@@ -7,7 +7,12 @@
     "fr-CA": "Plan fouéreux"
   },
   "production_code": "NABF22",
-  "original_air_date": "2011-11-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-11-20"
+    }
+  ],
   "overall_number": 492,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Book_Job",

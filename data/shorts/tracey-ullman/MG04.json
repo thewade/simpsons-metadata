@@ -4,7 +4,12 @@
     "en": "Babysitting Maggie"
   },
   "production_code": "MG04",
-  "original_air_date": "1987-05-31",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-05-31"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Babysitting_Maggie"
   }

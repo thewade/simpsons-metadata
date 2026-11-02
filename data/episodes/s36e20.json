@@ -6,7 +6,12 @@
     "fr-FR": "Ragoût de mensonges"
   },
   "production_code": "36ABF09",
-  "original_air_date": "2025-05-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-05-04"
+    }
+  ],
   "overall_number": 788,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Stew_Lies",

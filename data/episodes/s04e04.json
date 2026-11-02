@@ -7,7 +7,12 @@
     "fr-CA": "Lisa la reine de beauté"
   },
   "production_code": "9F02",
-  "original_air_date": "1992-10-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1992-10-15"
+    }
+  ],
   "overall_number": 63,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F02.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXII"
   },
   "production_code": "NABF19",
-  "original_air_date": "2011-10-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-10-30"
+    }
+  ],
   "overall_number": 489,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXII",

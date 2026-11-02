@@ -6,7 +6,12 @@
     "fr-FR": "Chalmers en bave"
   },
   "production_code": "36ABF14",
-  "original_air_date": "2025-10-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-10-05"
+    }
+  ],
   "overall_number": 792,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Keep_Chalm_and_Gary_On",

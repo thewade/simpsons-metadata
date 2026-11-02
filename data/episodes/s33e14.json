@@ -7,7 +7,12 @@
     "fr-CA": "Vous ne croirez jamais de quoi parle cet épisode ! L'acte 3 va vous choquer"
   },
   "production_code": "UABF07",
-  "original_air_date": "2022-03-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-03-13"
+    }
+  ],
   "overall_number": 720,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/You_Won't_Believe_What_This_Episode_Is_About_–_Act_Three_Will_Shock_You!",

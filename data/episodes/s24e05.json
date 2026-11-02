@@ -7,7 +7,12 @@
     "fr-CA": "Vire-capo"
   },
   "production_code": "PABF19",
-  "original_air_date": "2012-11-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-11-18"
+    }
+  ],
   "overall_number": 513,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Penny-Wiseguys",

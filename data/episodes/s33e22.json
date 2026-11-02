@@ -7,7 +7,12 @@
     "fr-CA": "Ce n'était qu'un rêve (américain)"
   },
   "production_code": "UABF14",
-  "original_air_date": "2022-05-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-05-22"
+    }
+  ],
   "overall_number": 728,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Poorhouse_Rock",

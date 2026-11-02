@@ -6,7 +6,12 @@
     "fr-FR": "La Ligue Abe de leur Moe"
   },
   "production_code": "36ABF08",
-  "original_air_date": "2025-04-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-04-27"
+    }
+  ],
   "overall_number": 787,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Abe_League_of_Their_Moe",

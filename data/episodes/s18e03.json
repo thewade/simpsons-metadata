@@ -7,7 +7,12 @@
     "fr-CA": "Swing la Marge dans l'fond d'la boîte à outils"
   },
   "production_code": "HABF20",
-  "original_air_date": "2006-09-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-09-24"
+    }
+  ],
   "overall_number": 381,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Please_Homer,_Don't_Hammer_'Em",

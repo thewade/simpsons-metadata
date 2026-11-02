@@ -7,7 +7,12 @@
     "fr-CA": "Plan de Marge"
   },
   "production_code": "UABF15",
-  "original_air_date": "2022-05-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-05-08"
+    }
+  ],
   "overall_number": 726,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Marge_the_Meanie",

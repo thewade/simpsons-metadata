@@ -7,7 +7,12 @@
     "fr-CA": "Un code, une ville"
   },
   "production_code": "BABF20",
-  "original_air_date": "2000-11-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-11-05"
+    }
+  ],
   "overall_number": 250,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF20.html",

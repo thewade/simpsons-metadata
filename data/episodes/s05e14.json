@@ -7,7 +7,12 @@
     "fr-CA": "Lisa s'en va-t-en guerre"
   },
   "production_code": "1F12",
-  "original_air_date": "1994-02-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-02-17"
+    }
+  ],
   "overall_number": 95,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F12.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Un poing c'est tout"
   },
   "production_code": "RABF09",
-  "original_air_date": "2013-03-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-03-10"
+    }
+  ],
   "overall_number": 523,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Black_Eyed,_Please",

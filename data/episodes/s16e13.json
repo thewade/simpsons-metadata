@@ -7,7 +7,12 @@
     "fr-CA": "Marge de crédit"
   },
   "production_code": "GABF07",
-  "original_air_date": "2005-03-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-03-20"
+    }
+  ],
   "overall_number": 348,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mobile_Homer",

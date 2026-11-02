@@ -7,7 +7,12 @@
     "fr-CA": "Et pourtant, elle tourne!"
   },
   "production_code": "KABF11",
-  "original_air_date": "2008-05-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-05-04"
+    }
+  ],
   "overall_number": 418,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Any_Given_Sundance",

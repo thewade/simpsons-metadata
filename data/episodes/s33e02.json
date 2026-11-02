@@ -7,7 +7,12 @@
     "fr-CA": "Le Bart du pénitencier"
   },
   "production_code": "QABF18",
-  "original_air_date": "2021-10-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-10-03"
+    }
+  ],
   "overall_number": 708,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart's_in_Jail!",

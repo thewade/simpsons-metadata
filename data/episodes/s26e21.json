@@ -7,7 +7,12 @@
     "fr-CA": "Voyou donc!"
   },
   "production_code": "TABF15",
-  "original_air_date": "2015-05-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-05-10"
+    }
+  ],
   "overall_number": 573,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bull-E",

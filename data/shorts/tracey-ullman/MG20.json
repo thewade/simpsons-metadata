@@ -4,7 +4,12 @@
     "en": "World War III"
   },
   "production_code": "MG20",
-  "original_air_date": "1987-11-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-11-22"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/World_War_III"
   }

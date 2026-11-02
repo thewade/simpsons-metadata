@@ -7,7 +7,12 @@
     "fr-CA": "Homer va à la fac"
   },
   "production_code": "1F02",
-  "original_air_date": "1993-10-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-10-14"
+    }
+  ],
   "overall_number": 84,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F02.html",

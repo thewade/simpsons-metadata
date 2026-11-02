@@ -7,7 +7,12 @@
     "fr-CA": "Le p'tit gros des glosettes"
   },
   "production_code": "GABF11",
-  "original_air_date": "2005-05-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-05-01"
+    }
+  ],
   "overall_number": 352,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Heartbroke_Kid",

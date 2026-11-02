@@ -7,7 +7,12 @@
     "fr-CA": "La Danse du saindoux"
   },
   "production_code": "5F20",
-  "original_air_date": "1998-08-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-08-23"
+    }
+  ],
   "overall_number": 204,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F20.html",

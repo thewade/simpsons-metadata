@@ -7,7 +7,12 @@
     "fr-CA": "La course après du monde"
   },
   "production_code": "FABF14",
-  "original_air_date": "2004-04-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-04-25"
+    }
+  ],
   "overall_number": 331,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Catch_'em_if_You_Can",

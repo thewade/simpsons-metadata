@@ -7,7 +7,12 @@
     "fr-CA": "D'oh-gun"
   },
   "production_code": "AABF20",
-  "original_air_date": "1999-05-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-05-16"
+    }
+  ],
   "overall_number": 226,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF20.html",

@@ -7,7 +7,12 @@
     "fr-CA": "La guerre des Simpson"
   },
   "production_code": "7F20",
-  "original_air_date": "1991-05-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-05-02"
+    }
+  ],
   "overall_number": 33,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F20.html",

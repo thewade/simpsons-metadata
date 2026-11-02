@@ -7,7 +7,12 @@
     "fr-CA": "Une Lisa en colère"
   },
   "production_code": "UABF19",
-  "original_air_date": "2022-10-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-10-02"
+    }
+  ],
   "overall_number": 730,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/One_Angry_Lisa",

@@ -7,7 +7,12 @@
     "fr-CA": "Des Moe pour le dire"
   },
   "production_code": "MABF13",
-  "original_air_date": "2010-05-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-05-09"
+    }
+  ],
   "overall_number": 462,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Moe_Letter_Blues",

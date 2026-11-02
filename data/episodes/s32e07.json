@@ -7,7 +7,12 @@
     "fr-CA": "Les joies du sax"
   },
   "production_code": "QABF02",
-  "original_air_date": "2020-11-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-11-22"
+    }
+  ],
   "overall_number": 691,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Three_Dreams_Denied",

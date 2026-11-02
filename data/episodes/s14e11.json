@@ -7,7 +7,12 @@
     "fr-CA": "Chambre en Bart"
   },
   "production_code": "EABF05",
-  "original_air_date": "2003-02-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-02-16"
+    }
+  ],
   "overall_number": 302,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Barting_Over",

@@ -7,7 +7,12 @@
     "fr-CA": "Fracture du cœur"
   },
   "production_code": "SABF22",
-  "original_air_date": "2014-11-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-11-02"
+    }
+  ],
   "overall_number": 557,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Opposites_A-Frack",

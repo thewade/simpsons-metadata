@@ -7,7 +7,12 @@
     "fr-CA": "Le Festival du film"
   },
   "production_code": "2F31",
-  "original_air_date": "1995-03-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-03-05"
+    }
+  ],
   "overall_number": 121,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F31.html",

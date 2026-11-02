@@ -7,7 +7,12 @@
     "fr-CA": "Une ville de chiens"
   },
   "production_code": "WABF15",
-  "original_air_date": "2017-05-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-05-21"
+    }
+  ],
   "overall_number": 618,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Dogtown_(The_Simpsons)",

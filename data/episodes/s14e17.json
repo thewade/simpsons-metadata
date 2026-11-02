@@ -7,7 +7,12 @@
     "fr-CA": "Le cœur brisé d'Homer"
   },
   "production_code": "EABF12",
-  "original_air_date": "2003-04-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-04-13"
+    }
+  ],
   "overall_number": 308,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Three_Gays_of_the_Condo",

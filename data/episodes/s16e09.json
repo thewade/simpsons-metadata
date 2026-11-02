@@ -7,7 +7,12 @@
     "fr-CA": "Le Rap du Rapt"
   },
   "production_code": "GABF03",
-  "original_air_date": "2005-02-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-02-13"
+    }
+  ],
   "overall_number": 344,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pranksta_Rap",

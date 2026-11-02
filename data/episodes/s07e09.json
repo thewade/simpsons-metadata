@@ -7,7 +7,12 @@
     "fr-CA": "Le dernier exploit de Sideshow Bob"
   },
   "production_code": "3F08",
-  "original_air_date": "1995-11-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-11-26"
+    }
+  ],
   "overall_number": 137,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F08.html",

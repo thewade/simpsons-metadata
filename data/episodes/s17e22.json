@@ -7,7 +7,12 @@
     "fr-CA": "Marge et Homer: L'Amour à coup sûr"
   },
   "production_code": "HABF16",
-  "original_air_date": "2006-05-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-05-21"
+    }
+  ],
   "overall_number": 378,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Marge_and_Homer_Turn_a_Couple_Play",

@@ -7,7 +7,12 @@
     "fr-CA": "Le Beigne du businessman"
   },
   "production_code": "EABF10",
-  "original_air_date": "2003-03-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-03-16"
+    }
+  ],
   "overall_number": 306,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/C.E.D'oh",

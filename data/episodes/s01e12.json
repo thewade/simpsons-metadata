@@ -7,7 +7,12 @@
     "fr-CA": "Mauvaise passe pour Krusty le clown"
   },
   "production_code": "7G12",
-  "original_air_date": "1990-04-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-04-29"
+    }
+  ],
   "overall_number": 12,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G12.html",

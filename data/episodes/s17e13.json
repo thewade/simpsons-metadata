@@ -7,7 +7,12 @@
     "fr-CA": "La déprime en cinq temps"
   },
   "production_code": "HABF06",
-  "original_air_date": "2006-03-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-03-12"
+    }
+  ],
   "overall_number": 369,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Seemingly_Never-Ending_Story",

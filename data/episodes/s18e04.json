@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d’Halloween XVII"
   },
   "production_code": "HABF17",
-  "original_air_date": "2006-11-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-11-05"
+    }
+  ],
   "overall_number": 382,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XVII",

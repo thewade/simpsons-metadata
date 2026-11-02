@@ -7,7 +7,12 @@
     "fr-CA": "Connexion inter-Ned"
   },
   "production_code": "XABF14",
-  "original_air_date": "2018-05-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-05-20"
+    }
+  ],
   "overall_number": 639,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Flanders'_Ladder",

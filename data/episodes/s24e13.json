@@ -7,7 +7,12 @@
     "fr-CA": "Capitaine Mini-Kirk"
   },
   "production_code": "RABF05",
-  "original_air_date": "2013-02-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-02-17"
+    }
+  ],
   "overall_number": 521,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Hardly_Kirk-ing",

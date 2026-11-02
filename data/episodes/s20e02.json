@@ -7,7 +7,12 @@
     "fr-CA": "Fourgon cellulaire"
   },
   "production_code": "KABF15",
-  "original_air_date": "2008-10-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-10-05"
+    }
+  ],
   "overall_number": 422,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lost_Verizon",

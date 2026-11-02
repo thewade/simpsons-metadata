@@ -7,7 +7,12 @@
     "fr-CA": "Génie dans l'herbe"
   },
   "production_code": "UABF09",
-  "original_air_date": "2022-03-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-03-27"
+    }
+  ],
   "overall_number": 722,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pretty_Whittle_Liar",

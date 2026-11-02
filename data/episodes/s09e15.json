@@ -7,7 +7,12 @@
     "fr-CA": "La dernière tentation de Krusty"
   },
   "production_code": "5F10",
-  "original_air_date": "1998-02-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-02-22"
+    }
+  ],
   "overall_number": 193,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F10.html",

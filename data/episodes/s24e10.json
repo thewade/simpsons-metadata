@@ -7,7 +7,12 @@
     "fr-CA": "Monsieur Lhabart"
   },
   "production_code": "RABF03",
-  "original_air_date": "2013-01-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-01-13"
+    }
+  ],
   "overall_number": 518,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Test_Before_Trying",

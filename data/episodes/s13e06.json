@@ -7,7 +7,12 @@
     "fr-CA": "Femme de peu de foi"
   },
   "production_code": "DABF02",
-  "original_air_date": "2001-12-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-12-16"
+    }
+  ],
   "overall_number": 275,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/DABF02.html",

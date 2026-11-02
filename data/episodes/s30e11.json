@@ -7,7 +7,12 @@
     "fr-CA": "Guerre, épais"
   },
   "production_code": "YABF03",
-  "original_air_date": "2019-01-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-01-06"
+    }
+  ],
   "overall_number": 650,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mad_About_the_Toy",

@@ -7,7 +7,12 @@
     "fr-CA": "Histoires de veau"
   },
   "production_code": "KABF10",
-  "original_air_date": "2008-04-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-04-27"
+    }
+  ],
   "overall_number": 417,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Apocalypse_Cow",

@@ -7,7 +7,12 @@
     "fr-CA": "Pierre qui glisse n'amasse pas l'or"
   },
   "production_code": "MABF05",
-  "original_air_date": "2010-02-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-02-14"
+    }
+  ],
   "overall_number": 453,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Boy_Meets_Curl",

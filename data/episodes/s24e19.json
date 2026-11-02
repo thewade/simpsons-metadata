@@ -7,7 +7,12 @@
     "fr-CA": "L'habit fait pas le Moe"
   },
   "production_code": "RABF12",
-  "original_air_date": "2013-05-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-05-05"
+    }
+  ],
   "overall_number": 527,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Whiskey_Business",

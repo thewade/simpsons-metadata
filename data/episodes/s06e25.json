@@ -7,7 +7,12 @@
     "fr-CA": "Qui a tiré sur M. Burns? (Partie 1)"
   },
   "production_code": "2F16",
-  "original_air_date": "1995-05-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-05-21"
+    }
+  ],
   "overall_number": 128,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F16.html",

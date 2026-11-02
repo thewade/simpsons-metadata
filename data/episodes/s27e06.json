@@ -7,7 +7,12 @@
     "fr-CA": "Amie bénéficitaire"
   },
   "production_code": "TABF21",
-  "original_air_date": "2015-11-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-11-08"
+    }
+  ],
   "overall_number": 580,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Friend_with_Benefit",

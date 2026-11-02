@@ -7,7 +7,12 @@
     "fr-CA": "Revue cochonne"
   },
   "production_code": "VABF20",
-  "original_air_date": "2016-09-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-09-25"
+    }
+  ],
   "overall_number": 597,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Monty_Burns'_Fleeing_Circus",

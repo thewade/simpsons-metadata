@@ -7,7 +7,12 @@
     "fr-CA": "Heille, heille, bonjour !"
   },
   "production_code": "UABF20",
-  "original_air_date": "2022-10-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-10-16"
+    }
+  ],
   "overall_number": 732,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_King_of_Nice",

@@ -7,7 +7,12 @@
     "fr-CA": "La grande Simpsina"
   },
   "production_code": "NABF11",
-  "original_air_date": "2011-04-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-04-10"
+    }
+  ],
   "overall_number": 482,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Great_Simpsina",

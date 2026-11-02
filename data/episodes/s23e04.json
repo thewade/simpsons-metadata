@@ -7,7 +7,12 @@
     "fr-CA": "Ouate de phoque"
   },
   "production_code": "NABF21",
-  "original_air_date": "2011-11-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-11-06"
+    }
+  ],
   "overall_number": 490,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Replaceable_You",

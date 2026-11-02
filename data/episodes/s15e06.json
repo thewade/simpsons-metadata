@@ -7,7 +7,12 @@
     "fr-CA": "Un Krusty sur le toit"
   },
   "production_code": "FABF01",
-  "original_air_date": "2003-12-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-12-07"
+    }
+  ],
   "overall_number": 319,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Today_I_Am_a_Clown",

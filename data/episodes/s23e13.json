@@ -7,7 +7,12 @@
     "fr-CA": "La jeune fille et la mère"
   },
   "production_code": "PABF06",
-  "original_air_date": "2012-02-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-02-12"
+    }
+  ],
   "overall_number": 499,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Daughter_Also_Rises",

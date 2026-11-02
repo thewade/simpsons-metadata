@@ -7,7 +7,12 @@
     "fr-CA": "Un soûlon c'est bien mais deux c'est mieux"
   },
   "production_code": "FABF10",
-  "original_air_date": "2004-03-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-03-21"
+    }
+  ],
   "overall_number": 328,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Co-Dependents'_Day",

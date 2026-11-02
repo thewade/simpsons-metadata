@@ -7,7 +7,12 @@
     "fr-CA": "Les culottes qui en savaient trop"
   },
   "production_code": "35ABF10",
-  "original_air_date": "2024-05-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-05-05"
+    }
+  ],
   "overall_number": 766,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Tell-Tale_Pants",

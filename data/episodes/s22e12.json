@@ -7,7 +7,12 @@
     "fr-CA": "Émission polluante"
   },
   "production_code": "NABF05",
-  "original_air_date": "2011-01-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-01-23"
+    }
+  ],
   "overall_number": 476,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_the_Father",

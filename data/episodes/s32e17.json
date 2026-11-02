@@ -7,7 +7,12 @@
     "fr-CA": "Une Marge sous influence"
   },
   "production_code": "QABF10",
-  "original_air_date": "2021-03-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-03-28"
+    }
+  ],
   "overall_number": 701,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Uncut_Femmes",

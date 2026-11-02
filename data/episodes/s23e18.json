@@ -7,7 +7,12 @@
     "fr-CA": "Le d'oh-réat"
   },
   "production_code": "PABF11",
-  "original_air_date": "2012-04-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-04-15"
+    }
+  ],
   "overall_number": 504,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Beware_My_Cheating_Bart",

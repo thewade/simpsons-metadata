@@ -7,7 +7,12 @@
     "fr-CA": "Les fumeurs de la danse"
   },
   "production_code": "KABF08",
-  "original_air_date": "2008-03-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-03-30"
+    }
+  ],
   "overall_number": 415,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Smoke_on_the_Daughter",

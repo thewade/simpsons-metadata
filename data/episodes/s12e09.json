@@ -7,7 +7,12 @@
     "fr-CA": "Activité coloriage"
   },
   "production_code": "BABF22",
-  "original_air_date": "2001-01-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-01-07"
+    }
+  ],
   "overall_number": 257,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF22.html",

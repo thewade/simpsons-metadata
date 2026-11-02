@@ -7,7 +7,12 @@
     "fr-CA": "Le barbier de Springfield"
   },
   "production_code": "NABF13",
-  "original_air_date": "2011-05-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-05-08"
+    }
+  ],
   "overall_number": 484,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_Scissorhands",

@@ -7,7 +7,12 @@
     "fr-CA": "Pôpatticus Finch"
   },
   "production_code": "YABF01",
-  "original_air_date": "2018-12-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-12-02"
+    }
+  ],
   "overall_number": 648,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Daddicus_Finch",

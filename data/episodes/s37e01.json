@@ -6,7 +6,12 @@
     "fr-FR": "Victimes de la mode"
   },
   "production_code": "36ABF13",
-  "original_air_date": "2025-09-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-09-28"
+    }
+  ],
   "overall_number": 791,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Thrifty_Ways_to_Thieve_Your_Mother",

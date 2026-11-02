@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween V"
   },
   "production_code": "2F03",
-  "original_air_date": "1994-10-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-10-30"
+    }
+  ],
   "overall_number": 109,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F03.html",

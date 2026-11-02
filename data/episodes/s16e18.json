@@ -7,7 +7,12 @@
     "fr-CA": "L'idole des jaunes"
   },
   "production_code": "GABF13",
-  "original_air_date": "2005-05-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-05-08"
+    }
+  ],
   "overall_number": 353,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Star_Is_Torn",

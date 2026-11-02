@@ -7,7 +7,12 @@
     "fr-CA": "Vive Ned Flanders"
   },
   "production_code": "AABF06",
-  "original_air_date": "1999-01-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-01-10"
+    }
+  ],
   "overall_number": 213,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF06.html",

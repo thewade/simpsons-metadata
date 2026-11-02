@@ -7,7 +7,12 @@
     "fr-CA": "Triche, mais triche égal"
   },
   "production_code": "35ABF01",
-  "original_air_date": "2023-12-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-12-24"
+    }
+  ],
   "overall_number": 760,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Do_the_Wrong_Thing_(The_Simpsons)",

@@ -7,7 +7,12 @@
     "fr-CA": "Homme de peu de fois"
   },
   "production_code": "RABF22",
-  "original_air_date": "2013-11-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-11-10"
+    }
+  ],
   "overall_number": 534,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/YOLO_(The_Simpsons)",

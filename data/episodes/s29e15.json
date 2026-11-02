@@ -7,7 +7,12 @@
     "fr-CA": "L'Art de la guerre du lard"
   },
   "production_code": "XABF07",
-  "original_air_date": "2018-04-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-04-08"
+    }
+  ],
   "overall_number": 633,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/No_Good_Read_Goes_Unpunished",

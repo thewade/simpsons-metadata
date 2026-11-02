@@ -7,7 +7,12 @@
     "fr-CA": "Entre le Bob et l'âne gris"
   },
   "production_code": "ZABF01",
-  "original_air_date": "2019-12-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-12-15"
+    }
+  ],
   "overall_number": 672,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bobby,_It's_Cold_Outside",

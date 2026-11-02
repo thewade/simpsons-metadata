@@ -7,7 +7,12 @@
     "fr-CA": "Un Homer à la mer"
   },
   "production_code": "3G04",
-  "original_air_date": "1998-03-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-03-29"
+    }
+  ],
   "overall_number": 197,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3G04.html",

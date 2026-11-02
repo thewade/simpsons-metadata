@@ -7,7 +7,12 @@
     "fr-CA": "Fitzcarr'eul'gros"
   },
   "production_code": "WABF07",
-  "original_air_date": "2017-02-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-02-12"
+    }
+  ],
   "overall_number": 610,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Fatzcarraldo",

@@ -7,7 +7,12 @@
     "fr-CA": "Incinérations malveillantes"
   },
   "production_code": "KABF01",
-  "original_air_date": "2007-11-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-11-25"
+    }
+  ],
   "overall_number": 408,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Funeral_for_a_Fiend",

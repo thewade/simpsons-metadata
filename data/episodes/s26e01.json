@@ -7,7 +7,12 @@
     "fr-CA": "Le clown est pouishe"
   },
   "production_code": "SABF20",
-  "original_air_date": "2014-09-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-09-28"
+    }
+  ],
   "overall_number": 553,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Clown_in_the_Dumps",

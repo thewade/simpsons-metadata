@@ -7,7 +7,12 @@
     "fr-CA": "L'arbre qui plantait des hommes"
   },
   "production_code": "PABF22",
-  "original_air_date": "2012-11-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-11-25"
+    }
+  ],
   "overall_number": 514,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Tree_Grows_in_Springfield",

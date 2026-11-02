@@ -7,7 +7,12 @@
     "fr-CA": "À droite, toute!"
   },
   "production_code": "PABF03",
-  "original_air_date": "2012-01-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-01-08"
+    }
+  ],
   "overall_number": 496,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Politically_Inept,_with_Homer_Simpson",

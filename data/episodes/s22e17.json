@@ -7,7 +7,12 @@
     "fr-CA": "L'étrangleur de Springfield"
   },
   "production_code": "NABF10",
-  "original_air_date": "2011-03-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-03-27"
+    }
+  ],
   "overall_number": 481,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Love_Is_a_Many_Strangled_Thing",

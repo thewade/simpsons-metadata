@@ -7,7 +7,12 @@
     "fr-CA": "Le frère prodigue"
   },
   "production_code": "7F16",
-  "original_air_date": "1991-02-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-02-21"
+    }
+  ],
   "overall_number": 28,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F16.html",

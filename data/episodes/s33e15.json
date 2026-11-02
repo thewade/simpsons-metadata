@@ -7,7 +7,12 @@
     "fr-CA": "Moi, mes souliers ...."
   },
   "production_code": "UABF08",
-  "original_air_date": "2022-03-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-03-20"
+    }
+  ],
   "overall_number": 721,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_the_Cool_Kid",

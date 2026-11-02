@@ -7,7 +7,12 @@
     "fr-CA": "Voyage au fond du père"
   },
   "production_code": "HABF03",
-  "original_air_date": "2006-01-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-01-08"
+    }
+  ],
   "overall_number": 366,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer's_Paternity_Coot",

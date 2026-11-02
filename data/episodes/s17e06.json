@@ -7,7 +7,12 @@
     "fr-CA": "Si la tendance a pas de maintien"
   },
   "production_code": "GABF21",
-  "original_air_date": "2005-11-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-11-20"
+    }
+  ],
   "overall_number": 362,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/See_Homer_Run",

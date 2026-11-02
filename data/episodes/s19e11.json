@@ -7,7 +7,12 @@
     "fr-CA": "Bac et Métal"
   },
   "production_code": "KABF04",
-  "original_air_date": "2008-01-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-01-27"
+    }
+  ],
   "overall_number": 411,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/That_'90s_Show_(The_Simpsons)",

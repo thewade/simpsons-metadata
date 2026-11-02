@@ -7,7 +7,12 @@
     "fr-CA": "Lard de la guerre"
   },
   "production_code": "SABF10",
-  "original_air_date": "2014-03-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-03-23"
+    }
+  ],
   "overall_number": 545,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_War_of_Art_(The_Simpsons)",

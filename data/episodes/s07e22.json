@@ -7,7 +7,12 @@
     "fr-CA": "Abe Simpson et son petit"
   },
   "production_code": "3F19",
-  "original_air_date": "1996-04-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-04-28"
+    }
+  ],
   "overall_number": 150,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F19.html",

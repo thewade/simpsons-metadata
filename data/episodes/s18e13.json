@@ -7,7 +7,12 @@
     "fr-CA": "Springfield en cinq temps!"
   },
   "production_code": "JABF07",
-  "original_air_date": "2007-02-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-02-18"
+    }
+  ],
   "overall_number": 391,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Springfield_Up",

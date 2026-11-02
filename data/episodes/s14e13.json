@@ -7,7 +7,12 @@
     "fr-CA": "La Conversion d'une star"
   },
   "production_code": "EABF08",
-  "original_air_date": "2003-03-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-03-02"
+    }
+  ],
   "overall_number": 304,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Star_Is_Born_Again",

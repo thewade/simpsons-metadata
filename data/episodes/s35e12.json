@@ -7,7 +7,12 @@
     "fr-CA": "Super Lisa Kart"
   },
   "production_code": "35ABF05",
-  "original_air_date": "2024-02-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-02-25"
+    }
+  ],
   "overall_number": 762,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_Gets_an_F1",

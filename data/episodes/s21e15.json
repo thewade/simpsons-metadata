@@ -7,7 +7,12 @@
     "fr-CA": "Besame pas trop"
   },
   "production_code": "MABF07",
-  "original_air_date": "2010-03-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-03-21"
+    }
+  ],
   "overall_number": 456,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Stealing_First_Base",

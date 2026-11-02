@@ -7,7 +7,12 @@
     "fr-CA": "L'ivresse au maître"
   },
   "production_code": "LABF15",
-  "original_air_date": "2009-10-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-10-04"
+    }
+  ],
   "overall_number": 443,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_Gets_a_%22Z%22",

@@ -4,7 +4,12 @@
     "en": "House of Cards"
   },
   "production_code": "MG12",
-  "original_air_date": "1987-10-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-10-25"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/House_of_Cards"
   }

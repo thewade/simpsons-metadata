@@ -7,7 +7,12 @@
     "fr-CA": "Un après-midi de dinde"
   },
   "production_code": "YABF17",
-  "original_air_date": "2019-11-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-11-24"
+    }
+  ],
   "overall_number": 670,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Thanksgiving_of_Horror",

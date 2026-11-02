@@ -7,7 +7,12 @@
     "fr-CA": "Ho-Moe"
   },
   "production_code": "NABF04",
-  "original_air_date": "2011-01-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-01-16"
+    }
+  ],
   "overall_number": 475,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Flaming_Moe",

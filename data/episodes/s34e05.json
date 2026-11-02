@@ -7,7 +7,12 @@
     "fr-CA": "Pas ça"
   },
   "production_code": "UABF17",
-  "original_air_date": "2022-10-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-10-23"
+    }
+  ],
   "overall_number": 733,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Not_It",

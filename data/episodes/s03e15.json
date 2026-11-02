@@ -7,7 +7,12 @@
     "fr-CA": "Homer joue à la maman"
   },
   "production_code": "8F14",
-  "original_air_date": "1992-02-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1992-02-06"
+    }
+  ],
   "overall_number": 50,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F14.html",

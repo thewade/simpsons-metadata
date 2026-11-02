@@ -7,7 +7,12 @@
     "fr-CA": "Les demi-frères ennemis"
   },
   "production_code": "UABF22",
-  "original_air_date": "2022-11-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-11-20"
+    }
+  ],
   "overall_number": 736,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Step_Brother_from_the_Same_Planet",

@@ -7,7 +7,12 @@
     "fr-CA": "Le roman-savon de Marge"
   },
   "production_code": "FABF05",
-  "original_air_date": "2004-01-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-01-25"
+    }
+  ],
   "overall_number": 323,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Diatribe_of_a_Mad_Housewife",

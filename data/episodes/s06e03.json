@@ -7,7 +7,12 @@
     "fr-CA": "Histoire d'amour"
   },
   "production_code": "2F33",
-  "original_air_date": "1994-09-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-09-25"
+    }
+  ],
   "overall_number": 106,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F33.html",

@@ -4,7 +4,12 @@
     "en": "Maggie In Peril: The Thrilling Conclusion"
   },
   "production_code": "MG43",
-  "original_air_date": "1989-05-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-05-07"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Maggie_in_Peril_(The_Thrilling_Conclusion)"
   }

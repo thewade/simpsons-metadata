@@ -7,7 +7,12 @@
     "fr-CA": "Biographies : Les Simpson"
   },
   "production_code": "BABF19",
-  "original_air_date": "2000-05-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-05-21"
+    }
+  ],
   "overall_number": 248,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF19.html",

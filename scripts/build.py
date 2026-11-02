@@ -119,6 +119,8 @@ def parse_record(path, dataset):
                 raise ValidationError(f"{path}: Amazon URL must be the clean HTTPS ASIN link")
     if dataset == "movies" and "original_air_date" in record:
         raise ValidationError(f"{path}: movies use release_date or planned_release_date")
+    if dataset in ("episodes", "shorts/tracey-ullman", "shorts/disney-plus") and "original_air_date" in record:
+        raise ValidationError(f"{path}: original_air_date is derived from releases; omit it from source")
     if dataset == "movies" and "release_date" in record and "planned_release_date" in record:
         raise ValidationError(f"{path}: a movie cannot have both release dates")
     for date_field in ("original_air_date", "release_date", "planned_release_date"):
@@ -130,6 +132,39 @@ def parse_record(path, dataset):
                 date.fromisoformat(value)
             except ValueError as exc:
                 raise ValidationError(f"{path}: {date_field} must be YYYY-MM-DD") from exc
+    if "releases" in record:
+        releases = record["releases"]
+        if dataset == "seasons" or not isinstance(releases, list) or not releases:
+            raise ValidationError(f"{path}: releases must be a nonempty array for a title")
+        seen = set()
+        dated = []
+        for number, release in enumerate(releases, 1):
+            label = f"releases[{number}]"
+            if not isinstance(release, dict) or not set(release) <= {"language", "date", "country", "network"}:
+                raise ValidationError(f"{path}: {label} has unsupported fields")
+            if not isinstance(release.get("language"), str) or not LANG_TAG.fullmatch(release["language"]):
+                raise ValidationError(f"{path}: {label}.language must be a language tag")
+            if "date" in release:
+                value = release["date"]
+                try:
+                    if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+                        raise ValueError("format")
+                    date.fromisoformat(value)
+                except ValueError as exc:
+                    raise ValidationError(f"{path}: {label}.date must be YYYY-MM-DD or omitted") from exc
+                dated.append(value)
+            if "country" in release and (not isinstance(release["country"], str)
+                                         or not re.fullmatch(r"[A-Z]{2}", release["country"])):
+                raise ValidationError(f"{path}: {label}.country must be a two-letter country code")
+            if "network" in release and (not isinstance(release["network"], str)
+                                         or not release["network"].strip() or release["network"] != release["network"].strip()):
+                raise ValidationError(f"{path}: {label}.network must be a nonempty string")
+            signature = tuple(sorted(release.items()))
+            if signature in seen:
+                raise ValidationError(f"{path}: duplicate release {number}")
+            seen.add(signature)
+        if dataset in ("episodes", "shorts/tracey-ullman", "shorts/disney-plus") and dated:
+            record["original_air_date"] = min(dated)
     streaming = record.get("streaming", {})
     if not isinstance(streaming, dict):
         raise ValidationError(f"{path}: streaming must be an object")

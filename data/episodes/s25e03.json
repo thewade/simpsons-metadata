@@ -7,7 +7,12 @@
     "fr-CA": "Quatre regrets et un enterrement"
   },
   "production_code": "RABF18",
-  "original_air_date": "2013-11-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-11-03"
+    }
+  ],
   "overall_number": 533,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Four_Regrettings_and_a_Funeral",

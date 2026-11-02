@@ -7,7 +7,12 @@
     "fr-CA": "Mentor, mentor"
   },
   "production_code": "YABF21",
-  "original_air_date": "2019-10-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-10-06"
+    }
+  ],
   "overall_number": 664,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Go_Big_or_Go_Homer",

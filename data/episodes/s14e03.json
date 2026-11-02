@@ -7,7 +7,12 @@
     "fr-CA": "L'Un redouble, l'autre pas"
   },
   "production_code": "DABF20",
-  "original_air_date": "2002-11-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-11-17"
+    }
+  ],
   "overall_number": 294,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_vs._Lisa_vs._the_Third_Grade",

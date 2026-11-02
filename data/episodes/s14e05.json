@@ -7,7 +7,12 @@
     "fr-CA": "Occupation Quintuple"
   },
   "production_code": "DABF21",
-  "original_air_date": "2002-12-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-12-01"
+    }
+  ],
   "overall_number": 296,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Helter_Shelter_(The_Simpsons)",

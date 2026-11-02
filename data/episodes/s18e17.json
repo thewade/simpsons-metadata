@@ -7,7 +7,12 @@
     "fr-CA": "Jeux interdits"
   },
   "production_code": "JABF10",
-  "original_air_date": "2007-04-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-04-22"
+    }
+  ],
   "overall_number": 395,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Marge_Gamer",

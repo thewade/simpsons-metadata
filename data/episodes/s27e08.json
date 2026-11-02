@@ -7,7 +7,12 @@
     "fr-CA": "Quinze minutes de gloire"
   },
   "production_code": "VABF01",
-  "original_air_date": "2015-12-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-12-06"
+    }
+  ],
   "overall_number": 582,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Paths_of_Glory_(The_Simpsons)",

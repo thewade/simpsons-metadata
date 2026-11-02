@@ -7,7 +7,12 @@
     "fr-CA": "Ma vie sans Bart"
   },
   "production_code": "OABF08",
-  "original_air_date": "2023-03-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-03-05"
+    }
+  ],
   "overall_number": 743,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bartless",

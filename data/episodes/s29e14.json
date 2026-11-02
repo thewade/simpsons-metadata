@@ -7,7 +7,12 @@
     "fr-CA": "L'Insoutenable Anxiété d'un clown"
   },
   "production_code": "XABF08",
-  "original_air_date": "2018-04-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-04-01"
+    }
+  ],
   "overall_number": 632,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Fears_of_a_Clown",

@@ -7,7 +7,12 @@
     "fr-CA": "Vieux Motard que jamais"
   },
   "production_code": "BABF05",
-  "original_air_date": "1999-11-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-11-28"
+    }
+  ],
   "overall_number": 234,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF05.html",

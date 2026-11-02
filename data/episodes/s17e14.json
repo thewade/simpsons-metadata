@@ -7,7 +7,12 @@
     "fr-CA": "Voyage au fond des mères"
   },
   "production_code": "HABF07",
-  "original_air_date": "2006-03-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-03-19"
+    }
+  ],
   "overall_number": 370,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart_Has_Two_Mommies",

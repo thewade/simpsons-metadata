@@ -4,7 +4,12 @@
     "en": "Bart's Hiccups"
   },
   "production_code": "MG26",
-  "original_air_date": "1988-03-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-03-13"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bart%27s_Hiccups"
   }

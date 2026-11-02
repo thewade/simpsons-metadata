@@ -7,7 +7,12 @@
     "fr-CA": "Bébérama"
   },
   "production_code": "FABF03",
-  "original_air_date": "2004-01-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-01-04"
+    }
+  ],
   "overall_number": 321,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Marge_vs._Singles,_Seniors,_Childless_Couples_and_Teens,_and_Gays",

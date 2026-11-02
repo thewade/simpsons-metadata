@@ -6,7 +6,12 @@
     "fr-FR": "Cœur plein, piscine vide"
   },
   "production_code": "36ABF10",
-  "original_air_date": "2025-05-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-05-11"
+    }
+  ],
   "overall_number": 789,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Full_Heart,_Empty_Pool",

@@ -7,7 +7,12 @@
     "fr-CA": "Danse ta vie, l'gros"
   },
   "production_code": "YABF06",
-  "original_air_date": "2019-02-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-02-10"
+    }
+  ],
   "overall_number": 652,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I'm_Dancing_as_Fat_as_I_Can",

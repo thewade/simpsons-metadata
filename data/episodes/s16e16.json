@@ -7,7 +7,12 @@
     "fr-CA": "Un couvreur sur le toit"
   },
   "production_code": "GABF10",
-  "original_air_date": "2005-05-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-05-01"
+    }
+  ],
   "overall_number": 351,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Don't_Fear_the_Roofer",

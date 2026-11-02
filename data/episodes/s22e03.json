@@ -7,7 +7,12 @@
     "fr-CA": "Parties honteuses"
   },
   "production_code": "MABF18",
-  "original_air_date": "2010-10-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-10-10"
+    }
+  ],
   "overall_number": 467,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/MoneyBart",

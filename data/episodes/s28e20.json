@@ -7,7 +7,12 @@
     "fr-CA": "Bart cynique et Vieilles Dentelles"
   },
   "production_code": "WABF13",
-  "original_air_date": "2017-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-04-30"
+    }
+  ],
   "overall_number": 616,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Looking_for_Mr._Goodbart",

@@ -7,7 +7,12 @@
     "fr-CA": "La vengeance est un plat qui se mange trois fois"
   },
   "production_code": "JABF05",
-  "original_air_date": "2007-01-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-01-28"
+    }
+  ],
   "overall_number": 389,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Revenge_Is_a_Dish_Best_Served_Three_Times",

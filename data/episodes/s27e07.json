@@ -7,7 +7,12 @@
     "fr-CA": "Lisa avec un « S »"
   },
   "production_code": "TABF20",
-  "original_air_date": "2015-11-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-11-22"
+    }
+  ],
   "overall_number": 581,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_with_an_'S'",

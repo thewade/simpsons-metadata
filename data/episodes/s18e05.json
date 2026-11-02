@@ -7,7 +7,12 @@
     "fr-CA": "G.I. d'oh !"
   },
   "production_code": "HABF21",
-  "original_air_date": "2006-11-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-11-12"
+    }
+  ],
   "overall_number": 383,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/G.I._(Annoyed_Grunt)",

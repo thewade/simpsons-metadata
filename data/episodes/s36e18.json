@@ -7,7 +7,12 @@
     "fr-CA": "Yellow Planet"
   },
   "production_code": "35ABF20",
-  "original_air_date": "2025-04-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-04-22"
+    }
+  ],
   "overall_number": 786,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Yellow_Planet",

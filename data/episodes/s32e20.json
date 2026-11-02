@@ -7,7 +7,12 @@
     "fr-CA": "Un tarot de lousse"
   },
   "production_code": "QABF14",
-  "original_air_date": "2021-05-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-05-09"
+    }
+  ],
   "overall_number": 704,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mother_and_Child_Reunion_(The_Simpsons)",

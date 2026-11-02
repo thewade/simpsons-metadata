@@ -7,7 +7,12 @@
     "fr-CA": "Shauna donc du plaisir"
   },
   "production_code": "UABF12",
-  "original_air_date": "2022-05-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-05-01"
+    }
+  ],
   "overall_number": 725,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Girls_Just_Shauna_Have_Fun",

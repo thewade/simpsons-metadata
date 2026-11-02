@@ -7,7 +7,12 @@
     "fr-CA": "Past & Furious"
   },
   "production_code": "35ABF19",
-  "original_air_date": "2025-02-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-02-12"
+    }
+  ],
   "overall_number": 782,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Past_and_the_Furious",

@@ -7,7 +7,12 @@
     "fr-CA": "Mauvais perdants"
   },
   "production_code": "JABF11",
-  "original_air_date": "2007-04-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-04-29"
+    }
+  ],
   "overall_number": 396,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Boys_of_Bummer",

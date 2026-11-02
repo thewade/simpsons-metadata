@@ -7,7 +7,12 @@
     "fr-CA": "Les D'oh-gereux"
   },
   "production_code": "NABF16",
-  "original_air_date": "2011-09-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-09-25"
+    }
+  ],
   "overall_number": 487,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Falcon_and_the_D'ohman",

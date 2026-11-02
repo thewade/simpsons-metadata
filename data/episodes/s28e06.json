@@ -7,7 +7,12 @@
     "fr-CA": "Deux pères sans clic"
   },
   "production_code": "VABF22",
-  "original_air_date": "2016-11-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-11-06"
+    }
+  ],
   "overall_number": 602,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/There_Will_Be_Buds",

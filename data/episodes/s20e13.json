@@ -7,7 +7,12 @@
     "fr-CA": "Et la sœur?"
   },
   "production_code": "LABF04",
-  "original_air_date": "2009-03-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-03-15"
+    }
+  ],
   "overall_number": 433,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Gone_Maggie_Gone",

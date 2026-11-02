@@ -7,7 +7,12 @@
     "fr-CA": "Homer de l'autre côté du pare-brise"
   },
   "production_code": "OABF13",
-  "original_air_date": "2023-05-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-05-21"
+    }
+  ],
   "overall_number": 750,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer's_Adventures_Through_the_Windshield_Glass",

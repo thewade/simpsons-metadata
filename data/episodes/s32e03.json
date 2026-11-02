@@ -7,7 +7,12 @@
     "fr-CA": "Histoire de lard"
   },
   "production_code": "ZABF21",
-  "original_air_date": "2020-10-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-10-11"
+    }
+  ],
   "overall_number": 687,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Now_Museum,_Now_You_Don't_(The_Simpsons)",

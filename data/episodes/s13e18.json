@@ -7,7 +7,12 @@
     "fr-CA": "Su-Père Choqué"
   },
   "production_code": "DABF13",
-  "original_air_date": "2002-04-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-04-28"
+    }
+  ],
   "overall_number": 287,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I_Am_Furious_(Yellow)",

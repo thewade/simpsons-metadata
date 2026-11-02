@@ -7,7 +7,12 @@
     "fr-CA": "En veillant su'l perron"
   },
   "production_code": "EABF20",
-  "original_air_date": "2003-11-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-11-16"
+    }
+  ],
   "overall_number": 316,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_President_Wore_Pearls",

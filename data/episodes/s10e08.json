@@ -7,7 +7,12 @@
     "fr-CA": "Homer Simpson dans «un tour rein»"
   },
   "production_code": "AABF04",
-  "original_air_date": "1998-12-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-12-06"
+    }
+  ],
   "overall_number": 211,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF04.html",

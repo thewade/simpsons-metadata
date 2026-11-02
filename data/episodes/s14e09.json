@@ -7,7 +7,12 @@
     "fr-CA": "Quand elle me tient dans ses bras"
   },
   "production_code": "EABF04",
-  "original_air_date": "2003-02-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-02-02"
+    }
+  ],
   "overall_number": 300,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Strong_Arms_of_the_Ma",

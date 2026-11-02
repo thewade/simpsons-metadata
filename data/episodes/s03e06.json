@@ -7,7 +7,12 @@
     "fr-CA": "Tel père, tel clown"
   },
   "production_code": "8F05",
-  "original_air_date": "1991-10-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-10-24"
+    }
+  ],
   "overall_number": 41,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F05.html",

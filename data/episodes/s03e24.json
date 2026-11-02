@@ -7,7 +7,12 @@
     "fr-CA": "L’invention"
   },
   "production_code": "8F23",
-  "original_air_date": "1992-08-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1992-08-27"
+    }
+  ],
   "overall_number": 59,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F23.html",

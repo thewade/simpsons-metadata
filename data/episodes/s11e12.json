@@ -7,7 +7,12 @@
     "fr-CA": "Les Simpson déménagent"
   },
   "production_code": "BABF08",
-  "original_air_date": "2000-01-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-01-23"
+    }
+  ],
   "overall_number": 238,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF08.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Monsieur le robot"
   },
   "production_code": "FABF04",
-  "original_air_date": "2004-01-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-01-11"
+    }
+  ],
   "overall_number": 322,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/I,_(Annoyed_Grunt)-Bot",

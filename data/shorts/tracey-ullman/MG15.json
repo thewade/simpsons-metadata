@@ -4,7 +4,12 @@
     "en": "Bart and Dad Eat Dinner"
   },
   "production_code": "MG15",
-  "original_air_date": "1987-11-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-11-01"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bart_and_Homer%27s_Dinner"
   }

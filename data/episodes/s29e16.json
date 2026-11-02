@@ -7,7 +7,12 @@
     "fr-CA": "Sur le matelas"
   },
   "production_code": "XABF10",
-  "original_air_date": "2018-04-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-04-15"
+    }
+  ],
   "overall_number": 634,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/King_Leer",

@@ -7,7 +7,12 @@
     "fr-CA": "Homer le clown"
   },
   "production_code": "2F12",
-  "original_air_date": "1995-02-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-02-12"
+    }
+  ],
   "overall_number": 118,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F12.html",

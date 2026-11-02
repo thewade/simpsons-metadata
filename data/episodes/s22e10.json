@@ -7,7 +7,12 @@
     "fr-CA": "Maman et ces amis passe une belle journée"
   },
   "production_code": "NABF03",
-  "original_air_date": "2011-01-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-01-09"
+    }
+  ],
   "overall_number": 474,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Moms_I'd_Like_to_Forget",

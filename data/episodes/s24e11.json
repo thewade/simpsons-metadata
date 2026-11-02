@@ -7,7 +7,12 @@
     "fr-CA": "La relève de la garde"
   },
   "production_code": "RABF04",
-  "original_air_date": "2013-01-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-01-27"
+    }
+  ],
   "overall_number": 519,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Changing_of_the_Guardian",

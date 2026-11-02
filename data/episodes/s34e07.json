@@ -7,7 +7,12 @@
     "fr-CA": "Bière manquante, fille manquée"
   },
   "production_code": "OABF01",
-  "original_air_date": "2022-11-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-11-13"
+    }
+  ],
   "overall_number": 735,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/From_Beer_to_Paternity",

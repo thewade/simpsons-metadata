@@ -7,7 +7,12 @@
     "fr-CA": "Le blues du Noël blanc"
   },
   "production_code": "SABF01",
-  "original_air_date": "2013-12-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-12-15"
+    }
+  ],
   "overall_number": 538,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/White_Christmas_Blues",

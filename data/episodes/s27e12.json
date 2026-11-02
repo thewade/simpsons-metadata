@@ -7,7 +7,12 @@
     "fr-CA": "Apu de souffle"
   },
   "production_code": "VABF05",
-  "original_air_date": "2016-01-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-01-17"
+    }
+  ],
   "overall_number": 586,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Much_Apu_About_Something",

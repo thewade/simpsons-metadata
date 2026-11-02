@@ -7,7 +7,12 @@
     "fr-CA": "Zéro de conduite"
   },
   "production_code": "EABF15",
-  "original_air_date": "2003-05-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-05-11"
+    }
+  ],
   "overall_number": 311,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Brake_My_Wife,_Please",

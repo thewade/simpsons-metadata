@@ -7,7 +7,12 @@
     "fr-CA": "En vérité, je vous le d'Oh"
   },
   "production_code": "MABF10",
-  "original_air_date": "2010-03-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-03-28"
+    }
+  ],
   "overall_number": 457,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Greatest_Story_Ever_D'ohed",

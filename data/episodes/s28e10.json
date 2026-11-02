@@ -7,7 +7,12 @@
     "fr-CA": "L'Hébreu de Noël"
   },
   "production_code": "WABF02",
-  "original_air_date": "2016-12-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-12-11"
+    }
+  ],
   "overall_number": 606,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Nightmare_After_Krustmas",

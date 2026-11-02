@@ -7,7 +7,12 @@
     "fr-CA": "Les Chroniques Margi-ennes"
   },
   "production_code": "VABF09",
-  "original_air_date": "2016-03-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-03-13"
+    }
+  ],
   "overall_number": 590,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Marge-ian_Chronicles",

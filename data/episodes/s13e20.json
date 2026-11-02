@@ -7,7 +7,12 @@
     "fr-CA": "Bac et boule de neige"
   },
   "production_code": "DABF15",
-  "original_air_date": "2002-05-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-05-12"
+    }
+  ],
   "overall_number": 289,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Little_Girl_in_the_Big_Ten",

@@ -7,7 +7,12 @@
     "fr-CA": "Mère indoue, fils indigne"
   },
   "production_code": "5F04",
-  "original_air_date": "1997-11-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1997-11-16"
+    }
+  ],
   "overall_number": 185,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F04.html",

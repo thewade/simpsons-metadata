@@ -7,7 +7,12 @@
     "fr-CA": "La gripette et la baleine"
   },
   "production_code": "MABF14",
-  "original_air_date": "2010-04-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-04-25"
+    }
+  ],
   "overall_number": 460,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Squirt_and_the_Whale",

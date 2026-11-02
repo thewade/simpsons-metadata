@@ -7,7 +7,12 @@
     "fr-CA": "Au bois dormant"
   },
   "production_code": "35ABF16",
-  "original_air_date": "2024-10-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-10-27"
+    }
+  ],
   "overall_number": 772,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Shoddy_Heat",

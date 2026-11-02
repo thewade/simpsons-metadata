@@ -7,7 +7,12 @@
     "fr-CA": "Marge prend sa revanche"
   },
   "production_code": "7G11",
-  "original_air_date": "1990-03-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-03-18"
+    }
+  ],
   "overall_number": 9,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G11.html",

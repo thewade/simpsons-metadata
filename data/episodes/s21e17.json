@@ -7,7 +7,12 @@
     "fr-CA": "La ligne jaune"
   },
   "production_code": "MABF08",
-  "original_air_date": "2010-04-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-04-11"
+    }
+  ],
   "overall_number": 458,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/American_History_X-cellent",

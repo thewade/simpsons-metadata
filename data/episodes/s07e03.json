@@ -7,7 +7,12 @@
     "fr-CA": "Les enfants Flanders"
   },
   "production_code": "3F01",
-  "original_air_date": "1995-10-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-10-01"
+    }
+  ],
   "overall_number": 131,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F01.html",

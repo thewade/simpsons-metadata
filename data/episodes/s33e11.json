@@ -7,7 +7,12 @@
     "fr-CA": "Deuxième essai et Marge"
   },
   "production_code": "UABF05",
-  "original_air_date": "2022-01-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-01-02"
+    }
+  ],
   "overall_number": 717,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Longest_Marge",

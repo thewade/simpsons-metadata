@@ -7,7 +7,12 @@
     "fr-CA": "Lisa, apprentie vétérinaire"
   },
   "production_code": "VABF08",
-  "original_air_date": "2016-03-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-03-06"
+    }
+  ],
   "overall_number": 589,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_the_Veterinarian",

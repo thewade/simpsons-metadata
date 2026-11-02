@@ -7,7 +7,12 @@
     "fr-CA": "Scout un jour, scout toujours"
   },
   "production_code": "1F06",
-  "original_air_date": "1993-11-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-11-18"
+    }
+  ],
   "overall_number": 89,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F06.html",

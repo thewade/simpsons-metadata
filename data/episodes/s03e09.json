@@ -7,7 +7,12 @@
     "fr-CA": "Bartmobile"
   },
   "production_code": "8F07",
-  "original_air_date": "1991-11-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-11-14"
+    }
+  ],
   "overall_number": 44,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F07.html",

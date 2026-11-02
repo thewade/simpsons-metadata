@@ -7,7 +7,12 @@
     "fr-CA": "Le jour de la frappe"
   },
   "production_code": "9F18",
-  "original_air_date": "1993-04-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-04-29"
+    }
+  ],
   "overall_number": 79,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F18.html",

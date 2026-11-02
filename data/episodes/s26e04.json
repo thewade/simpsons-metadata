@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXV"
   },
   "production_code": "SABF21",
-  "original_air_date": "2014-10-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-10-19"
+    }
+  ],
   "overall_number": 556,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXV",

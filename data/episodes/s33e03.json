@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXXII"
   },
   "production_code": "QABF16",
-  "original_air_date": "2021-10-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-10-10"
+    }
+  ],
   "overall_number": 709,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXXII",

@@ -4,7 +4,12 @@
     "en": "The Most Wonderful Time of the Year",
     "fr": "The Most Wonderful Time of the Year"
   },
-  "original_air_date": "2024-10-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-10-11"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Most_Wonderful_Time_of_the_Year_(2024_film)"
   },

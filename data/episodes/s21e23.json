@@ -7,7 +7,12 @@
     "fr-CA": "Le jugement de saloMoe"
   },
   "production_code": "MABF15",
-  "original_air_date": "2010-05-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-05-23"
+    }
+  ],
   "overall_number": 464,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Judge_Me_Tender",

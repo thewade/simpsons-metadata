@@ -7,7 +7,20 @@
     "fr-CA": "Au nom du pepère et du fils"
   },
   "production_code": "LABF11",
-  "original_air_date": "2009-03-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-03-17",
+      "country": "GB",
+      "network": "Sky1"
+    },
+    {
+      "language": "en",
+      "date": "2009-03-22",
+      "country": "US",
+      "network": "FOX"
+    }
+  ],
   "overall_number": 434,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/In_the_Name_of_the_Grandfather",

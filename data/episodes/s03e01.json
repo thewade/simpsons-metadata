@@ -7,7 +7,12 @@
     "fr-CA": "Lobot-Homer"
   },
   "production_code": "7F24",
-  "original_air_date": "1991-09-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-09-19"
+    }
+  ],
   "overall_number": 36,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F24.html",

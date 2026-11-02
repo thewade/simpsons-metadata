@@ -7,7 +7,12 @@
     "fr-CA": "Enfin, ils partent"
   },
   "production_code": "PABF07",
-  "original_air_date": "2012-02-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-02-19"
+    }
+  ],
   "overall_number": 500,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/At_Long_Last_Leave",

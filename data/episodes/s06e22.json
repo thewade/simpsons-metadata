@@ -7,7 +7,12 @@
     "fr-CA": "Le saxophoniste"
   },
   "production_code": "2F32",
-  "original_air_date": "1995-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-04-30"
+    }
+  ],
   "overall_number": 125,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F32.html",

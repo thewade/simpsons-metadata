@@ -7,7 +7,12 @@
     "fr-CA": "Génie en herbe"
   },
   "production_code": "FABF09",
-  "original_air_date": "2004-02-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-02-22"
+    }
+  ],
   "overall_number": 326,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Smart_&_Smarter",

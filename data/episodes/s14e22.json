@@ -7,7 +7,12 @@
     "fr-CA": "Prendre un enfant par le Moe"
   },
   "production_code": "EABF17",
-  "original_air_date": "2003-05-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-05-18"
+    }
+  ],
   "overall_number": 313,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Moe_Baby_Blues",

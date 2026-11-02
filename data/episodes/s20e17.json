@@ -7,7 +7,12 @@
     "fr-CA": "Le bon, l'abrutie et l'achalant"
   },
   "production_code": "LABF07",
-  "original_air_date": "2009-04-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-04-19"
+    }
+  ],
   "overall_number": 437,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Good,_the_Sad_and_the_Drugly",

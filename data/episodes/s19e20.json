@@ -7,7 +7,12 @@
     "fr-CA": "Laissez dépasser"
   },
   "production_code": "KABF13",
-  "original_air_date": "2008-05-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-05-18"
+    }
+  ],
   "overall_number": 420,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/All_About_Lisa",

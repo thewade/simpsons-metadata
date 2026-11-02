@@ -7,7 +7,12 @@
     "fr-CA": "J'ai mouillé ta mère"
   },
   "production_code": "PABF08",
-  "original_air_date": "2012-03-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-03-11"
+    }
+  ],
   "overall_number": 502,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/How_I_Wet_Your_Mother",

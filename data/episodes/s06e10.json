@@ -7,7 +7,12 @@
     "fr-CA": "Le tonique"
   },
   "production_code": "2F07",
-  "original_air_date": "1994-12-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-12-04"
+    }
+  ],
   "overall_number": 113,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F07.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Parle parle, jazz jazz"
   },
   "production_code": "HABF18",
-  "original_air_date": "2006-09-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-09-17"
+    }
+  ],
   "overall_number": 380,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Jazzy_and_the_Pussycats",

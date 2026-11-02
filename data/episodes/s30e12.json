@@ -7,7 +7,12 @@
     "fr-CA": "La Fille de l'autobus"
   },
   "production_code": "YABF04",
-  "original_air_date": "2019-01-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-01-13"
+    }
+  ],
   "overall_number": 651,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Girl_on_the_Bus",

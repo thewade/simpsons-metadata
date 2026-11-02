@@ -4,7 +4,12 @@
     "en": "The Pacifier"
   },
   "production_code": "MG05",
-  "original_air_date": "1987-06-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-06-21"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Pacifier"
   }

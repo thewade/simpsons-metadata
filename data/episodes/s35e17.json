@@ -7,7 +7,12 @@
     "fr-CA": "Pour boire, il faut vendre"
   },
   "production_code": "35ABF11",
-  "original_air_date": "2024-05-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-05-12"
+    }
+  ],
   "overall_number": 767,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Tipping_Point_(The_Simpsons)",

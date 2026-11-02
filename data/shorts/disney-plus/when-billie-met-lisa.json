@@ -4,7 +4,12 @@
     "en": "When Billie Met Lisa",
     "fr": "Quand Billie a rencontré Lisa"
   },
-  "original_air_date": "2022-04-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-04-22"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/When_Billie_Met_Lisa"
   },

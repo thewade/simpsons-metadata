@@ -7,7 +7,12 @@
     "fr-CA": "Homerland"
   },
   "production_code": "RABF20",
-  "original_air_date": "2013-09-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-09-29"
+    }
+  ],
   "overall_number": 531,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homerland",

@@ -7,7 +7,12 @@
     "fr-CA": "Les Apprentis-gnochons"
   },
   "production_code": "EABF13",
-  "original_air_date": "2003-04-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-04-27"
+    }
+  ],
   "overall_number": 309,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Dude,_Where's_My_Ranch%3F",

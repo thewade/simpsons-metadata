@@ -7,7 +7,12 @@
     "fr-CA": "Un drôle de manège"
   },
   "production_code": "5F08",
-  "original_air_date": "1998-01-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-01-11"
+    }
+  ],
   "overall_number": 190,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F08.html",

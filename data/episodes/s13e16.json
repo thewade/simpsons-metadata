@@ -7,7 +7,12 @@
     "fr-CA": "Stone, Homer est stone"
   },
   "production_code": "DABF11",
-  "original_air_date": "2002-04-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-04-07"
+    }
+  ],
   "overall_number": 285,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Weekend_at_Burnsie's",

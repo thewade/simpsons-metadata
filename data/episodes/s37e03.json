@@ -6,7 +6,12 @@
     "fr-FR": "Simpson Horror Show XXXVI"
   },
   "production_code": "36ABF15",
-  "original_air_date": "2025-10-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-10-19"
+    }
+  ],
   "overall_number": 793,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXXVI",

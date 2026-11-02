@@ -7,7 +7,12 @@
     "fr-CA": "Élection Douloureuse"
   },
   "production_code": "SABF02",
-  "original_air_date": "2013-11-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-11-24"
+    }
+  ],
   "overall_number": 536,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Kid_Is_All_Right",

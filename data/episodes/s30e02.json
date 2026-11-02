@@ -7,7 +7,12 @@
     "fr-CA": "L'Hôtel des rêves brisés"
   },
   "production_code": "XABF15",
-  "original_air_date": "2018-10-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-10-07"
+    }
+  ],
   "overall_number": 641,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Heartbreak_Hotel_(The_Simpsons)",

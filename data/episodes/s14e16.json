@@ -7,7 +7,12 @@
     "fr-CA": "La Guéguerre des étoiles"
   },
   "production_code": "EABF11",
-  "original_air_date": "2003-03-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-03-30"
+    }
+  ],
   "overall_number": 307,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/'Scuse_Me_While_I_Miss_the_Sky",

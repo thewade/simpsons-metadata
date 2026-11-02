@@ -4,7 +4,12 @@
     "en": "Watching Television"
   },
   "production_code": "MG02",
-  "original_air_date": "1987-05-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-05-03"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Watching_Television"
   }

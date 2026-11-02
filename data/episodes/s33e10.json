@@ -7,7 +7,12 @@
     "fr-CA": "Maggie, Inc."
   },
   "production_code": "UABF03",
-  "original_air_date": "2021-12-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-12-19"
+    }
+  ],
   "overall_number": 716,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/A_Made_Maggie",

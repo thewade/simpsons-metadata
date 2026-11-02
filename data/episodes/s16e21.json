@@ -7,7 +7,12 @@
     "fr-CA": "Le père, le fils et l'artiste invité"
   },
   "production_code": "GABF09",
-  "original_air_date": "2005-05-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-05-15"
+    }
+  ],
   "overall_number": 356,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Father,_the_Son,_and_the_Holy_Guest_Star",

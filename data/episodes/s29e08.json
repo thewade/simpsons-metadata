@@ -7,7 +7,12 @@
     "fr-CA": "L'Opus de Monsieur Lisa"
   },
   "production_code": "XABF01",
-  "original_air_date": "2017-12-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-12-03"
+    }
+  ],
   "overall_number": 626,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mr._Lisa's_Opus",

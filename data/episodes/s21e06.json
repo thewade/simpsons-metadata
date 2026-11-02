@@ -7,7 +7,12 @@
     "fr-CA": "Vers de contact"
   },
   "production_code": "LABF18",
-  "original_air_date": "2009-11-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-11-22"
+    }
+  ],
   "overall_number": 447,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pranks_and_Greens",

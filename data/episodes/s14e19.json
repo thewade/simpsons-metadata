@@ -7,7 +7,12 @@
     "fr-CA": "Les Dents de la bière"
   },
   "production_code": "EABF14",
-  "original_air_date": "2003-05-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-05-04"
+    }
+  ],
   "overall_number": 310,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Old_Yeller-Belly",

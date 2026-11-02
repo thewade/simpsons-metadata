@@ -7,7 +7,12 @@
     "fr-CA": "Quelle chicane de famille"
   },
   "production_code": "DABF01",
-  "original_air_date": "2002-01-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-01-06"
+    }
+  ],
   "overall_number": 276,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/DABF01.html",

@@ -4,7 +4,12 @@
     "en": "Maggie In Peril: Chapter One"
   },
   "production_code": "MG42",
-  "original_air_date": "1989-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-04-30"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Maggie_in_Peril_(Chapter_One)"
   }

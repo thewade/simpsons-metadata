@@ -7,7 +7,12 @@
     "fr-CA": "Une guitare dans le garde-robe"
   },
   "production_code": "VABF06",
-  "original_air_date": "2016-02-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-02-21"
+    }
+  ],
   "overall_number": 588,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Gal_of_Constant_Sorrow",

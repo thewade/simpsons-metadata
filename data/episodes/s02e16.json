@@ -7,7 +7,12 @@
     "fr-CA": "Chien fou"
   },
   "production_code": "7F14",
-  "original_air_date": "1991-03-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1991-03-07"
+    }
+  ],
   "overall_number": 29,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7F14.html",

@@ -4,7 +4,12 @@
     "en": "Bart's Nightmare"
   },
   "production_code": "MG45",
-  "original_air_date": "1989-03-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-03-26"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bart%27s_Nightmare"
   }

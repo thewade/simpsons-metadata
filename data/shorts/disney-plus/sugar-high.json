@@ -3,7 +3,12 @@
   "titles": {
     "en": "Sugar High"
   },
-  "original_air_date": "2025-11-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-10"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Sugar_High"
   }

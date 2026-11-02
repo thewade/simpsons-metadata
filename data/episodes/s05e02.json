@@ -7,7 +7,12 @@
     "fr-CA": "Le cap de la peur"
   },
   "production_code": "9F22",
-  "original_air_date": "1993-10-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-10-07"
+    }
+  ],
   "overall_number": 83,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F22.html",

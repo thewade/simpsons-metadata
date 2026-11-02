@@ -7,7 +7,12 @@
     "fr-CA": "Moi, j'm la vengeance"
   },
   "production_code": "UABF13",
-  "original_air_date": "2022-05-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-05-15"
+    }
+  ],
   "overall_number": 727,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Meat_Is_Murder_(The_Simpsons)",

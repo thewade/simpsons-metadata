@@ -4,7 +4,12 @@
     "en": "Bart of the Jungle"
   },
   "production_code": "MG46",
-  "original_air_date": "1989-04-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-04-16"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bart_of_the_Jungle"
   }

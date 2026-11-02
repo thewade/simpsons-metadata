@@ -30,6 +30,8 @@ The API is static and read-only. It does not offer server-side search, filtering
 
 Some categories are currently empty and return `{}`. A record may have a `links` object for verified external pages and a `streaming` object for known provider identifiers. Omitted data is unknown, not an assertion that it does not exist.
 
+Episodes and shorts also expose a `releases` array. Each entry identifies a known release by language and may include its date, country, and network when verified. An omitted `date` means the date is unknown. The existing `original_air_date` field remains available as the earliest dated release for compatibility.
+
 The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episodes into season tables and also lists movies, Tracey Ullman shorts, and Disney+ shorts. Select a row for regional titles, references, archived source fields, and a Disney+ link when a content ID is stored. Those playback links are built from imported IDs and are not a guarantee of current or regional availability.
 
 The landing page and guide are available in English, French (France), and French (Québec). They start with your browser's preferred language; use the language menu to change it. The choice is saved in the browser and can be shared with `?lang=en`, `?lang=fr-FR`, or `?lang=fr-CA`. A Québec guide title falls back to the France title, then a generic French title, then English when needed. The JSON API retains its original language tags.

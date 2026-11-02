@@ -7,7 +7,12 @@
     "fr-CA": "Dernier Tour de piste"
   },
   "production_code": "CABF10",
-  "original_air_date": "2001-02-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-02-18"
+    }
+  ],
   "overall_number": 261,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/CABF10.html",

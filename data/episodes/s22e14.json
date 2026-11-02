@@ -7,7 +7,12 @@
     "fr-CA": "Su-Père Choqué, le film"
   },
   "production_code": "NABF07",
-  "original_air_date": "2011-02-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-02-20"
+    }
+  ],
   "overall_number": 478,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Angry_Dad:_The_Movie",

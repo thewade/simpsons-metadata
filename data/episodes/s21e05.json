@@ -7,7 +7,12 @@
     "fr-CA": "Le diable s'habille pas pantoute"
   },
   "production_code": "LABF17",
-  "original_air_date": "2009-11-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-11-15"
+    }
+  ],
   "overall_number": 446,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Devil_Wears_Nada",

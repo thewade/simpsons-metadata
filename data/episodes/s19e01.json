@@ -7,7 +7,12 @@
     "fr-CA": "Si j’avais les ailes d’un twit"
   },
   "production_code": "JABF20",
-  "original_air_date": "2007-09-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-09-23"
+    }
+  ],
   "overall_number": 401,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/He_Loves_to_Fly_and_He_D'ohs",

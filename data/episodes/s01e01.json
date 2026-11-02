@@ -7,7 +7,12 @@
     "fr-CA": "Homer au nez rouge"
   },
   "production_code": "7G08",
-  "original_air_date": "1989-12-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-12-17"
+    }
+  ],
   "overall_number": 1,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G08.html",

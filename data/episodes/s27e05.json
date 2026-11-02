@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXVI"
   },
   "production_code": "TABF18",
-  "original_air_date": "2015-10-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-10-25"
+    }
+  ],
   "overall_number": 579,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXVI",

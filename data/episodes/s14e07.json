@@ -7,7 +7,12 @@
     "fr-CA": "L'Éruption de l'Edna"
   },
   "production_code": "EABF02",
-  "original_air_date": "2003-01-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-01-05"
+    }
+  ],
   "overall_number": 298,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Special_Edna",

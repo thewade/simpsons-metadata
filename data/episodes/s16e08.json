@@ -7,7 +7,12 @@
     "fr-CA": "La Passion du Football"
   },
   "production_code": "GABF02",
-  "original_air_date": "2005-02-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-02-06"
+    }
+  ],
   "overall_number": 343,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_and_Ned's_Hail_Mary_Pass",

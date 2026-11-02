@@ -7,7 +7,12 @@
     "fr-CA": "Mal de mère"
   },
   "production_code": "KABF12",
-  "original_air_date": "2008-05-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-05-11"
+    }
+  ],
   "overall_number": 419,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mona_Leaves-a",

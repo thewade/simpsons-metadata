@@ -7,7 +7,12 @@
     "fr-CA": "Le Monty coune"
   },
   "production_code": "NABF01",
-  "original_air_date": "2010-11-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-11-21"
+    }
+  ],
   "overall_number": 470,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Fool_Monty",

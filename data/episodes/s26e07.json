@@ -7,7 +7,12 @@
     "fr-CA": "Le bûcher des vérités"
   },
   "production_code": "TABF01",
-  "original_air_date": "2014-11-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-11-16"
+    }
+  ],
   "overall_number": 559,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Blazed_and_Confused",

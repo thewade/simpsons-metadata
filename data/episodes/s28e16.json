@@ -7,7 +7,12 @@
     "fr-CA": "Le Krusty de camp"
   },
   "production_code": "WABF09",
-  "original_air_date": "2017-03-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-03-05"
+    }
+  ],
   "overall_number": 612,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Kamp_Krustier",

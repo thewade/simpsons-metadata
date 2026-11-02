@@ -7,7 +7,12 @@
     "fr-CA": "Lisa chez les scouts"
   },
   "production_code": "UABF21",
-  "original_air_date": "2022-10-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-10-09"
+    }
+  ],
   "overall_number": 731,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_the_Boy_Scout",

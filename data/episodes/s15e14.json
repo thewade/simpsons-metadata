@@ -7,7 +7,12 @@
     "fr-CA": "Retour de flamme"
   },
   "production_code": "FABF08",
-  "original_air_date": "2004-03-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-03-14"
+    }
+  ],
   "overall_number": 327,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Ziff_Who_Came_to_Dinner",

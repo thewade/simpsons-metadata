@@ -7,7 +7,12 @@
     "fr-CA": "Bart l'enfant modèle"
   },
   "production_code": "1F05",
-  "original_air_date": "1993-11-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-11-11"
+    }
+  ],
   "overall_number": 88,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/1F05.html",

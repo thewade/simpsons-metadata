@@ -7,7 +7,12 @@
     "fr-CA": "La Mort d’un chien"
   },
   "production_code": "8F17",
-  "original_air_date": "1992-03-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1992-03-12"
+    }
+  ],
   "overall_number": 54,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/8F17.html",

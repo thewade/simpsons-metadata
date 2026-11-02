@@ -7,7 +7,12 @@
     "fr-CA": "Homer revient toujours au Rock'n'Roll"
   },
   "production_code": "DABF22",
-  "original_air_date": "2002-11-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-11-10"
+    }
+  ],
   "overall_number": 293,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/How_I_Spent_My_Strummer_Vacation",

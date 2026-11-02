@@ -7,7 +7,12 @@
     "fr-CA": "Pas si bons baisers de Russie"
   },
   "production_code": "XABF20",
-  "original_air_date": "2018-11-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-11-11"
+    }
+  ],
   "overall_number": 645,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/From_Russia_Without_Love",

@@ -7,7 +7,12 @@
     "fr-CA": "Ce que femme de BD veut"
   },
   "production_code": "RABF08",
-  "original_air_date": "2013-04-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-04-14"
+    }
+  ],
   "overall_number": 525,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/What_Animated_Women_Want",

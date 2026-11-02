@@ -7,7 +7,12 @@
     "fr-CA": "Le taon, la brute et le croulant"
   },
   "production_code": "SABF03",
-  "original_air_date": "2014-01-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-01-12"
+    }
+  ],
   "overall_number": 540,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Married_to_the_Blob",

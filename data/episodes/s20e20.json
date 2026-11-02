@@ -7,7 +7,12 @@
     "fr-CA": "Maman et fifille sont chez le coiffeur"
   },
   "production_code": "LABF09",
-  "original_air_date": "2009-05-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-05-10"
+    }
+  ],
   "overall_number": 440,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Four_Great_Women_and_a_Manicure",

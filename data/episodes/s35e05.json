@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXXIV"
   },
   "production_code": "OABF17",
-  "original_air_date": "2023-11-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-11-05"
+    }
+  ],
   "overall_number": 755,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXXIV",

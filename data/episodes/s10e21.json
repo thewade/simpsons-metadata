@@ -7,7 +7,12 @@
     "fr-CA": "Le monde aime mieux Montgomery Burns"
   },
   "production_code": "AABF17",
-  "original_air_date": "1999-05-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-05-02"
+    }
+  ],
   "overall_number": 224,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF17.html",

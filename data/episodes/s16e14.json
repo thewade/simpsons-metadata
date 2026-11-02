@@ -7,7 +7,12 @@
     "fr-CA": "Le cinquième colon"
   },
   "production_code": "GABF08",
-  "original_air_date": "2005-04-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-04-03"
+    }
+  ],
   "overall_number": 349,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Seven-Beer_Snitch",

@@ -7,7 +7,12 @@
     "fr-CA": "Les petites-filles modèles-réduits"
   },
   "production_code": "LABF08",
-  "original_air_date": "2009-04-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-04-26"
+    }
+  ],
   "overall_number": 438,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Father_Knows_Worst",

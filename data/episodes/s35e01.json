@@ -7,7 +7,12 @@
     "fr-CA": "La traversée du Homer"
   },
   "production_code": "OABF18",
-  "original_air_date": "2023-10-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-10-01"
+    }
+  ],
   "overall_number": 751,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer's_Crossing",

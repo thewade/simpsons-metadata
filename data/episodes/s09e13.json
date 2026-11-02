@@ -7,7 +7,12 @@
     "fr-CA": "Un coups de pied aux cultes"
   },
   "production_code": "5F23",
-  "original_air_date": "1998-02-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-02-08"
+    }
+  ],
   "overall_number": 191,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F23.html",

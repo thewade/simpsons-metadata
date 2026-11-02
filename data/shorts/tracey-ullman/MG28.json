@@ -4,7 +4,12 @@
     "en": "Zoo Story"
   },
   "production_code": "MG28",
-  "original_air_date": "1988-05-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-05-10"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Zoo_Story"
   }

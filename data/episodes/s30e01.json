@@ -7,7 +7,12 @@
     "fr-CA": "Bart n'est pas mort"
   },
   "production_code": "XABF19",
-  "original_air_date": "2018-09-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-09-30"
+    }
+  ],
   "overall_number": 640,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart's_Not_Dead",

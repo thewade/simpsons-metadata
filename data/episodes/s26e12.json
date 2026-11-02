@@ -7,7 +7,12 @@
     "fr-CA": "La tesla qui venait du ciel"
   },
   "production_code": "TABF04",
-  "original_air_date": "2015-01-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-01-25"
+    }
+  ],
   "overall_number": 564,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Musk_Who_Fell_to_Earth",

@@ -7,7 +7,12 @@
     "fr-CA": "Un prince, deux meurtriers et beaucoup de papillons"
   },
   "production_code": "KABF07",
-  "original_air_date": "2008-03-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-03-09"
+    }
+  ],
   "overall_number": 414,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Dial_'N'_for_Nerder",

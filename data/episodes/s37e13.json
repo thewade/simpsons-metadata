@@ -6,7 +6,12 @@
     "fr-FR": "Séparance"
   },
   "production_code": "37ABF07",
-  "original_air_date": "2026-01-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-01-04"
+    }
+  ],
   "overall_number": 803,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Seperance",

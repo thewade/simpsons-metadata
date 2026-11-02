@@ -100,6 +100,13 @@ class BuildTests(unittest.TestCase):
             self.assertIn('Wikipedia (French)', guide)
             self.assertIn('Simpsons Archive', guide)
             episodes = json.loads((out / "episodes.json").read_text(encoding="utf-8"))
+            self.assertTrue(all(record["original_air_date"] ==
+                                min(release["date"] for release in record["releases"] if "date" in release)
+                                for record in episodes.values()))
+            self.assertEqual(episodes["s20e14"]["releases"], [
+                {"language": "en", "date": "2009-03-17", "country": "GB", "network": "Sky1"},
+                {"language": "en", "date": "2009-03-22", "country": "US", "network": "FOX"},
+            ])
             self.assertEqual(episodes["s20e09"]["original_aspect_ratio"], "4:3")
             self.assertEqual(episodes["s20e10"]["original_aspect_ratio"], "16:9")
             self.assertEqual(sum("original_aspect_ratio" in record for record in episodes.values()), len(episodes))
@@ -156,11 +163,17 @@ class BuildTests(unittest.TestCase):
             ullman = json.loads((out / "shorts" / "tracey-ullman.json").read_text(encoding="utf-8"))
             self.assertEqual(set(ullman), {f"MG{number:02}" for number in range(1, 49)})
             self.assertEqual(ullman["MG09"]["original_air_date"], "1987-09-20")
+            self.assertTrue(all(record["releases"] ==
+                                [{"language": "en", "date": record["original_air_date"]}]
+                                for record in ullman.values()))
             self.assertEqual(ullman["MG40"]["titles"]["en"], "Simpson Xmas")
             self.assertTrue(all(record["links"]["simpsonswiki"].startswith("https://simpsonswiki.com/wiki/")
                                 for record in ullman.values()))
             disney_shorts = json.loads((out / "shorts" / "disney-plus.json").read_text(encoding="utf-8"))
             self.assertEqual(len(disney_shorts), 16)
+            self.assertTrue(all(record["releases"] ==
+                                [{"language": "en", "date": record["original_air_date"]}]
+                                for record in disney_shorts.values()))
             self.assertEqual(disney_shorts["the-force-awakens-from-its-nap"]["original_air_date"],
                              "2021-05-04")
             self.assertEqual(disney_shorts["apocalypse-doh"]["original_air_date"], "2025-11-01")
@@ -254,7 +267,8 @@ class BuildTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "sample-short.json"
             path.write_text(json.dumps({"id": "sample-short", "titles": {"en": "Sample Short"},
-                                        "original_air_date": "2025-11-01"}), encoding="utf-8")
+                                        "releases": [{"language": "en", "date": "2025-11-01"}]}),
+                            encoding="utf-8")
             self.assertNotIn("production_code", module.parse_record(path, "shorts/disney-plus"))
             bad = Path(temp) / "SampleShort.json"
             bad.write_text(json.dumps({"id": "SampleShort", "titles": {"en": "Sample"}}),
@@ -286,6 +300,36 @@ class BuildTests(unittest.TestCase):
             path = Path(temp) / "s01e01.json"
             path.write_text(json.dumps({"id": "s01e01", "titles": {"fr_CA": "Titre"}}))
             with self.assertRaisesRegex(module.ValidationError, "language tag"):
+                module.parse_record(path, "episodes")
+
+    def test_releases_allow_unknown_dates_and_derive_first_air_date(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "s01e01.json"
+            record = {"id": "s01e01", "titles": {"en": "Example"}, "releases": [
+                {"language": "en", "date": "2009-03-22", "country": "US", "network": "FOX"},
+                {"language": "en", "date": "2009-03-17", "country": "GB", "network": "Sky1"},
+                {"language": "fr-CA", "country": "CA"},
+            ]}
+            path.write_text(json.dumps(record), encoding="utf-8")
+            parsed = module.parse_record(path, "episodes")
+            self.assertEqual(parsed["original_air_date"], "2009-03-17")
+            self.assertNotIn("date", parsed["releases"][2])
+            for invalid in (
+                {"language": "fr-CA", "date": None},
+                {"language": "fr_CA"},
+                {"language": "en", "date": "2009-02-30"},
+                {"language": "en", "country": "UK1"},
+                {"language": "en", "network": " "},
+            ):
+                with self.subTest(invalid=invalid):
+                    record["releases"] = [invalid]
+                    path.write_text(json.dumps(record), encoding="utf-8")
+                    with self.assertRaises(module.ValidationError):
+                        module.parse_record(path, "episodes")
+            record["releases"] = [{"language": "en", "date": "2009-03-17"}]
+            record["original_air_date"] = "2009-03-22"
+            path.write_text(json.dumps(record), encoding="utf-8")
+            with self.assertRaisesRegex(module.ValidationError, "derived from releases"):
                 module.parse_record(path, "episodes")
 
     def test_validates_reference_links(self):

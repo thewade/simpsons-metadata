@@ -7,7 +7,12 @@
     "fr-CA": "Arrivederci Bob"
   },
   "production_code": "HABF02",
-  "original_air_date": "2005-12-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-12-11"
+    }
+  ],
   "overall_number": 364,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Italian_Bob",

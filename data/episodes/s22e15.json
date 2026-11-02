@@ -7,7 +7,12 @@
     "fr-CA": "Le bonheur est dans le pré"
   },
   "production_code": "NABF08",
-  "original_air_date": "2011-03-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-03-06"
+    }
+  ],
   "overall_number": 479,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Scorpion's_Tale",

@@ -7,7 +7,12 @@
     "fr-CA": "Bart-becue détective"
   },
   "production_code": "TABF17",
-  "original_air_date": "2015-10-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-10-04"
+    }
+  ],
   "overall_number": 576,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Cue_Detective",

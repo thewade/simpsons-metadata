@@ -7,7 +7,12 @@
     "fr-CA": "Les Enfants de l'avenir"
   },
   "production_code": "BABF13",
-  "original_air_date": "2000-03-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-03-19"
+    }
+  ],
   "overall_number": 243,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF13.html",

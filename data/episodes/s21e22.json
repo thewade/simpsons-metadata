@@ -7,7 +7,12 @@
     "fr-CA": "Visage à deux Bob"
   },
   "production_code": "MABF11",
-  "original_air_date": "2010-05-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-05-16"
+    }
+  ],
   "overall_number": 463,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Bob_Next_Door",

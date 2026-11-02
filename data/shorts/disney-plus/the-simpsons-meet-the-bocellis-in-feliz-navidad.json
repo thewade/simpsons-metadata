@@ -4,7 +4,12 @@
     "en": "The Simpsons Meet the Bocellis in 'Feliz Navidad'",
     "fr": "Les Simpson rencontrent la famille Bocellis dans Feliz Navidad"
   },
-  "original_air_date": "2022-12-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-12-15"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Meet_the_Bocellis_in_%22Feliz_Navidad%22"
   },

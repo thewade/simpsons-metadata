@@ -7,7 +7,12 @@
     "fr-CA": "Zirconias cubiques sur canapé"
   },
   "production_code": "PABF21",
-  "original_air_date": "2012-09-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-09-30"
+    }
+  ],
   "overall_number": 509,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Moonshine_River",

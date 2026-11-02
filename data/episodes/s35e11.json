@@ -7,7 +7,12 @@
     "fr-CA": "Le monstre de Frinkenstein"
   },
   "production_code": "35ABF03",
-  "original_air_date": "2024-02-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-02-18"
+    }
+  ],
   "overall_number": 761,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Frinkenstein's_Monster",

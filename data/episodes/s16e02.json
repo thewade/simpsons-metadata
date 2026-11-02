@@ -7,7 +7,12 @@
     "fr-CA": "Cuisiner c'est trop dur"
   },
   "production_code": "FABF20",
-  "original_air_date": "2004-11-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-11-14"
+    }
+  ],
   "overall_number": 337,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/All's_Fair_in_Oven_War",

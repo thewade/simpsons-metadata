@@ -7,7 +7,12 @@
     "fr-CA": "Histoires bibliques"
   },
   "production_code": "AABF14",
-  "original_air_date": "1999-04-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-04-04"
+    }
+  ],
   "overall_number": 221,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF14.html",

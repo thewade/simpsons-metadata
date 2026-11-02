@@ -3,7 +3,12 @@
   "titles": {
     "en": "The Incredible Bulk"
   },
-  "original_air_date": "2025-11-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-24"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Incredible_Bulk"
   }

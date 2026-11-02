@@ -7,7 +7,12 @@
     "fr-CA": "Faites le mur, pas la guerre"
   },
   "production_code": "LABF12",
-  "original_air_date": "2009-05-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-05-17"
+    }
+  ],
   "overall_number": 441,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Coming_to_Homerica",

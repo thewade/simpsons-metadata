@@ -4,7 +4,12 @@
     "en": "Family Portrait"
   },
   "production_code": "MG25",
-  "original_air_date": "1988-03-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-03-06"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Family_Portrait"
   }

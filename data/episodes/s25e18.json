@@ -7,7 +7,12 @@
     "fr-CA": "Les lendemains de l'avenir"
   },
   "production_code": "SABF13",
-  "original_air_date": "2014-04-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-04-13"
+    }
+  ],
   "overall_number": 548,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Days_of_Future_Future",

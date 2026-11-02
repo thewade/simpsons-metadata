@@ -4,7 +4,12 @@
     "en": "The Bart Simpson Show"
   },
   "production_code": "MG38",
-  "original_air_date": "1988-11-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-11-20"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Bart_Simpson_Show"
   }

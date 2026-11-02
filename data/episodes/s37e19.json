@@ -6,7 +6,12 @@
     "fr-CA": "Yellow Mirror"
   },
   "production_code": "36ABF22",
-  "original_air_date": "2026-08-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2026-08-26"
+    }
+  ],
   "overall_number": 809,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Yellow_Mirror",

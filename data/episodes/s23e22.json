@@ -7,7 +7,12 @@
     "fr-CA": "Lisa vire Gaga"
   },
   "production_code": "PABF14",
-  "original_air_date": "2012-05-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-05-20"
+    }
+  ],
   "overall_number": 508,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Lisa_Goes_Gaga",

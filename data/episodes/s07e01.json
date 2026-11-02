@@ -7,7 +7,12 @@
     "fr-CA": "Qui a tiré sur M. Burns? (Partie 2)"
   },
   "production_code": "2F20",
-  "original_air_date": "1995-09-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-09-17"
+    }
+  ],
   "overall_number": 129,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F20.html",

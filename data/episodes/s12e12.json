@@ -7,7 +7,12 @@
     "fr-CA": "Tennis la petite peste"
   },
   "production_code": "CABF07",
-  "original_air_date": "2001-02-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2001-02-11"
+    }
+  ],
   "overall_number": 260,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/CABF07.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Homer le grand"
   },
   "production_code": "2F09",
-  "original_air_date": "1995-01-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-01-08"
+    }
+  ],
   "overall_number": 115,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F09.html",

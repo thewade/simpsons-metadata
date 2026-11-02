@@ -7,7 +7,12 @@
     "fr-CA": "Vain Skinner sous les mers"
   },
   "production_code": "SABF04",
-  "original_air_date": "2013-12-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-12-08"
+    }
+  ],
   "overall_number": 537,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Yellow_Subterfuge",

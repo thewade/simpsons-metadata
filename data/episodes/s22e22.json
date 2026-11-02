@@ -7,7 +7,12 @@
     "fr-CA": "Edna, il l'a"
   },
   "production_code": "NABF15",
-  "original_air_date": "2011-05-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-05-22"
+    }
+  ],
   "overall_number": 486,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Ned-Liest_Catch",

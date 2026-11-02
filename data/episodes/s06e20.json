@@ -7,7 +7,12 @@
     "fr-CA": "Deux douzaines de plus"
   },
   "production_code": "2F18",
-  "original_air_date": "1995-04-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1995-04-09"
+    }
+  ],
   "overall_number": 123,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F18.html",

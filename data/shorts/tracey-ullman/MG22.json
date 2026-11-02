@@ -4,7 +4,12 @@
     "en": "The Pagans"
   },
   "production_code": "MG22",
-  "original_air_date": "1988-02-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-02-14"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Pagans"
   }

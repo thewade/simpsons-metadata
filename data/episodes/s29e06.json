@@ -7,7 +7,12 @@
     "fr-CA": "Maire supérieur"
   },
   "production_code": "WABF20",
-  "original_air_date": "2017-11-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-11-12"
+    }
+  ],
   "overall_number": 624,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Old_Blue_Mayor_She_Ain't_What_She_Used_to_Be",

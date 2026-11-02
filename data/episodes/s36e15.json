@@ -6,7 +6,12 @@
     "fr-FR": "Les Flandshees d'Innersimpson"
   },
   "production_code": "36ABF05",
-  "original_air_date": "2025-03-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-03-30"
+    }
+  ],
   "overall_number": 783,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Flandshees_of_Innersimpson",

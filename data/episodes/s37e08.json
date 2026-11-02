@@ -6,7 +6,12 @@
     "fr-FR": "L'Emporte-places"
   },
   "production_code": "37ABF01",
-  "original_air_date": "2025-11-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-23"
+    }
+  ],
   "overall_number": 798,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Day_of_the_Jack-up",

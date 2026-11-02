@@ -7,7 +7,12 @@
     "fr-CA": "Bart : mère couveuse"
   },
   "production_code": "5F22",
-  "original_air_date": "1998-09-27",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-09-27"
+    }
+  ],
   "overall_number": 206,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/5F22.html",

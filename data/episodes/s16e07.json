@@ -7,7 +7,12 @@
     "fr-CA": "Tu es bière, et sur cette bière"
   },
   "production_code": "GABF01",
-  "original_air_date": "2005-01-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-01-30"
+    }
+  ],
   "overall_number": 342,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mommie_Beerest",

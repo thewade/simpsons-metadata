@@ -7,7 +7,12 @@
     "fr-CA": "Conseils de famille"
   },
   "production_code": "XABF06",
-  "original_air_date": "2018-03-25",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-03-25"
+    }
+  ],
   "overall_number": 631,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/3_Scenes_Plus_a_Tag_from_a_Marriage",

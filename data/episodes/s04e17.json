@@ -7,7 +7,12 @@
     "fr-CA": "Dernier arrêt à Springfield"
   },
   "production_code": "9F15",
-  "original_air_date": "1993-03-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-03-11"
+    }
+  ],
   "overall_number": 76,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F15.html",

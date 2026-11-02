@@ -7,7 +7,12 @@
     "fr-CA": "Lisa rêve à Rio"
   },
   "production_code": "DABF10",
-  "original_air_date": "2002-03-31",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-03-31"
+    }
+  ],
   "overall_number": 284,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Blame_It_on_Lisa",

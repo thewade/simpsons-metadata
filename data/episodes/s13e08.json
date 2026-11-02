@@ -7,7 +7,12 @@
     "fr-CA": "La méthode Marge-tignac"
   },
   "production_code": "DABF03",
-  "original_air_date": "2002-01-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-01-20"
+    }
+  ],
   "overall_number": 277,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/DABF03.html",

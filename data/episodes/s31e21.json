@@ -7,7 +7,12 @@
     "fr-CA": "Le dîner de Lisa"
   },
   "production_code": "ZABF14",
-  "original_air_date": "2020-05-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-05-10"
+    }
+  ],
   "overall_number": 683,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Hateful_Eight-Year-Olds",

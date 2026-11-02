@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXX"
   },
   "production_code": "YABF18",
-  "original_air_date": "2019-10-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-10-20"
+    }
+  ],
   "overall_number": 666,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXX",

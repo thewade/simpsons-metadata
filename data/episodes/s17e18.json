@@ -7,7 +7,12 @@
     "fr-CA": "Histoires d'eau"
   },
   "production_code": "HABF11",
-  "original_air_date": "2006-04-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-04-23"
+    }
+  ],
   "overall_number": 374,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Wettest_Stories_Ever_Told",

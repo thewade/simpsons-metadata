@@ -7,7 +7,12 @@
     "fr-CA": "La complainte d'Abraham"
   },
   "production_code": "HABF09",
-  "original_air_date": "2006-04-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-04-02"
+    }
+  ],
   "overall_number": 372,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Million_Dollar_Abie",

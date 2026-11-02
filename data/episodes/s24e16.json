@@ -7,7 +7,12 @@
     "fr-CA": "Le chevalier gris"
   },
   "production_code": "RABF10",
-  "original_air_date": "2013-03-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-03-17"
+    }
+  ],
   "overall_number": 524,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Dark_Knight_Court",

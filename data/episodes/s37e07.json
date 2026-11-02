@@ -6,7 +6,12 @@
     "fr-FR": "L'Empire Quimby"
   },
   "production_code": "36ABF18",
-  "original_air_date": "2025-11-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-11-16"
+    }
+  ],
   "overall_number": 797,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Sashes_to_Sashes",

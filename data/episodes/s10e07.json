@@ -7,7 +7,12 @@
     "fr-CA": "La bonne note de Lisa"
   },
   "production_code": "AABF03",
-  "original_air_date": "1998-11-22",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-11-22"
+    }
+  ],
   "overall_number": 210,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF03.html",

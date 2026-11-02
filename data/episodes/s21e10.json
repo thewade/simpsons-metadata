@@ -7,7 +7,12 @@
     "fr-CA": "Il était une fois, à Springfield"
   },
   "production_code": "LABF20",
-  "original_air_date": "2010-01-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-01-10"
+    }
+  ],
   "overall_number": 451,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_Springfield",

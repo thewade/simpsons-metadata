@@ -7,7 +7,12 @@
     "fr-CA": "Vivre à un"
   },
   "production_code": "BABF10",
-  "original_air_date": "2000-02-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-02-13"
+    }
+  ],
   "overall_number": 240,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF10.html",

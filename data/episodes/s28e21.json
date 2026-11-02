@@ -7,7 +7,12 @@
     "fr-CA": "Le Blues de Moho"
   },
   "production_code": "WABF14",
-  "original_air_date": "2017-05-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-05-07"
+    }
+  ],
   "overall_number": 617,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Moho_House",

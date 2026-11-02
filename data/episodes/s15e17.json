@@ -7,7 +7,12 @@
     "fr-CA": "Le barbant de Séville"
   },
   "production_code": "FABF12",
-  "original_air_date": "2004-04-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-04-18"
+    }
+  ],
   "overall_number": 330,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/My_Big_Fat_Geek_Wedding",

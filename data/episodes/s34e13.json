@@ -7,7 +7,12 @@
     "fr-CA": "La Santa Famiglia Di Springfield"
   },
   "production_code": "OABF06",
-  "original_air_date": "2023-02-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-02-19"
+    }
+  ],
   "overall_number": 741,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Many_Saints_of_Springfield",

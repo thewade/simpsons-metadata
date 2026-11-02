@@ -7,7 +7,12 @@
     "fr-CA": "Gros Merda"
   },
   "production_code": "MABF19",
-  "original_air_date": "2010-12-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-12-12"
+    }
+  ],
   "overall_number": 473,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Donnie_Fatso",

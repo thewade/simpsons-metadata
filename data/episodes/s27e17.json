@@ -7,7 +7,12 @@
     "fr-CA": "La cage aux Burns"
   },
   "production_code": "VABF10",
-  "original_air_date": "2016-04-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-04-03"
+    }
+  ],
   "overall_number": 591,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Burns_Cage",

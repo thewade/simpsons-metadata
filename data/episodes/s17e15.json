@@ -7,7 +7,12 @@
     "fr-CA": "J'aime ta femme"
   },
   "production_code": "HABF08",
-  "original_air_date": "2006-03-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-03-26"
+    }
+  ],
   "overall_number": 371,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_Simpson,_This_Is_Your_Wife",

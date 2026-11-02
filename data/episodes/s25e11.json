@@ -7,7 +7,12 @@
     "fr-CA": "Tigre et gnochon"
   },
   "production_code": "SABF06",
-  "original_air_date": "2014-01-26",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-01-26"
+    }
+  ],
   "overall_number": 541,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Specs_and_the_City",

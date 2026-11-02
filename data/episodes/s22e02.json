@@ -7,7 +7,12 @@
     "fr-CA": "Un sacré héritage"
   },
   "production_code": "MABF17",
-  "original_air_date": "2010-10-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2010-10-03"
+    }
+  ],
   "overall_number": 466,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Loan-a_Lisa",

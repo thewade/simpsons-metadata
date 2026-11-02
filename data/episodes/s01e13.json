@@ -7,7 +7,12 @@
     "fr-CA": "Une soirée romantique"
   },
   "production_code": "7G01",
-  "original_air_date": "1990-05-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1990-05-13"
+    }
+  ],
   "overall_number": 13,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/7G01.html",

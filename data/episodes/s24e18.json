@@ -7,7 +7,12 @@
     "fr-CA": "Prêtre, pas prêtre, j'y vais"
   },
   "production_code": "RABF11",
-  "original_air_date": "2013-04-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2013-04-28"
+    }
+  ],
   "overall_number": 526,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Pulpit_Friction",

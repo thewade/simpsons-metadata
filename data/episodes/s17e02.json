@@ -7,7 +7,12 @@
     "fr-CA": "Madame et son fantôme"
   },
   "production_code": "GABF16",
-  "original_air_date": "2005-09-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-09-18"
+    }
+  ],
   "overall_number": 358,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Girl_Who_Slept_Too_Little",

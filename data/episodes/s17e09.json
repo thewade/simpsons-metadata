@@ -7,7 +7,12 @@
     "fr-CA": "Il est jaune le divin enfant"
   },
   "production_code": "HABF01",
-  "original_air_date": "2005-12-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-12-18"
+    }
+  ],
   "overall_number": 365,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Simpsons_Christmas_Stories",

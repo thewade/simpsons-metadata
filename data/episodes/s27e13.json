@@ -7,7 +7,12 @@
     "fr-CA": "Y'a de l'amour dans le N2-O2-Ar-CO2-Ne-He-CH4"
   },
   "production_code": "VABF07",
-  "original_air_date": "2016-02-14",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-02-14"
+    }
+  ],
   "overall_number": 587,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Love_Is_in_the_N2-O2-Ar-CO2-Ne-He-CH4",

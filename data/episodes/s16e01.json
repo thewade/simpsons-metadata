@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d’Halloween XV"
   },
   "production_code": "FABF23",
-  "original_air_date": "2004-11-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-11-07"
+    }
+  ],
   "overall_number": 336,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XV",

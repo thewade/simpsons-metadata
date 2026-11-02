@@ -7,7 +7,12 @@
     "fr-CA": "La grande adoption"
   },
   "production_code": "FABF19",
-  "original_air_date": "2004-11-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-11-21"
+    }
+  ],
   "overall_number": 338,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Sleeping_with_the_Enemy_(The_Simpsons)",

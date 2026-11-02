@@ -7,7 +7,12 @@
     "fr-CA": "Travailler en sifflant"
   },
   "production_code": "WABF16",
-  "original_air_date": "2017-10-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-10-15"
+    }
+  ],
   "overall_number": 621,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Whistler's_Father",

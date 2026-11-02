@@ -7,7 +7,12 @@
     "fr-CA": "Le retour de Sideshow Bob"
   },
   "production_code": "2F02",
-  "original_air_date": "1994-10-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1994-10-09"
+    }
+  ],
   "overall_number": 108,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F02.html",

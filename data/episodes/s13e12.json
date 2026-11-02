@@ -7,7 +7,12 @@
     "fr-CA": "Le cowboy fait le tour de Springfield"
   },
   "production_code": "DABF07",
-  "original_air_date": "2002-02-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-02-24"
+    }
+  ],
   "overall_number": 281,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Lastest_Gun_in_the_West",

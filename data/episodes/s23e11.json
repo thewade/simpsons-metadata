@@ -7,7 +7,12 @@
     "fr-CA": "Le réseau d'oh-cial"
   },
   "production_code": "PABF04",
-  "original_air_date": "2012-01-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-01-15"
+    }
+  ],
   "overall_number": 497,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_D'oh-cial_Network",

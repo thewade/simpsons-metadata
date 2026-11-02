@@ -7,7 +7,12 @@
     "fr-CA": "Dix moutons, neuf moutons, huit marmots"
   },
   "production_code": "BABF03",
-  "original_air_date": "1999-11-21",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1999-11-21"
+    }
+  ],
   "overall_number": 233,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF03.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Chacun son chemin"
   },
   "production_code": "QABF19",
-  "original_air_date": "2021-10-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-10-17"
+    }
+  ],
   "overall_number": 710,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Wayz_We_Were",

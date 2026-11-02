@@ -7,7 +7,12 @@
     "fr-CA": "L'homme vit d'ESports"
   },
   "production_code": "YABF09",
-  "original_air_date": "2019-03-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-03-17"
+    }
+  ],
   "overall_number": 656,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/E_My_Sports",

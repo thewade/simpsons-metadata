@@ -7,7 +7,12 @@
     "fr-CA": "Homer et son équipe"
   },
   "production_code": "3F10",
-  "original_air_date": "1996-01-07",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-01-07"
+    }
+  ],
   "overall_number": 140,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F10.html",

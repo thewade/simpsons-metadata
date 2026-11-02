@@ -7,7 +7,12 @@
     "fr-CA": "L'amer drapeau"
   },
   "production_code": "FABF17",
-  "original_air_date": "2004-05-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-05-16"
+    }
+  ],
   "overall_number": 334,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart-Mangled_Banner",

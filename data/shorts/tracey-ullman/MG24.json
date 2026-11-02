@@ -4,7 +4,12 @@
     "en": "The Aquarium"
   },
   "production_code": "MG24",
-  "original_air_date": "1988-02-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-02-28"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Aquarium"
   }

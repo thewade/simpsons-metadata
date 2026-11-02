@@ -4,7 +4,12 @@
     "en": "The Shell Game"
   },
   "production_code": "MG35",
-  "original_air_date": "1988-11-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-11-13"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/The_Shell_Game"
   }

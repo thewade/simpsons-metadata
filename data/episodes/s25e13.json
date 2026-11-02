@@ -7,7 +7,12 @@
     "fr-CA": "L'homme qui plantait des gènes"
   },
   "production_code": "SABF07",
-  "original_air_date": "2014-03-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-03-09"
+    }
+  ],
   "overall_number": 543,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Man_Who_Grew_Too_Much",

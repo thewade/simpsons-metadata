@@ -6,7 +6,12 @@
     "fr-FR": "P.S. Je te déteste"
   },
   "production_code": "36ABF07",
-  "original_air_date": "2025-04-13",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2025-04-13"
+    }
+  ],
   "overall_number": 785,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/P.S._I_Hate_You_(The_Simpsons)",

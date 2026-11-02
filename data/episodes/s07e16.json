@@ -7,7 +7,12 @@
     "fr-CA": "Lisa l'iconoclaste"
   },
   "production_code": "3F13",
-  "original_air_date": "1996-02-18",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1996-02-18"
+    }
+  ],
   "overall_number": 144,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3F13.html",

@@ -11,6 +11,13 @@ manual syncs:
 | [French episode list](https://fr.wikipedia.org/wiki/Liste_des_%C3%A9pisodes_des_Simpson) | `titles.fr-FR`, `titles.fr-CA`, French episode articles, and French season articles |
 | [French article for the 2007 film](https://fr.wikipedia.org/wiki/Les_Simpson%2C_le_film) | The film's shared French and Québec title and French article link |
 
+The existing episode air dates and short first-release dates were migrated into
+dated `en` release entries. This migration did not infer country or network from
+the source lists. The published `original_air_date` remains derived from the
+earliest dated release. Additional regional release details need their own
+verification before being added.
+The GB/Sky1 and US/FOX details for `s20e14` were supplied by the maintainer.
+
 `links.wikipedia` points to a standalone English episode, season, or movie article.
 `links.wikipedia_fr` points to a standalone French episode, season, or movie article. List-page
 links belong in this document, not in those per-episode fields. An omitted title
@@ -99,7 +106,7 @@ The dataset also includes three earlier shorts now available on Disney+:
 [The Longest Daycare](https://en.wikipedia.org/wiki/The_Longest_Daycare),
 [Playdate with Destiny](https://en.wikipedia.org/wiki/Playdate_with_Destiny), and
 [Te Deseo Lo Mejor](https://en.wikipedia.org/wiki/Te_Deseo_Lo_Mejor).
-Their `original_air_date` records their first public release, including theatrical
+Their dated release entries record their first public release, including theatrical
 premieres for the two Maggie shorts. The Disney+ list does not provide production
 codes for its nine films, and no verified codes were found for the other seven
 shorts. All 16 use stable lowercase title slugs; `production_code` is omitted.

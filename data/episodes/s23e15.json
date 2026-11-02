@@ -7,7 +7,12 @@
     "fr-CA": "Festival de Cannes"
   },
   "production_code": "PABF09",
-  "original_air_date": "2012-03-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2012-03-04"
+    }
+  ],
   "overall_number": 501,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Exit_Through_the_Kwik-E-Mart",

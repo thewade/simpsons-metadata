@@ -7,7 +7,12 @@
     "fr-CA": "Itchy et Scratchy: Le film"
   },
   "production_code": "9F03",
-  "original_air_date": "1992-11-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1992-11-03"
+    }
+  ],
   "overall_number": 65,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F03.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Le temps d'une Inde"
   },
   "production_code": "HABF10",
-  "original_air_date": "2006-04-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-04-09"
+    }
+  ],
   "overall_number": 373,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Kiss_Kiss,_Bang_Bangalore",

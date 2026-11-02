@@ -7,7 +7,12 @@
     "fr-CA": "Effet Bœuf"
   },
   "production_code": "QABF11",
-  "original_air_date": "2021-04-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-04-11"
+    }
+  ],
   "overall_number": 702,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Burger_Kings",

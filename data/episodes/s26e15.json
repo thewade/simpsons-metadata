@@ -7,7 +7,12 @@
     "fr-CA": "La princesse et la grenouille"
   },
   "production_code": "TABF08",
-  "original_air_date": "2015-03-01",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-03-01"
+    }
+  ],
   "overall_number": 567,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Princess_Guide_(The_Simpsons)",

@@ -7,7 +7,12 @@
     "fr-CA": "Chambre en haute ville"
   },
   "production_code": "LABF10",
-  "original_air_date": "2009-05-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-05-03"
+    }
+  ],
   "overall_number": 439,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Waverly_Hills,_9-0-2-1-D'oh",

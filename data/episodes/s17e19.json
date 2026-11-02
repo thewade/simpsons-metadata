@@ -7,7 +7,12 @@
     "fr-CA": "Comme un garçon"
   },
   "production_code": "HABF12",
-  "original_air_date": "2006-04-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-04-30"
+    }
+  ],
   "overall_number": 375,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Girls_Just_Want_to_Have_Sums",

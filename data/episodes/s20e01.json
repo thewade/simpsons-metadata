@@ -7,7 +7,12 @@
     "fr-CA": "Crime-pâtissière"
   },
   "production_code": "KABF17",
-  "original_air_date": "2008-09-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-09-28"
+    }
+  ],
   "overall_number": 421,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Sex,_Pies_and_Idiot_Scrapes",

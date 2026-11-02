@@ -7,7 +7,12 @@
     "fr-CA": "Broche, broche tes dents"
   },
   "production_code": "ZABF05",
-  "original_air_date": "2020-01-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-01-05"
+    }
+  ],
   "overall_number": 673,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Hail_to_the_Teeth",

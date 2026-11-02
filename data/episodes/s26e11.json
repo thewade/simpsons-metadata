@@ -7,7 +7,12 @@
     "fr-CA": "Dix ans fermes"
   },
   "production_code": "TABF05",
-  "original_air_date": "2015-01-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-01-11"
+    }
+  ],
   "overall_number": 563,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Bart's_New_Friend",

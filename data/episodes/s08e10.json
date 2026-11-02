@@ -7,7 +7,12 @@
     "fr-CA": "Aux frontières du réel, Homer continue"
   },
   "production_code": "3G01",
-  "original_air_date": "1997-01-12",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1997-01-12"
+    }
+  ],
   "overall_number": 163,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/3G01.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Donne-moi ta bouche"
   },
   "production_code": "FABF13",
-  "original_air_date": "2004-05-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-05-09"
+    }
+  ],
   "overall_number": 333,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Way_We_Weren't",

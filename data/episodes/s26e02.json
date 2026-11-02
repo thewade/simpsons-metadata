@@ -7,7 +7,12 @@
     "fr-CA": "Le naufrage du Thérapeutitanic"
   },
   "production_code": "SABF17",
-  "original_air_date": "2014-10-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-10-05"
+    }
+  ],
   "overall_number": 554,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Wreck_of_the_Relationship",

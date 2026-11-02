@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d'Halloween XXXIII"
   },
   "production_code": "UABF18",
-  "original_air_date": "2022-10-30",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2022-10-30"
+    }
+  ],
   "overall_number": 734,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XXXIII",

@@ -7,7 +7,12 @@
     "fr-CA": "À Dieu, monsieur le professeur"
   },
   "production_code": "XABF12",
-  "original_air_date": "2018-05-06",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2018-05-06"
+    }
+  ],
   "overall_number": 637,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Left_Behind_(The_Simpsons)",

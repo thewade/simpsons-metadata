@@ -7,7 +7,12 @@
     "fr-CA": "Lait à faire peur"
   },
   "production_code": "VABF04",
-  "original_air_date": "2016-01-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2016-01-10"
+    }
+  ],
   "overall_number": 585,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Teenage_Mutant_Milk-Caused_Hurdles",

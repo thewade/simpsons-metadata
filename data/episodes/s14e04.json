@@ -7,7 +7,12 @@
     "fr-CA": "Y'a de la Marge au balcon"
   },
   "production_code": "DABF18",
-  "original_air_date": "2002-11-24",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-11-24"
+    }
+  ],
   "overall_number": 295,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Large_Marge",

@@ -7,7 +7,12 @@
     "fr-CA": "Scènes de la vue conjugale"
   },
   "production_code": "YABF05",
-  "original_air_date": "2019-02-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-02-17"
+    }
+  ],
   "overall_number": 653,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Clown_Stays_in_the_Picture",

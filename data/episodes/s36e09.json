@@ -6,7 +6,12 @@
     "fr-FR": "Homer et ses sœurs"
   },
   "production_code": "36ABF03",
-  "original_air_date": "2024-12-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-12-15"
+    }
+  ],
   "overall_number": 777,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Homer_and_Her_Sisters",

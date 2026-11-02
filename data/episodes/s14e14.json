@@ -7,7 +7,12 @@
     "fr-CA": "À hauteur de clown"
   },
   "production_code": "EABF09",
-  "original_air_date": "2003-03-09",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2003-03-09"
+    }
+  ],
   "overall_number": 305,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Mr._Spritz_Goes_to_Washington",

@@ -7,7 +7,12 @@
     "fr-CA": "Dans mon balado"
   },
   "production_code": "ZABF22",
-  "original_air_date": "2020-11-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-11-15"
+    }
+  ],
   "overall_number": 690,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Podcast_News",

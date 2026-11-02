@@ -7,7 +7,12 @@
     "fr-CA": "Covercraft"
   },
   "production_code": "TABF02",
-  "original_air_date": "2014-11-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-11-23"
+    }
+  ],
   "overall_number": 560,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Covercraft",

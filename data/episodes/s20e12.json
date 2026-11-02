@@ -7,7 +7,12 @@
     "fr-CA": "Prêt pas prêt, j'y vas"
   },
   "production_code": "LABF03",
-  "original_air_date": "2009-03-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2009-03-08"
+    }
+  ],
   "overall_number": 432,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/No_Loan_Again,_Naturally",

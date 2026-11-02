@@ -7,7 +7,12 @@
     "fr-CA": "Soif de pouvoir"
   },
   "production_code": "OABF21",
-  "original_air_date": "2023-10-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-10-29"
+    }
+  ],
   "overall_number": 754,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Thirst_Trap:_A_Corporate_Love_Story",

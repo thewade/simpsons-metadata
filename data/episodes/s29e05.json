@@ -7,7 +7,12 @@
     "fr-CA": "À bon entendeur"
   },
   "production_code": "WABF19",
-  "original_air_date": "2017-11-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2017-11-05"
+    }
+  ],
   "overall_number": 623,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Grampy_Can_Ya_Hear_Me",

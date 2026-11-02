@@ -7,7 +7,12 @@
     "fr-CA": "Gorille à tribord"
   },
   "production_code": "YABF20",
-  "original_air_date": "2019-11-03",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-11-03"
+    }
+  ],
   "overall_number": 667,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Gorillas_on_the_Mast",

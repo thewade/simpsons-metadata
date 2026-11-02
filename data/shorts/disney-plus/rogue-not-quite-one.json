@@ -4,7 +4,12 @@
     "en": "Rogue Not Quite One",
     "fr": "Maggie Simpson dans « une histoire pas tout à fait rogue »"
   },
-  "original_air_date": "2023-05-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-05-04"
+    }
+  ],
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Rogue_Not_Quite_One"
   },

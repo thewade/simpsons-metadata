@@ -7,7 +7,12 @@
     "fr-CA": "Mairie à la pègre"
   },
   "production_code": "AABF05",
-  "original_air_date": "1998-12-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1998-12-20"
+    }
+  ],
   "overall_number": 212,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/AABF05.html",

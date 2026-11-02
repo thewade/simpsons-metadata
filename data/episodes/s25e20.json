@@ -7,7 +7,12 @@
     "fr-CA": "Une autre brique dans le mur"
   },
   "production_code": "RABF21",
-  "original_air_date": "2014-05-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2014-05-04"
+    }
+  ],
   "overall_number": 550,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Brick_Like_Me",

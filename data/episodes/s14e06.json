@@ -7,7 +7,12 @@
     "fr-CA": "Qui veut la peau de Homer Simpson?"
   },
   "production_code": "EABF01",
-  "original_air_date": "2002-12-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2002-12-15"
+    }
+  ],
   "overall_number": 297,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Great_Louse_Detective",

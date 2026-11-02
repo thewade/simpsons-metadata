@@ -7,7 +7,12 @@
     "fr-CA": "Un Noël du futur antérieur"
   },
   "production_code": "NABF18",
-  "original_air_date": "2011-12-11",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2011-12-11"
+    }
+  ],
   "overall_number": 495,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Holidays_of_Future_Passed",

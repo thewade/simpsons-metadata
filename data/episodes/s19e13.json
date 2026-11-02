@@ -7,7 +7,12 @@
     "fr-CA": "La revanche du directeur : La pire contre-attaque"
   },
   "production_code": "KABF06",
-  "original_air_date": "2008-03-02",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2008-03-02"
+    }
+  ],
   "overall_number": 413,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Debarted",

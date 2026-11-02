@@ -7,7 +7,12 @@
     "fr-CA": "La grosse liasse"
   },
   "production_code": "QABF06",
-  "original_air_date": "2021-02-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2021-02-28"
+    }
+  ],
   "overall_number": 697,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Wad_Goals",

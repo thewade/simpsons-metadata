@@ -7,7 +7,12 @@
     "fr-CA": "Si la vie éternelle vous intéresse"
   },
   "production_code": "BABF06",
-  "original_air_date": "2000-01-16",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2000-01-16"
+    }
+  ],
   "overall_number": 237,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/BABF06.html",

@@ -7,7 +7,12 @@
     "fr-CA": "Un Noël sous hypnose"
   },
   "production_code": "35ABF22",
-  "original_air_date": "2024-12-17",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2024-12-17"
+    }
+  ],
   "overall_number": 779,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/O_C%27mon_All_Ye_Faithful",

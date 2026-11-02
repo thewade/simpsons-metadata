@@ -7,7 +7,12 @@
     "fr-CA": "Le mariage a un je-ne-sais-quoi"
   },
   "production_code": "GABF04",
-  "original_air_date": "2005-02-20",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2005-02-20"
+    }
+  ],
   "overall_number": 345,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/There's_Something_About_Marrying",

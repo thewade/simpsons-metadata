@@ -7,7 +7,12 @@
     "fr-CA": "Tailles et têtes fortes"
   },
   "production_code": "TABF06",
-  "original_air_date": "2015-02-08",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2015-02-08"
+    }
+  ],
   "overall_number": 565,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Walking_Big_&_Tall",

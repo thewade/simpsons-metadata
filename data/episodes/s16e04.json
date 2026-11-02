@@ -7,7 +7,12 @@
     "fr-CA": "Profession: Reporter (et baveuse)"
   },
   "production_code": "FABF22",
-  "original_air_date": "2004-12-05",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-12-05"
+    }
+  ],
   "overall_number": 339,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/She_Used_to_Be_My_Girl",

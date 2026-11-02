@@ -4,7 +4,12 @@
     "en": "Bathtime"
   },
   "production_code": "MG44",
-  "original_air_date": "1989-03-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1989-03-19"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Bathtime"
   }

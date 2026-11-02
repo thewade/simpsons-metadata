@@ -7,7 +7,12 @@
     "fr-CA": "Onze, jaune, le père et le manque"
   },
   "production_code": "HABF04",
-  "original_air_date": "2006-01-29",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2006-01-29"
+    }
+  ],
   "overall_number": 367,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/We're_on_the_Road_to_D'ohwhere",

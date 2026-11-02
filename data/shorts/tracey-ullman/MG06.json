@@ -4,7 +4,12 @@
     "en": "Burp Contest"
   },
   "production_code": "MG06",
-  "original_air_date": "1987-06-28",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1987-06-28"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Burp_Contest"
   }

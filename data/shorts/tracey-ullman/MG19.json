@@ -4,7 +4,12 @@
     "en": "Grandpa and the Kids"
   },
   "production_code": "MG19",
-  "original_air_date": "1988-01-10",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1988-01-10"
+    }
+  ],
   "links": {
     "simpsonswiki": "https://simpsonswiki.com/wiki/Grampa_%26_the_Kids"
   }

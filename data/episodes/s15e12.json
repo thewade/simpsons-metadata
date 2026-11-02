@@ -7,7 +7,12 @@
     "fr-CA": "Cent heures de solitude"
   },
   "production_code": "FABF07",
-  "original_air_date": "2004-02-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-02-15"
+    }
+  ],
   "overall_number": 325,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Milhouse_Doesn't_Live_Here_Anymore",

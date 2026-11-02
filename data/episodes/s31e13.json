@@ -7,7 +7,12 @@
     "fr-CA": "Chaîne de bolles"
   },
   "production_code": "ZABF07",
-  "original_air_date": "2020-02-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2020-02-23"
+    }
+  ],
   "overall_number": 675,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Frinkcoin",

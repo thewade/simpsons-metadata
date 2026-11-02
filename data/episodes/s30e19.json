@@ -7,7 +7,12 @@
     "fr-CA": "La Passion de Lisa"
   },
   "production_code": "YABF11",
-  "original_air_date": "2019-03-31",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2019-03-31"
+    }
+  ],
   "overall_number": 658,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Girl's_in_the_Band",

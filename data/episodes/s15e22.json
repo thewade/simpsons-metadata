@@ -7,7 +7,12 @@
     "fr-CA": "Convergence d'opinions"
   },
   "production_code": "FABF18",
-  "original_air_date": "2004-05-23",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2004-05-23"
+    }
+  ],
   "overall_number": 335,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Fraudcast_News",

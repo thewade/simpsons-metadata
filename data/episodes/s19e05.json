@@ -7,7 +7,12 @@
     "fr-CA": "Spécial d’Halloween XVIII"
   },
   "production_code": "JABF16",
-  "original_air_date": "2007-11-04",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2007-11-04"
+    }
+  ],
   "overall_number": 405,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_XVIII",

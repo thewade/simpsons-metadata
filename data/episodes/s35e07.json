@@ -7,7 +7,12 @@
     "fr-CA": "Les gaffes du gros gars gonflé"
   },
   "production_code": "OABF19",
-  "original_air_date": "2023-11-19",
+  "releases": [
+    {
+      "language": "en",
+      "date": "2023-11-19"
+    }
+  ],
   "overall_number": 757,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/It's_a_Blunderful_Life",

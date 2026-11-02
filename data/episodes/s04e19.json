@@ -7,7 +7,12 @@
     "fr-CA": "Le pseudonyme"
   },
   "production_code": "9F16",
-  "original_air_date": "1993-04-15",
+  "releases": [
+    {
+      "language": "en",
+      "date": "1993-04-15"
+    }
+  ],
   "overall_number": 78,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/9F16.html",
