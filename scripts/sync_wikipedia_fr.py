@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Review or apply French episode titles and article links from a saved Wikipedia page.
+"""Review or apply French titles and article links from a saved Wikipedia page.
 
 Download the rendered French episode list, then run this script with --html PATH.
-The default is a dry run; --apply updates existing numbered episode records only.
+The default is a dry run; --apply updates existing episode and season records.
 """
 
 import argparse
@@ -25,6 +25,7 @@ class EpisodeTableParser(HTMLParser):
         self.row = None
         self.cell = None
         self.skip_reference = 0
+        self.season_links = {}
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -35,9 +36,13 @@ class EpisodeTableParser(HTMLParser):
             match = re.fullmatch(r"ep(\d+)", attrs.get("id", ""))
             if match and not self.row["cells"]:
                 self.row["overall"] = int(match.group(1))
-        elif tag == "a" and self.cell is not None and len(self.row["cells"]) == 2:
+        elif tag == "a":
             href = attrs.get("href", "")
-            if href.startswith("https://fr.wikipedia.org/wiki/") and "new" not in attrs.get("class", "").split():
+            is_article = "new" not in attrs.get("class", "").split()
+            season = re.fullmatch(r"https://fr\.wikipedia\.org/wiki/Saison_([1-9][0-9]*)_des_Simpson", href)
+            if season and is_article:
+                self.season_links[int(season.group(1))] = href
+            if self.cell is not None and len(self.row["cells"]) == 2 and href.startswith("https://fr.wikipedia.org/wiki/") and is_article:
                 self.row["fr_link"] = href
         elif tag == "sup" and self.cell is not None:
             if "reference" in attrs.get("class", "").split() or attrs.get("id", "").startswith("cite_ref"):
@@ -74,6 +79,14 @@ def parse_episode_rows(html):
     if not rows:
         raise ValueError("No episode rows found; check the downloaded Wikipedia page")
     return rows
+
+
+def parse_season_links(html):
+    parser = EpisodeTableParser()
+    parser.feed(html)
+    if not parser.season_links:
+        raise ValueError("No French season article links found; check the downloaded Wikipedia page")
+    return parser.season_links
 
 
 def article_url(href):
@@ -120,18 +133,36 @@ def plan_updates(rows, episode_dir):
     return plans, counts
 
 
+def plan_season_updates(links, season_dir):
+    plans = []
+    for path in sorted(season_dir.glob("s*.json")):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        number = int(path.stem[1:])
+        href = links.get(number)
+        if href:
+            link = article_url(href)
+            if record.get("links", {}).get("wikipedia_fr") != link:
+                record.setdefault("links", {})["wikipedia_fr"] = link
+                plans.append((path, record))
+    return plans
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--html", type=Path, required=True, help="saved rendered French Wikipedia episode list")
-    parser.add_argument("--apply", action="store_true", help="write changes to data/episodes")
+    parser.add_argument("--apply", action="store_true", help="write changes to data/episodes and data/seasons")
     args = parser.parse_args()
-    rows = parse_episode_rows(args.html.read_text(encoding="utf-8"))
+    html = args.html.read_text(encoding="utf-8")
+    rows = parse_episode_rows(html)
+    season_links = parse_season_links(html)
     plans, counts = plan_updates(rows, ROOT / "data" / "episodes")
+    season_plans = plan_season_updates(season_links, ROOT / "data" / "seasons")
     for name in ("matched_episodes", "changed_files", "fr-FR_titles", "fr-CA_titles",
                  "french_article_links", "production_code_disagreements"):
         print(f"{name}: {counts[name]}")
+    print(f"french_season_article_links: {len(season_plans)}")
     if args.apply:
-        for path, record in plans:
+        for path, record in plans + season_plans:
             path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("Applied changes")
     else:

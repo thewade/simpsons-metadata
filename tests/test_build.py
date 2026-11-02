@@ -40,6 +40,7 @@ class BuildTests(unittest.TestCase):
             self.assertIn('id="classic"', guide)
             self.assertIn('id="modern"', guide)
             self.assertIn('id="season-38"', guide)
+            self.assertIn('French article', guide)
             self.assertIn('id="s01e01-details" hidden', guide)
             self.assertIn('https://www.disneyplus.com/play/ffb14e5a-38db-4522-a559-3cfa52bcf4df', guide)
             self.assertNotIn('href="https://www.disneyplus.com/play/not-ported-over"', guide)
@@ -65,6 +66,9 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(json.loads((out / "commercials.json").read_text()), {})
             seasons = json.loads((out / "seasons.json").read_text())
             self.assertEqual(len(seasons), 38)
+            self.assertEqual(sum("wikipedia_fr" in record.get("links", {}) for record in seasons.values()), 38)
+            self.assertEqual(seasons["s05"]["links"]["wikipedia_fr"],
+                             "https://fr.wikipedia.org/wiki/Saison_5_des_Simpson")
             self.assertNotIn("movie", seasons)
             self.assertEqual(seasons["s38"]["links"]["wikipedia"],
                              "https://en.wikipedia.org/wiki/The_Simpsons_season_38")

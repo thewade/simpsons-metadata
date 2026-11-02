@@ -240,9 +240,12 @@ def render_episode_guide(catalog):
             dates = [record["original_air_date"] for record in records if "original_air_date" in record]
             years = sorted({value[:4] for value in dates})
             year_label = years[0] if len(years) == 1 else f"{years[0]}–{years[-1]}" if years else ""
-            season_link = season.get("links", {}).get("wikipedia")
-            season_link_html = (f'<a href="{h(season_link)}" target="_blank" rel="noopener noreferrer">Season article ↗</a>'
-                                if season_link else "")
+            season_links = []
+            for site, label in (("wikipedia", "English article"), ("wikipedia_fr", "French article")):
+                url = season.get("links", {}).get(site)
+                if url:
+                    season_links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{label} ↗</a>')
+            season_link_html = "".join(season_links)
             heading = (f'<header class="season-heading"><div><p class="season-kicker">{h(year_label)}</p>'
                        f'<h3 id="season-{number:02}">Season {number}</h3></div>'
                        f'<div class="season-meta"><span>{len(records)} numbered episodes</span>{season_link_html}</div></header>')
