@@ -1,10 +1,16 @@
 {
   "id": "the-simpsons-meet-the-bocellis-in-feliz-navidad",
   "titles": {
-    "en": "The Simpsons Meet the Bocellis in 'Feliz Navidad'"
+    "en": "The Simpsons Meet the Bocellis in 'Feliz Navidad'",
+    "fr": "Les Simpson rencontrent la famille Bocellis dans Feliz Navidad"
   },
   "original_air_date": "2022-12-15",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Meet_the_Bocellis_in_%22Feliz_Navidad%22"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "1dcf7fc2-0989-44eb-992c-938c07a1c26f"
+    }
   }
 }

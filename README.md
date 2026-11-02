@@ -24,9 +24,9 @@ The API is static and read-only. It does not offer server-side search, filtering
 | [`/v1/seasons.json`](https://api.simpsonseh.com/v1/seasons.json) | Television seasons, keyed by IDs such as `s01` |
 | [`/v1/movies.json`](https://api.simpsonseh.com/v1/movies.json) | Released and announced films, keyed by IDs such as `movie-2007` |
 | [`/v1/shorts/tracey-ullman.json`](https://api.simpsonseh.com/v1/shorts/tracey-ullman.json) | Tracey Ullman shorts, keyed by `MG01`–`MG48` production codes |
-| [`/v1/shorts/disney-plus.json`](https://api.simpsonseh.com/v1/shorts/disney-plus.json) | Disney+ shorts, keyed by stable title slugs |
+| [`/v1/shorts/disney-plus.json`](https://api.simpsonseh.com/v1/shorts/disney-plus.json) | Shorts available on Disney+, including earlier theatrical releases, keyed by stable title slugs |
 | [`/v1/commercials.json`](https://api.simpsonseh.com/v1/commercials.json) | Commercials |
-| [`/v1/specials.json`](https://api.simpsonseh.com/v1/specials.json) | Specials other than feature films |
+| [`/v1/specials.json`](https://api.simpsonseh.com/v1/specials.json) | Unnumbered specials other than feature films, keyed by stable title slugs |
 
 Some categories are currently empty and return `{}`. A record may have a `links` object for verified external pages and a `streaming` object for known provider identifiers. Omitted data is unknown, not an assertion that it does not exist.
 

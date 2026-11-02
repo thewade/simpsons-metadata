@@ -1,10 +1,16 @@
 {
   "id": "plusaversary",
   "titles": {
-    "en": "Plusaversary"
+    "en": "Plusaversary",
+    "fr": "Le Plusanniversary des Simpson"
   },
   "original_air_date": "2021-11-12",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Plusaversary"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "3c791468-6f02-4c33-bbff-ee4b54ef8feb"
+    }
   }
 }

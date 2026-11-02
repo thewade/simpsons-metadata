@@ -80,8 +80,19 @@ plus four *Simpsons × Fortnite* shorts released on Disney+ in 2025:
 [Sugar High](https://simpsonswiki.com/wiki/Sugar_High),
 [Multiplidiocy](https://simpsonswiki.com/wiki/Multiplidiocy), and
 [The Incredible Bulk](https://simpsonswiki.com/wiki/The_Incredible_Bulk).
-The cited Disney+ list does not provide production codes for its nine films,
-and no verified codes were found for the four later shorts. They use stable
-lowercase title slugs; `production_code` is omitted. Their title, date, and
-individual article link are recorded. Theatrically premiered Maggie shorts and
-full-length Disney+ exclusive episodes are outside this dataset.
+The dataset also includes three earlier shorts now available on Disney+:
+[The Longest Daycare](https://en.wikipedia.org/wiki/The_Longest_Daycare),
+[Playdate with Destiny](https://en.wikipedia.org/wiki/Playdate_with_Destiny), and
+[Te Deseo Lo Mejor](https://en.wikipedia.org/wiki/Te_Deseo_Lo_Mejor).
+Their `original_air_date` records their first public release, including theatrical
+premieres for the two Maggie shorts. The Disney+ list does not provide production
+codes for its nine films, and no verified codes were found for the other seven
+shorts. All 16 use stable lowercase title slugs; `production_code` is omitted.
+Full-length Disney+ exclusive episodes remain in `data/episodes/`.
+
+[The Simpsons Yule Log](https://simpsonswiki.com/wiki/The_Simpsons_Yule_Log)
+is an hour-long Disney+ special, so it is in `data/specials/`, keyed by a title
+slug without a production code. Its December 22, 2025 release date comes from
+that article. The repository owner supplied its French-language display title
+and Disney+ content ID along with those of 12 shorts on November 1, 2026; see
+[DISNEY_PLUS_IDS.md](DISNEY_PLUS_IDS.md).

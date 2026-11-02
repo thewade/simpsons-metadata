@@ -1,10 +1,16 @@
 {
   "id": "the-force-awakens-from-its-nap",
   "titles": {
-    "en": "The Force Awakens from Its Nap"
+    "en": "The Force Awakens from Its Nap",
+    "fr": "Maggie Simpson dans « Le Réveil de la Force après la sieste »"
   },
   "original_air_date": "2021-05-04",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Force_Awakens_from_Its_Nap"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "8ca133cb-d680-45f7-ba51-fc7c92c61db0"
+    }
   }
 }

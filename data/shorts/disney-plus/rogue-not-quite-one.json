@@ -1,10 +1,16 @@
 {
   "id": "rogue-not-quite-one",
   "titles": {
-    "en": "Rogue Not Quite One"
+    "en": "Rogue Not Quite One",
+    "fr": "Maggie Simpson dans « une histoire pas tout à fait rogue »"
   },
   "original_air_date": "2023-05-04",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Rogue_Not_Quite_One"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "13c6353b-7794-420c-9a84-831b4943d271"
+    }
   }
 }

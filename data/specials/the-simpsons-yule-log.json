@@ -1,0 +1,16 @@
+{
+  "id": "the-simpsons-yule-log",
+  "titles": {
+    "en": "The Simpsons Yule Log",
+    "fr": "The Simpsons Yule Log"
+  },
+  "original_air_date": "2025-12-22",
+  "links": {
+    "simpsonswiki": "https://simpsonswiki.com/wiki/The_Simpsons_Yule_Log"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "e04cc982-370f-4b16-96c4-73218b8bb168"
+    }
+  }
+}

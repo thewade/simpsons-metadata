@@ -1,10 +1,10 @@
 # Streaming-provider links (optional metadata)
 
-The published JSON may store verified, publicly shareable Disney+ episode links. These are plain **links**, not embedded playback or a guarantee that a title is available in every region.
+The published JSON may store verified, publicly shareable Disney+ content IDs and links for episodes, shorts, specials and films. These are plain **links**, not embedded playback or a guarantee that a title is available in every region.
 
 Episode records also include `original_aspect_ratio`. That describes the original episode format, not the viewer's current Disney+ Remastered Aspect Ratio setting or a second Disney+ content ID.
 
-An episode may optionally contain:
+A record may optionally contain:
 
 ```json
 "streaming": {
@@ -15,7 +15,7 @@ An episode may optionally contain:
 }
 ```
 
-Either `url` or `content_id` may be provided; both must agree if supplied. Values above are placeholders: **do not import them**. Use IDs copied from real Disney+ episode pages. Do not fabricate content IDs from season/episode numbers.
+Either `url` or `content_id` may be provided; both must agree if supplied. Values above are placeholders: **do not import them**. Use IDs copied from real Disney+ pages. Do not fabricate content IDs from season/episode numbers.
 
 - Disney+ does not provide a documented public link parameter that forces original 4:3 versus remastered 16:9 playback.
 - No supported public URL parameters are known for forcing audio language, subtitle language, timestamps or selected playback intervals.

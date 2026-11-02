@@ -97,10 +97,30 @@ class BuildTests(unittest.TestCase):
             self.assertTrue(all(record["links"]["simpsonswiki"].startswith("https://simpsonswiki.com/wiki/")
                                 for record in ullman.values()))
             disney_shorts = json.loads((out / "shorts" / "disney-plus.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(disney_shorts), 13)
+            self.assertEqual(len(disney_shorts), 16)
             self.assertEqual(disney_shorts["the-force-awakens-from-its-nap"]["original_air_date"],
                              "2021-05-04")
             self.assertEqual(disney_shorts["apocalypse-doh"]["original_air_date"], "2025-11-01")
+            supplied_short_ids = {
+                "the-most-wonderful-time-of-the-year": "3839790c-c962-4d61-a5f8-ba2350a83f47",
+                "may-the-12th-be-with-you": "28a4c172-5dda-460f-a7e0-98d29c5b3d7f",
+                "rogue-not-quite-one": "13c6353b-7794-420c-9a84-831b4943d271",
+                "the-simpsons-meet-the-bocellis-in-feliz-navidad": "1dcf7fc2-0989-44eb-992c-938c07a1c26f",
+                "welcome-to-the-club": "1d60097d-e7a1-4fe2-8fe1-038f5f46d709",
+                "when-billie-met-lisa": "ea439976-b9b0-4ac6-b79f-77c7b1a709da",
+                "the-good-the-bart-and-the-loki": "3ffb8049-a23a-4251-b0f6-8a70386919e2",
+                "the-force-awakens-from-its-nap": "8ca133cb-d680-45f7-ba51-fc7c92c61db0",
+                "the-longest-daycare": "066a121a-a89a-44a8-9f2d-56b21f0c7241",
+                "playdate-with-destiny": "6ea838b5-b5ac-45e0-8980-881d906a91a0",
+                "plusaversary": "3c791468-6f02-4c33-bbff-ee4b54ef8feb",
+                "te-deseo-lo-mejor": "4d935ff3-aa17-4e11-975a-30009a09b359",
+            }
+            for short_id, content_id in supplied_short_ids.items():
+                self.assertEqual(disney_shorts[short_id]["streaming"]["disney_plus"]["content_id"], content_id)
+                self.assertIn("fr", disney_shorts[short_id]["titles"])
+                self.assertNotIn("fr-CA", disney_shorts[short_id]["titles"])
+            self.assertEqual(disney_shorts["playdate-with-destiny"]["titles"]["fr"],
+                             "Maggie Simpson dans « Le Jeu du Destin »")
             self.assertTrue(all("production_code" not in record for record in disney_shorts.values()))
             self.assertNotIn("apocalypse-doh", production)
             self.assertEqual(json.loads((out / "commercials.json").read_text()), {})
@@ -130,7 +150,13 @@ class BuildTests(unittest.TestCase):
             self.assertNotIn("production_code", movies["movie-2027"])
             self.assertIsNone(movies["movie-2027"]["links"]["wikipedia_fr"])
             self.assertNotIn("fr-FR", movies["movie-2027"]["titles"])
-            self.assertEqual(json.loads((out / "specials.json").read_text()), {})
+            specials = json.loads((out / "specials.json").read_text(encoding="utf-8"))
+            self.assertEqual(set(specials), {"the-simpsons-yule-log"})
+            self.assertEqual(specials["the-simpsons-yule-log"]["streaming"]["disney_plus"]["content_id"],
+                             "e04cc982-370f-4b16-96c4-73218b8bb168")
+            self.assertEqual(specials["the-simpsons-yule-log"]["titles"]["fr"],
+                             "The Simpsons Yule Log")
+            self.assertNotIn("the-simpsons-yule-log", production)
             self.assertEqual(json.loads((out / "manifest.json").read_text())["api_version"], 1)
 
     def test_rejects_duplicate_external_ids(self):
@@ -172,6 +198,18 @@ class BuildTests(unittest.TestCase):
                            encoding="utf-8")
             with self.assertRaisesRegex(module.ValidationError, "lowercase title slug"):
                 module.parse_record(bad, "shorts/disney-plus")
+
+    def test_special_allows_slug_without_production_code(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "sample-special.json"
+            path.write_text(json.dumps({"id": "sample-special", "titles": {"en": "Sample Special"}}),
+                            encoding="utf-8")
+            self.assertNotIn("production_code", module.parse_record(path, "specials"))
+            bad = Path(temp) / "SampleSpecial.json"
+            bad.write_text(json.dumps({"id": "SampleSpecial", "titles": {"en": "Sample"}}),
+                           encoding="utf-8")
+            with self.assertRaisesRegex(module.ValidationError, "lowercase title slug"):
+                module.parse_record(bad, "specials")
 
     def test_rejects_duplicate_json_keys(self):
         with tempfile.TemporaryDirectory() as temp:

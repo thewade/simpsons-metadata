@@ -1,10 +1,16 @@
 {
   "id": "welcome-to-the-club",
   "titles": {
-    "en": "Welcome to the Club"
+    "en": "Welcome to the Club",
+    "fr": "Bienvenue au club"
   },
   "original_air_date": "2022-09-08",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Welcome_to_the_Club_(2022_film)"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "1d60097d-e7a1-4fe2-8fe1-038f5f46d709"
+    }
   }
 }

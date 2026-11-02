@@ -163,7 +163,8 @@ def main():
     print(f"french_season_article_links: {len(season_plans)}")
     if args.apply:
         for path, record in plans + season_plans:
-            path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n",
+                            encoding="utf-8", newline="\n")
         print("Applied changes")
     else:
         print("Dry run; pass --apply to write changes")

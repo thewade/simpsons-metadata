@@ -11,7 +11,7 @@
 ## Record identity and datasets
 
 - Regular TV episodes use the established common **aired** order: `s01e01`, `s07e23` (lowercase and two or more digits for each component). The numbering is treated as stable and never automatically reordered to match an external service.
-- Tracey Ullman shorts, commercials and specials are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Disney+ shorts have no verified production codes in the cited list, so they use stable lowercase title slugs and omit `production_code` until one is verified. Films use `movie-YYYY`, based on the release year or announced release year when the record is created, as their ID. Keep these IDs stable if a title or planned release changes; store a verified production code separately when known.
+- Tracey Ullman shorts and commercials are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Disney+ shorts and unnumbered specials use stable lowercase title slugs and omit `production_code` until one is verified. Films use `movie-YYYY`, based on the release year or announced release year when the record is created, as their ID. Keep these IDs stable if a title or planned release changes; store a verified production code separately when known.
 - Record identity is the pair (`dataset`, `id`), e.g. (`episodes`, `s01e01`) or (`shorts/tracey-ullman`, `MG01`). This avoids cross-dataset collisions.
 - Source files are `data/<dataset>/<id>.json` (non-episode directories mirror published datasets). Git filenames must be portable and are validated against the record ID.
 - Supported datasets: `episodes`, `seasons`, `movies`, `shorts/tracey-ullman`, `shorts/disney-plus`, `commercials`, `specials`. No combined `shorts.json`.
@@ -21,11 +21,11 @@
 
 - `id` is required and matches the filename.
 - `titles` is required, nonempty, and keyed by BCP 47 tags (`en`, `fr-CA`, `fr-FR`, etc.). The build checks a pragmatic syntax subset, not the complete IANA language registry.
-- A Tracey Ullman short, commercial or special requires `production_code`, equal to `id`. A Disney+ short or movie may omit it until verified; when present it need not equal the record ID.
+- A Tracey Ullman short or commercial requires `production_code`, equal to `id`. A Disney+ short, unnumbered special or movie may omit it until verified; when present it need not equal the record ID.
 - An episode may include `production_code` if known.
 - `tvdb`, `tmdb`, `imdb` are optional external identifier strings. They are **not** used as internal IDs.
 - `links` is an optional, nonempty object of named HTTPS URLs or `null`, such as `"links": {"wikipedia": "https://en.wikipedia.org/wiki/..."}`. `wikipedia` is the English article and `wikipedia_fr` is the French article; the reference lists and sync process are documented in [SOURCES.md](SOURCES.md). Link names use lowercase letters, digits and underscores. Verify the target against the record's identity; do not construct URLs from titles. Omit a link key when its status is unknown; use `null` only after confirming that the named destination does not exist.
-- `original_air_date` is for television records. Movies use `release_date` for an actual theatrical date or `planned_release_date` for an announced date. These dates use YYYY-MM-DD and are validated.
+- `original_air_date` records a television premiere or a short's first public release, including theatrical premieres. Movies use `release_date` for an actual theatrical date or `planned_release_date` for an announced date. These dates use YYYY-MM-DD and are validated.
 - `original_aspect_ratio` is recorded for numbered episodes: `4:3` through `s20e09` and `16:9` from `s20e10` onward. It describes the episode's original format, independent of a streaming service's remastering preference.
 - Missing information is **omitted**, not guessed. The explicit `null` value for a link means its absence was checked and confirmed.
 - If multiple identifiers genuinely refer to the same item, put them in that item's record. If an identifier appears on two different records, publishing fails rather than silently choosing one.
@@ -53,7 +53,7 @@ Build output is generated; **never edit it manually**. It is not committed to Gi
 
 ## Trade-off: some non-episode items need production codes
 
-The production-code rule for Tracey Ullman shorts, commercials and specials intentionally cannot represent an item with no known production code. Disney+ shorts use title slugs because their production codes have not been verified; movies use year-based IDs. If two films share a release year, the movie ID policy will need an extension. If a later Disney+ short repeats a title, add a disambiguating suffix while keeping existing IDs stable. To support other categories without a production code, revise their ID policy deliberately rather than putting fabricated codes into the database.
+The production-code rule for Tracey Ullman shorts and commercials intentionally cannot represent an item with no known production code. Disney+ shorts and unnumbered specials use title slugs when their production codes have not been verified; movies use year-based IDs. If two films share a release year, the movie ID policy will need an extension. If a later short or special repeats a title, add a disambiguating suffix while keeping existing IDs stable. To support other categories without a production code, revise their ID policy deliberately rather than putting fabricated codes into the database.
 
 ## Rights
 
@@ -68,4 +68,4 @@ When present on a season or movie, `amazon_listings` contains one entry per know
 
 ## Optional provider URLs and website integration
 
-Verified Disney+ episode URLs may be stored under `streaming.disney_plus` (see `STREAMING.md`). There is no assumption that URL arguments can force 4:3/16:9, captions, audio, timestamp seeks, or clipping. This is optional per record; unknown values are omitted. If the old PHP/MySQL site needs metadata, it should consume the published API as a downstream copy. That integration must never write changes back into the canonical JSON from the old SQL data. The historical SQL migration tool is archived under `legacy/` and is outside the build and validation workflow.
+Verified Disney+ content IDs and URLs may be stored under `streaming.disney_plus` (see `STREAMING.md`). There is no assumption that URL arguments can force 4:3/16:9, captions, audio, timestamp seeks, or clipping. This is optional per record; unknown values are omitted. If the old PHP/MySQL site needs metadata, it should consume the published API as a downstream copy. That integration must never write changes back into the canonical JSON from the old SQL data. The historical SQL migration tool is archived under `legacy/` and is outside the build and validation workflow.

@@ -1,5 +1,18 @@
 # Disney+ content ID sources
 
+## Shorts and Yule Log added November 1, 2026
+
+The repository owner supplied 13 French-language display titles and
+`/fr-ca/play/<content_id>` links from Disney+'s French Canadian pages. Twelve
+matched or added records in
+`data/shorts/disney-plus/`; the hour-long Yule Log was added to `data/specials/`.
+The display titles are stored as `titles.fr`, with subsequent corrections from
+the repository owner. The locale of the page does not establish a Quebec dub or
+region-specific title. The IDs are stored under
+`streaming.disney_plus.content_id`. The API constructs locale-neutral play
+links from those IDs. Four *Simpsons × Fortnite* shorts remain without Disney+
+IDs because none were supplied for them.
+
 ## Exclusive episodes added November 1, 2026
 
 Six French Canadian Disney+ play links supplied by the repository owner were

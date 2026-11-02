@@ -1,10 +1,16 @@
 {
   "id": "the-good-the-bart-and-the-loki",
   "titles": {
-    "en": "The Good, the Bart, and the Loki"
+    "en": "The Good, the Bart, and the Loki",
+    "fr": "Le bon, le Bart et le Loki"
   },
   "original_air_date": "2021-07-07",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Good,_the_Bart,_and_the_Loki"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "3ffb8049-a23a-4251-b0f6-8a70386919e2"
+    }
   }
 }

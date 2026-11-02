@@ -1,10 +1,16 @@
 {
   "id": "when-billie-met-lisa",
   "titles": {
-    "en": "When Billie Met Lisa"
+    "en": "When Billie Met Lisa",
+    "fr": "Quand Billie a rencontré Lisa"
   },
   "original_air_date": "2022-04-22",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/When_Billie_Met_Lisa"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "ea439976-b9b0-4ac6-b79f-77c7b1a709da"
+    }
   }
 }

@@ -1,10 +1,16 @@
 {
   "id": "may-the-12th-be-with-you",
   "titles": {
-    "en": "May the 12th Be with You"
+    "en": "May the 12th Be with You",
+    "fr": "Que la fête des Mères soit avec vous"
   },
   "original_air_date": "2024-05-10",
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/May_the_12th_Be_with_You"
+  },
+  "streaming": {
+    "disney_plus": {
+      "content_id": "28a4c172-5dda-460f-a7e0-98d29c5b3d7f"
+    }
   }
 }
