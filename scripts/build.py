@@ -228,7 +228,7 @@ def openapi_document():
 
 
 def render_episode_guide(catalog):
-    """Render the numbered episodes as accessible, expandable season tables."""
+    """Render episodes, movies, and shorts as accessible, expandable tables."""
     template = (ROOT / "deployment" / "episodes" / "index.html").read_text(encoding="utf-8")
     by_season = defaultdict(list)
     for record in catalog["episodes"].values():
@@ -236,6 +236,52 @@ def render_episode_guide(catalog):
         by_season[season_number].append(record)
     numbers = sorted({int(key[1:]) for key in catalog["seasons"]} | set(by_season))
     h = lambda value: escape(str(value), quote=True)
+
+    def display_date(value):
+        parsed = date.fromisoformat(value)
+        return f'<time datetime="{h(value)}">{h(parsed.strftime("%B"))} {parsed.day}, {parsed.year}</time>'
+
+    def detail_row(record, kind, colspan):
+        ident = record["id"]
+        title = record["titles"].get("en", next(iter(record["titles"].values())))
+        facts = []
+        for language, translated in record["titles"].items():
+            if language != "en":
+                facts.append(f'<div><dt>Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
+        if "original_aspect_ratio" in record:
+            facts.append(f'<div><dt>Original aspect ratio</dt><dd>{h(record["original_aspect_ratio"])}</dd></div>')
+        for key, label in (("tvdb", "TVDB"), ("tmdb", "TMDB"), ("imdb", "IMDb")):
+            if key in record:
+                facts.append(f'<div><dt>{label}</dt><dd><code>{h(record[key])}</code></dd></div>')
+        fact_html = f'<dl class="detail-facts">{"".join(facts)}</dl>' if facts else ""
+        links = []
+        for site, url in record.get("links", {}).items():
+            if url is None:
+                if site == "wikipedia":
+                    links.append('<span class="no-link">No standalone English Wikipedia article</span>')
+            else:
+                name = {"wikipedia": "Wikipedia (English)",
+                        "wikipedia_fr": "Wikipedia (French)"}.get(site, site.replace("_", " ").title())
+                links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{h(name)} ↗</a>')
+        disney = record.get("streaming", {}).get("disney_plus", {})
+        content_id = disney.get("content_id")
+        disney_url = (f'https://www.disneyplus.com/play/{quote(content_id, safe="")}'
+                      if content_id else disney.get("url"))
+        if disney_url:
+            links.append(f'<a href="{h(disney_url)}" target="_blank" rel="noopener noreferrer">Open on Disney+ ↗</a>')
+        for listing in record.get("amazon_listings", []):
+            label = {"dvd": "DVD", "blu_ray": "Blu-ray"}.get(listing.get("format"), "Amazon")
+            links.append(f'<a href="{h(listing["url"])}" target="_blank" rel="noopener noreferrer">{label} on Amazon ↗</a>')
+        links_html = f'<div class="detail-links">{"".join(links)}</div>' if links else '<p class="no-link">No external links recorded.</p>'
+        legacy = record.get("legacy")
+        legacy_html = (f'<details class="legacy"><summary>Archived source fields</summary>'
+                       f'<pre>{h(json.dumps(legacy, ensure_ascii=False, indent=2))}</pre></details>') if legacy else ""
+        details_id = f"{ident}-details"
+        return (f'<tr class="detail-row" id="{h(details_id)}" hidden><td colspan="{colspan}"><div class="detail-panel">'
+                f'<div class="detail-top"><div><p class="detail-label">{h(ident)} · {kind} details</p>'
+                f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}">Link to {kind.lower()}</a></div>'
+                f'{fact_html}{links_html}{legacy_html}</div></td></tr>')
+
     jumps = "".join(f'<a href="#season-{number:02}">{number}</a>' for number in numbers)
     groups = []
     for first, last, label, anchor in ((1, 20, "Seasons 1–20", "classic"),
@@ -268,9 +314,7 @@ def render_episode_guide(catalog):
                 episode_number = int(ident.split("e", 1)[1])
                 title = record["titles"].get("en", next(iter(record["titles"].values())))
                 aired = record.get("original_air_date")
-                displayed_date = (f'{date.fromisoformat(aired).strftime("%B")} {date.fromisoformat(aired).day}, '
-                                  f'{date.fromisoformat(aired).year}') if aired else "—"
-                date_html = f'<time datetime="{h(aired)}">{h(displayed_date)}</time>' if aired else "—"
+                date_html = display_date(aired) if aired else "—"
                 production = record.get("production_code", "—")
                 overall = record.get("overall_number", "—")
                 details_id = f"{ident}-details"
@@ -280,51 +324,60 @@ def render_episode_guide(catalog):
                     f'aria-controls="{h(details_id)}">{h(title)}</button></th><td>{date_html}</td>'
                     f'<td><code>{h(production)}</code></td><td class="row-arrow" aria-hidden="true">⌄</td></tr>'
                 )
-                facts = []
-                for language, translated in record["titles"].items():
-                    if language != "en":
-                        facts.append(f'<div><dt>Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
-                if "original_aspect_ratio" in record:
-                    facts.append(f'<div><dt>Original aspect ratio</dt><dd>{h(record["original_aspect_ratio"])}</dd></div>')
-                for key, field_label in (("tvdb", "TVDB"), ("tmdb", "TMDB"), ("imdb", "IMDb")):
-                    if key in record:
-                        facts.append(f'<div><dt>{field_label}</dt><dd><code>{h(record[key])}</code></dd></div>')
-                fact_html = f'<dl class="detail-facts">{"".join(facts)}</dl>' if facts else ""
-                links = []
-                for site, url in record.get("links", {}).items():
-                    if url is None:
-                        if site == "wikipedia":
-                            links.append('<span class="no-link">No standalone English Wikipedia article</span>')
-                    else:
-                        name = {"wikipedia": "Wikipedia (English)",
-                                "wikipedia_fr": "Wikipedia (French)"}.get(site, site.replace("_", " ").title())
-                        links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{h(name)} ↗</a>')
-                disney = record.get("streaming", {}).get("disney_plus", {})
-                content_id = disney.get("content_id")
-                disney_url = (f'https://www.disneyplus.com/play/{quote(content_id, safe="")}'
-                              if content_id else disney.get("url"))
-                if disney_url:
-                    links.append(f'<a href="{h(disney_url)}" target="_blank" rel="noopener noreferrer">Open on Disney+ ↗</a>')
-                links_html = f'<div class="detail-links">{"".join(links)}</div>' if links else '<p class="no-link">No external links recorded.</p>'
-                legacy = record.get("legacy")
-                legacy_html = (f'<details class="legacy"><summary>Archived source fields</summary>'
-                               f'<pre>{h(json.dumps(legacy, ensure_ascii=False, indent=2))}</pre></details>') if legacy else ""
-                rows.append(
-                    f'<tr class="detail-row" id="{h(details_id)}" hidden><td colspan="6"><div class="detail-panel">'
-                    f'<div class="detail-top"><div><p class="detail-label">{h(ident)} · Episode details</p>'
-                    f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}">Link to episode</a></div>'
-                    f'{fact_html}{links_html}{legacy_html}</div></td></tr>'
-                )
-            table = ('<div class="table-scroll"><table><thead><tr><th scope="col">Overall</th><th scope="col">No.</th>'
+                rows.append(detail_row(record, "Episode", 6))
+            table = ('<div class="table-scroll"><table class="episode-table"><thead><tr><th scope="col">Overall</th><th scope="col">No.</th>'
                      '<th scope="col">Episode</th><th scope="col">Original air date</th>'
                      '<th scope="col">Production code</th><th scope="col"><span class="sr-only">Details</span></th>'
                      f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
             sections.append(f'<section class="season">{heading}{table}</section>')
         groups.append(f'<section class="group" id="{anchor}"><div class="group-heading"><p class="eyebrow">Episode catalogue</p>'
                       f'<h2>{label}</h2></div>{"".join(sections)}</section>')
+
+    media_groups = (
+        ("movies", "movies", "Movies", "Film", "Release date", True,
+         "Feature films, including announced releases."),
+        ("shorts/tracey-ullman", "tracey-ullman-shorts", "Tracey Ullman shorts", "Short", "Original air date", True,
+         "The original television shorts, ordered by first broadcast."),
+        ("shorts/disney-plus", "disney-plus-shorts", "Disney+ shorts", "Short", "First release", False,
+         "Short films available on Disney+, including earlier theatrical releases."),
+    )
+    for dataset, anchor, heading, kind, date_heading, show_code, description in media_groups:
+        records = sorted(catalog.get(dataset, {}).values(),
+                         key=lambda record: (record.get("release_date") or record.get("planned_release_date")
+                                             or record.get("original_air_date") or "9999-99-99", record["id"]))
+        rows = []
+        for record in records:
+            ident = record["id"]
+            title = record["titles"].get("en", next(iter(record["titles"].values())))
+            released = record.get("release_date") or record.get("original_air_date")
+            planned = record.get("planned_release_date") if not released else None
+            date_html = display_date(released or planned) if released or planned else "—"
+            if planned:
+                date_html += ' <span class="date-note">(planned)</span>'
+            code_html = (f'<td><code>{h(record["production_code"])}</code></td>'
+                         if "production_code" in record else '<td>—</td>') if show_code else ""
+            details_id = f"{ident}-details"
+            rows.append(f'<tr class="episode-row media-row" id="{h(ident)}">'
+                        f'<th scope="row"><button type="button" class="episode-toggle" aria-expanded="false" '
+                        f'aria-controls="{h(details_id)}">{h(title)}</button></th>'
+                        f'<td>{date_html}</td>{code_html}<td class="row-arrow" aria-hidden="true">⌄</td></tr>')
+            rows.append(detail_row(record, kind, 4 if show_code else 3))
+        code_heading = '<th scope="col">Production code</th>' if show_code else ""
+        table = (f'<div class="table-scroll"><table class="media-table"><thead><tr><th scope="col">{kind}</th>'
+                 f'<th scope="col">{date_heading}</th>{code_heading}'
+                 f'<th scope="col"><span class="sr-only">Details</span></th></tr></thead>'
+                 f'<tbody>{"".join(rows)}</tbody></table></div>') if rows else '<p class="empty">No records yet.</p>'
+        api_path = DATASETS[dataset]
+        groups.append(f'<section class="group media-group" id="{anchor}"><div class="group-heading">'
+                      f'<p class="eyebrow">Beyond numbered episodes</p><h2>{heading}</h2>'
+                      f'<p class="group-intro">{description} {len(records)} records. '
+                      f'<a href="/v1/{api_path}">Download JSON ↗</a></p></div>{table}</section>')
     replacements = {
         "{{EPISODE_COUNT}}": str(len(catalog["episodes"])),
         "{{SEASON_COUNT}}": str(len(numbers)),
+        "{{MOVIE_COUNT}}": str(len(catalog.get("movies", {}))),
+        "{{SHORT_COUNT}}": str(sum(len(catalog.get(dataset, {})) for dataset in
+                                   ("shorts/tracey-ullman", "shorts/disney-plus"))),
         "<!-- SEASON_JUMPS -->": jumps,
         "<!-- EPISODE_TABLES -->": "".join(groups),
     }

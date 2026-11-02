@@ -30,7 +30,7 @@ The API is static and read-only. It does not offer server-side search, filtering
 
 Some categories are currently empty and return `{}`. A record may have a `links` object for verified external pages and a `streaming` object for known provider identifiers. Omitted data is unknown, not an assertion that it does not exist.
 
-The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episodes into season tables. Select a row for regional titles, references, archived source fields, and a Disney+ link when a content ID is stored. Those playback links are built from imported IDs and are not a guarantee of current or regional availability.
+The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episodes into season tables and also lists movies, Tracey Ullman shorts, and Disney+ shorts. Select a row for regional titles, references, archived source fields, and a Disney+ link when a content ID is stored. Those playback links are built from imported IDs and are not a guarantee of current or regional availability.
 
 ## Lookups and API description
 

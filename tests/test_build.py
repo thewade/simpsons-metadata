@@ -1,6 +1,7 @@
 import importlib.util
 import json
 from pathlib import Path
+import re
 import tempfile
 import unittest
 
@@ -19,11 +20,19 @@ class BuildTests(unittest.TestCase):
                 "links": {"wikipedia": None},
                 "streaming": {"disney_plus": {"content_id": "id?part"}},
             }},
+            "movies": {"movie-2027": {
+                "id": "movie-2027", "titles": {"en": "Film & <script>"},
+                "planned_release_date": "2027-09-03",
+            }},
         })
         self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", guide)
         self.assertNotIn("<script>alert(1)</script>", guide)
         self.assertIn("No standalone English Wikipedia article", guide)
         self.assertIn("https://www.disneyplus.com/play/id%3Fpart", guide)
+        self.assertIn("Film &amp; &lt;script&gt;", guide)
+        self.assertNotIn("Film & <script>", guide)
+        self.assertIn('id="movie-2027-details" hidden', guide)
+        self.assertIn('September 3, 2027</time> <span class="date-note">(planned)</span>', guide)
 
     def test_build_outputs_expected_maps(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -37,8 +46,22 @@ class BuildTests(unittest.TestCase):
             self.assertIn('href="/episodes/"', (out.parent / "index.html").read_text())
             self.assertEqual(guide.count('<tr class="episode-row"'),
                              len(json.loads((out / "episodes.json").read_text())))
+            self.assertEqual(guide.count('<tr class="episode-row media-row"'), 66)
+            ids = re.findall(r'\bid="([^"]+)"', guide)
+            controls = re.findall(r'\baria-controls="([^"]+)"', guide)
+            self.assertEqual(len(ids), len(set(ids)))
+            self.assertEqual(len(controls), guide.count('<tr class="episode-row'))
+            self.assertTrue(set(controls).issubset(ids))
             self.assertIn('id="classic"', guide)
             self.assertIn('id="modern"', guide)
+            self.assertIn('id="movies"', guide)
+            self.assertIn('id="tracey-ullman-shorts"', guide)
+            self.assertIn('id="disney-plus-shorts"', guide)
+            self.assertIn('id="movie-2007-details" hidden', guide)
+            self.assertIn('id="MG01-details" hidden', guide)
+            self.assertIn('id="the-longest-daycare-details" hidden', guide)
+            self.assertIn('DVD on Amazon', guide)
+            self.assertIn('https://www.disneyplus.com/play/066a121a-a89a-44a8-9f2d-56b21f0c7241', guide)
             self.assertIn('id="season-38"', guide)
             self.assertIn('French article', guide)
             self.assertIn('id="s01e01-details" hidden', guide)
