@@ -67,6 +67,13 @@ def parse_record(path, dataset):
         raise ValidationError(f"{path}: Disney+ short id must be a lowercase title slug")
     if dataset not in ("episodes", "seasons", "movies", "shorts/disney-plus") and record.get("production_code") != ident:
         raise ValidationError(f"{path}: non-episode id must equal production_code")
+    if "original_aspect_ratio" in record:
+        if dataset != "episodes":
+            raise ValidationError(f"{path}: original_aspect_ratio is only for episodes")
+        season, episode = map(int, re.fullmatch(r"s(\d+)e(\d+)", ident).groups())
+        expected = "4:3" if (season, episode) <= (20, 9) else "16:9"
+        if record["original_aspect_ratio"] != expected:
+            raise ValidationError(f"{path}: invalid original_aspect_ratio")
     titles = record.get("titles")
     if not isinstance(titles, dict) or not titles:
         raise ValidationError(f"{path}: titles must be a nonempty object")
@@ -277,6 +284,8 @@ def render_episode_guide(catalog):
                 for language, translated in record["titles"].items():
                     if language != "en":
                         facts.append(f'<div><dt>Title ({h(language)})</dt><dd>{h(translated)}</dd></div>')
+                if "original_aspect_ratio" in record:
+                    facts.append(f'<div><dt>Original aspect ratio</dt><dd>{h(record["original_aspect_ratio"])}</dd></div>')
                 for key, field_label in (("tvdb", "TVDB"), ("tmdb", "TMDB"), ("imdb", "IMDb")):
                     if key in record:
                         facts.append(f'<div><dt>{field_label}</dt><dd><code>{h(record[key])}</code></dd></div>')

@@ -42,10 +42,18 @@ class BuildTests(unittest.TestCase):
             self.assertIn('id="season-38"', guide)
             self.assertIn('French article', guide)
             self.assertIn('id="s01e01-details" hidden', guide)
+            self.assertIn('<dt>Original aspect ratio</dt><dd>4:3</dd>', guide)
+            self.assertIn('<dt>Original aspect ratio</dt><dd>16:9</dd>', guide)
             self.assertIn('https://www.disneyplus.com/play/ffb14e5a-38db-4522-a559-3cfa52bcf4df', guide)
             self.assertNotIn('href="https://www.disneyplus.com/play/not-ported-over"', guide)
             self.assertIn('Wikipedia (French)', guide)
             episodes = json.loads((out / "episodes.json").read_text(encoding="utf-8"))
+            self.assertEqual(episodes["s20e09"]["original_aspect_ratio"], "4:3")
+            self.assertEqual(episodes["s20e10"]["original_aspect_ratio"], "16:9")
+            self.assertEqual(sum("original_aspect_ratio" in record for record in episodes.values()), len(episodes))
+            self.assertTrue(all(record["original_aspect_ratio"] ==
+                                ("4:3" if tuple(map(int, record["id"][1:].split("e"))) <= (20, 9) else "16:9")
+                                for record in episodes.values()))
             self.assertEqual(sum("wikipedia_fr" in record.get("links", {}) for record in episodes.values()),
                              len(episodes))
             self.assertTrue(all(record["links"]["wikipedia_fr"].startswith("https://fr.wikipedia.org/wiki/")
@@ -143,6 +151,15 @@ class BuildTests(unittest.TestCase):
             path.write_text(json.dumps({"id": "MG01", "titles": {"en": "Good Night"}}))
             with self.assertRaisesRegex(module.ValidationError, "production_code"):
                 module.parse_record(path, "shorts/tracey-ullman")
+
+    def test_rejects_wrong_original_aspect_ratio(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "s20e10.json"
+            record = {"id": "s20e10", "titles": {"en": "Example"},
+                      "original_aspect_ratio": "4:3"}
+            path.write_text(json.dumps(record), encoding="utf-8")
+            with self.assertRaisesRegex(module.ValidationError, "original_aspect_ratio"):
+                module.parse_record(path, "episodes")
 
     def test_disney_short_allows_slug_without_production_code(self):
         with tempfile.TemporaryDirectory() as temp:

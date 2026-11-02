@@ -2,6 +2,8 @@
 
 The published JSON may store verified, publicly shareable Disney+ episode links. These are plain **links**, not embedded playback or a guarantee that a title is available in every region.
 
+Episode records also include `original_aspect_ratio`. That describes the original episode format, not the viewer's current Disney+ Remastered Aspect Ratio setting or a second Disney+ content ID.
+
 An episode may optionally contain:
 
 ```json
