@@ -9,9 +9,10 @@ manual syncs:
 | [English episodes, seasons 1–20](https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes_%28seasons_1%E2%80%9320%29) | Aired order, original air dates, production codes, English episode articles |
 | [English episodes, season 21 onward](https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes_%28season_21%E2%80%93present%29) | The same fields for later seasons |
 | [French episode list](https://fr.wikipedia.org/wiki/Liste_des_%C3%A9pisodes_des_Simpson) | `titles.fr-FR`, `titles.fr-CA`, French episode articles, and French season articles |
+| [French article for the 2007 film](https://fr.wikipedia.org/wiki/Les_Simpson%2C_le_film) | The film's shared French and Québec title and French article link |
 
-`links.wikipedia` points to a standalone English episode or season article.
-`links.wikipedia_fr` points to a standalone French episode or season article. List-page
+`links.wikipedia` points to a standalone English episode, season, or movie article.
+`links.wikipedia_fr` points to a standalone French episode, season, or movie article. List-page
 links belong in this document, not in those per-episode fields. An omitted title
 or link means it was not established; a list placeholder such as “Titre
 québécois inconnu” is not an episode title. Do not infer a French article URL
@@ -48,3 +49,12 @@ their season episode number, and matches season records by season number. It
 updates only known French titles and article links.
 It reports production code disagreements without changing those fields. Review
 the resulting diff and update the revision and date above when syncing again.
+
+## Film articles
+
+The 2007 film's [French article](https://fr.wikipedia.org/wiki/Les_Simpson%2C_le_film)
+lists “Les Simpson, le film” as both the French and Québec title. As checked on
+2026-11-01, the [2027 film's English article](https://en.wikipedia.org/wiki/The_New_Simpsons_Movie)
+has no French Wikipedia language link, and no established French or Québec title
+was found. Its `links.wikipedia_fr` is `null`; its regional titles remain omitted.
+Recheck both when the film receives a localized title or French article.

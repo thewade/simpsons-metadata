@@ -1,12 +1,15 @@
 {
   "id": "movie-2007",
   "titles": {
-    "en": "The Simpsons Movie"
+    "en": "The Simpsons Movie",
+    "fr-FR": "Les Simpson, le film",
+    "fr-CA": "Les Simpson, le film"
   },
   "production_code": "Movie1",
   "release_date": "2007-07-26",
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Movie"
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons_Movie",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Les_Simpson,_le_film"
   },
   "amazon_listings": [
     {

@@ -82,8 +82,14 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(set(movies), {"movie-2007", "movie-2027"})
             self.assertEqual(movies["movie-2007"]["release_date"], "2007-07-26")
             self.assertEqual(movies["movie-2007"]["production_code"], "Movie1")
+            self.assertEqual(movies["movie-2007"]["titles"]["fr-FR"], "Les Simpson, le film")
+            self.assertEqual(movies["movie-2007"]["titles"]["fr-CA"], "Les Simpson, le film")
+            self.assertEqual(movies["movie-2007"]["links"]["wikipedia_fr"],
+                             "https://fr.wikipedia.org/wiki/Les_Simpson,_le_film")
             self.assertEqual(movies["movie-2027"]["planned_release_date"], "2027-09-03")
             self.assertNotIn("production_code", movies["movie-2027"])
+            self.assertIsNone(movies["movie-2027"]["links"]["wikipedia_fr"])
+            self.assertNotIn("fr-FR", movies["movie-2027"]["titles"])
             self.assertEqual(json.loads((out / "specials.json").read_text()), {})
             self.assertEqual(json.loads((out / "manifest.json").read_text())["api_version"], 1)
 
