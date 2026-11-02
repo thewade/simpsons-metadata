@@ -11,7 +11,7 @@
 ## Record identity and datasets
 
 - Regular TV episodes use the established common **aired** order: `s01e01`, `s07e23` (lowercase and two or more digits for each component). The numbering is treated as stable and never automatically reordered to match an external service.
-- Shorts, commercials and specials are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Where no verified production code exists, **do not invent one** for those datasets. Films use `movie-YYYY`, based on the release year or announced release year when the record is created, as their ID. Keep that ID stable if a planned release moves; store a verified production code separately when known.
+- Tracey Ullman shorts, commercials and specials are identified by **production code**; preserve its meaningful spelling (e.g. `MG01`). Disney+ shorts have no verified production codes in the cited list, so they use stable lowercase title slugs and omit `production_code` until one is verified. Films use `movie-YYYY`, based on the release year or announced release year when the record is created, as their ID. Keep these IDs stable if a title or planned release changes; store a verified production code separately when known.
 - Record identity is the pair (`dataset`, `id`), e.g. (`episodes`, `s01e01`) or (`shorts/tracey-ullman`, `MG01`). This avoids cross-dataset collisions.
 - Source files are `data/<dataset>/<id>.json` (non-episode directories mirror published datasets). Git filenames must be portable and are validated against the record ID.
 - Supported datasets: `episodes`, `seasons`, `movies`, `shorts/tracey-ullman`, `shorts/disney-plus`, `commercials`, `specials`. No combined `shorts.json`.
@@ -21,7 +21,7 @@
 
 - `id` is required and matches the filename.
 - `titles` is required, nonempty, and keyed by BCP 47 tags (`en`, `fr-CA`, `fr-FR`, etc.). The build checks a pragmatic syntax subset, not the complete IANA language registry.
-- A short, commercial or special requires `production_code`, equal to `id`. A movie may omit it until verified; when present it need not equal the movie ID.
+- A Tracey Ullman short, commercial or special requires `production_code`, equal to `id`. A Disney+ short or movie may omit it until verified; when present it need not equal the record ID.
 - An episode may include `production_code` if known.
 - `tvdb`, `tmdb`, `imdb` are optional external identifier strings. They are **not** used as internal IDs.
 - `links` is an optional, nonempty object of named HTTPS URLs or `null`, such as `"links": {"wikipedia": "https://en.wikipedia.org/wiki/..."}`. `wikipedia` is the English article and `wikipedia_fr` is the French article; the reference lists and sync process are documented in [SOURCES.md](SOURCES.md). Link names use lowercase letters, digits and underscores. Verify the target against the record's identity; do not construct URLs from titles. Omit a link key when its status is unknown; use `null` only after confirming that the named destination does not exist.
@@ -50,9 +50,9 @@ Build output is generated; **never edit it manually**. It is not committed to Gi
 - Cloudflare Pages is the deployment target for `api.simpsonseh.com`, using GitHub integration. DreamHost remains the existing website/database host and can retain authoritative DNS. GitHub Actions validates the data; the Cloudflare build serves static files.
 - If project needs grow: consider immutable release snapshots, variants for differing regional/platform titles, a full BCP 47 validator, or search tooling **when actually needed**.
 
-## Trade-off: all non-episode items need production codes
+## Trade-off: some non-episode items need production codes
 
-The production-code rule for shorts, commercials and specials intentionally cannot represent an item with no known production code. Movies use year-based IDs because announced films may not yet have production codes. If two films share a release year, the movie ID policy will need an extension. To support other categories without a production code, revise their ID policy deliberately rather than putting fabricated codes into the database.
+The production-code rule for Tracey Ullman shorts, commercials and specials intentionally cannot represent an item with no known production code. Disney+ shorts use title slugs because their production codes have not been verified; movies use year-based IDs. If two films share a release year, the movie ID policy will need an extension. If a later Disney+ short repeats a title, add a disambiguating suffix while keeping existing IDs stable. To support other categories without a production code, revise their ID policy deliberately rather than putting fabricated codes into the database.
 
 ## Rights
 

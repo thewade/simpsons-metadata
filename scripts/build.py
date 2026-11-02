@@ -28,6 +28,7 @@ SCHEMES = ("production", "tvdb", "tmdb", "imdb")
 LANG_TAG = re.compile(r"^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?(?:-[a-zA-Z0-9]{4,8})*$")
 EPISODE_ID = re.compile(r"^s[0-9]{2,}e[0-9]{2,}$")
 OTHER_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+SHORT_SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
 class ValidationError(Exception):
@@ -62,7 +63,9 @@ def parse_record(path, dataset):
         raise ValidationError(f"{path}: season id must be sXX")
     if dataset == "movies" and not re.fullmatch(r"movie-[0-9]{4}", ident):
         raise ValidationError(f"{path}: movie id must be movie-YYYY")
-    if dataset not in ("episodes", "seasons", "movies") and record.get("production_code") != ident:
+    if dataset == "shorts/disney-plus" and not SHORT_SLUG.fullmatch(ident):
+        raise ValidationError(f"{path}: Disney+ short id must be a lowercase title slug")
+    if dataset not in ("episodes", "seasons", "movies", "shorts/disney-plus") and record.get("production_code") != ident:
         raise ValidationError(f"{path}: non-episode id must equal production_code")
     titles = record.get("titles")
     if not isinstance(titles, dict) or not titles:
@@ -186,7 +189,7 @@ def openapi_document():
         "seasons": "Season catalogue entries, including legacy Amazon listings.",
         "movies": "Feature films, including announced releases.",
         "shorts/tracey-ullman": "Tracey Ullman shorts, keyed by production code.",
-        "shorts/disney-plus": "Disney+ shorts, keyed by production code.",
+        "shorts/disney-plus": "Disney+ shorts, keyed by stable title slug; production code optional.",
         "commercials": "Commercials, keyed by production code.",
         "specials": "Specials and other non-regular items.",
         "production": "Production code to dataset and internal ID.",

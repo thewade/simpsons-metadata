@@ -1,4 +1,4 @@
-# Wikipedia source pages
+# Metadata source pages
 
 The JSON files in `data/` are the source of truth for this API. These Wikipedia
 lists are reference pages used to check episode facts and links during periodic
@@ -58,3 +58,30 @@ lists “Les Simpson, le film” as both the French and Québec title. As checke
 has no French Wikipedia language link, and no established French or Québec title
 was found. Its `links.wikipedia_fr` is `null`; its regional titles remain omitted.
 Recheck both when the film receives a localized title or French article.
+
+## Short film sources
+
+Checked on 2026-11-01. The Tracey Ullman dataset contains 48 shorts. [The Simpsons shorts, revision
+1377993342](https://en.wikipedia.org/w/index.php?title=The_Simpsons_shorts&oldid=1377993342)
+supplies the aired titles and dates; [Wikisimpsons production order, revision
+1487273](https://simpsonswiki.com/w/index.php?title=List_of_episodes_by_production_order&oldid=1487273)
+supplies the `MG01`–`MG48` production codes and individual Wikisimpsons links.
+Wikipedia and Wikisimpsons disagree on the dates of `MG09`, `MG16`, `MG17`,
+`MG28`, and `MG29`; these records use the dates on the Wikipedia shorts list.
+The parenthesized `4W`/`5W` codes on Wikisimpsons belong to *The Tracey Ullman
+Show* episodes and are not used as the shorts' production codes.
+The two lists also use different English names for `MG10`, `MG15`, `MG19`, and
+`MG40`; the records use the titles on the Wikipedia shorts list.
+
+The Disney+ dataset contains the [nine shorts listed on Wikipedia, revision
+1374017134](https://en.wikipedia.org/w/index.php?title=The_Simpsons_Disney%2B_shorts&oldid=1374017134),
+plus four *Simpsons × Fortnite* shorts released on Disney+ in 2025:
+[Apocalypse D'oh!](https://simpsonswiki.com/wiki/Apocalypse_D%27oh%21),
+[Sugar High](https://simpsonswiki.com/wiki/Sugar_High),
+[Multiplidiocy](https://simpsonswiki.com/wiki/Multiplidiocy), and
+[The Incredible Bulk](https://simpsonswiki.com/wiki/The_Incredible_Bulk).
+The cited Disney+ list does not provide production codes for its nine films,
+and no verified codes were found for the four later shorts. They use stable
+lowercase title slugs; `production_code` is omitted. Their title, date, and
+individual article link are recorded. Theatrically premiered Maggie shorts and
+full-length Disney+ exclusive episodes are outside this dataset.

@@ -23,8 +23,8 @@ The API is static and read-only. It does not offer server-side search, filtering
 | [`/v1/episodes.json`](https://api.simpsonseh.com/v1/episodes.json) | Regular episodes, keyed by aired-order IDs such as `s01e01` |
 | [`/v1/seasons.json`](https://api.simpsonseh.com/v1/seasons.json) | Television seasons, keyed by IDs such as `s01` |
 | [`/v1/movies.json`](https://api.simpsonseh.com/v1/movies.json) | Released and announced films, keyed by IDs such as `movie-2007` |
-| [`/v1/shorts/tracey-ullman.json`](https://api.simpsonseh.com/v1/shorts/tracey-ullman.json) | Tracey Ullman shorts |
-| [`/v1/shorts/disney-plus.json`](https://api.simpsonseh.com/v1/shorts/disney-plus.json) | Disney+ shorts |
+| [`/v1/shorts/tracey-ullman.json`](https://api.simpsonseh.com/v1/shorts/tracey-ullman.json) | Tracey Ullman shorts, keyed by `MG01`–`MG48` production codes |
+| [`/v1/shorts/disney-plus.json`](https://api.simpsonseh.com/v1/shorts/disney-plus.json) | Disney+ shorts, keyed by stable title slugs |
 | [`/v1/commercials.json`](https://api.simpsonseh.com/v1/commercials.json) | Commercials |
 | [`/v1/specials.json`](https://api.simpsonseh.com/v1/specials.json) | Specials other than feature films |
 

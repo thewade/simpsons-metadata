@@ -62,7 +62,21 @@ class BuildTests(unittest.TestCase):
             production = json.loads((out / "production.json").read_text())
             self.assertEqual(production["7G08"], {"dataset": "episodes", "id": "s01e01"})
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})
+            self.assertEqual(production["MG48"], {"dataset": "shorts/tracey-ullman", "id": "MG48"})
             self.assertEqual(production["Movie1"], {"dataset": "movies", "id": "movie-2007"})
+            ullman = json.loads((out / "shorts" / "tracey-ullman.json").read_text(encoding="utf-8"))
+            self.assertEqual(set(ullman), {f"MG{number:02}" for number in range(1, 49)})
+            self.assertEqual(ullman["MG09"]["original_air_date"], "1987-09-20")
+            self.assertEqual(ullman["MG40"]["titles"]["en"], "Simpson Xmas")
+            self.assertTrue(all(record["links"]["simpsonswiki"].startswith("https://simpsonswiki.com/wiki/")
+                                for record in ullman.values()))
+            disney_shorts = json.loads((out / "shorts" / "disney-plus.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(disney_shorts), 13)
+            self.assertEqual(disney_shorts["the-force-awakens-from-its-nap"]["original_air_date"],
+                             "2021-05-04")
+            self.assertEqual(disney_shorts["apocalypse-doh"]["original_air_date"], "2025-11-01")
+            self.assertTrue(all("production_code" not in record for record in disney_shorts.values()))
+            self.assertNotIn("apocalypse-doh", production)
             self.assertEqual(json.loads((out / "commercials.json").read_text()), {})
             seasons = json.loads((out / "seasons.json").read_text())
             self.assertEqual(len(seasons), 38)
@@ -111,6 +125,18 @@ class BuildTests(unittest.TestCase):
             path.write_text(json.dumps({"id": "MG01", "titles": {"en": "Good Night"}}))
             with self.assertRaisesRegex(module.ValidationError, "production_code"):
                 module.parse_record(path, "shorts/tracey-ullman")
+
+    def test_disney_short_allows_slug_without_production_code(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "sample-short.json"
+            path.write_text(json.dumps({"id": "sample-short", "titles": {"en": "Sample Short"},
+                                        "original_air_date": "2025-11-01"}), encoding="utf-8")
+            self.assertNotIn("production_code", module.parse_record(path, "shorts/disney-plus"))
+            bad = Path(temp) / "SampleShort.json"
+            bad.write_text(json.dumps({"id": "SampleShort", "titles": {"en": "Sample"}}),
+                           encoding="utf-8")
+            with self.assertRaisesRegex(module.ValidationError, "lowercase title slug"):
+                module.parse_record(bad, "shorts/disney-plus")
 
     def test_rejects_duplicate_json_keys(self):
         with tempfile.TemporaryDirectory() as temp:

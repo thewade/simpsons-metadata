@@ -4,5 +4,9 @@
     "en": "Good Night"
   },
   "production_code": "MG01",
-  "original_air_date": "1987-04-19"
+  "original_air_date": "1987-04-19",
+  "links": {
+    "simpsonswiki": "https://simpsonswiki.com/wiki/Good_Night",
+    "wikipedia": "https://en.wikipedia.org/wiki/Good_Night_(The_Simpsons)"
+  }
 }
