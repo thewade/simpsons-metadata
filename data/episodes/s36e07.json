@@ -2,13 +2,15 @@
   "id": "s36e07",
   "titles": {
     "en": "Treehouse of Horror Presents: Simpsons Wicked This Way Comes",
-    "fr-FR": "Le Simpson Horror Show: Quelque chose de maléfique approche"
+    "fr-FR": "Le Simpson Horror Show : Quelque chose de maléfique approche",
+    "fr-CA": "Le spécial d'Halloween présente La Foire des Simpson"
   },
   "production_code": "35ABF14",
   "original_air_date": "2024-11-24",
   "overall_number": 775,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_Presents:_Simpsons_Wicked_This_Way_Comes"
+    "wikipedia": "https://en.wikipedia.org/wiki/Treehouse_of_Horror_Presents:_Simpsons_Wicked_This_Way_Comes",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Le_Simpson_Horror_Show_:_Quelque_chose_de_mal%C3%A9fique_approche"
   },
   "streaming": {
     "disney_plus": {

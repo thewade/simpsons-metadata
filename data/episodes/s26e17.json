@@ -2,14 +2,15 @@
   "id": "s26e17",
   "titles": {
     "en": "Waiting for Duffman",
-    "fr-FR": "Le Nouveau Duffman[censure 2]",
+    "fr-FR": "Le Nouveau Duffman",
     "fr-CA": "En attendant Duffman"
   },
   "production_code": "TABF10",
   "original_air_date": "2015-03-15",
   "overall_number": 569,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Waiting_for_Duffman"
+    "wikipedia": "https://en.wikipedia.org/wiki/Waiting_for_Duffman",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Le_Nouveau_Duffman"
   },
   "streaming": {
     "disney_plus": {

@@ -1,13 +1,15 @@
 {
   "id": "s37e05",
   "titles": {
-    "en": "Bad Boys...For Life?"
+    "en": "Bad Boys...For Life?",
+    "fr-FR": "Mauvais Garçon pour la vie"
   },
   "production_code": "36ABF17",
   "original_air_date": "2025-11-02",
   "overall_number": 795,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Bad_Boys..._for_Life%3F"
+    "wikipedia": "https://en.wikipedia.org/wiki/Bad_Boys..._for_Life%3F",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Mauvais_Gar%C3%A7on_pour_la_vie"
   },
   "streaming": {
     "disney_plus": {

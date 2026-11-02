@@ -1,13 +1,15 @@
 {
   "id": "s37e12",
   "titles": {
-    "en": "¡The Fall Guy-Yi-Yi!"
+    "en": "¡The Fall Guy-Yi-Yi!",
+    "fr-FR": "L'Homme qui tombe à pique"
   },
   "production_code": "37ABF06",
   "original_air_date": "2025-12-28",
   "overall_number": 802,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/¡The_Fall_Guy-Yi-Yi!"
+    "wikipedia": "https://en.wikipedia.org/wiki/¡The_Fall_Guy-Yi-Yi!",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/L'Homme_qui_tombe_%C3%A0_pique"
   },
   "streaming": {
     "disney_plus": {

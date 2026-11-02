@@ -2,13 +2,15 @@
   "id": "s36e02",
   "titles": {
     "en": "The Yellow Lotus",
-    "fr-FR": "Le Lotus jaune"
+    "fr-FR": "Le Lotus jaune",
+    "fr-CA": "Le Lotus jaune"
   },
   "production_code": "35ABF08",
   "original_air_date": "2024-10-06",
   "overall_number": 770,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/The_Yellow_Lotus"
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Yellow_Lotus",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Le_Lotus_jaune"
   },
   "streaming": {
     "disney_plus": {

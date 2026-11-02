@@ -2,14 +2,15 @@
   "id": "s03e01",
   "titles": {
     "en": "Stark Raving Dad",
-    "fr-FR": "Mon pote Michael Jackson[censure 1]",
+    "fr-FR": "Mon pote Michael Jackson",
     "fr-CA": "Lobot-Homer"
   },
   "production_code": "7F24",
   "original_air_date": "1991-09-19",
   "overall_number": 36,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Stark_Raving_Dad"
+    "wikipedia": "https://en.wikipedia.org/wiki/Stark_Raving_Dad",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Mon_pote_Michael_Jackson"
   },
   "legacy": {
     "type": "episode",

@@ -2,13 +2,15 @@
   "id": "s36e08",
   "titles": {
     "en": "Convenience Airways",
-    "fr-FR": "Air Confort"
+    "fr-FR": "Air Confort",
+    "fr-CA": "Air Commodité"
   },
   "production_code": "36ABF01",
   "original_air_date": "2024-12-08",
   "overall_number": 776,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Convenience_Airways"
+    "wikipedia": "https://en.wikipedia.org/wiki/Convenience_Airways",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Air_Confort"
   },
   "streaming": {
     "disney_plus": {

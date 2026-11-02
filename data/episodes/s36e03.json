@@ -2,13 +2,15 @@
   "id": "s36e03",
   "titles": {
     "en": "Desperately Seeking Lisa",
-    "fr-FR": "Recherche Lisa désespérément"
+    "fr-FR": "Recherche Lisa désespérément",
+    "fr-CA": "Recherche Lisa désespérément"
   },
   "production_code": "35ABF18",
   "original_air_date": "2024-10-20",
   "overall_number": 771,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Desperately_Seeking_Lisa"
+    "wikipedia": "https://en.wikipedia.org/wiki/Desperately_Seeking_Lisa",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Recherche_Lisa_d%C3%A9sesp%C3%A9r%C3%A9ment"
   },
   "streaming": {
     "disney_plus": {

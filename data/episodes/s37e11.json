@@ -1,13 +1,15 @@
 {
   "id": "s37e11",
   "titles": {
-    "en": "Parahormonal Activity"
+    "en": "Parahormonal Activity",
+    "fr-FR": "Activité parahormonale"
   },
   "production_code": "37ABF03",
   "original_air_date": "2025-12-14",
   "overall_number": 801,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Parahormonal_Activity"
+    "wikipedia": "https://en.wikipedia.org/wiki/Parahormonal_Activity",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Activit%C3%A9_parahormonale"
   },
   "streaming": {
     "disney_plus": {

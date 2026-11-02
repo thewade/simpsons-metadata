@@ -1,13 +1,15 @@
 {
   "id": "s37e06",
   "titles": {
-    "en": "Bart 'N' Frink"
+    "en": "Bart 'N' Frink",
+    "fr-FR": "Donjons et Dragon de Komodo"
   },
   "production_code": "36ABF16",
   "original_air_date": "2025-11-09",
   "overall_number": 796,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Bart_'N'_Frink"
+    "wikipedia": "https://en.wikipedia.org/wiki/Bart_'N'_Frink",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Donjons_et_Dragon_de_Komodo"
   },
   "streaming": {
     "disney_plus": {

@@ -1,13 +1,15 @@
 {
   "id": "s37e10",
   "titles": {
-    "en": "Guess Who's Coming to Skinner"
+    "en": "Guess Who's Coming to Skinner",
+    "fr-FR": "Devine qui vient chez Skinner"
   },
   "production_code": "37ABF04",
   "original_air_date": "2025-12-07",
   "overall_number": 800,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Guess_Who's_Coming_to_Skinner"
+    "wikipedia": "https://en.wikipedia.org/wiki/Guess_Who's_Coming_to_Skinner",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Devine_qui_vient_chez_Skinner"
   },
   "streaming": {
     "disney_plus": {

@@ -1,13 +1,15 @@
 {
   "id": "s37e08",
   "titles": {
-    "en": "The Day of the Jack-up"
+    "en": "The Day of the Jack-up",
+    "fr-FR": "L'Emporte-places"
   },
   "production_code": "37ABF01",
   "original_air_date": "2025-11-23",
   "overall_number": 798,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/The_Day_of_the_Jack-up"
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Day_of_the_Jack-up",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/L'Emporte-places"
   },
   "streaming": {
     "disney_plus": {

@@ -40,4 +40,4 @@ The [episode guide](https://api.simpsonseh.com/episodes/) groups numbered episod
 
 Original metadata contributions are licensed [CC BY 4.0](LICENSE-DATA.md); code is [MIT licensed](LICENSE). Credit **Simpsons Metadata contributors** and link to [this repository](https://github.com/thewade/simpsons-metadata) when using the metadata. This project is unaffiliated with the rights holders of *The Simpsons*.
 
-The JSON records in [`data/`](data/) are the source of truth. Corrections and additions are welcome through pull requests; see [CONTRIBUTING.md](CONTRIBUTING.md). Maintainer details are in [DESIGN.md](DESIGN.md) and [DEPLOYMENT.md](DEPLOYMENT.md).
+The JSON records in [`data/`](data/) are the source of truth. Corrections and additions are welcome through pull requests; see [CONTRIBUTING.md](CONTRIBUTING.md). Maintainer details are in [DESIGN.md](DESIGN.md), [DEPLOYMENT.md](DEPLOYMENT.md), and the [episode source notes](SOURCES.md).

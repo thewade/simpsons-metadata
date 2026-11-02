@@ -281,7 +281,8 @@ def render_episode_guide(catalog):
                         if site == "wikipedia":
                             links.append('<span class="no-link">No standalone English Wikipedia article</span>')
                     else:
-                        name = "Wikipedia" if site == "wikipedia" else site.replace("_", " ").title()
+                        name = {"wikipedia": "Wikipedia (English)",
+                                "wikipedia_fr": "Wikipedia (French)"}.get(site, site.replace("_", " ").title())
                         links.append(f'<a href="{h(url)}" target="_blank" rel="noopener noreferrer">{h(name)} ↗</a>')
                 disney = record.get("streaming", {}).get("disney_plus", {})
                 content_id = disney.get("content_id")

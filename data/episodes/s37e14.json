@@ -1,13 +1,15 @@
 {
   "id": "s37e14",
   "titles": {
-    "en": "Irrational Treasure"
+    "en": "Irrational Treasure",
+    "fr-FR": "Le Trésor de Pitit Papa Noël"
   },
   "production_code": "37ABF08",
   "original_air_date": "2026-02-15",
   "overall_number": 804,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Irrational_Treasure"
+    "wikipedia": "https://en.wikipedia.org/wiki/Irrational_Treasure",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Le_Tr%C3%A9sor_de_Pitit_Papa_No%C3%ABl"
   },
   "streaming": {
     "disney_plus": {

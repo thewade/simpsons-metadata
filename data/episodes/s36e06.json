@@ -2,13 +2,15 @@
   "id": "s36e06",
   "titles": {
     "en": "Women in Shorts",
-    "fr-FR": "Courts Métrages au féminin"
+    "fr-FR": "Courts Métrages au féminin",
+    "fr-CA": "Brèves de femmes"
   },
   "production_code": "35ABF17",
   "original_air_date": "2024-11-10",
   "overall_number": 774,
   "links": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Women_in_Shorts"
+    "wikipedia": "https://en.wikipedia.org/wiki/Women_in_Shorts",
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Courts_M%C3%A9trages_au_f%C3%A9minin"
   },
   "streaming": {
     "disney_plus": {
