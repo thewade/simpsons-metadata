@@ -47,8 +47,10 @@ downloaded on 2026-11-01. The sync matched all 801 existing numbered episode
 records and added 801 French episode article links and 38 French season article
 links. It filled 14 `fr-FR` and seven
 `fr-CA` titles and corrected four existing `fr-FR` titles. The three production
-code disagreements in `s24e19`, `s24e20`, and `s37e15` were left unchanged for
-separate review.
+code disagreements in `s24e19`, `s24e20`, and `s37e15` were initially left
+for separate review. The season 24 pair was later corrected after the
+[Simpsons Archive season 24 guide](https://www.simpsonsarchive.com/episodeguide/season24.html)
+confirmed `RABF13` for `s24e19` and `RABF12` for `s24e20`.
 
 For a later sync, save the **rendered HTML** of the French list, review the dry
 run, then apply and validate:
@@ -138,6 +140,72 @@ only the first part. Simpsons Park has separate pages for both parts, allowing
 the second parts to be matched by production code and episode number. Where the
 two sources disagree, the source-specific dates and links above document the
 choice. The MediaWiki importer will continue to report those discrepancies.
+
+### French Wikipedia production code audit
+
+On 2026-11-02, the 17 `production_code_disagreement` entries in the cached
+MediaWiki report were compared with the [Simpsons Park episode guide](https://www.simpsonspark.com/guide-des-episodes)
+and the [Wikisimpsons episode list](https://simpsonswiki.com/wiki/List_of_episodes).
+Both guides identify each episode by title and overall number and agree with
+the dataset's production code in every case. The French Wikipedia value is
+different for 16 episodes; its code field is empty for `s37e07`. No dataset
+production codes were changed. A later sync should recheck these source fields
+in case the French Wikipedia articles are corrected.
+
+| Episode | Dataset, Simpsons Park, Wikisimpsons | French Wikipedia infobox |
+| --- | --- | --- |
+| `s06e03` | `2F33` | `2F23` |
+| `s12e17` | `CABF13` | `CABF14` |
+| `s14e20` | `EABF15` | `EABF10` |
+| `s15e13` | `FABF09` | `FABF08` |
+| `s17e18` | `HABF11` | `HABF10` |
+| `s19e07` | `JABF17` | `JABF22` |
+| `s19e13` | `KABF06` | `KABF07` |
+| `s20e15` | `LABF05` | `LABF11` |
+| `s21e07` | `LABF19` | `LABF18` |
+| `s21e12` | `MABF05` | `MABF03` |
+| `s21e21` | `MABF13` | `MABF12` |
+| `s23e19` | `PABF12` | `PABF11` |
+| `s24e01` | `PABF21` | `PABF22` |
+| `s29e19` | `XABF12` | `XABF09` |
+| `s35e10` | `35ABF01` | `35ABF05` |
+| `s36e10` | `35ABF21` | `36ABF21` |
+| `s37e07` | `36ABF18` | missing |
+
+### English US air date audit
+
+On 2026-11-02, the 19 `usa_date_disagreement` entries in the MediaWiki report
+were checked against the English Wikipedia [seasons 1–20](https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes_%28seasons_1%E2%80%9320%29)
+and [season 21 onward](https://en.wikipedia.org/wiki/List_of_The_Simpsons_episodes_%28season_21%E2%80%93present%29)
+lists, the [Wikisimpsons episode list](https://simpsonswiki.com/wiki/List_of_episodes),
+and the [Simpsons Archive season guides](https://www.simpsonsarchive.com/episodeguide/).
+Simpsons Archive and Wikisimpsons agree with the dataset's US date for all 19.
+English Wikipedia also agrees for the 17 standalone entries. It combines the
+two-part stories `s31e19`–`s31e20` and `s33e06`–`s33e07` into one row using
+the first part's date; Simpsons Archive and Wikisimpsons list the second parts
+separately. No English release dates were changed.
+
+| Episode | Dataset and English sources (US) | French Wikipedia infobox (USA) |
+| --- | --- | --- |
+| `s03e04` | 1991-10-10 | 1991-10-31 |
+| `s03e07` | 1991-10-31 | 1991-09-07 |
+| `s03e21` | 1992-04-09 | 1992-04-08 |
+| `s04e01` | 1992-09-24 | 1992-09-29 |
+| `s04e20` | 1993-04-29 | 1993-04-24 |
+| `s05e01` | 1993-09-30 | 1993-10-07 |
+| `s09e21` | 1998-04-19 | 1998-04-18 |
+| `s10e19` | 1999-04-11 | 1999-04-25 |
+| `s11e08` | 1999-11-28 | 1999-11-21 |
+| `s12e06` | 2000-12-03 | 2000-11-26 |
+| `s12e15` | 2001-03-04 | 2001-03-11 |
+| `s12e16` | 2001-03-11 | 2001-04-01 |
+| `s14e19` | 2003-05-04 | 2003-04-27 |
+| `s15e17` | 2004-04-18 | 2004-05-18 |
+| `s17e21` | 2006-05-14 | 2006-05-21 |
+| `s21e09` | 2010-01-03 | 2010-01-01 |
+| `s25e11` | 2014-01-26 | 2014-01-27 |
+| `s31e20` | 2020-05-03 | 2020-04-26 (first part) |
+| `s33e07` | 2021-11-14 | 2021-11-07 (first part) |
 
 ### Québec premiere networks
 

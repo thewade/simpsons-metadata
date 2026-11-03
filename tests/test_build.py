@@ -185,6 +185,8 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(production["MG01"], {"dataset": "shorts/tracey-ullman", "id": "MG01"})
             self.assertEqual(production["MG48"], {"dataset": "shorts/tracey-ullman", "id": "MG48"})
             self.assertEqual(production["36ABF21"], {"dataset": "episodes", "id": "s37e17"})
+            self.assertEqual(production["RABF13"], {"dataset": "episodes", "id": "s24e19"})
+            self.assertEqual(production["RABF12"], {"dataset": "episodes", "id": "s24e20"})
             self.assertEqual(production["Movie1"], {"dataset": "movies", "id": "movie-2007"})
             ullman = json.loads((out / "shorts" / "tracey-ullman.json").read_text(encoding="utf-8"))
             self.assertEqual(set(ullman), {f"MG{number:02}" for number in range(1, 49)})
