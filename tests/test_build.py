@@ -103,10 +103,36 @@ class BuildTests(unittest.TestCase):
             self.assertTrue(all(record["original_air_date"] ==
                                 min(release["date"] for release in record["releases"] if "date" in release)
                                 for record in episodes.values()))
-            self.assertEqual(episodes["s20e14"]["releases"], [
+            self.assertTrue(all(any(release["language"] == "fr-CA" and release.get("country") == "CA"
+                                    for release in record["releases"])
+                                for record in episodes.values() if int(record["id"][1:3]) < 36))
+            self.assertIn({"language": "fr-CA", "country": "CA", "network": "Super Écran"},
+                          episodes["s01e01"]["releases"])
+            self.assertIn({"language": "fr-CA", "country": "CA", "network": "TQS"},
+                          episodes["s09e01"]["releases"])
+            self.assertIn({"language": "fr-CA", "country": "CA", "network": "Télétoon"},
+                          episodes["s13e01"]["releases"])
+            disney_exclusive = {"s36e10", "s36e11", "s36e14", "s36e18",
+                                "s37e16", "s37e17", "s37e18", "s37e19"}
+            for episode in episodes.values():
+                us_releases = [item for item in episode["releases"]
+                               if item["language"] == "en" and item.get("country") == "US"]
+                self.assertEqual(len(us_releases), 1, episode["id"])
+                self.assertEqual(us_releases[0]["network"],
+                                 "Disney+" if episode["id"] in disney_exclusive else "FOX")
+            self.assertEqual(episodes["s20e14"]["releases"][:2], [
                 {"language": "en", "date": "2009-03-17", "country": "GB", "network": "Sky1"},
                 {"language": "en", "date": "2009-03-22", "country": "US", "network": "FOX"},
             ])
+            self.assertEqual(episodes["s32e04"]["original_air_date"], "2020-10-18")
+            self.assertIn({"language": "en", "date": "2020-10-18", "country": "CA",
+                           "network": "Citytv"}, episodes["s32e04"]["releases"])
+            self.assertTrue(any(item["language"] == "fr-FR" and item["country"] == "FR"
+                                for item in episodes["s20e14"]["releases"]))
+            self.assertIn({"language": "fr-CA", "date": "2015-11-26", "country": "CA",
+                           "network": "Télétoon"}, episodes["s26e13"]["releases"])
+            self.assertIn({"language": "fr-CA", "date": "2026-10-21", "country": "CA",
+                           "network": "Noovo"}, episodes["s36e07"]["releases"])
             self.assertEqual(episodes["s20e09"]["original_aspect_ratio"], "4:3")
             self.assertEqual(episodes["s20e10"]["original_aspect_ratio"], "16:9")
             self.assertEqual(sum("original_aspect_ratio" in record for record in episodes.values()), len(episodes))

@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1993-01-14"
+      "date": "1993-01-14",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1993-12-20",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 71,

@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2001-01-07"
+      "date": "2001-01-07",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2001-09-20",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 257,

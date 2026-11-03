@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2003-05-04"
+      "date": "2003-05-04",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2003-12-22",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 310,

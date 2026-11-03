@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2007-09-30"
+      "date": "2007-09-30",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2008-09-02",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2008-09-12",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 402,

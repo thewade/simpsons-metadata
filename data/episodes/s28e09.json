@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2016-12-04"
+      "date": "2016-12-04",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2019-01-05",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2017-12-14",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 605,

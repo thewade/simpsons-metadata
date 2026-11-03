@@ -9,7 +9,14 @@
   "releases": [
     {
       "language": "en",
-      "date": "2024-12-22"
+      "date": "2024-12-22",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2025-02-21",
+      "country": "FR"
     }
   ],
   "overall_number": 780,

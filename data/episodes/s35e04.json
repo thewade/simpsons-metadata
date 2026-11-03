@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2023-10-29"
+      "date": "2023-10-29",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2024-07-10",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2025-02-13",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 754,

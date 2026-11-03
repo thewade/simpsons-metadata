@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1998-03-01"
+      "date": "1998-03-01",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1998-12-12",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 194,

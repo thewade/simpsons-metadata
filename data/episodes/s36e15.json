@@ -9,7 +9,14 @@
   "releases": [
     {
       "language": "en",
-      "date": "2025-03-30"
+      "date": "2025-03-30",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2025-07-09",
+      "country": "FR"
     }
   ],
   "overall_number": 783,

@@ -10,7 +10,14 @@
   "releases": [
     {
       "language": "en",
-      "date": "2025-02-12"
+      "date": "2025-02-12",
+      "country": "US",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2025-02-28",
+      "country": "FR"
     }
   ],
   "overall_number": 782,

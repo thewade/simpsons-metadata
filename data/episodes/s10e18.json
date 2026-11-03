@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1999-04-04"
+      "date": "1999-04-04",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2000-01-08",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 221,

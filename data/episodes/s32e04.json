@@ -10,7 +10,27 @@
   "releases": [
     {
       "language": "en",
-      "date": "2020-11-01"
+      "date": "2020-10-18",
+      "country": "CA",
+      "network": "Citytv"
+    },
+    {
+      "language": "en",
+      "date": "2020-11-01",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2021-10-20",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2022-05-12",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 688,

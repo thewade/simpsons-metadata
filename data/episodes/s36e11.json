@@ -10,13 +10,22 @@
   "releases": [
     {
       "language": "en",
-      "date": "2024-12-17"
+      "date": "2024-12-17",
+      "country": "US",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2024-12-17",
+      "country": "FR",
+      "network": "Disney+"
     }
   ],
   "overall_number": 779,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/O_C%27mon_All_Ye_Faithful",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Un_No%C3%ABl_sous_hypnose"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Un_No%C3%ABl_sous_hypnose",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/un-nol-sous-hypnose-partie-2"
   },
   "streaming": {
     "disney_plus": {

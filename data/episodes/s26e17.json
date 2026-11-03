@@ -10,7 +10,21 @@
   "releases": [
     {
       "language": "en",
-      "date": "2015-03-15"
+      "date": "2015-03-15",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2020-04-07",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2016-01-14",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 569,

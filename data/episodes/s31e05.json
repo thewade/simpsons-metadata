@@ -10,7 +10,21 @@
   "releases": [
     {
       "language": "en",
-      "date": "2019-11-03"
+      "date": "2019-11-03",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2020-10-02",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2020-11-26",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 667,

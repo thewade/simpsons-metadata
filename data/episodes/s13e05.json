@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2001-12-09"
+      "date": "2001-12-09",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2002-10-09",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 274,

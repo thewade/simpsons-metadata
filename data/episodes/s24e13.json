@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2013-02-17"
+      "date": "2013-02-17",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2018-02-10",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2013-11-28",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 521,

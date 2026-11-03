@@ -10,13 +10,26 @@
   "releases": [
     {
       "language": "en",
-      "date": "2003-03-16"
+      "date": "2003-03-16",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2003-12-27",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 306,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/C.E.D'oh",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Homer_patron_de_la_centrale"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Homer_patron_de_la_centrale",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/homer-patron-de-la-centrale"
   },
   "streaming": {
     "disney_plus": {

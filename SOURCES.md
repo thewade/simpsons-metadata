@@ -72,6 +72,132 @@ updates only known French titles and article links.
 It reports production code disagreements without changing those fields. Review
 the resulting diff and update the revision and date above when syncing again.
 
+## Refresh regional episode release dates
+
+`scripts/sync_wikipedia_fr_releases.py` reads each episode's known
+`links.wikipedia_fr` article through the [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Revisions)
+and extracts `USA`, `France`, and `Québec` dates from its episode infobox. It
+records the article revision ID, proposed changes, and any identity or date
+disagreement in `dist/wiki-fr-release-report.json`. API responses are cached in
+`dist/wiki-fr-release-cache/`. Both paths are ignored by Git.
+
+```sh
+python scripts/sync_wikipedia_fr_releases.py --refresh --as-of 2026-11-02
+# Review dist/wiki-fr-release-report.json before merging:
+python scripts/sync_wikipedia_fr_releases.py --offline --as-of 2026-11-02 --apply
+python -m unittest discover -s tests -v
+python scripts/build.py
+```
+
+Replace `--as-of` with the date of a later sync, or omit it to use the local
+current date. The cutoff keeps announced future broadcasts out of actual
+`releases`. A cached run (`--offline`) reproduces the reviewed proposal without
+another network request; `--refresh` downloads new revisions. The tool verifies
+season, episode number, production code, and existing English date where
+available. If the article's USA date disagrees but its identity fields match,
+the tool uses its regional dates while preserving the existing English entry.
+If identity is uncertain, or a regional date precedes the recorded original
+release, it leaves that date for manual review in the report. A France entry
+with separate Disney+ and W9 dates keeps both releases and their networks.
+
+On 2026-11-02, the report covered 803 distinct articles for 809 episodes. It
+merged dates into 802 records, including 810 France and 346 Québec release
+entries, and identified the US country for 786 existing English releases. Seven
+records had unresolved article identity/date disagreements. Two France dates
+were earlier than the existing original release, and one Québec broadcast was
+still in the future; those dates were not merged. Review the report again when
+refreshing the sources.
+
+### Simpsons Park cross-check
+
+The [Simpsons Park episode guide](https://www.simpsonspark.com/guide-des-episodes)
+and its individual episode pages provide a secondary source for dates. On
+2026-11-02, their season/episode numbers, production codes, and flag-marked
+broadcast dates were checked for the seven records that the MediaWiki importer
+could not identify confidently, and for the two France dates that preceded the
+original release. The nine records have a direct `links.simpsonspark` URL.
+The site distinguishes US, France, Québec, Belgium, and Disney+ dates; a
+Belgium date was not treated as a France release. Its Disney+ dates are recorded
+as France releases with `network: "Disney+"` when the linked French episode page
+shows that platform. No Québec date was inferred from a French-language title.
+
+| Episode | Added regional dates from its Simpsons Park page |
+| --- | --- |
+| [s07e01](https://www.simpsonspark.com/episodes/qui_a_tire_sur_mr_burns_partie_2) | France 1996-01-27 |
+| [s12e15](https://www.simpsonspark.com/episodes/homer-fait-la-grve-de-la-faim) | France 2001-10-11 |
+| [s12e16](https://www.simpsonspark.com/episodes/la-brute-et-les-surdous) | France 2001-10-15 |
+| [s14e15](https://www.simpsonspark.com/episodes/homer-patron-de-la-centrale) | France 2003-12-27 |
+| [s28e13](https://www.simpsonspark.com/episodes/phatsby-le-magnifique-2-2) | France 2019-01-12; Québec 2018-01-18 |
+| [s31e20](https://www.simpsonspark.com/episodes/prtres-en-guerre-deuxime-partie) | France Disney+ 2020-10-02; Québec 2021-03-11 |
+| [s33e07](https://www.simpsonspark.com/episodes/a-serious-flanders%C2%A0-parts-2) | France Disney+ 2022-10-05; Québec 2022-11-17 |
+| [s36e06](https://www.simpsonspark.com/episodes/courts-mtrages-au-fminin) | France Disney+ 2025-01-24 |
+| [s36e11](https://www.simpsonspark.com/episodes/un-nol-sous-hypnose-partie-2) | France Disney+ 2024-12-17 |
+
+The French Wikipedia infoboxes for the multi-part episodes sometimes describe
+only the first part. Simpsons Park has separate pages for both parts, allowing
+the second parts to be matched by production code and episode number. Where the
+two sources disagree, the source-specific dates and links above document the
+choice. The MediaWiki importer will continue to report those discrepancies.
+
+### Québec premiere networks
+
+The maintainer supplied a season-based network mapping on 2026-11-02. Existing
+dated `fr-CA` releases were checked against the corresponding broadcast period
+before adding `network`:
+
+| Seasons | Network | Applied to current releases |
+| --- | --- | --- |
+| 1 | Super Écran from 1991-02-15 | 13 undated releases |
+| 2–12 | TQS | 256 undated releases |
+| 13–35 | Télétoon, September 2004–September 2025 | 341 dated and 158 undated releases |
+| 36 onward | Noovo from 2026-09-09 | Eight dated releases in season 36 |
+
+The season 36 change is supported by [Bell Media's 2026 announcement](https://www.bellmedia.ca/fr/salle-de-presse/presse/bell-media-et-disney-annoncent-un-nouvel-accord-pour-la-diffusion-et-le-doublage-des-simpson-au-quebec-2/).
+[Corus's autumn 2024 programming announcement](https://assets.corusent.com/wp-content/uploads/2024/08/Communique_Lancement_CorusFr_A24.pdf)
+lists season 35 among Télétoon's new programming. The older [French Wikipedia
+series history](https://fr.wikipedia.org/wiki/Les_Simpson) describes the
+Super Écran, TQS, and Télétoon transitions. A [2004 Télétoon press release](https://www.simpsonspark.com/images/news/teletoon_simpson.pdf)
+explicitly announces its season 13 Québec premiere, and [Simpsons Park's
+broadcast history](https://www.simpsonspark.com/dossiers/pays) says TQS funded
+the dub through season 12. These network values are inferred
+from the season and date, rather than from an individual episode listing; an
+episode-specific source takes precedence if a later check finds an exception.
+Three existing `Télétoon (Canada)` labels were normalized to `Télétoon`.
+
+The maintainer also confirmed on 2026-11-02 that every main-series episode
+before season 36 had a Québec French dub. For 427 episodes in seasons 1–35
+without a dated Québec release, an undated `{"language": "fr-CA", "country":
+"CA"}` entry records that fact. Its `network` now follows the season mapping
+above, while its premiere date remains unknown. Existing dated Québec entries
+and their networks were preserved. The undated entries can be completed when
+episode-level premiere evidence is found.
+
+### US premiere networks
+
+The maintainer confirmed that numbered episodes premiered on FOX in the US,
+except the Disney+ exclusive episodes. The [FOX series page](https://www.fox.com/the-simpsons/)
+identifies the broadcaster, while the [Disney+ exclusive episode
+list](https://simpsonswiki.com/wiki/Disney%2B_exclusive_episodes) identifies the
+eight exclusive numbered records by production code: `35ABF19`–`35ABF22` and
+`36ABF19`–`36ABF22`. These are `s36e10`, `s36e11`, `s36e14`, `s36e18`, and
+`s37e16`–`s37e19`. Their `en` US release entries have `network: "Disney+"`;
+the other 801 numbered episodes' US entries have `network: "FOX"`. The 22
+English entries whose country was still omitted were identified as US
+premieres from this episode classification. The separate GB/Sky1 release in
+`s20e14` remains alongside its later US/FOX release.
+The [Wikisimpsons broadcast-order list](https://simpsonswiki.com/wiki/List_of_episodes)
+was cross-checked on 2026-11-02: its Disney+ sections correspond to those same
+eight records. It also lists four later season 38 broadcasts that are not yet
+in this dataset; none is marked as a Disney+ premiere.
+
+The [season 32 episode list](https://fr.wikipedia.org/wiki/Saison_32_des_Simpson)
+also records a Canadian broadcast of `s32e04` on 2020-10-18 before its US
+broadcast on 2020-11-01. The maintainer identified Citytv as the Canadian
+network; a [contemporaneous episode reminder](https://tstoaddicts.com/2020/10/31/episode-reminder-treehouse-of-horror-xxxi-season-32-episode-4-2/)
+independently notes the earlier Citytv airing. Its existing French releases
+remain in the dataset, and the API's derived `original_air_date` is now
+2020-10-18.
+
 ## Film articles
 
 The 2007 film's [French article](https://fr.wikipedia.org/wiki/Les_Simpson%2C_le_film)

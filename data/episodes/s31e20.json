@@ -10,13 +10,28 @@
   "releases": [
     {
       "language": "en",
-      "date": "2020-05-03"
+      "date": "2020-05-03",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2020-10-02",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2021-03-11",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 682,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Warrin'_Priests",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Pr%C3%AAtres_en_guerre"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Pr%C3%AAtres_en_guerre",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/prtres-en-guerre-deuxime-partie"
   },
   "streaming": {
     "disney_plus": {

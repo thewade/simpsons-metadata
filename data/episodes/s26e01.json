@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2014-09-28"
+      "date": "2014-09-28",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2018-04-21",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2015-09-03",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 553,

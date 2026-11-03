@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1990-10-25"
+      "date": "1990-10-25",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1991-03-30",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 16,

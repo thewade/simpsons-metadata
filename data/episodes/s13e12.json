@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2002-02-24"
+      "date": "2002-02-24",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2002-11-18",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 281,

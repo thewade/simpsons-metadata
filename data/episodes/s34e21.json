@@ -10,7 +10,21 @@
   "releases": [
     {
       "language": "en",
-      "date": "2023-05-14"
+      "date": "2023-05-14",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2023-07-12",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2024-03-21",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 749,

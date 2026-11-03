@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1990-01-21"
+      "date": "1990-01-21",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1990-12-29",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Super Écran"
     }
   ],
   "overall_number": 3,

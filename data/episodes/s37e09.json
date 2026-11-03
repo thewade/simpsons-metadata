@@ -9,7 +9,9 @@
   "releases": [
     {
       "language": "en",
-      "date": "2025-11-30"
+      "date": "2025-11-30",
+      "country": "US",
+      "network": "FOX"
     }
   ],
   "overall_number": 799,

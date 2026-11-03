@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2009-03-01"
+      "date": "2009-03-01",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2009-11-03",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 431,

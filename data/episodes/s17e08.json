@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2005-12-11"
+      "date": "2005-12-11",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2006-10-21",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 364,

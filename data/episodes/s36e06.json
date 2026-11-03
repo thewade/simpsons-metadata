@@ -10,13 +10,28 @@
   "releases": [
     {
       "language": "en",
-      "date": "2024-11-10"
+      "date": "2024-11-10",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2026-10-14",
+      "country": "CA",
+      "network": "Noovo"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2025-01-24",
+      "country": "FR",
+      "network": "Disney+"
     }
   ],
   "overall_number": 774,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/Women_in_Shorts",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Courts_M%C3%A9trages_au_f%C3%A9minin"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Courts_M%C3%A9trages_au_f%C3%A9minin",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/courts-mtrages-au-fminin"
   },
   "streaming": {
     "disney_plus": {

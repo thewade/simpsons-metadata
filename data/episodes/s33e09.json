@@ -10,7 +10,21 @@
   "releases": [
     {
       "language": "en",
-      "date": "2021-11-28"
+      "date": "2021-11-28",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2022-10-05",
+      "country": "FR",
+      "network": "Disney+"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2022-12-01",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 715,

@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "2000-02-13"
+      "date": "2000-02-13",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2000-10-10",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 240,

@@ -10,14 +10,27 @@
   "releases": [
     {
       "language": "en",
-      "date": "1995-09-17"
+      "date": "1995-09-17",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1996-01-27",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 129,
   "links": {
     "simpsons_archive": "https://www.simpsonsarchive.com/episodes/2F20.html",
     "wikipedia": "https://en.wikipedia.org/wiki/Who_Shot_Mr._Burns%3F#Part_Two",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Qui_a_tir%C3%A9_sur_M._Burns_%3F"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Qui_a_tir%C3%A9_sur_M._Burns_%3F",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/qui_a_tire_sur_mr_burns_partie_2"
   },
   "streaming": {
     "disney_plus": {

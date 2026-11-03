@@ -10,13 +10,27 @@
   "releases": [
     {
       "language": "en",
-      "date": "2017-01-15"
+      "date": "2017-01-15",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2019-01-12",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2018-01-18",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 609,
   "links": {
     "wikipedia": "https://en.wikipedia.org/wiki/The_Great_Phatsby",
-    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Phatsby_le_Magnifique"
+    "wikipedia_fr": "https://fr.wikipedia.org/wiki/Phatsby_le_Magnifique",
+    "simpsonspark": "https://www.simpsonspark.com/episodes/phatsby-le-magnifique-2-2"
   },
   "streaming": {
     "disney_plus": {

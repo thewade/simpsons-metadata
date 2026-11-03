@@ -10,7 +10,19 @@
   "releases": [
     {
       "language": "en",
-      "date": "1994-12-04"
+      "date": "1994-12-04",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "1995-10-14",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "country": "CA",
+      "network": "TQS"
     }
   ],
   "overall_number": 113,

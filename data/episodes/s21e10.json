@@ -10,7 +10,20 @@
   "releases": [
     {
       "language": "en",
-      "date": "2010-01-10"
+      "date": "2010-01-10",
+      "country": "US",
+      "network": "FOX"
+    },
+    {
+      "language": "fr-FR",
+      "date": "2010-11-21",
+      "country": "FR"
+    },
+    {
+      "language": "fr-CA",
+      "date": "2010-11-11",
+      "country": "CA",
+      "network": "Télétoon"
     }
   ],
   "overall_number": 451,

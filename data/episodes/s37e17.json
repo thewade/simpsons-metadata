@@ -9,7 +9,9 @@
   "releases": [
     {
       "language": "en",
-      "date": "2026-06-17"
+      "date": "2026-06-17",
+      "country": "US",
+      "network": "Disney+"
     }
   ],
   "overall_number": 807,
