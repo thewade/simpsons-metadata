@@ -21,6 +21,29 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(module.guide_title({"en": "English", "fr": "French"}, "fr-CA"), "French")
         self.assertEqual(module.guide_title({"en": "English"}, "fr-CA"), "English")
 
+    def test_guide_uses_first_english_release_and_shows_all_releases(self):
+        record = {
+            "id": "s20e14", "titles": {"en": "Episode"}, "original_air_date": "2009-03-10",
+            "releases": [
+                {"language": "en", "date": "2009-03-22", "country": "US", "network": "FOX"},
+                {"language": "fr-FR", "date": "2009-03-10", "country": "FR", "network": "Canal+"},
+                {"language": "en", "date": "2009-03-17", "country": "GB", "network": "Sky1"},
+                {"language": "fr-CA", "country": "CA", "network": "TQS <test>"},
+            ],
+        }
+        self.assertEqual(module.first_english_date(record), "2009-03-17")
+        guide = module.render_episode_guide({"seasons": {"s20": {"id": "s20"}},
+                                              "episodes": {"s20e14": record}})
+        self.assertRegex(guide, r'id="s20e14"[^\n]*<time datetime="2009-03-17">')
+        self.assertIn('data-i18n="premiereDate">Premiere date', guide)
+        self.assertIn('id="s20e14-releases" data-i18n="releases">Releases', guide)
+        self.assertEqual(guide.count('<span class="release-premiere"'), 1)
+        self.assertLess(guide.index('datetime="2009-03-10"'), guide.index('datetime="2009-03-17"',
+                                                                            guide.index('id="s20e14-releases"')))
+        self.assertIn('data-i18n="releaseDateUnknown">Date not recorded', guide)
+        self.assertIn('TQS &lt;test&gt;', guide)
+        self.assertNotIn('TQS <test>', guide)
+
     def test_episode_guide_escapes_metadata_and_links_only_known_ids(self):
         guide = module.render_episode_guide({
             "seasons": {"s01": {"id": "s01"}},

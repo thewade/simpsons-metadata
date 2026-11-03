@@ -83,6 +83,15 @@
     .detail-facts div { min-width:0; }
     .detail-facts dt { color:var(--muted); font-size:.73rem; font-weight:750; text-transform:uppercase; letter-spacing:.06em; }
     .detail-facts dd { margin:.18rem 0 0; overflow-wrap:anywhere; }
+    .release-section { margin-top:1.4rem; padding-top:1.1rem; border-top:1px solid var(--line); }
+    .release-section h5 { margin:0 0 .75rem; font-size:1rem; }
+    .release-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:.65rem; margin:0; padding:0; list-style:none; }
+    .release-list li { padding:.7rem .85rem; border:1px solid var(--line); border-radius:5px; background:#fff; }
+    .release-meta { display:flex; flex-wrap:wrap; gap:.1rem .5rem; color:var(--muted); font-size:.78rem; }
+    .release-meta span + span::before { content:"·"; margin-right:.5rem; }
+    .release-date { margin-top:.25rem; font-weight:750; }
+    .release-unknown { color:var(--muted); font-weight:500; }
+    .release-premiere { display:inline-block; margin-left:.3rem; padding:.1rem .35rem; border-radius:3px; background:var(--yellow); font-size:.73rem; font-weight:800; }
     .detail-links { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.25rem; }
     .detail-links a { display:inline-flex; align-items:center; min-height:2.4rem; padding:.4rem .8rem; border:1px solid #bdd4e6; border-radius:5px; background:#f0f7fc; font-size:.85rem; font-weight:800; text-decoration:none; }
     .detail-links a:hover { background:#e2f0fa; }
@@ -106,7 +115,7 @@
 <body data-page="guide">
   <a class="skip" href="#catalogue" data-i18n="skipCatalogue">Skip to catalogue</a>
   <header class="topbar"><div class="wrap"><a class="brand" href="/" data-page-link="/"><span aria-hidden="true">S</span> Simpsons Metadata</a><nav aria-label="Site navigation" data-i18n-aria="primaryNav"><a href="/" data-page-link="/" data-i18n="navHome">Home</a><a href="/v1/episodes.json" data-i18n="navJson">Raw JSON</a><a href="/docs/" data-i18n="navApi">API reference ↗</a></nav><div class="language-picker"><label for="language-select">Language / Langue</label><select id="language-select"><option value="en">English</option><option value="fr-FR">Français (France)</option><option value="fr-CA">Français (Québec)</option></select></div></div></header>
-  <section class="hero" aria-labelledby="guide-title"><div class="wrap"><p class="eyebrow" data-i18n="guideEyebrow">Browse the catalogue</p><h1 id="guide-title" data-i18n="guideHeading">Episode guide</h1><p data-i18n="guideIntro" data-episodes="{{EPISODE_COUNT}}" data-seasons="{{SEASON_COUNT}}" data-movies="{{MOVIE_COUNT}}" data-shorts="{{SHORT_COUNT}}">{{EPISODE_COUNT}} numbered episodes across {{SEASON_COUNT}} seasons, plus {{MOVIE_COUNT}} movies and {{SHORT_COUNT}} shorts. Select a row to reveal titles, references, and Disney+ links when available.</p></div></section>
+  <section class="hero" aria-labelledby="guide-title"><div class="wrap"><p class="eyebrow" data-i18n="guideEyebrow">Browse the catalogue</p><h1 id="guide-title" data-i18n="guideHeading">Episode guide</h1><p data-i18n="guideIntro" data-episodes="{{EPISODE_COUNT}}" data-seasons="{{SEASON_COUNT}}" data-movies="{{MOVIE_COUNT}}" data-shorts="{{SHORT_COUNT}}">{{EPISODE_COUNT}} numbered episodes across {{SEASON_COUNT}} seasons, plus {{MOVIE_COUNT}} movies and {{SHORT_COUNT}} shorts. Select a row to reveal releases, titles, references, and Disney+ links when available.</p></div></section>
   <aside class="guide-nav"><div class="wrap"><div class="lead"><a href="#classic" data-i18n="classic">Seasons 1–20</a><a href="#modern" data-i18n="modern">Season 21 onward</a><a href="#movies" data-i18n="movies">Movies</a><a href="#tracey-ullman-shorts" data-i18n="traceyShorts">Tracey Ullman shorts</a><a href="#disney-plus-shorts" data-i18n="disneyShorts">Disney+ shorts</a><a href="/v1/episodes.json" data-i18n="downloadEpisodes">Download episodes.json ↗</a></div><nav class="season-jumps" aria-label="Jump to a season" data-i18n-aria="jumpSeason"><!-- SEASON_JUMPS --></nav></div></aside>
   <main id="catalogue" class="wrap catalogue">
     <p class="guide-note" data-i18n-html="guideNote"><strong>About these links:</strong> Disney+ links are formed from stored content IDs. The IDs have not been rechecked against current playback, and availability can vary by region or subscription. Planned movie dates are marked as such.</p>

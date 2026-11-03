@@ -275,6 +275,12 @@ def guide_title(titles, locale):
     return next(iter(titles.values()))
 
 
+def first_english_date(record):
+    """Use the first dated English release as an episode's guide premiere."""
+    return min((release["date"] for release in record.get("releases", [])
+                if release["language"] == "en" and "date" in release), default=None)
+
+
 def render_episode_guide(catalog):
     """Render episodes, movies, and shorts as accessible, expandable tables."""
     template = (ROOT / "deployment" / "episodes" / "index.html").read_text(encoding="utf-8")
@@ -294,6 +300,43 @@ def render_episode_guide(catalog):
     def display_date(value):
         parsed = date.fromisoformat(value)
         return f'<time datetime="{h(value)}">{h(parsed.strftime("%B"))} {parsed.day}, {parsed.year}</time>'
+
+    def release_details(record):
+        releases = record.get("releases", [])
+        if not releases:
+            return ""
+        language_names = {"en": ("releaseEnglish", "English"),
+                          "fr-FR": ("releaseFrenchFrance", "French (France)"),
+                          "fr-CA": ("releaseFrenchQuebec", "French (Québec)")}
+        country_names = {"US": ("releaseUnitedStates", "United States"),
+                         "CA": ("releaseCanada", "Canada"),
+                         "FR": ("releaseFrance", "France"),
+                         "GB": ("releaseUnitedKingdom", "United Kingdom")}
+        premiere = first_english_date(record)
+        items = []
+        for release in sorted(releases, key=lambda item: item.get("date", "9999-99-99")):
+            language = release["language"]
+            language_key, language_name = language_names.get(language, (None, language))
+            language_i18n = f' data-i18n="{language_key}"' if language_key else ""
+            metadata = [f'<span{language_i18n}>{h(language_name)}</span>']
+            country = release.get("country")
+            if country:
+                country_key, country_name = country_names.get(country, (None, country))
+                country_i18n = f' data-i18n="{country_key}"' if country_key else ""
+                metadata.append(f'<span{country_i18n}>{h(country_name)}</span>')
+            if release.get("network"):
+                metadata.append(f'<span>{h(release["network"])}</span>')
+            air_date = release.get("date")
+            date_html = (display_date(air_date) if air_date else
+                         '<span class="release-unknown" data-i18n="releaseDateUnknown">Date not recorded</span>')
+            if air_date and language == "en" and air_date == premiere:
+                date_html += ' <span class="release-premiere" data-i18n="premiere">Premiere</span>'
+            items.append(f'<li><div class="release-meta">{"".join(metadata)}</div>'
+                         f'<div class="release-date">{date_html}</div></li>')
+        ident = h(record["id"])
+        return (f'<section class="release-section" aria-labelledby="{ident}-releases">'
+                f'<h5 id="{ident}-releases" data-i18n="releases">Releases</h5>'
+                f'<ul class="release-list">{"".join(items)}</ul></section>')
 
     def detail_row(record, kind, colspan):
         ident = record["id"]
@@ -350,7 +393,7 @@ def render_episode_guide(catalog):
                 f'<span data-i18n="{detail_key}">{kind} details</span></p>'
                 f'<h4>{h(title)}</h4></div><a class="permalink" href="#{h(ident)}" '
                 f'data-i18n="{link_key}">Link to {kind.lower()}</a></div>'
-                f'{fact_html}{links_html}{legacy_html}</div></td></tr>')
+                f'{fact_html}{release_details(record)}{links_html}{legacy_html}</div></td></tr>')
 
     jumps = "".join(f'<a href="#season-{number:02}">{number}</a>' for number in numbers)
     groups = []
@@ -363,7 +406,7 @@ def render_episode_guide(catalog):
         for number in members:
             records = sorted(by_season[number], key=lambda record: int(record["id"].split("e", 1)[1]))
             season = catalog["seasons"].get(f"s{number:02}", {})
-            dates = [record["original_air_date"] for record in records if "original_air_date" in record]
+            dates = [air_date for record in records if (air_date := first_english_date(record))]
             years = sorted({value[:4] for value in dates})
             year_label = years[0] if len(years) == 1 else f"{years[0]}–{years[-1]}" if years else ""
             season_links = []
@@ -387,7 +430,7 @@ def render_episode_guide(catalog):
                 ident = record["id"]
                 episode_number = int(ident.split("e", 1)[1])
                 title = record["titles"].get("en", next(iter(record["titles"].values())))
-                aired = record.get("original_air_date")
+                aired = first_english_date(record)
                 date_html = display_date(aired) if aired else "—"
                 production = record.get("production_code", "—")
                 overall = record.get("overall_number", "—")
@@ -402,7 +445,7 @@ def render_episode_guide(catalog):
             table = ('<div class="table-scroll"><table class="episode-table"><thead><tr>'
                      '<th scope="col" data-i18n="overall">Overall</th><th scope="col" data-i18n="number">No.</th>'
                      '<th scope="col" data-i18n="episode">Episode</th>'
-                     '<th scope="col" data-i18n="originalAirDate">Original air date</th>'
+                     '<th scope="col" data-i18n="premiereDate">Premiere date</th>'
                      '<th scope="col" data-i18n="productionCode">Production code</th>'
                      '<th scope="col"><span class="sr-only" data-i18n="details">Details</span></th>'
                      f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
